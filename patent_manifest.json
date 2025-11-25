@@ -1,0 +1,26 @@
+{
+  "sv_manifest_sig": "patents:v1",
+  "portfolio_epoch": 1,
+  "min_entity_version": "0.1.0",
+  "allow_orgs": [
+    "StegVerse",
+    "StegVerse-Labs"
+  ],
+  "allow_repos_glob": [
+    "StegVerse/*",
+    "StegVerse-Labs/*"
+  ],
+  "exclude_repos_glob": [
+    "**/Patents",
+    "**/archive/**"
+  ],
+  "disclosure_template": "templates/disclosure.md",
+  "provisional_template": "templates/provisional.md",
+  "claim_template": "templates/claims.md",
+  "diagram_template": "templates/diagram.md",
+  "deadline_policy_days": {
+    "provisional_to_nonprovisional": 365,
+    "pct_from_provisional": 365
+  },
+  "last_updated_utc": "2025-11-25T04:52:52.336644Z"
+}
