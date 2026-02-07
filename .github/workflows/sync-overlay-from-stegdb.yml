@@ -27,6 +27,14 @@ jobs:
           ref: ${{ inputs.stegdb_ref }}
           path: _stegdb
 
+      - name: Preserve overlay canon directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -d canon ]]; then
+            tar -czf /tmp/canon-backup.tgz canon
+          fi
+
       - name: Sync Patents overlay into canon/
         run: |
           mkdir -p canon
@@ -34,6 +42,14 @@ jobs:
           cp -R _stegdb/canonical/overlays/PatentsOverlay/canon/* canon/
           rm -rf _stegdb
 
+      - name: Restore overlay canon directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -f /tmp/canon-backup.tgz ]]; then
+            tar -xzf /tmp/canon-backup.tgz
+          fi
+          
       - name: Commit overlay changes
         run: |
           git config user.name "github-actions[bot]"
