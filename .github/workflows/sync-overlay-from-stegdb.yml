@@ -27,33 +27,30 @@ jobs:
           ref: ${{ inputs.stegdb_ref }}
           path: _stegdb
 
-      - name: Preserve overlay canon directory
+      - name: Sync Patents overlay into canon/ (fail loud)
         shell: bash
         run: |
           set -euo pipefail
-          if [[ -d canon ]]; then
-            tar -czf /tmp/canon-backup.tgz canon
-          fi
+          SRC="_stegdb/canonical/overlays/PatentsOverlay/canon"
+          test -d "$SRC" || (echo "::error::Missing overlay folder: $SRC"; exit 3)
 
-      - name: Sync Patents overlay into canon/
-        run: |
           mkdir -p canon
-          rm -rf canon/*
-          cp -R _stegdb/canonical/overlays/PatentsOverlay/canon/* canon/
+          rsync -a --delete "$SRC/" "canon/"
+
+          test -n "$(ls -A canon)" || (echo "::error::Overlay sync produced empty canon/"; exit 4)
+
           rm -rf _stegdb
 
-      - name: Restore overlay canon directory
+      - name: Commit overlay changes
         shell: bash
         run: |
           set -euo pipefail
-          if [[ -f /tmp/canon-backup.tgz ]]; then
-            tar -xzf /tmp/canon-backup.tgz
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
           fi
-          
-      - name: Commit overlay changes
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add canon
-          git commit -m "Sync Patents canon overlay from StegDB @ ${{ inputs.stegdb_ref }}" || echo "No changes"
+          git commit -m "chore: sync Patents overlay from StegDB @ ${{ inputs.stegdb_ref }}"
           git push
