@@ -19,10 +19,10 @@ PAT-005 is an urgent provisional-review candidate because a public technical pap
 ## Current execution order
 
 1. Lock PAT-001 claim scope, technical evidence, inventorship, and disclosure chronology.
-2. Review and harden the new PAT-001 working provisional draft without treating unsupported refinements as established priority material.
-3. Preserve reusable shared claim structures for PAT-002 through PAT-004.
-4. Triage PAT-005 disclosure timing and prepare its provisional-review package without displacing PAT-001 unless legal review determines urgency requires reprioritization.
-5. Prepare dependent family drafts in parallel without delaying the earliest defensible filing.
+2. Review and harden the PAT-001 working provisional draft without treating unsupported refinements as established priority material.
+3. Render and review the verified-core PAT-001 drawings while keeping proposed embodiments visually and evidentially separate.
+4. Preserve reusable shared claim structures for PAT-002 through PAT-004.
+5. Triage PAT-005 disclosure timing and prepare its provisional-review package without displacing PAT-001 unless legal review determines urgency requires reprioritization.
 6. Validate the filing-packet engine against a claim-sensitive family only after its source draft is authorized for packet generation.
 
 ## Current evidence findings
@@ -31,7 +31,7 @@ A dated architecture document titled `StegVerse-Micro-Node-Agency.md` was create
 
 This evidence predates the later June 28–July 2 runtime implementation discussions and must be treated as an earlier documented conception milestone, subject to inventorship and corroboration review.
 
-PAT-005 has a public-disclosure triage package under `disclosures/`, `claims/`, `evidence/`, `figures/`, `provisionals/`, and `triage/`. Do not use `patent pending` unless an application has actually been filed.
+PAT-005 has a public-disclosure triage package, structured family record, evidence maps, conception chronology, prior-art collision chart, inventorship worksheet, formal drawing source, working provisional draft, and filing-readiness index. Do not use `patent pending` unless an application has actually been filed.
 
 PAT-001 now has:
 
@@ -40,17 +40,18 @@ PAT-001 now has:
 - `evidence/PAT-001_INVENTORSHIP_WORKSHEET.md`, requiring human contribution analysis limitation by limitation and for the claimed combinations;
 - `evidence/PAT-001_PRIOR_ART_SEARCH_LEDGER.md`, separating patentability searching from freedom-to-operate analysis and preserving reproducible search events;
 - `figures/PAT-001_FIGURE_DESCRIPTIONS.md`, a ten-figure drawing plan that distinguishes verified runtime behavior from uncorroborated capability-resolution, construction, expiry, lease, context-retention, and heartbeat-retention embodiments;
-- `figures/PAT-001-FIG-01-system-overview.mmd`, reproducible source for the verified request-to-decision, receipt, return, and reconstruction architecture;
-- `figures/PAT-001-FIG-02-role-sequence.mmd`, reproducible source for the ordered transition-table role sequence;
-- `figures/PAT-001-FIG-03-receipt-binding.mmd`, reproducible source for request, role-evidence, receipt, return-payload, and reconstruction hash relationships;
-- `figures/PAT-001-FIG-04-decision-boundary.mmd`, reproducible source for ALLOW, DENY, and FAIL_CLOSED decision branching;
-- `provisionals/PAT-001_provisional.md`, a working technical provisional draft containing background, summary, detailed description, examples, alternatives, working claims, and abstract.
+- `figures/PAT-001-FIG-01-system-overview.mmd` through `PAT-001-FIG-04-decision-boundary.mmd`, reproducible sources for the verified runtime core;
+- `diagrams/PAT-001-formal-drawing-sheets.md`, a consolidated ten-sheet working source with reference numerals, verified-flow conventions, proposed-flow conventions, and a reference-numeral index;
+- `provisionals/PAT-001_provisional.md`, a working technical provisional draft containing background, summary, detailed description, examples, alternatives, working claims, and abstract;
+- `filing-readiness/PAT-001_FILING_READINESS_INDEX.md`, an explicit gate record separating draft presence, packet authorization, filing, and patent-pending status;
+- `tools/validate_patent_readiness.py`, a deterministic readiness validator that emits `READY_FOR_REVIEW_PACKET`, `FAIL_CLOSED_BLOCKERS`, or `INVALID_READINESS_RECORD` without performing any external submission;
+- `tests/test_patent_readiness.py`, executable coverage for current fail-closed posture, missing records, missing artifacts, and an authorized complete fixture.
 
-The strongest currently verified PAT-001 implementation combination is transition-table role execution, distinct authority and admissibility evaluation, fail-closed behavior, deterministic hash-bound receipts, governed return-path evidence, and reconstruction witnesses. Demand-only construction, minimum manifest-derived addressability, default expiry, usage-only delayed retention, bounded context reuse, and prohibition on heartbeat-only persistence remain high-value limitations requiring corroboration or implementation evidence. The working draft labels those later embodiments as requiring verified support and filing review.
+The strongest currently verified PAT-001 implementation combination is transition-table role execution, distinct authority and admissibility evaluation, fail-closed behavior, deterministic hash-bound receipts, governed return-path evidence, and reconstruction witnesses. Demand-only construction, minimum manifest-derived addressability, default expiry, usage-only delayed retention, bounded context reuse, and prohibition on heartbeat-only persistence remain high-value limitations requiring corroboration or implementation evidence. The working draft and formal drawing source label those later embodiments as requiring verified support and filing review.
 
 ## Filing-packet engine installed
 
-The repository now includes:
+The repository includes:
 
 - `tools/patent_ai.py` — positive-trigger-only patent candidate watcher. A candidate is admitted only when a commit contains `[PATENT]`, touches `patent_candidates/**`, or is associated with a PR labeled `patent-candidate`. Each admission emits a trigger receipt.
 - `tools/filing_packet_emitter.py` — filesystem-only provisional packet emitter producing a specification DOCX, cover data, fee estimate, filing checklist, and hash manifest.
@@ -60,28 +61,30 @@ The repository now includes:
 - `tests/test_patent_ai.py` — executable coverage for T1 commit-tag, T2 candidate-path, T3 PR-label, negative/no-trigger, and idempotent receipt behavior.
 - `tests/test_filing_packet_emitter.py` — executable coverage for fail-closed missing input, warning state, artifact hashes, null filing dates, packet-emitted state, and populated claim/summary handling.
 - `tests/test_utc_timestamps.py` — regression coverage requiring timezone-aware, `Z`-normalized timestamps and prohibiting deprecated `utcnow()` use.
+- `tests/test_patent_readiness.py` — readiness-boundary regression coverage.
 - `requirements-dev.txt` — reproducible test dependency declaration.
 
 ## Validation state
 
 Completed:
 
-- `python -m py_compile` passed for both Python tools;
+- `python -m py_compile` passed for the original patent watcher and packet emitter;
 - imports for `requests` and `python-docx` passed;
-- independent `python -m pytest -q` validation passed for the patent-engine test modules before the timestamp remediation;
+- independent `python -m pytest -q` validation passed for the patent-engine test modules before timestamp remediation;
 - the uploaded sample DOCX hash was verified and preserved as a binary fixture;
 - naïve `datetime.utcnow()` generation was replaced with timezone-aware UTC helpers producing `Z`-normalized RFC 3339 values;
 - timestamp regression tests were committed;
 - the original binary DOCX fixture was committed through the Git data API without forcing or overwriting concurrent repository work;
-- four reproducible Mermaid drawing sources were committed for the verified PAT-001 runtime core.
+- four reproducible Mermaid drawing sources and a consolidated formal drawing-sheet source were committed for PAT-001;
+- a deterministic readiness validator and tests were committed. The current PAT-001 readiness record is intentionally expected to fail closed because blocking checkboxes remain unresolved and review-packet authorization is `no`.
 
-No combined status checks were attached to the latest direct commit. Full authoritative-dispatcher validation therefore remains required before a release tag.
+No pull-request workflow run or combined status checks were attached to the latest direct commits. Full authoritative-dispatcher validation therefore remains required before a release tag or review-packet authorization.
 
 ## Human boundary invariant
 
 No automated component may submit a filing to the USPTO or another jurisdiction. The packet emitter may prepare and hash filing artifacts, but the submission, certification, fee confirmation, and recording of the actual filing receipt remain human-controlled transitions. Filed dates must remain null until the human records the actual filing event.
 
-The presence of a working provisional draft does not mean an application was filed and does not authorize `patent pending` language.
+The presence of a working provisional draft, formal drawing source, or readiness validator does not mean an application was filed and does not authorize `patent pending` language.
 
 ## StegFin integration boundary
 
@@ -98,7 +101,7 @@ Dependency rule: patent registry or packet tooling may consume StegFin services 
 
 ## Repository state
 
-The repository contains the claim schemas and master data, family renderer, patent doctrine documentation, filing-packet tools, binary and Markdown sample fixtures, test suites, PAT-001 chronology/evidence/inventorship/prior-art controls, PAT-001 figure descriptions, four verified-core drawing sources and a working provisional draft, and the PAT-005 triage and working filing package.
+The repository contains claim schemas and master data, family renderers, patent doctrine documentation, filing-packet tools, readiness validation, binary and Markdown sample fixtures, test suites, PAT-001 chronology/evidence/inventorship/prior-art controls, PAT-001 working and formal drawing sources, a PAT-001 working provisional draft and readiness index, and the PAT-005 triage and working filing package.
 
 Priority tracking issue: #1.
 
@@ -108,9 +111,10 @@ Priority tracking issue: #1.
 - locate executable evidence for active-node capability resolution, minimum node construction, expiry, usage leases, bounded context retention, and heartbeat non-self-retention;
 - populate PAT-001 inventor candidates, corroborators, evidence, and contribution distinctions through human fact collection and counsel review;
 - execute and populate the PAT-001 prior-art search ledger using verified patent and non-patent databases;
-- render the four verified-core drawing sources to filing-review SVG/PDF outputs;
-- create the remaining PAT-001 drawing sources only after their capability-resolution, construction, expiry, lease, context-retention, and heartbeat-retention support is corroborated;
+- render PAT-001 FIGS. 1–6 to monochrome filing-review SVG/PDF outputs and verify reference numerals against the specification;
+- keep PAT-001 FIGS. 7–10 proposed until capability-resolution, construction, expiry, lease, context-retention, and heartbeat-retention support is corroborated;
 - review and revise the PAT-001 working provisional draft for support, terminology consistency, claim strategy, inventorship, and disclosure risk;
+- run `tools/validate_patent_readiness.py` through the authoritative dispatcher and preserve the expected fail-closed receipt while blockers remain;
 - authorize and run the filing-packet emitter against PAT-001 only after review resolves unsupported placeholders and sensitive scope;
 - resolve PAT-005 earliest-enabling-disclosure and foreign-filing triage;
 - run the full repository test suite in the authoritative dispatcher and preserve its receipt;
@@ -118,7 +122,7 @@ Priority tracking issue: #1.
 
 ## Ownership and continuation scope
 
-Issue #1 remains the authoritative filing-priority record. Continuation may install tests, fixtures, schemas, dispatch tasks, figures, and filing-readiness documentation. It may not automatically file, declare inventorship from commit metadata, publish unsupported limitations as established priority material, treat StegFin execution as USPTO submission authority, or claim `patent pending` before an application is actually filed.
+Issue #1 remains the authoritative filing-priority record. Continuation may install tests, fixtures, schemas, dispatch tasks, figures, readiness validators, and filing-readiness documentation. It may not automatically file, declare inventorship from commit metadata, publish unsupported limitations as established priority material, override unresolved readiness gates, treat StegFin execution as USPTO submission authority, or claim `patent pending` before an application is actually filed.
 
 ## Constraints
 
@@ -126,4 +130,5 @@ Issue #1 remains the authoritative filing-priority record. Continuation may inst
 - Human and patent-counsel review is required before filing.
 - Commit authorship does not establish inventorship.
 - Repository publication does not establish novelty.
+- Readiness validation must fail closed while blocking fields remain unresolved.
 - Do not expand public disclosure of unsupported claim-sensitive implementation details beyond the authorized working repository review path.
