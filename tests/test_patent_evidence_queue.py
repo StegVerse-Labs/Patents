@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from tools.build_patent_evidence_queue import build_queue, is_machine_authorized if False else build_queue
+from tools.build_patent_evidence_queue import build_queue
 from tools.validate_patent_evidence_queue import validate
 
 
