@@ -23,9 +23,9 @@
     "contributor_interview_packet": true,
     "practitioner_handoff": true,
     "filing_readiness_index": true,
-    "primary_implementation_anchor_record": true,
-    "primary_implementation_anchor_validator": true,
-    "primary_implementation_anchor_tests": true
+    "multi_repository_implementation_anchor_record": true,
+    "multi_repository_implementation_anchor_validator": true,
+    "multi_repository_implementation_anchor_tests": true
   },
   "artifact_map": {
     "technical_disclosure": "disclosures/PAT-005-governed-device-continuity.md",
@@ -47,9 +47,9 @@
     "contributor_interview_packet": "inventorship/PAT-005-contributor-interview-packet.md",
     "practitioner_handoff": "reviews/PAT-005-practitioner-handoff.md",
     "filing_readiness_index": "reviews/PAT-005-filing-readiness-index.md",
-    "primary_implementation_anchor_record": "data/PAT-005-implementation-anchors.json",
-    "primary_implementation_anchor_validator": "tools/validate_pat005_implementation_anchors.py",
-    "primary_implementation_anchor_tests": "tests/test_pat005_implementation_anchors.py"
+    "multi_repository_implementation_anchor_record": "data/PAT-005-implementation-anchors.json",
+    "multi_repository_implementation_anchor_validator": "tools/validate_pat005_implementation_anchors.py",
+    "multi_repository_implementation_anchor_tests": "tests/test_pat005_implementation_anchors.py"
   },
   "blocking_gates": {
     "verified_prior_art_references": false,
@@ -63,8 +63,8 @@
   },
   "expected_decision": "FAIL_CLOSED_BLOCKERS",
   "next_machine_tasks": [
-    "collect exact StegTalk, StegMusic, and StegGuardian destination-side validator and receipt anchors",
-    "preserve executable negative fixtures and outputs",
+    "locate and verify StegGuardian page and receipt paths or preserve an explicit absence receipt",
+    "preserve executable cross-repository negative fixtures and outputs",
     "populate stable prior art publication identifiers after verified search",
     "run the canonical portfolio entry point through the authoritative execution path"
   ],
@@ -75,5 +75,5 @@
     "obtain qualified patent practitioner review",
     "decide whether to file"
   ],
-  "legal_notice": "Working technical portfolio status only. Exact source implementation anchors support technical review but do not determine inventorship, patentability, filing authority, or patent-pending status. Not legal advice and not a filed patent application."
+  "legal_notice": "Working technical portfolio status only. Exact source, StegTalk, and StegMusic implementation anchors support technical review but do not determine inventorship, patentability, filing authority, or patent-pending status. Not legal advice and not a filed patent application."
 }
