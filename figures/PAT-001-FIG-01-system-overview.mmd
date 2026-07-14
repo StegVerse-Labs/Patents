@@ -1,0 +1,20 @@
+flowchart LR
+    A[Governed request or manifest] --> B[Manifest intake]
+    B --> C[Transition-table role chain]
+    C --> D{Terminal decision}
+    D -->|ALLOW| E[Bounded governed result]
+    D -->|DENY| F[Denied result]
+    D -->|FAIL_CLOSED| G[Fail-closed result]
+    E --> H[Receipt issuer]
+    F --> H
+    G --> H
+    H --> I[Governed return-path carrier]
+    I --> J[Reconstruction witness]
+
+    subgraph Verified runtime core
+      C
+      D
+      H
+      I
+      J
+    end
