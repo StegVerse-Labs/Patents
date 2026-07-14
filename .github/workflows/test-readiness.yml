@@ -11,7 +11,7 @@ permissions:
 jobs:
   repo-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -58,3 +58,18 @@ jobs:
 
           print('TEST READINESS PASSED')
           PY
+      - name: Run canonical patent portfolio validation
+        run: python tools/patent_portfolio.py --repo-root .
+      - name: Upload patent portfolio execution evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: patent-portfolio-execution-${{ github.sha }}
+          if-no-files-found: warn
+          retention-days: 90
+          path: |
+            receipts/patent-portfolio-dispatch.json
+            data/patent-workstream-status.json
+            data/patent-machine-queue.json
+            data/patent-evidence-acquisition-queue.json
+            continuation/patent-portfolio-machine-continuation.json
