@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stegverse.org/schemas/ecosystem-patent-candidate.schema.json",
+  "title": "Ecosystem Patent Candidate",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "title",
+    "source_repositories",
+    "technical_problem",
+    "technical_mechanism",
+    "technical_effects",
+    "evidence_refs",
+    "existing_family_relationship",
+    "disclosure_posture",
+    "recommended_disposition",
+    "status"
+  ],
+  "properties": {
+    "candidate_id": {"type": "string", "pattern": "^CAND-[0-9]{3,}$"},
+    "title": {"type": "string", "minLength": 3},
+    "source_repositories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "pattern": "^[^/]+/[^/]+$"}
+    },
+    "technical_problem": {"type": "string", "minLength": 10},
+    "technical_mechanism": {"type": "string", "minLength": 10},
+    "technical_effects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 3}
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["repository", "path"],
+        "properties": {
+          "repository": {"type": "string"},
+          "path": {"type": "string"},
+          "commit": {"type": ["string", "null"]},
+          "description": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "existing_family_relationship": {
+      "type": "object",
+      "required": ["related_family_ids", "relationship"],
+      "properties": {
+        "related_family_ids": {"type": "array", "items": {"type": "string"}},
+        "relationship": {
+          "type": "string",
+          "enum": ["new_family", "dependent_family", "merge_candidate", "unclear"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "candidate_contributors": {"type": "array", "items": {"type": "string"}},
+    "earliest_known_date": {"type": ["string", "null"], "format": "date"},
+    "disclosure_posture": {
+      "type": "string",
+      "enum": ["nonpublic", "internal_public_repo", "public_disclosure", "unknown"]
+    },
+    "collision_zones": {"type": "array", "items": {"type": "string"}},
+    "enablement_gaps": {"type": "array", "items": {"type": "string"}},
+    "recommended_disposition": {
+      "type": "string",
+      "enum": [
+        "OPEN_DISCLOSURE",
+        "DEPENDENT_FAMILY_REVIEW",
+        "MERGE_INTO_EXISTING_FAMILY",
+        "HOLD_FOR_EVIDENCE",
+        "NOT_PATENT_CANDIDATE",
+        "URGENT_DISCLOSURE_TRIAGE"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["identified", "triage", "reviewed", "promoted", "held", "rejected"]
+    },
+    "legal_notice": {"type": "string"}
+  },
+  "additionalProperties": false
+}
