@@ -1,0 +1,35 @@
+{
+  "family_id": "PAT-001",
+  "status": "rendered_for_review_not_approved",
+  "filing_authorized": false,
+  "patent_pending_authorized": false,
+  "artifacts": [
+    {
+      "figure": "FIG-01",
+      "path": "rendered/PAT-001/PAT-001-FIG-01-system-overview.svg",
+      "sha256": "5c40bf0ec902b39f8ea955d29c926d6a33760f2bc02fb643d617c383107856f0"
+    },
+    {
+      "figure": "FIG-02",
+      "path": "rendered/PAT-001/PAT-001-FIG-02-role-sequence.svg",
+      "sha256": "48a2ba05467094895345da9e074cb372cfcdc10b87ea75874343eaf82000a06c"
+    },
+    {
+      "figure": "FIG-03",
+      "path": "rendered/PAT-001/PAT-001-FIG-03-receipt-binding.svg",
+      "sha256": "af18af2046e1bb3210563301c5d77d9d708bfcfaf874331c34d9120b7936caf5"
+    },
+    {
+      "figure": "FIG-04",
+      "path": "rendered/PAT-001/PAT-001-FIG-04-decision-boundary.svg",
+      "sha256": "d88666b3f3371939e6f458a15e9938882aebcb9aa3f41c8ba5da0f78c796d128"
+    }
+  ],
+  "remaining_review": [
+    "verify reference numerals against the specification",
+    "review line clarity and page layout",
+    "obtain practitioner approval",
+    "render or defer FIGS. 5-10 according to evidentiary support"
+  ],
+  "legal_notice": "Review drawings only. Not approved filing drawings and not evidence of a filed application."
+}
