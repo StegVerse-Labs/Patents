@@ -50,20 +50,26 @@ def validate_record(repo_root: Path, record_path: Path) -> dict[str, Any]:
     if not isinstance(blockers, dict) or not blockers:
         errors.append("blocking_gates must be a non-empty object")
 
-    artifact_map = record.get("artifact_map", {})
-    if artifact_map and not isinstance(artifact_map, dict):
-        errors.append("artifact_map must be an object when present")
-    elif isinstance(artifact_map, dict):
-        for completion_key, relative_path in artifact_map.items():
-            if not isinstance(relative_path, str):
-                errors.append(f"artifact_map.{completion_key} must be a string path")
-                continue
-            exists = (repo_root / relative_path).is_file()
-            declared_complete = bool(completed.get(completion_key)) if isinstance(completed, dict) else False
-            if declared_complete and not exists:
-                errors.append(f"completed artifact missing: {completion_key} -> {relative_path}")
-            if exists and not declared_complete:
-                warnings.append(f"artifact exists but completion flag is false: {completion_key}")
+    artifact_map = record.get("artifact_map")
+    if not isinstance(artifact_map, dict) or not artifact_map:
+        errors.append("artifact_map must be a non-empty object")
+        artifact_map = {}
+
+    if isinstance(completed, dict):
+        for completion_key, declared_complete in completed.items():
+            if declared_complete is True and completion_key not in artifact_map:
+                errors.append(f"completed artifact has no artifact_map entry: {completion_key}")
+
+    for completion_key, relative_path in artifact_map.items():
+        if not isinstance(relative_path, str) or not relative_path.strip():
+            errors.append(f"artifact_map.{completion_key} must be a non-empty string path")
+            continue
+        exists = (repo_root / relative_path).is_file()
+        declared_complete = bool(completed.get(completion_key)) if isinstance(completed, dict) else False
+        if declared_complete and not exists:
+            errors.append(f"completed artifact missing: {completion_key} -> {relative_path}")
+        if exists and not declared_complete:
+            warnings.append(f"artifact exists but completion flag is false: {completion_key}")
 
     unresolved = []
     if isinstance(blockers, dict):
