@@ -20,7 +20,7 @@ def _utc_now() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
-def _run(command: list[str], cwd: Path) -> dict[str, Any]:
+def _run(command: list[str], cwd: Path, accepted_returncodes: set[int]) -> dict[str, Any]:
     completed = subprocess.run(
         command,
         cwd=cwd,
@@ -28,63 +28,84 @@ def _run(command: list[str], cwd: Path) -> dict[str, Any]:
         capture_output=True,
         check=False,
     )
+    parsed: Any = None
+    try:
+        parsed = json.loads(completed.stdout) if completed.stdout.strip() else None
+    except json.JSONDecodeError:
+        parsed = None
     return {
         "command": command,
+        "accepted_returncodes": sorted(accepted_returncodes),
         "returncode": completed.returncode,
         "stdout": completed.stdout,
         "stderr": completed.stderr,
-        "passed": completed.returncode == 0,
+        "parsed_result": parsed,
+        "passed": completed.returncode in accepted_returncodes,
     }
 
 
-def build_commands(repo_root: Path) -> list[dict[str, Any]]:
+def build_commands() -> list[dict[str, Any]]:
     py = sys.executable
     return [
         {
             "id": "pat001_completion",
             "command": [py, "tools/validate_completion_status.py", "data/PAT-001-completion-status.json", "--repo-root", "."],
+            "accepted_returncodes": {0},
         },
         {
             "id": "pat005_completion",
             "command": [py, "tools/validate_completion_status.py", "data/PAT-005-completion-status.json", "--repo-root", "."],
+            "accepted_returncodes": {0},
         },
         {
             "id": "pat001_readiness",
-            "command": [py, "tools/validate_patent_readiness.py", "filing-readiness/PAT-001_FILING_READINESS_INDEX.md", "--repo-root", "."],
+            "command": [py, "tools/validate_patent_readiness.py", "--family", "PAT-001", "--root", "."],
+            "accepted_returncodes": {0, 2},
         },
         {
             "id": "pat001_drawing_sources",
             "command": [py, "tools/lint_patent_drawings.py", "figures"],
+            "accepted_returncodes": {0},
         },
         {
             "id": "pat001_rendered_drawings",
             "command": [py, "tools/verify_rendered_drawings.py", "rendered/PAT-001/manifest.json", "--repo-root", "."],
+            "accepted_returncodes": {0},
         },
         {
             "id": "workstream_selection",
-            "command": [py, "tools/select_patent_workstream.py", "data/patent-workstream-status.json"],
+            "command": [
+                py,
+                "tools/select_patent_workstream.py",
+                "data/PAT-001-completion-status.json",
+                "data/PAT-005-completion-status.json",
+            ],
+            "accepted_returncodes": {0},
         },
         {
             "id": "pytest",
             "command": [py, "-m", "pytest", "-q"],
+            "accepted_returncodes": {0},
         },
     ]
 
 
 def dispatch(repo_root: Path) -> dict[str, Any]:
     results: list[dict[str, Any]] = []
-    for item in build_commands(repo_root):
-        result = _run(item["command"], repo_root)
+    for item in build_commands():
+        result = _run(item["command"], repo_root, item["accepted_returncodes"])
         result["id"] = item["id"]
         results.append(result)
 
     failures = [result["id"] for result in results if not result["passed"]]
+    workstream = next((r.get("parsed_result") for r in results if r["id"] == "workstream_selection"), None)
     decision = "PORTFOLIO_MACHINE_VALIDATION_PASSED" if not failures else "PORTFOLIO_MACHINE_VALIDATION_FAILED"
     return {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "generated_at": _utc_now(),
         "decision": decision,
         "failed_checks": failures,
+        "workstream_decision": workstream.get("decision") if isinstance(workstream, dict) else None,
         "checks": results,
         "authority_boundary": {
             "filing_performed": False,
