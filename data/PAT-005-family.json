@@ -1,0 +1,78 @@
+{
+  "family_id": "PAT-005",
+  "title": "Governed Device Continuity and Destination-Bound Hardware Abstraction",
+  "priority_order": 5,
+  "status": "drafting",
+  "parent_family_ids": [
+    "PAT-001",
+    "PAT-002"
+  ],
+  "inventive_center": "A physical-device continuity process that reconstructs canonical device identity from heterogeneous source-linked observations, preserves unresolved and unsupported states, generates destination-bound non-authorizing packages, requires independently governed destination responses, and retains linked evidence sufficient to reconstruct the path through governance and publication without equating publication or reachability with operational authority.",
+  "technical_problem": "Existing discovery, fingerprinting, onboarding, hardware-abstraction, inventory, and provenance systems do not jointly preserve source lineage, unresolved states, destination-relative compatibility, explicit withholding of operational authority, independent destination receipts, and reverse reconstruction across source, destination, governance, and publication repositories.",
+  "technical_effects": [
+    "reduces duplicate or conflicting physical-device identities across observation transports",
+    "preserves ambiguity and unsupported states instead of forcing classification",
+    "separates destination preparation from authority to operate a device",
+    "requires destination-side evidence before treating a handoff as accepted",
+    "supports reverse reconstruction from public or destination evidence to source observations"
+  ],
+  "shared_clause_ids": [
+    "SCL-RECEIPT",
+    "SCL-TRANSITION-TABLE-BINDING",
+    "SCL-NON-INFERENCE",
+    "SCL-MASTER-RECORDS-WITNESS"
+  ],
+  "claim_ids": [
+    "CLM-PAT-005-METHOD-001",
+    "CLM-PAT-005-SYSTEM-001",
+    "CLM-PAT-005-PUBLICATION-001"
+  ],
+  "implementation_evidence": [
+    {
+      "repository": "StegVerse-Labs/device-continuity-layer",
+      "path": "tools/build_inventory.py",
+      "commit": null,
+      "description": "Canonical inventory generation from source-linked device fingerprints."
+    },
+    {
+      "repository": "StegVerse-Labs/device-continuity-layer",
+      "path": "tools/build_destination_packages.py",
+      "commit": null,
+      "description": "Destination-bound package generation with constrained response posture."
+    },
+    {
+      "repository": "StegVerse-Labs/StegTalk",
+      "path": "receipts/device-continuity/stegtalk-device-continuity-receipt.json",
+      "commit": "0e7b153faba53adc2bac7277e33c50c9f8075343",
+      "description": "Independent communication-destination receipt recording observation-only, non-authorizing acceptance."
+    },
+    {
+      "repository": "StegVerse-Labs/StegMusic",
+      "path": "receipts/device-continuity/stegmusic-device-continuity-receipt.json",
+      "commit": "87d1e7ec2151d6dcc416f9246b003c288c2853c1",
+      "description": "Independent media-destination receipt recording observation-only, non-authorizing acceptance."
+    },
+    {
+      "repository": "StegVerse-002/stegguardian-wiki",
+      "path": "pages/device-continuity-guardian-boundary.md",
+      "commit": "dc7d7891552de0f93229296b896a48031f1459b8",
+      "description": "Guardian boundary separating handoff evidence from operator approval, active trust, and behavior authority."
+    },
+    {
+      "repository": "GCAT-BCAT-Engine/Publisher",
+      "path": "Papers/device-continuity-layer-governed-hardware-abstraction.md",
+      "commit": "661521388485f275a9231394dd2308bb52db68d3",
+      "description": "Known public technical disclosure of the governed device-continuity architecture."
+    }
+  ],
+  "disclosure_dates": {
+    "first_conception": null,
+    "first_written_description": null,
+    "first_executable_implementation": null,
+    "first_public_disclosure": "2026-07-13"
+  },
+  "inventor_candidates": [
+    "TO_BE_DETERMINED_BY_CLAIM_CONTRIBUTION"
+  ],
+  "notes": "Working technical record only. Earlier public disclosures may exist and must be audited. Publication evidence does not establish filing, patentability, inventorship, priority, activation, or operational authority."
+}
