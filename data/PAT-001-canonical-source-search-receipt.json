@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "family_id": "PAT-001",
+  "search_scope": "accessible GitHub code and commit index",
+  "searched_at": "2026-07-14T00:00:00-05:00",
+  "queries": [
+    {
+      "query": "StegVerse-Micro-Node-Agency",
+      "scope": "StegVerse-Labs",
+      "result": "REFERENCES_ONLY",
+      "matched_paths": [
+        "StegVerse-Labs/Patents/PATENTS_MIRROR_HANDOFF.md",
+        "StegVerse-Labs/Patents/evidence/PAT-001_CONCEPTION_AND_DISCLOSURE_CHRONOLOGY.md",
+        "StegVerse-Labs/Patents/evidence/PAT-001_CLAIM_ELEMENT_EVIDENCE_MAP.md",
+        "StegVerse-Labs/Patents/filing-readiness/PAT-001_FILING_READINESS_INDEX.md"
+      ]
+    },
+    {
+      "query": "StegVerse-Micro-Node-Agency",
+      "scope": "global commit index",
+      "result": "NO_COMMIT_MATCH",
+      "matched_paths": []
+    },
+    {
+      "query": "scoped receipt-bearing revocable",
+      "scope": "global code index",
+      "result": "PATENTS_REFERENCE_ONLY_WITH_UNRELATED_EXTERNAL_MATCHES",
+      "matched_paths": [
+        "StegVerse-Labs/Patents/PATENTS_MIRROR_HANDOFF.md",
+        "StegVerse-Labs/Patents/evidence/PAT-001_CONCEPTION_AND_DISCLOSURE_CHRONOLOGY.md"
+      ]
+    },
+    {
+      "query": "micro-node agency scoped receipt revocable",
+      "scope": "StegVerse-Labs",
+      "result": "REFERENCES_ONLY",
+      "matched_paths": [
+        "StegVerse-Labs/Patents/PATENTS_MIRROR_HANDOFF.md",
+        "StegVerse-Labs/Patents/evidence/PAT-001_CONCEPTION_AND_DISCLOSURE_CHRONOLOGY.md"
+      ]
+    }
+  ],
+  "decision": "CANONICAL_SOURCE_NOT_RECOVERED",
+  "canonical_june_6_source_verified": false,
+  "canonical_june_16_source_verified": false,
+  "negative_evidence_preserved": true,
+  "retry_triggers": [
+    "new repository or organization becomes accessible",
+    "repository history or deleted branch is restored",
+    "exact file URL, commit SHA, archive, or local copy is supplied",
+    "GitHub index coverage changes materially"
+  ],
+  "authority_boundary": {
+    "conception_date_determined": false,
+    "inventorship_determined": false,
+    "patentability_determined": false,
+    "filing_authorized": false,
+    "patent_pending_authorized": false
+  },
+  "legal_notice": "A negative repository search does not establish absence, conception date, inventorship, novelty, patentability, or filing authority."
+}
