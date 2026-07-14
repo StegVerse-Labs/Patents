@@ -4,16 +4,18 @@
 
 `CONTINUE_ACTIVE_PATENT_WORK`
 
-The ecosystem-candidate review path is armed but not active because PAT-001 and PAT-005 still have authorized machine tasks. The durable controller and status record must determine future transitions; sessions must not activate candidate review merely because external blockers also exist.
+The ecosystem-candidate review path is armed but not active because PAT-001 and PAT-005 still have authorized machine tasks. The durable controller and synchronized status record determine future transitions; sessions must not activate candidate review merely because external blockers also exist.
 
 ## Manual-task elimination baseline
 
-All repeatable repository-local validation and task-selection steps are now consolidated behind:
+All repeatable repository-local validation, task selection, receipt creation, and continuation-state synchronization are consolidated behind:
 
 - `tools/run_patent_portfolio_dispatcher.py`
 - `tests/test_patent_portfolio_dispatcher.py`
 - `tools/build_patent_machine_queue.py`
 - `tests/test_patent_machine_queue.py`
+- `tools/synchronize_patent_portfolio_state.py`
+- `tests/test_synchronize_patent_portfolio_state.py`
 
 A single dispatcher invocation now performs:
 
@@ -25,7 +27,11 @@ A single dispatcher invocation now performs:
 6. automatic machine-task queue generation from active-family completion records;
 7. active-work versus ecosystem-candidate workstream selection;
 8. the complete pytest surface;
-9. one consolidated JSON receipt.
+9. final consolidated JSON receipt creation;
+10. automatic synchronization of `data/patent-workstream-status.json`;
+11. automatic creation of `continuation/patent-portfolio-machine-continuation.json`.
+
+The receipt is finalized before synchronization so the SHA-256 stored in status and continuation records remains stable. Manual handoff reconciliation is no longer required after a dispatcher run.
 
 The automatic queue excludes human, practitioner, inventor, approval, authorization, signature, payment, submission, filing, and patent-pending tasks. Those excluded transitions are not avoidable manual chores; they are legally or evidentially non-delegable authority boundaries.
 
@@ -68,6 +74,7 @@ These records separate verified negative behavior from unverified construction, 
 - `tests/test_select_patent_workstream.py`
 - `schemas/ecosystem-patent-candidate.schema.json`
 - `data/patent-workstream-status.json`
+- `continuation/patent-portfolio-machine-continuation.json` after dispatcher execution
 
 ## Activation event
 
@@ -75,6 +82,8 @@ Switch to `REVIEW_ECOSYSTEM_CANDIDATES` only when every higher-priority active f
 
 1. submission-ready; or
 2. externally blocked with no authorized machine task remaining.
+
+The dispatcher and synchronizer activate this state automatically from the completion records; no session-level judgment or manual status editing is required.
 
 ## Return event
 
@@ -86,11 +95,11 @@ A review cycle may inspect repositories and commits, identify technical mechanis
 
 ## Current next machine work
 
-1. Execute the unified dispatcher and preserve its consolidated receipt through the authoritative execution path.
+1. Execute the unified dispatcher through the authoritative execution path; its receipt, queue, workstream status, and continuation record will be preserved automatically.
 2. Corroborate PAT-001 June 6 and June 16 source records and commits.
 3. Preserve executable fixtures for PAT-001 negative and proposed paths where implementation exists.
 4. Complete PAT-005 source-anchor and executable-negative-fixture tasks.
-5. Re-run the dispatcher after each material family-status change; it will rebuild the machine queue and workstream decision automatically.
+5. Re-run the dispatcher after each material family-status change; no manual queue, status, or handoff reconciliation is required.
 
 ## Validation state
 
@@ -98,4 +107,4 @@ The automation code and regression tests are committed, but the latest direct co
 
 ## Ownership
 
-Issue #1 remains the portfolio priority record. This handoff owns the workstream-transition rule, candidate-review activation boundary, unified machine dispatcher, and automatic machine-task queue.
+Issue #1 remains the portfolio priority record. This handoff owns the workstream-transition rule, candidate-review activation boundary, unified machine dispatcher, automatic machine-task queue, and synchronized continuation state.
