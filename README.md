@@ -20,34 +20,47 @@ This repository manages StegVerse invention disclosures, reusable claim data, pr
 
 - `disclosures/PAT-005-governed-device-continuity.md`
 - `claims/PAT-005-claim-architecture.md`
+- `data/PAT-005-family.json`
 - `provisionals/PAT-005-working-provisional-draft.md`
-- `diagrams/PAT-005-figure-descriptions.md`
 
-### Evidence
+### Evidence and chronology
 
 - `evidence/PAT-005-evidence-ledger.md`
 - `evidence/PAT-005-cross-repository-source-map.md`
 - `evidence/PAT-005-destination-and-guardian-anchors.md`
 - `evidence/PAT-005-end-to-end-reconstruction.md`
+- `evidence/PAT-005-conception-chronology.md`
 
-### Filing and disclosure triage
+### Drawings
+
+- `diagrams/PAT-005-figure-descriptions.md`
+- `diagrams/PAT-005-formal-drawing-sheets.md`
+
+### Prior art and inventorship
+
+- `prior-art/PAT-005-initial-collision-chart.md`
+- `inventorship/PAT-005-claim-contribution-worksheet.md`
+
+### Filing and disclosure review
 
 - `triage/PAT-005-public-disclosure-and-filing-triage.md`
+- `reviews/PAT-005-filing-readiness-index.md`
 
 ### Current unresolved review items
 
-- claim-by-claim inventorship;
+- claim-by-claim contributor interviews and inventorship determination;
 - earliest conception and written-description dates;
 - earliest public disclosure for each limitation;
-- formal prior-art search and limitation charts;
-- formal patent drawings;
+- exact patent-publication searching and element-by-element claim charts;
+- conversion of working diagrams into filing-format drawings with reference numerals;
 - complete negative and failure evidence;
 - successful hosted-release publication receipt, if retained in claim scope;
-- practitioner review of enablement, claim scope, and foreign-filing implications.
+- practitioner review of enablement, claim scope, eligibility, and foreign-filing implications.
 
 ## Structured source of truth
 
 - `data/master_claims.json` — shared clauses, family metadata, claim concepts, evidence placeholders, disclosure dates, and inventorship notes
+- `data/PAT-005-family.json` — structured working family record for PAT-005
 - `schemas/patent-family.schema.json` — reusable family record
 - `schemas/claim.schema.json` — reusable claim record
 - `docs/CLAIM_DATA_MODEL.md` — architecture and evidence rules
