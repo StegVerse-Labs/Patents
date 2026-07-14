@@ -1,31 +1,56 @@
-# StegVerse Patents Repo — StegPatent-AI-001 (v1)
+# StegVerse Patents — StegPatent-AI-001
 
-This repo bootstraps an autonomous Patent AI Entity for StegVerse.
+This repository manages StegVerse invention disclosures, reusable claim data, provisional-draft artifacts, evidence, and filing deadlines. It does not file automatically with the USPTO or any other patent office.
 
-## What it does (v1)
-- Watches StegVerse org repos for patentable changes
-- Creates invention disclosure stubs
-- Generates provisional draft skeletons
-- Produces claims tiers (broad → narrow)
-- Tracks deadlines for provisional → non-provisional
+## Current priority families
+
+1. `PAT-001` — Transition-Table-Native Dynamic Micro-Node Computing
+2. `PAT-002` — Heartbeat-Governed Entity and Reflected-State Computing
+3. `PAT-003` — Generalized Adaptive Scanner Using Dynamic Micro-Nodes
+4. `PAT-004` — Manifest-Governed Bidirectional Neural Communication
+
+`PAT-001` is the foundational computing architecture. The later families express technical extensions and implementations; dependency in this repository does not by itself establish legal priority entitlement.
+
+## Structured source of truth
+
+- `data/master_claims.json` — shared clauses, family metadata, claim concepts, evidence placeholders, disclosure dates, and inventorship notes
+- `schemas/patent-family.schema.json` — reusable family record
+- `schemas/claim.schema.json` — reusable claim record
+- `docs/CLAIM_DATA_MODEL.md` — architecture and evidence rules
+- `scripts/render_patent_families.py` — deterministic review-artifact renderer
+
+Validate and render:
+
+```bash
+python scripts/render_patent_families.py --check
+python scripts/render_patent_families.py
+```
+
+Rendered working drafts are written to `generated/families/`.
+
+## Patent AI functions
+
+- Watches allowlisted StegVerse repositories for potentially patentable changes
+- Creates invention-disclosure stubs
+- Maintains reusable claim and limitation data
+- Generates provisional-draft skeletons and claim tiers
+- Links claim limitations to implementation and disclosure evidence
+- Tracks provisional-to-nonprovisional and PCT deadlines
 - Maintains a central patent manifest for portfolio management
 
-## Quick start (iPhone-friendly)
-1. Create repo: `StegVerse/Patents`
-2. Upload this bundle to the repo root and commit to `main`.
-3. Add org/repo secrets:
-   - `GH_STEGVERSE_PATENT_AI_TOKEN` (fine-grained PAT)
-     - Org access: StegVerse + StegVerse-Labs
-     - Permissions: Contents Read/Write, Pull Requests Read/Write, Actions Read
-   - `OPENAI_API_KEY` (optional for richer drafting; v1 runs without)
-4. Go to Actions → **Patent Watcher** → Run workflow (dry-run default).
-5. Review generated disclosures in `/disclosures` and drafts in `/provisionals`.
+## Evidence and inventorship discipline
+
+Each claimed limitation should eventually link to the earliest known conception, written description, executable implementation, public disclosure, repository path, commit, and test or receipt.
+
+Inventorship is determined from human contribution to conception of the subject matter actually claimed. It is not determined solely from repository ownership, organizational position, prompting, or commit authorship.
 
 ## Safety rules
-- v1 never files automatically with USPTO.
-- v1 generates drafts + claims + diagrams for human/legal review.
-- v1 will not publish anything outside this repo.
-- v1 uses allowlists for target repos and file paths.
+
+- Never file, publish externally, assign rights, or make legal representations automatically.
+- Treat generated claims and drafts as working technical artifacts requiring qualified legal review.
+- Preserve nonpublic material and use allowlists for repositories and paths.
+- Record uncertainty rather than inventing dates, inventors, evidence, or legal conclusions.
 
 ## Versioning
-Repo epoch + version live in `patent_manifest.json`.
+
+Repository epoch and portfolio settings live in `patent_manifest.json`. Structured claim-data versioning lives in `data/master_claims.json`.
