@@ -16,6 +16,9 @@
     "formal_drawing_sheet_source": true,
     "rendered_review_drawings": true,
     "rendered_drawing_manifest": true,
+    "source_corroboration_record": true,
+    "source_corroboration_validator": true,
+    "source_corroboration_tests": true,
     "filing_readiness_index": true,
     "readiness_validator": true,
     "readiness_validator_tests": true,
@@ -34,6 +37,9 @@
     "formal_drawing_sheet_source": "diagrams/PAT-001-formal-drawing-sheets.md",
     "rendered_review_drawings": "rendered/PAT-001/PAT-001-FIG-01-system-overview.svg",
     "rendered_drawing_manifest": "rendered/PAT-001/manifest.json",
+    "source_corroboration_record": "data/PAT-001-source-corroboration.json",
+    "source_corroboration_validator": "tools/validate_source_corroboration.py",
+    "source_corroboration_tests": "tests/test_source_corroboration.py",
     "filing_readiness_index": "filing-readiness/PAT-001_FILING_READINESS_INDEX.md",
     "readiness_validator": "tools/validate_patent_readiness.py",
     "readiness_validator_tests": "tests/test_patent_readiness.py",
@@ -58,12 +64,11 @@
   "expected_decision": "FAIL_CLOSED_BLOCKERS",
   "expected_readiness_decision": "FAIL_CLOSED_BLOCKERS",
   "next_machine_tasks": [
-    "locate canonical June 6 and June 16 source repositories and commit anchors",
+    "locate the exact canonical June 6 and June 16 source repositories and commit anchors while preserving adjacent cross-repository corroboration",
     "collect executable evidence for capability resolution and minimum node construction",
     "collect executable evidence for expiry, usage leases, bounded context retention, and heartbeat non-self-retention",
     "populate stable patent and non-patent prior art identifiers after verified searches",
-    "verify all rendered drawing hashes and reference numerals through the authoritative dispatcher",
-    "run the complete repository validation surface through the authoritative dispatcher"
+    "run the canonical portfolio entry point through the authoritative execution path"
   ],
   "next_human_tasks": [
     "conduct contributor interviews",
@@ -80,5 +85,5 @@
     "automated_fee_payment_permitted": false,
     "patent_pending_use_permitted": false
   },
-  "legal_notice": "Working technical portfolio status only. Rendered SVGs are review artifacts, not approved filing drawings. Not legal advice and not a filed patent application."
+  "legal_notice": "Working technical portfolio status only. Cross-repository anchors corroborate technical limitations but do not determine conception date, inventorship, patentability, filing authority, or patent-pending status. Rendered SVGs are review artifacts, not approved filing drawings. Not legal advice and not a filed patent application."
 }
