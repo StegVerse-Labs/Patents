@@ -8,7 +8,7 @@ The ecosystem-candidate review path is armed but not active because PAT-001 and 
 
 ## Manual-task elimination baseline
 
-All repeatable repository-local validation, task selection, receipt creation, continuation-state synchronization, concurrency protection, and operator summarization are consolidated behind:
+All repeatable repository-local validation, task selection, receipt creation, continuation-state synchronization, concurrency protection, operator summarization, and source-corroboration validation are consolidated behind:
 
 - `tools/patent_portfolio.py`
 - `tests/test_patent_portfolio_runner.py`
@@ -19,6 +19,8 @@ All repeatable repository-local validation, task selection, receipt creation, co
 - `tests/test_patent_machine_queue.py`
 - `tools/synchronize_patent_portfolio_state.py`
 - `tests/test_synchronize_patent_portfolio_state.py`
+- `tools/validate_source_corroboration.py`
+- `tests/test_source_corroboration.py`
 
 The canonical command is:
 
@@ -32,18 +34,19 @@ One invocation now performs:
 2. PAT-001 completion-record validation;
 3. PAT-005 completion-record validation;
 4. PAT-001 readiness validation, accepting the expected fail-closed blocker result as a valid machine outcome;
-5. PAT-001 drawing-source linting;
-6. PAT-001 rendered-drawing manifest, SHA-256, SVG, and reference-numeral verification;
-7. automatic machine-task queue generation from active-family completion records;
-8. active-work versus ecosystem-candidate workstream selection;
-9. the complete pytest surface;
-10. final consolidated JSON receipt creation;
-11. automatic synchronization of `data/patent-workstream-status.json`;
-12. automatic creation of `continuation/patent-portfolio-machine-continuation.json`;
-13. concise output of the next authorized machine task;
-14. guaranteed execution-lock cleanup on success, validation failure, or exception.
+5. PAT-001 cross-repository source-corroboration validation;
+6. PAT-001 drawing-source linting;
+7. PAT-001 rendered-drawing manifest, SHA-256, SVG, and reference-numeral verification;
+8. automatic machine-task queue generation from active-family completion records;
+9. active-work versus ecosystem-candidate workstream selection;
+10. the complete pytest surface;
+11. final consolidated JSON receipt creation;
+12. automatic synchronization of `data/patent-workstream-status.json`;
+13. automatic creation of `continuation/patent-portfolio-machine-continuation.json`;
+14. concise output of the next authorized machine task;
+15. guaranteed execution-lock cleanup on success, validation failure, or exception.
 
-Concurrent execution fails closed with `PORTFOLIO_EXECUTION_LOCKED` instead of allowing competing receipt or state writes. The receipt is finalized before synchronization so the SHA-256 stored in status and continuation records remains stable. Manual command sequencing, state inspection, queue selection, and handoff reconciliation are no longer required after a runner invocation.
+Concurrent execution fails closed with `PORTFOLIO_EXECUTION_LOCKED` instead of allowing competing receipt or state writes. The receipt is finalized before synchronization so the SHA-256 stored in status and continuation records remains stable. Manual command sequencing, state inspection, queue selection, source-anchor consistency checking, and handoff reconciliation are no longer required after a runner invocation.
 
 The automatic queue excludes human, practitioner, inventor, approval, authorization, signature, payment, submission, filing, and patent-pending tasks. Those excluded transitions are not avoidable manual chores; they are legally or evidentially non-delegable authority boundaries.
 
@@ -57,6 +60,20 @@ The automatic queue excludes human, practitioner, inventor, approval, authorizat
 - `tests/test_completion_status.py`
 
 Both active-family completion records contain explicit `artifact_map` entries for every `completed: true` key. The validator fails closed for missing maps, unmapped completion claims, missing files, authority-state conflicts, and patent-pending authorization before filing.
+
+### PAT-001 source corroboration
+
+- `data/PAT-001-source-corroboration.json`
+- `tools/validate_source_corroboration.py`
+- `tests/test_source_corroboration.py`
+
+The corroboration record binds exact repository, commit, path, and blob identifiers for three adjacent ecosystem sources:
+
+1. `StegVerse-Labs/StegDB@e822a8715dbb45eccb84351d3a6f2ce2169008a7` — monitoring micro-node policy;
+2. the same StegDB commit — executable monitoring micro-node manifest schema;
+3. `StegVerse-Labs/Site@03bc107899bf36a635296cc9d19292630bacd5eb` — publication micro-node workflow reference.
+
+These anchors corroborate bounded scope, explicit ignored domains, manifest-declared input/output contracts, allowed postures, receipt requirements, escalation targets, authority levels, separate node authorities, ordered node sequences, bounded child-node instantiation, lineage tracking, receipt aggregation, termination, lifecycle timestamps, input/output hashes, and fail-closed states. They do not establish the exact June 6 or June 16 source commit, inventorship, patentability, priority date, default expiry, usage-only retention, bounded context reuse, or heartbeat non-self-retention.
 
 ### PAT-001 rendered review drawings
 
@@ -108,15 +125,15 @@ A review cycle may inspect repositories and commits, identify technical mechanis
 ## Current next machine work
 
 1. Execute `tools/patent_portfolio.py` through the authoritative execution path; its receipt, queue, workstream status, continuation record, and next-task summary will be preserved automatically.
-2. Corroborate PAT-001 June 6 and June 16 source records and commits.
-3. Preserve executable fixtures for PAT-001 negative and proposed paths where implementation exists.
+2. Locate the exact canonical June 6 and June 16 PAT-001 source repositories and commit anchors while preserving the adjacent corroboration record.
+3. Preserve executable fixtures for PAT-001 capability resolution, minimum node construction, expiry, lease, context-retention, and heartbeat-retention paths where implementation exists.
 4. Complete PAT-005 source-anchor and executable-negative-fixture tasks.
-5. Re-run the canonical entry point after each material family-status change; no manual queue, status, receipt, or handoff reconciliation is required.
+5. Re-run the canonical entry point after each material family-status change; no manual queue, status, receipt, source-corroboration, or handoff reconciliation is required.
 
 ## Validation state
 
-The runner, automation code, and regression tests are committed, but the latest direct commits do not have an attached pull-request workflow run. Authoritative execution receipts therefore remain required. Absence of a workflow run must not be interpreted as validation success.
+The runner, source-corroboration validator, automation code, and regression tests are committed, but the latest direct commits do not have an attached pull-request workflow run. Authoritative execution receipts therefore remain required. Absence of a workflow run must not be interpreted as validation success.
 
 ## Ownership
 
-Issue #1 remains the portfolio priority record. This handoff owns the workstream-transition rule, candidate-review activation boundary, concurrency-safe portfolio runner, unified machine dispatcher, automatic machine-task queue, and synchronized continuation state.
+Issue #1 remains the portfolio priority record. This handoff owns the workstream-transition rule, candidate-review activation boundary, concurrency-safe portfolio runner, unified machine dispatcher, automatic machine-task queue, source-corroboration controls, and synchronized continuation state.
