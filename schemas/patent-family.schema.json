@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stegverse.org/schemas/patents/patent-family.schema.json",
+  "title": "StegVerse Patent Family",
+  "type": "object",
+  "required": [
+    "family_id",
+    "title",
+    "priority_order",
+    "status",
+    "inventive_center",
+    "claim_ids"
+  ],
+  "properties": {
+    "family_id": {"type": "string", "pattern": "^PAT-[0-9]{3}$"},
+    "title": {"type": "string", "minLength": 1},
+    "priority_order": {"type": "integer", "minimum": 1},
+    "status": {
+      "type": "string",
+      "enum": ["concept", "disclosure_in_progress", "drafting", "review", "filed", "abandoned"]
+    },
+    "parent_family_ids": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^PAT-[0-9]{3}$"},
+      "uniqueItems": true,
+      "default": []
+    },
+    "inventive_center": {"type": "string", "minLength": 1},
+    "technical_problem": {"type": "string"},
+    "technical_effects": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "shared_clause_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true,
+      "default": []
+    },
+    "claim_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "pattern": "^CLM-[A-Z0-9-]+$"},
+      "uniqueItems": true
+    },
+    "implementation_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["repository", "description"],
+        "properties": {
+          "repository": {"type": "string"},
+          "path": {"type": ["string", "null"]},
+          "commit": {"type": ["string", "null"]},
+          "description": {"type": "string"}
+        },
+        "additionalProperties": false
+      },
+      "default": []
+    },
+    "disclosure_dates": {
+      "type": "object",
+      "properties": {
+        "first_conception": {"type": ["string", "null"], "format": "date"},
+        "first_written_description": {"type": ["string", "null"], "format": "date"},
+        "first_executable_implementation": {"type": ["string", "null"], "format": "date"},
+        "first_public_disclosure": {"type": ["string", "null"], "format": "date"}
+      },
+      "additionalProperties": false
+    },
+    "inventor_candidates": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
