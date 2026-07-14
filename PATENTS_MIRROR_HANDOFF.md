@@ -40,6 +40,10 @@ PAT-001 now has:
 - `evidence/PAT-001_INVENTORSHIP_WORKSHEET.md`, requiring human contribution analysis limitation by limitation and for the claimed combinations;
 - `evidence/PAT-001_PRIOR_ART_SEARCH_LEDGER.md`, separating patentability searching from freedom-to-operate analysis and preserving reproducible search events;
 - `figures/PAT-001_FIGURE_DESCRIPTIONS.md`, a ten-figure drawing plan that distinguishes verified runtime behavior from uncorroborated capability-resolution, construction, expiry, lease, context-retention, and heartbeat-retention embodiments;
+- `figures/PAT-001-FIG-01-system-overview.mmd`, reproducible source for the verified request-to-decision, receipt, return, and reconstruction architecture;
+- `figures/PAT-001-FIG-02-role-sequence.mmd`, reproducible source for the ordered transition-table role sequence;
+- `figures/PAT-001-FIG-03-receipt-binding.mmd`, reproducible source for request, role-evidence, receipt, return-payload, and reconstruction hash relationships;
+- `figures/PAT-001-FIG-04-decision-boundary.mmd`, reproducible source for ALLOW, DENY, and FAIL_CLOSED decision branching;
 - `provisionals/PAT-001_provisional.md`, a working technical provisional draft containing background, summary, detailed description, examples, alternatives, working claims, and abstract.
 
 The strongest currently verified PAT-001 implementation combination is transition-table role execution, distinct authority and admissibility evaluation, fail-closed behavior, deterministic hash-bound receipts, governed return-path evidence, and reconstruction witnesses. Demand-only construction, minimum manifest-derived addressability, default expiry, usage-only delayed retention, bounded context reuse, and prohibition on heartbeat-only persistence remain high-value limitations requiring corroboration or implementation evidence. The working draft labels those later embodiments as requiring verified support and filing review.
@@ -68,7 +72,8 @@ Completed:
 - the uploaded sample DOCX hash was verified and preserved as a binary fixture;
 - naïve `datetime.utcnow()` generation was replaced with timezone-aware UTC helpers producing `Z`-normalized RFC 3339 values;
 - timestamp regression tests were committed;
-- the original binary DOCX fixture was committed through the Git data API without forcing or overwriting concurrent repository work.
+- the original binary DOCX fixture was committed through the Git data API without forcing or overwriting concurrent repository work;
+- four reproducible Mermaid drawing sources were committed for the verified PAT-001 runtime core.
 
 No combined status checks were attached to the latest direct commit. Full authoritative-dispatcher validation therefore remains required before a release tag.
 
@@ -93,7 +98,7 @@ Dependency rule: patent registry or packet tooling may consume StegFin services 
 
 ## Repository state
 
-The repository contains the claim schemas and master data, family renderer, patent doctrine documentation, filing-packet tools, binary and Markdown sample fixtures, test suites, PAT-001 chronology/evidence/inventorship/prior-art controls, PAT-001 figure descriptions and working provisional draft, and the PAT-005 triage and working filing package.
+The repository contains the claim schemas and master data, family renderer, patent doctrine documentation, filing-packet tools, binary and Markdown sample fixtures, test suites, PAT-001 chronology/evidence/inventorship/prior-art controls, PAT-001 figure descriptions, four verified-core drawing sources and a working provisional draft, and the PAT-005 triage and working filing package.
 
 Priority tracking issue: #1.
 
@@ -103,7 +108,8 @@ Priority tracking issue: #1.
 - locate executable evidence for active-node capability resolution, minimum node construction, expiry, usage leases, bounded context retention, and heartbeat non-self-retention;
 - populate PAT-001 inventor candidates, corroborators, evidence, and contribution distinctions through human fact collection and counsel review;
 - execute and populate the PAT-001 prior-art search ledger using verified patent and non-patent databases;
-- produce actual PAT-001 drawing files from the committed figure descriptions;
+- render the four verified-core drawing sources to filing-review SVG/PDF outputs;
+- create the remaining PAT-001 drawing sources only after their capability-resolution, construction, expiry, lease, context-retention, and heartbeat-retention support is corroborated;
 - review and revise the PAT-001 working provisional draft for support, terminology consistency, claim strategy, inventorship, and disclosure risk;
 - authorize and run the filing-packet emitter against PAT-001 only after review resolves unsupported placeholders and sensitive scope;
 - resolve PAT-005 earliest-enabling-disclosure and foreign-filing triage;
