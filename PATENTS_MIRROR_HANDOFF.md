@@ -12,20 +12,26 @@ Prepare the earliest defensible filing package for:
 2. PAT-002 — Heartbeat-Governed Entity and Reflected-State Computing
 3. PAT-003 — Generalized Adaptive Scanner Using Dynamic Micro-Nodes
 4. PAT-004 — Manifest-Governed Bidirectional Neural Communication
+5. PAT-005 — Governed Device Continuity and Destination-Bound Hardware Abstraction
+
+PAT-005 is an urgent provisional-review candidate because a public technical paper was committed on 2026-07-13. Earliest enabling public disclosure, inventorship, claim scope, and foreign-filing consequences remain under review.
 
 ## Current execution order
 
 1. Lock PAT-001 claim scope, technical evidence, inventorship, and disclosure chronology.
 2. Produce a provisional-quality PAT-001 specification without waiting for the remaining families.
 3. Preserve reusable shared claim structures for PAT-002 through PAT-004.
-4. Prepare dependent family drafts in parallel without delaying PAT-001 filing readiness.
-5. Validate the filing-packet engine against PAT-001 only after the claim-sensitive source draft is ready for authorized review.
+4. Triage PAT-005 disclosure timing and prepare its provisional-review package without displacing PAT-001 unless legal review determines urgency requires reprioritization.
+5. Prepare dependent family drafts in parallel without delaying the earliest defensible filing.
+6. Validate the filing-packet engine against a claim-sensitive family only after its source draft is ready for authorized review.
 
-## Current evidence finding
+## Current evidence findings
 
 A dated architecture document titled `StegVerse-Micro-Node-Agency.md` was created on 2026-06-16. It describes micro-node agency as the newest refinement after governed multi-tier AI hierarchy, defines a micro-node as a scoped, receipt-bearing, revocable and non-sovereign AI work unit, and identifies cost, compute, state-drift, review, receipt, and authority problems in larger recursive-agent structures.
 
 This evidence predates the later June 28–July 2 runtime implementation discussions and must be treated as an earlier documented conception milestone, subject to inventorship and corroboration review.
+
+PAT-005 has a public-disclosure triage package under `disclosures/`, `claims/`, `evidence/`, and `triage/`. Do not use `patent pending` unless an application has actually been filed.
 
 ## Filing-packet engine installed
 
@@ -34,18 +40,28 @@ The repository now includes:
 - `tools/patent_ai.py` — positive-trigger-only patent candidate watcher. A candidate is admitted only when a commit contains `[PATENT]`, touches `patent_candidates/**`, or is associated with a PR labeled `patent-candidate`. Each admission emits a trigger receipt.
 - `tools/filing_packet_emitter.py` — filesystem-only provisional packet emitter producing a specification DOCX, cover data, fee estimate, filing checklist, and hash manifest.
 - `docs/FILING_PACKET_SPEC.md` — canonical filing-packet lifecycle, invariants, and StegFin integration boundary.
-- `samples/sample_specification.md` — substantive rendering of the uploaded DOCX sample, pinned to source SHA-256 `0a31faeed211448bafb632ac2a6dc8ea4a977634d3b173badb61de54c9a28c59`.
+- `samples/sample_specification.md` — substantive rendering of the uploaded DOCX sample.
+- `samples/sample_specification.docx` — binary DOCX fixture, SHA-256 `0a31faeed211448bafb632ac2a6dc8ea4a977634d3b173badb61de54c9a28c59`.
 - `tests/test_patent_ai.py` — executable coverage for T1 commit-tag, T2 candidate-path, T3 PR-label, negative/no-trigger, and idempotent receipt behavior.
 - `tests/test_filing_packet_emitter.py` — executable coverage for fail-closed missing input, warning state, artifact hashes, null filing dates, packet-emitted state, and populated claim/summary handling.
 - `requirements-dev.txt` — reproducible test dependency declaration.
 
-Local validation completed:
+## Validation state
+
+Completed before the latest timestamp remediation:
 
 - `python -m py_compile` passed for both Python tools.
 - imports for `requests` and `python-docx` passed.
-- the uploaded sample DOCX hash was recorded.
-- independent `python -m pytest -q` validation passed: 2 test modules passed in 0.34 seconds.
-- validation exposed two non-blocking `datetime.utcnow()` deprecation warnings; replace naïve UTC generation with timezone-aware UTC values before the next release tag.
+- independent `python -m pytest -q` validation passed for the patent-engine test modules.
+- the uploaded sample DOCX hash was verified and is now preserved as a binary fixture.
+
+Completed in the current continuation:
+
+- replaced naïve `datetime.utcnow()` generation in `tools/patent_ai.py` with timezone-aware UTC helpers producing `Z`-normalized RFC 3339 values;
+- replaced naïve `datetime.utcnow()` generation in `tools/filing_packet_emitter.py` with timezone-aware UTC generation;
+- committed the original binary DOCX fixture through the Git data API without forcing or overwriting concurrent repository work.
+
+No combined status checks were attached to the latest direct commit. Full authoritative-dispatcher validation therefore remains required before a release tag.
 
 ## Human boundary invariant
 
@@ -66,41 +82,25 @@ Dependency rule: patent registry or packet tooling may consume StegFin services 
 
 ## Repository state
 
-The repository contains:
-
-- `schemas/claim.schema.json`
-- `schemas/patent-family.schema.json`
-- `data/master_claims.json`
-- `scripts/render_patent_families.py`
-- `docs/CLAIM_DATA_MODEL.md`
-- `tests/test_master_claims.py`
-- `tests/test_patent_ai.py`
-- `tests/test_filing_packet_emitter.py`
-- `tools/patent_ai.py`
-- `tools/filing_packet_emitter.py`
-- `docs/FILING_PACKET_SPEC.md`
-- `samples/sample_specification.md`
-- `requirements.txt`
-- `requirements-dev.txt`
+The repository contains the claim schemas and master data, family renderer, patent doctrine documentation, filing-packet tools, binary and Markdown sample fixtures, test suites, PAT-001 evidence chronology, and the PAT-005 triage package.
 
 Priority tracking issue: #1.
 
 ## Next required artifacts and validations
 
-- `evidence/PAT-001_CONCEPTION_AND_DISCLOSURE_CHRONOLOGY.md`
-- claim-element-to-repository-evidence map
-- human inventorship worksheet by claimed limitation
-- prior-art search ledger
-- provisional specification draft
-- figure list and system diagrams
-- replace `datetime.utcnow()` with timezone-aware UTC generation and rerun tests
-- commit or regenerate a binary DOCX fixture through a binary-capable repository path
-- consolidate the current workflow count toward the 1–2 dispatcher standard as a separate remediation task
+- PAT-001 claim-element-to-repository-evidence map
+- PAT-001 human inventorship worksheet by claimed limitation
+- PAT-001 prior-art search ledger
+- PAT-001 provisional specification draft
+- PAT-001 figure list and system diagrams
+- PAT-005 earliest-enabling-disclosure and foreign-filing triage resolution
+- tests asserting every generated timestamp is timezone-aware and `Z` normalized
 - run the full repository test suite in the authoritative dispatcher and preserve its receipt
+- consolidate the current workflow count toward the 1–2 dispatcher standard as a separate remediation task
 
 ## Ownership and continuation scope
 
-Issue #1 remains the authoritative filing-priority record. Continuation may install tests, fixtures, schemas, dispatch tasks, and filing-readiness documentation. It may not automatically file, declare inventorship from commit metadata, publish claim-sensitive drafts outside the authorized repository, or treat StegFin execution as USPTO submission authority.
+Issue #1 remains the authoritative filing-priority record. Continuation may install tests, fixtures, schemas, dispatch tasks, and filing-readiness documentation. It may not automatically file, declare inventorship from commit metadata, publish claim-sensitive drafts outside the authorized repository, treat StegFin execution as USPTO submission authority, or claim `patent pending` before an application is actually filed.
 
 ## Constraints
 
