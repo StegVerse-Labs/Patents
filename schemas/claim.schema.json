@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stegverse.org/schemas/patents/claim.schema.json",
+  "title": "StegVerse Patent Claim",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "family_id",
+    "claim_type",
+    "category",
+    "status",
+    "limitations"
+  ],
+  "properties": {
+    "claim_id": {"type": "string", "pattern": "^CLM-[A-Z0-9-]+$"},
+    "family_id": {"type": "string", "pattern": "^PAT-[0-9]{3}$"},
+    "claim_number": {"type": ["integer", "null"], "minimum": 1},
+    "claim_type": {
+      "type": "string",
+      "enum": ["independent", "dependent"]
+    },
+    "category": {
+      "type": "string",
+      "enum": ["method", "system", "computer_readable_medium", "apparatus", "dependent_feature"]
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^CLM-[A-Z0-9-]+$"},
+      "uniqueItems": true,
+      "default": []
+    },
+    "status": {
+      "type": "string",
+      "enum": ["concept", "draft", "review", "approved_for_filing", "filed", "abandoned"]
+    },
+    "preamble": {"type": "string"},
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["limitation_id", "text"],
+        "properties": {
+          "limitation_id": {"type": "string"},
+          "text": {"type": "string", "minLength": 1},
+          "source_clause_id": {"type": ["string", "null"]},
+          "required": {"type": "boolean", "default": true},
+          "evidence_refs": {
+            "type": "array",
+            "items": {"type": "string"},
+            "default": []
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "technical_effects": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "prior_art_collision_zones": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "inventorship_notes": {"type": "string"},
+    "review_notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
