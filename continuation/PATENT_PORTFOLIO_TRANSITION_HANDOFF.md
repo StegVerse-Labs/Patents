@@ -8,13 +8,11 @@ The ecosystem-candidate review path is armed but inactive because PAT-001 and PA
 
 ## Canonical automation
 
-Run:
-
 ```bash
 python tools/patent_portfolio.py --repo-root .
 ```
 
-The locked runner validates completion/readiness state, PAT-001 corroboration and negative source-search receipts, PAT-005 four-repository implementation anchors, drawings, evidence and machine queues, workstream selection, pytest, consolidated receipts, and synchronized continuation state. It excludes inventorship, practitioner judgment, approval, filing, payment, submission, and patent-pending decisions.
+The locked runner validates completion/readiness state, PAT-001 corroboration and source-search receipts, PAT-005 four-repository anchors and negative-case replay, drawings, evidence and machine queues, workstream selection, pytest, consolidated receipts, and synchronized continuation state. It excludes inventorship, practitioner judgment, approval, filing, payment, submission, and patent-pending decisions.
 
 ## PAT-001 state
 
@@ -25,47 +23,39 @@ The locked runner validates completion/readiness state, PAT-001 corroboration an
 
 ## PAT-005 four-repository anchors
 
-`data/PAT-005-implementation-anchors.json` binds eleven exact artifacts across four repositories.
+`data/PAT-005-implementation-anchors.json` binds eleven exact artifacts across:
 
-### Source implementation
+- `StegVerse-Labs/device-continuity-layer@d12e8790b7d426cda0594cd817833d0b76db15ac`
+- `StegVerse-Labs/StegTalk@0888572be55b5045643fa373bf2e17d829c8dbb4`
+- `StegVerse-Labs/StegMusic@a7b1ebb37dd92b9dfef36096c4f414d4f9bab5bc`
+- `StegVerse-002/stegguardian-wiki@8cfa27cae30c314da4cedab5dcd8af0ef2e02977`
 
-`StegVerse-Labs/device-continuity-layer@d12e8790b7d426cda0594cd817833d0b76db15ac`
+The anchors preserve destination-bound package construction, bounded response options, non-authorizing destination handoffs, payload/destination receipt binding, accepted observe-only posture, reconstructability, Guardian review-only posture, and authority separation.
 
-- destination package builder;
-- package validator;
-- StegTalk acceptance fixture with observe-only, review-required, and denied outcomes.
+## PAT-005 executable negative evidence
 
-### StegTalk destination
+- `fixtures/PAT-005-negative-cases.json`
+- `tools/replay_pat005_negative_cases.py`
+- `tests/test_pat005_negative_cases.py`
 
-`StegVerse-Labs/StegTalk@0888572be55b5045643fa373bf2e17d829c8dbb4`
+Eight replayable rejection cases cover:
 
-- handoff validator — blob `11d905fdb5b962bac3978503474e2632e227507a`;
-- receipt validator — blob `6f79043d457348a65efd895238340340e325178d`;
-- non-authorizing reconstructable receipt — blob `9ec4e41da35ec2cb11a8a52245bf1f974bae24ef`.
+1. wrong destination repository;
+2. unexpected authorizing handoff status;
+3. unauthorized destination decision;
+4. missing non-authority rule;
+5. payload/receipt mismatch;
+6. destination/receipt mismatch;
+7. receipt decision outside the allowed set;
+8. non-reconstructable receipt.
 
-### StegMusic destination
-
-`StegVerse-Labs/StegMusic@a7b1ebb37dd92b9dfef36096c4f414d4f9bab5bc`
-
-- handoff validator — blob `3bccc370edc0964ec850f20e8094eab08e9a3fc1`;
-- receipt validator — blob `bb129fd31c004c10b0f64d525a5bc7d7878b5f02`;
-- non-authorizing reconstructable receipt — blob `c7fa05835c29362086f97499b145931499cac638`.
-
-### StegGuardian boundary
-
-`StegVerse-002/stegguardian-wiki@8cfa27cae30c314da4cedab5dcd8af0ef2e02977`
-
-- guardian boundary page — blob `777a9aa6f0786c1ac5740f63ff6f9589c512fd53`;
-- reconstructable guardian receipt — blob `37d0e769fbe9aacfa646d66562eaffb0e72deafc`.
-
-The Guardian page states that a handoff candidate is not operator approval, active device trust, or destination behavior authority; unknown devices remain review-only until destination policy accepts them. The validator explicitly prevents Guardian documentation from being classified as executable authority.
+The replay surface derives from exact anchored validator behavior. It is deterministic technical evidence, not a production execution receipt and not a legal conclusion. Dispatcher schema `2.0` now runs this replay automatically.
 
 ## Current next machine work
 
 1. Execute the canonical runner through the authoritative execution path.
-2. Preserve PAT-005 executable cross-repository negative fixtures and outputs beyond the already anchored denial, review-only, and non-authority outcomes.
-3. Preserve PAT-001 executable or explicit negative lifecycle evidence.
-4. Populate stable prior-art identifiers only from verified patent and non-patent sources.
+2. Preserve PAT-001 executable or explicit negative lifecycle evidence.
+3. Populate stable prior-art identifiers only from verified patent and non-patent sources.
 
 ## Activation boundary
 
@@ -73,8 +63,8 @@ Switch to `REVIEW_ECOSYSTEM_CANDIDATES` only when every higher-priority active f
 
 ## Validation state
 
-The four-repository anchor record, Guardian-aware validator, regression tests, completion-state binding, and this handoff are committed. No attached workflow run has yet supplied an authoritative execution receipt.
+The negative corpus, replay tool, regression tests, dispatcher integration, PAT-005 completion-state binding, and this handoff are committed. No attached workflow run has supplied an authoritative execution receipt, so execution success is not claimed.
 
 ## Ownership
 
-Issue #1 remains the authoritative filing-priority record. This handoff owns portfolio transition, the concurrency-safe runner, unified dispatcher, both queues, corroboration controls, source-search receipts, PAT-005 four-repository anchor controls, and synchronized continuation state.
+Issue #1 remains the authoritative filing-priority record. This handoff owns portfolio transition, the concurrency-safe runner, unified dispatcher, queues, corroboration controls, source-search receipts, PAT-005 four-repository anchors, negative replay controls, and synchronized continuation state.
