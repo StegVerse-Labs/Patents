@@ -32,6 +32,14 @@ CANDIDATE_PR_LABEL = "patent-candidate"
 COMMIT_TAG = "[PATENT]"
 
 
+def utc_now() -> dt.datetime:
+    return dt.datetime.now(dt.timezone.utc)
+
+
+def utc_iso(value: dt.datetime) -> str:
+    return value.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z")
+
+
 def log(msg):
     print(f"[PATENT_AI] {msg}", flush=True)
 
@@ -91,11 +99,9 @@ def check_triggers(token: str, full_name: str, commit: dict) -> Optional[Tuple[s
     sha = commit["sha"]
     msg = commit["commit"]["message"]
 
-    # T1 — commit message tag (no extra API call)
     if COMMIT_TAG.lower() in msg.lower():
         return ("T1-commit-tag", f"message contains {COMMIT_TAG}: {msg.splitlines()[0][:120]}")
 
-    # T2 — candidate path touched (one extra call: commit detail)
     try:
         detail = gh_get(token, f"/repos/{owner}/{repo}/commits/{sha}")
         for f in detail.get("files", []):
@@ -105,7 +111,6 @@ def check_triggers(token: str, full_name: str, commit: dict) -> Optional[Tuple[s
     except RuntimeError as e:
         log(f"WARN: commit detail fetch failed for {full_name}@{sha[:7]}: {e}")
 
-    # T3 — associated PR label (one extra call)
     try:
         prs = gh_get(token, f"/repos/{owner}/{repo}/commits/{sha}/pulls")
         for pr in prs:
@@ -120,8 +125,6 @@ def check_triggers(token: str, full_name: str, commit: dict) -> Optional[Tuple[s
 
 def write_trigger_receipt(root: pathlib.Path, inv_id: str, full_name: str,
                           sha: str, trigger: str, evidence: str):
-    """Receipt binding this admitted candidate to the executed trigger
-    predicate. If the receipt exists, the candidate was already admitted."""
     path = root / "queue" / f"{inv_id}.trigger.json"
     if path.exists():
         return False
@@ -131,15 +134,11 @@ def write_trigger_receipt(root: pathlib.Path, inv_id: str, full_name: str,
         "source": f"{full_name}@{sha}",
         "trigger": trigger,
         "evidence": evidence,
-        "admitted_utc": dt.datetime.utcnow().isoformat() + "Z",
+        "admitted_utc": utc_iso(utc_now()),
     }, indent=2), encoding="utf-8")
     log(f"ADMIT {inv_id} via {trigger} — {evidence}")
     return True
 
-
-# ---------------------------------------------------------------------------
-# Draft emission (unchanged from v1 apart from trigger annotation)
-# ---------------------------------------------------------------------------
 
 def infer_invention_id(full_name: str, sha: str) -> str:
     return f"{full_name.split('/')[1]}-{sha[:7]}"
@@ -164,7 +163,7 @@ def write_disclosure(root: pathlib.Path, inv_id: str, title: str, sources: str):
         "invention_id": inv_id,
         "title": title,
         "inventors": "Rigel Randolph et al.",
-        "date_utc": dt.datetime.utcnow().isoformat() + "Z",
+        "date_utc": utc_iso(utc_now()),
         "sources": sources,
     })
     path = root / "disclosures" / f"{inv_id}.md"
@@ -179,7 +178,7 @@ def write_provisional(root: pathlib.Path, inv_id: str, title: str):
         "invention_id": inv_id,
         "title": title,
         "inventors": "Rigel Randolph et al.",
-        "date_utc": dt.datetime.utcnow().isoformat() + "Z",
+        "date_utc": utc_iso(utc_now()),
         "fig1": "System overview",
         "fig2": "Method flow",
         "fig3": "Timing/event adjacency",
@@ -197,11 +196,11 @@ def update_deadlines(root: pathlib.Path, inv_id: str):
         data = json.loads(ledger.read_text())
     if any(i["invention_id"] == inv_id for i in data["items"]):
         return
-    now = dt.datetime.utcnow()
+    now = utc_now()
     data["items"].append({
         "invention_id": inv_id,
         "provisional_filed_utc": None,
-        "candidate_admitted_utc": now.isoformat() + "Z",
+        "candidate_admitted_utc": utc_iso(now),
         "nonprovisional_due_utc": None,
         "pct_due_utc": None,
         "status": "drafting",
@@ -218,7 +217,7 @@ def main():
 
     manifest = load_manifest(root)
     since_days = int(os.getenv("PATENT_SINCE_DAYS", "7"))
-    since = (dt.datetime.utcnow() - dt.timedelta(days=since_days)).isoformat() + "Z"
+    since = utc_iso(utc_now() - dt.timedelta(days=since_days))
 
     ensure_dirs(root)
     scanned = admitted = 0
