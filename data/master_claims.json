@@ -1,0 +1,407 @@
+{
+  "schema_version": "1.0.0",
+  "record_status": "working_invention_disclosure_data",
+  "legal_notice": "Working technical and claim-architecture data only. Not legal advice and not a filed patent application.",
+  "shared_clauses": [
+    {
+      "clause_id": "SCL-MANIFEST-ADDRESSABILITY",
+      "text": "receiving a machine-readable manifest that defines an addressable scope external to the manifest"
+    },
+    {
+      "clause_id": "SCL-CAPABILITY-ABSENCE",
+      "text": "determining that no active bounded processing node possesses a capability required to address the manifest-defined scope"
+    },
+    {
+      "clause_id": "SCL-MINIMUM-NODE",
+      "text": "constructing a bounded processing node having no greater addressability than required by the manifest"
+    },
+    {
+      "clause_id": "SCL-TRANSITION-TABLE-BINDING",
+      "text": "binding the processing node to a transition-table cell defining state, role, permitted input, permitted output, authority, refusal, succession, and expiry conditions"
+    },
+    {
+      "clause_id": "SCL-USAGE-RETENTION",
+      "text": "retaining the processing node after completion only while externally evidenced continued usage satisfies a delayed-expiry condition"
+    },
+    {
+      "clause_id": "SCL-CONTEXT-BOUNDARY",
+      "text": "preserving context associated with continued usage without expanding beyond the manifest-defined addressability"
+    },
+    {
+      "clause_id": "SCL-RECEIPT",
+      "text": "generating a receipt identifying the manifest, node build, exercised addressability, state transition, output, and expiry or retention disposition"
+    },
+    {
+      "clause_id": "SCL-HEARTBEAT-COMPOSITE",
+      "text": "forming a state-bearing heartbeat from current system state, prior subsystem information, context, and routing intent"
+    },
+    {
+      "clause_id": "SCL-HEARTBEAT-PREFLIGHT",
+      "text": "evaluating health and admissibility of the heartbeat before subsystem interaction"
+    },
+    {
+      "clause_id": "SCL-RETURN-DELTA",
+      "text": "determining a multidimensional delta between a source heartbeat and one or more returned subsystem signals"
+    },
+    {
+      "clause_id": "SCL-STATE-UPDATE",
+      "text": "updating system state and subsequent routing according to evaluated fresh subsystem data rather than merely returning a reflected signal to its originating subsystem"
+    },
+    {
+      "clause_id": "SCL-MASTER-RECORDS-WITNESS",
+      "text": "providing a reconstructable representation of source, return, delta, and resulting state transitions to a witness record system"
+    },
+    {
+      "clause_id": "SCL-DYNAMIC-OBSERVATION",
+      "text": "continuing observation until a manifest-relative complete signal is acquired or a minimum adverse-condition observation interval is satisfied"
+    },
+    {
+      "clause_id": "SCL-NON-INFERENCE",
+      "text": "producing a non-inference result when the required observation interval expires without sufficient evidence"
+    },
+    {
+      "clause_id": "SCL-MUTUAL-CALIBRATION",
+      "text": "calibrating distinguishable sender-isolated, receiver-isolated, requested-coupling, confirmed-coupling, joint-operation, and disengagement states"
+    },
+    {
+      "clause_id": "SCL-NEURAL-STATE-INVOCATION",
+      "text": "invoking a manifest-specified node build only after observing a calibrated neural state satisfying an invocation condition"
+    }
+  ],
+  "families": [
+    {
+      "family_id": "PAT-001",
+      "title": "Transition-Table-Native Dynamic Micro-Node Computing",
+      "priority_order": 1,
+      "status": "disclosure_in_progress",
+      "parent_family_ids": [],
+      "inventive_center": "Demand-constructed, manifest-bounded processing nodes whose existence, addressability, transitions, context retention, and expiry are governed by a machine-readable transition table and evidenced by receipts.",
+      "technical_problem": "Conventional static pipelines, agents, and distributed workers retain unnecessary capability, lack transition-bound authority, and cannot prove the exact addressability exercised during computation.",
+      "technical_effects": [
+        "reduces persistent computational footprint",
+        "prevents unnecessary capability from remaining active",
+        "preserves context only for active use",
+        "provides reconstructable transition evidence"
+      ],
+      "shared_clause_ids": [
+        "SCL-MANIFEST-ADDRESSABILITY",
+        "SCL-CAPABILITY-ABSENCE",
+        "SCL-MINIMUM-NODE",
+        "SCL-TRANSITION-TABLE-BINDING",
+        "SCL-USAGE-RETENTION",
+        "SCL-CONTEXT-BOUNDARY",
+        "SCL-RECEIPT"
+      ],
+      "claim_ids": ["CLM-PAT-001-METHOD-001", "CLM-PAT-001-SYSTEM-001"],
+      "implementation_evidence": [
+        {
+          "repository": "StegVerse-002/micro-node-runtime",
+          "path": null,
+          "commit": null,
+          "description": "Transition-table-native request, decision, receipt, deterministic verification, role-obligation, and portable installation implementation."
+        },
+        {
+          "repository": "StegVerse-org/core-node-runtime-demo",
+          "path": null,
+          "commit": null,
+          "description": "Demonstration of larger runtime adaptation around manifest-bound micro-node behavior."
+        },
+        {
+          "repository": "StegVerse-Labs/stegseed",
+          "path": null,
+          "commit": null,
+          "description": "Portable declarations, warrants, policy references, and witness structures relevant to node construction."
+        }
+      ],
+      "disclosure_dates": {
+        "first_conception": null,
+        "first_written_description": null,
+        "first_executable_implementation": null,
+        "first_public_disclosure": null
+      },
+      "inventor_candidates": ["TO_BE_DETERMINED_BY_CLAIM_CONTRIBUTION"],
+      "notes": "Highest filing priority. Populate dates and claim-by-claim inventorship before external publication."
+    },
+    {
+      "family_id": "PAT-002",
+      "title": "Heartbeat-Governed Entity and Reflected-State Computing",
+      "priority_order": 2,
+      "status": "disclosure_in_progress",
+      "parent_family_ids": ["PAT-001"],
+      "inventive_center": "A composite state-bearing heartbeat that is evaluated before transmission, transformed by subsystem interaction, compared with returned signals, and used to update whole-system state, node construction, routing, recovery, and witness records.",
+      "technical_problem": "Ordinary liveness heartbeats and telemetry do not expose relational subsystem health, transformation deltas, context-bearing state evolution, or the distance between non-inference and irreversibility.",
+      "technical_effects": [
+        "observes source, path, receiver, and coupling health separately",
+        "uses return deltas to localize subsystem behavior",
+        "adapts observation and routing according to fresh subsystem data",
+        "supports recovery before irreversible transition"
+      ],
+      "shared_clause_ids": [
+        "SCL-HEARTBEAT-COMPOSITE",
+        "SCL-HEARTBEAT-PREFLIGHT",
+        "SCL-RETURN-DELTA",
+        "SCL-STATE-UPDATE",
+        "SCL-MASTER-RECORDS-WITNESS",
+        "SCL-RECEIPT"
+      ],
+      "claim_ids": ["CLM-PAT-002-METHOD-001", "CLM-PAT-002-SYSTEM-001"],
+      "implementation_evidence": [
+        {
+          "repository": "StegVerse-Labs/StegEntity",
+          "path": null,
+          "commit": null,
+          "description": "Entity lifecycle and orchestration-cycle material relevant to heartbeat-governed state."
+        },
+        {
+          "repository": "Data-Continuation/core-lite",
+          "path": null,
+          "commit": null,
+          "description": "Continuity event, reconstruction, intake, export, and reporting mechanisms."
+        }
+      ],
+      "disclosure_dates": {
+        "first_conception": null,
+        "first_written_description": null,
+        "first_executable_implementation": null,
+        "first_public_disclosure": null
+      },
+      "inventor_candidates": ["TO_BE_DETERMINED_BY_CLAIM_CONTRIBUTION"],
+      "notes": "Heartbeat health is determined prior to reflection; returned signals are primary evidence of relational and subsystem health."
+    },
+    {
+      "family_id": "PAT-003",
+      "title": "Generalized Adaptive Scanner Using Dynamic Micro-Nodes",
+      "priority_order": 3,
+      "status": "disclosure_in_progress",
+      "parent_family_ids": ["PAT-001", "PAT-002"],
+      "inventive_center": "A generalized scanner that constructs acquisition, decoding, and comparative micro-nodes from observed signal conditions and evaluates an entity by how subsystems transform state-bearing inputs over a dynamically sufficient observation interval.",
+      "technical_problem": "Fixed scanners and isolated-signal classifiers cannot efficiently reconstruct whole-system condition from simultaneous transformations, cross-signal coupling, adaptive response, and recovery.",
+      "technical_effects": [
+        "allocates computation proportionally to detected signal strength and ambiguity",
+        "distinguishes adaptive fluctuation from dysfunction through comparative relationships",
+        "reduces unnecessary observation and computation",
+        "preserves non-inference where completeness is not reached"
+      ],
+      "shared_clause_ids": [
+        "SCL-MANIFEST-ADDRESSABILITY",
+        "SCL-CAPABILITY-ABSENCE",
+        "SCL-MINIMUM-NODE",
+        "SCL-RETURN-DELTA",
+        "SCL-DYNAMIC-OBSERVATION",
+        "SCL-NON-INFERENCE",
+        "SCL-RECEIPT"
+      ],
+      "claim_ids": ["CLM-PAT-003-METHOD-001", "CLM-PAT-003-SYSTEM-001"],
+      "implementation_evidence": [],
+      "disclosure_dates": {
+        "first_conception": null,
+        "first_written_description": null,
+        "first_executable_implementation": null,
+        "first_public_disclosure": null
+      },
+      "inventor_candidates": ["TO_BE_DETERMINED_BY_CLAIM_CONTRIBUTION"],
+      "notes": "Sensor modalities and organism-specific embodiments must be supported in the specification without making unsupported diagnostic claims."
+    },
+    {
+      "family_id": "PAT-004",
+      "title": "Manifest-Governed Bidirectional Neural Communication",
+      "priority_order": 4,
+      "status": "disclosure_in_progress",
+      "parent_family_ids": ["PAT-001", "PAT-002", "PAT-003"],
+      "inventive_center": "A calibrated mutual-state contract in which observed neural states invoke manifest-specified bounded node builds and stimulation or interpretation occurs only through transition-governed, mutually distinguishable isolated and coupled operating states.",
+      "technical_problem": "Existing neural interfaces may decode or stimulate without a reconstructable mutual contract distinguishing spontaneous activity, intentional communication, authorized coupling, disengagement, and recovery to autonomous operation.",
+      "technical_effects": [
+        "prevents uncalibrated neural activity from being treated as communication",
+        "requires reciprocal evidence before joint operation",
+        "preserves autonomous sender and receiver states",
+        "records when coupling began, changed, and ended"
+      ],
+      "shared_clause_ids": [
+        "SCL-MANIFEST-ADDRESSABILITY",
+        "SCL-MUTUAL-CALIBRATION",
+        "SCL-NEURAL-STATE-INVOCATION",
+        "SCL-TRANSITION-TABLE-BINDING",
+        "SCL-HEARTBEAT-COMPOSITE",
+        "SCL-RECEIPT"
+      ],
+      "claim_ids": ["CLM-PAT-004-METHOD-001", "CLM-PAT-004-SYSTEM-001"],
+      "implementation_evidence": [],
+      "disclosure_dates": {
+        "first_conception": null,
+        "first_written_description": null,
+        "first_executable_implementation": null,
+        "first_public_disclosure": null
+      },
+      "inventor_candidates": ["TO_BE_DETERMINED_BY_CLAIM_CONTRIBUTION"],
+      "notes": "Separate passive observation, interpretation, communication, and stimulation authority in all claim and embodiment data."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CLM-PAT-001-METHOD-001",
+      "family_id": "PAT-001",
+      "claim_number": null,
+      "claim_type": "independent",
+      "category": "method",
+      "depends_on": [],
+      "status": "concept",
+      "preamble": "A computer-implemented method comprising:",
+      "limitations": [
+        {"limitation_id": "L1", "source_clause_id": "SCL-MANIFEST-ADDRESSABILITY", "text": "receiving a machine-readable manifest defining an addressable scope external to the manifest", "required": true, "evidence_refs": []},
+        {"limitation_id": "L2", "source_clause_id": "SCL-CAPABILITY-ABSENCE", "text": "determining that no active bounded processing node possesses a required capability within an applicable transition-table boundary", "required": true, "evidence_refs": []},
+        {"limitation_id": "L3", "source_clause_id": "SCL-MINIMUM-NODE", "text": "constructing a bounded processing node having no greater addressability than required by the manifest", "required": true, "evidence_refs": []},
+        {"limitation_id": "L4", "source_clause_id": "SCL-TRANSITION-TABLE-BINDING", "text": "binding the bounded processing node to a transition-table cell defining permitted operation and expiry", "required": true, "evidence_refs": []},
+        {"limitation_id": "L5", "source_clause_id": "SCL-USAGE-RETENTION", "text": "retaining the bounded processing node after completion only while externally evidenced continued usage satisfies a delayed-expiry condition", "required": true, "evidence_refs": []},
+        {"limitation_id": "L6", "source_clause_id": "SCL-RECEIPT", "text": "generating a receipt identifying the node build, exercised addressability, state transition, output, and disposition", "required": true, "evidence_refs": []}
+      ],
+      "technical_effects": ["minimal capability construction", "usage-bound persistence", "reconstructable execution"],
+      "prior_art_collision_zones": ["actors", "microservices", "workflow engines", "serverless functions", "finite-state machines", "agent orchestration"],
+      "inventorship_notes": "Determine inventorship from conception of each required limitation, not repository ownership.",
+      "review_notes": "Working concept only."
+    },
+    {
+      "claim_id": "CLM-PAT-001-SYSTEM-001",
+      "family_id": "PAT-001",
+      "claim_number": null,
+      "claim_type": "independent",
+      "category": "system",
+      "depends_on": [],
+      "status": "concept",
+      "preamble": "A computing system comprising:",
+      "limitations": [
+        {"limitation_id": "L1", "source_clause_id": null, "text": "a manifest intake component", "required": true, "evidence_refs": []},
+        {"limitation_id": "L2", "source_clause_id": null, "text": "a capability resolver configured to determine whether an admissible active node can address the manifest", "required": true, "evidence_refs": []},
+        {"limitation_id": "L3", "source_clause_id": "SCL-MINIMUM-NODE", "text": "a constructor configured to instantiate a minimum-addressability bounded processing node when no admissible active node is available", "required": true, "evidence_refs": []},
+        {"limitation_id": "L4", "source_clause_id": "SCL-RECEIPT", "text": "a receipt generator configured to record exercised addressability and node disposition", "required": true, "evidence_refs": []}
+      ],
+      "technical_effects": ["reduced persistent runtime footprint", "bounded capability reuse"],
+      "prior_art_collision_zones": ["container schedulers", "function-as-a-service", "agent registries"],
+      "inventorship_notes": "Pending.",
+      "review_notes": "Working concept only."
+    },
+    {
+      "claim_id": "CLM-PAT-002-METHOD-001",
+      "family_id": "PAT-002",
+      "claim_number": null,
+      "claim_type": "independent",
+      "category": "method",
+      "depends_on": [],
+      "status": "concept",
+      "preamble": "A computer-implemented method for evaluating a coupled system, comprising:",
+      "limitations": [
+        {"limitation_id": "L1", "source_clause_id": "SCL-HEARTBEAT-COMPOSITE", "text": "forming a state-bearing source heartbeat from current system information and prior subsystem data", "required": true, "evidence_refs": []},
+        {"limitation_id": "L2", "source_clause_id": "SCL-HEARTBEAT-PREFLIGHT", "text": "determining source-heartbeat health before interaction with a receiving subsystem", "required": true, "evidence_refs": []},
+        {"limitation_id": "L3", "source_clause_id": "SCL-RETURN-DELTA", "text": "receiving fresh subsystem data and determining a multidimensional delta relative to the source heartbeat", "required": true, "evidence_refs": []},
+        {"limitation_id": "L4", "source_clause_id": "SCL-STATE-UPDATE", "text": "updating whole-system state and routing subsequent state-bearing data to one or more subsystems according to the evaluated fresh subsystem data", "required": true, "evidence_refs": []},
+        {"limitation_id": "L5", "source_clause_id": "SCL-MASTER-RECORDS-WITNESS", "text": "recording a reconstructable representation of the source, return, delta, and resulting state changes", "required": true, "evidence_refs": []}
+      ],
+      "technical_effects": ["relational subsystem health observation", "adaptive routing", "state reconstruction"],
+      "prior_art_collision_zones": ["system heartbeat telemetry", "echo and radar processing", "closed-loop monitoring", "digital twins"],
+      "inventorship_notes": "Pending.",
+      "review_notes": "Working concept only."
+    },
+    {
+      "claim_id": "CLM-PAT-002-SYSTEM-001",
+      "family_id": "PAT-002",
+      "claim_number": null,
+      "claim_type": "independent",
+      "category": "system",
+      "depends_on": [],
+      "status": "concept",
+      "preamble": "A reflected-state computing system comprising:",
+      "limitations": [
+        {"limitation_id": "L1", "source_clause_id": null, "text": "a heartbeat composer", "required": true, "evidence_refs": []},
+        {"limitation_id": "L2", "source_clause_id": null, "text": "a subsystem return collector", "required": true, "evidence_refs": []},
+        {"limitation_id": "L3", "source_clause_id": "SCL-RETURN-DELTA", "text": "a delta evaluator configured to compare state-bearing source and return data", "required": true, "evidence_refs": []},
+        {"limitation_id": "L4", "source_clause_id": null, "text": "a transition-governed routing component configured to form and route a subsequent heartbeat", "required": true, "evidence_refs": []}
+      ],
+      "technical_effects": ["whole-system adaptation from subsystem returns"],
+      "prior_art_collision_zones": ["distributed telemetry", "feedback control"],
+      "inventorship_notes": "Pending.",
+      "review_notes": "Working concept only."
+    },
+    {
+      "claim_id": "CLM-PAT-003-METHOD-001",
+      "family_id": "PAT-003",
+      "claim_number": null,
+      "claim_type": "independent",
+      "category": "method",
+      "depends_on": [],
+      "status": "concept",
+      "preamble": "A method for scanning an entity, comprising:",
+      "limitations": [
+        {"limitation_id": "L1", "source_clause_id": null, "text": "acquiring a plurality of signals during temporally coordinated observation", "required": true, "evidence_refs": []},
+        {"limitation_id": "L2", "source_clause_id": "SCL-MINIMUM-NODE", "text": "dynamically constructing one or more signal-specific acquisition nodes according to normalized strength, noise, ambiguity, or confidence", "required": true, "evidence_refs": []},
+        {"limitation_id": "L3", "source_clause_id": null, "text": "constructing subsequent decoding or cross-signal comparison nodes according to attributes of acquired signals", "required": true, "evidence_refs": []},
+        {"limitation_id": "L4", "source_clause_id": "SCL-RETURN-DELTA", "text": "determining functional condition from relationships among source-to-return transformations rather than solely from isolated thresholds", "required": true, "evidence_refs": []},
+        {"limitation_id": "L5", "source_clause_id": "SCL-DYNAMIC-OBSERVATION", "text": "continuing observation until a manifest-relative complete signal is obtained or a minimum adverse-condition observation period is satisfied", "required": true, "evidence_refs": []},
+        {"limitation_id": "L6", "source_clause_id": "SCL-NON-INFERENCE", "text": "producing non-inference when sufficient evidence is not obtained", "required": true, "evidence_refs": []}
+      ],
+      "technical_effects": ["adaptive sensing", "cross-system anomaly localization", "bounded observation"],
+      "prior_art_collision_zones": ["multimodal sensor fusion", "medical imaging", "remote vital-sign sensing", "adaptive diagnostics"],
+      "inventorship_notes": "Pending.",
+      "review_notes": "Working concept only."
+    },
+    {
+      "claim_id": "CLM-PAT-003-SYSTEM-001",
+      "family_id": "PAT-003",
+      "claim_number": null,
+      "claim_type": "independent",
+      "category": "system",
+      "depends_on": [],
+      "status": "concept",
+      "preamble": "An adaptive scanning system comprising:",
+      "limitations": [
+        {"limitation_id": "L1", "source_clause_id": null, "text": "a plurality of sensing modalities or channels", "required": true, "evidence_refs": []},
+        {"limitation_id": "L2", "source_clause_id": null, "text": "a temporal synchronization component", "required": true, "evidence_refs": []},
+        {"limitation_id": "L3", "source_clause_id": "SCL-MINIMUM-NODE", "text": "a transition-governed node constructor configured to allocate acquisition and analysis nodes according to detected signal conditions", "required": true, "evidence_refs": []},
+        {"limitation_id": "L4", "source_clause_id": null, "text": "a comparative state reconstruction engine", "required": true, "evidence_refs": []}
+      ],
+      "technical_effects": ["minimal compute proportional to observation need"],
+      "prior_art_collision_zones": ["scanner arrays", "edge AI diagnostics"],
+      "inventorship_notes": "Pending.",
+      "review_notes": "Working concept only."
+    },
+    {
+      "claim_id": "CLM-PAT-004-METHOD-001",
+      "family_id": "PAT-004",
+      "claim_number": null,
+      "claim_type": "independent",
+      "category": "method",
+      "depends_on": [],
+      "status": "concept",
+      "preamble": "A method for bidirectional neural communication, comprising:",
+      "limitations": [
+        {"limitation_id": "L1", "source_clause_id": "SCL-MUTUAL-CALIBRATION", "text": "calibrating neural and system states that distinguish isolated operation from mutually acknowledged coupled operation", "required": true, "evidence_refs": []},
+        {"limitation_id": "L2", "source_clause_id": "SCL-NEURAL-STATE-INVOCATION", "text": "observing a calibrated neural state and invoking a manifest-specified bounded node build associated with the state", "required": true, "evidence_refs": []},
+        {"limitation_id": "L3", "source_clause_id": null, "text": "producing an interpretation or stimulation candidate within a transition-table-defined authority and safety boundary", "required": true, "evidence_refs": []},
+        {"limitation_id": "L4", "source_clause_id": null, "text": "requiring reciprocal confirmation before entering joint operation", "required": true, "evidence_refs": []},
+        {"limitation_id": "L5", "source_clause_id": "SCL-RECEIPT", "text": "generating a receipt identifying observed state, invoked node build, coupling state, output, and disengagement or recovery disposition", "required": true, "evidence_refs": []}
+      ],
+      "technical_effects": ["bounded neural interpretation", "mutual coupling awareness", "reversible joint operation"],
+      "prior_art_collision_zones": ["brain-computer interfaces", "closed-loop neuromodulation", "adaptive neural decoding", "deep-brain stimulation"],
+      "inventorship_notes": "Pending.",
+      "review_notes": "Working concept only."
+    },
+    {
+      "claim_id": "CLM-PAT-004-SYSTEM-001",
+      "family_id": "PAT-004",
+      "claim_number": null,
+      "claim_type": "independent",
+      "category": "system",
+      "depends_on": [],
+      "status": "concept",
+      "preamble": "A bidirectional neural communication system comprising:",
+      "limitations": [
+        {"limitation_id": "L1", "source_clause_id": null, "text": "a neural activity acquisition interface", "required": true, "evidence_refs": []},
+        {"limitation_id": "L2", "source_clause_id": null, "text": "a manifest-bound node constructor", "required": true, "evidence_refs": []},
+        {"limitation_id": "L3", "source_clause_id": null, "text": "a mutual-state transition controller", "required": true, "evidence_refs": []},
+        {"limitation_id": "L4", "source_clause_id": null, "text": "an optional bounded stimulation interface operable only in a permitted coupled state", "required": true, "evidence_refs": []}
+      ],
+      "technical_effects": ["separation of observation, interpretation, communication, and stimulation authority"],
+      "prior_art_collision_zones": ["neural implants", "non-invasive stimulation", "neuroprosthetics"],
+      "inventorship_notes": "Pending.",
+      "review_notes": "Working concept only."
+    }
+  ]
+}
