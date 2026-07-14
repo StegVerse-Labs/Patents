@@ -16,6 +16,7 @@ def test_build_commands_covers_active_machine_surface() -> None:
         "pat001_readiness",
         "pat001_drawing_sources",
         "pat001_rendered_drawings",
+        "machine_queue",
         "workstream_selection",
         "pytest",
     ]
@@ -30,6 +31,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
         "pat001_readiness": (2, {"decision": "FAIL_CLOSED_BLOCKERS"}),
         "pat001_drawing_sources": (0, {"decision": "DRAWING_SOURCES_VALID"}),
         "pat001_rendered_drawings": (0, {"decision": "DRAWING_MANIFEST_VALID"}),
+        "machine_queue": (0, {"decision": "MACHINE_QUEUE_READY", "queue": [{"task": "verify hashes"}]}),
         "workstream_selection": (0, {"decision": "CONTINUE_ACTIVE_PATENT_WORK"}),
         "pytest": (0, None),
     }
@@ -47,6 +49,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
     assert receipt["decision"] == "PORTFOLIO_MACHINE_VALIDATION_PASSED"
     assert receipt["failed_checks"] == []
     assert receipt["workstream_decision"] == "CONTINUE_ACTIVE_PATENT_WORK"
+    assert receipt["machine_queue_size"] == 1
     assert receipt["authority_boundary"]["filing_performed"] is False
 
 
