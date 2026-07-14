@@ -1,0 +1,51 @@
+{
+  "family_id": "PAT-005",
+  "status": "practitioner_review_ready",
+  "filed": false,
+  "patent_pending_authorized": false,
+  "completed": {
+    "technical_disclosure": true,
+    "working_provisional_draft": true,
+    "claim_architecture": true,
+    "structured_family_record": true,
+    "cross_repository_source_map": true,
+    "destination_commit_anchors": true,
+    "guardian_commit_anchors": true,
+    "end_to_end_reconstruction": true,
+    "negative_path_matrix": true,
+    "figure_descriptions": true,
+    "drawing_source_sheets": true,
+    "drawing_production_spec": true,
+    "initial_prior_art_collision_chart": true,
+    "limitation_level_claim_chart": true,
+    "conception_chronology_worksheet": true,
+    "inventorship_worksheet": true,
+    "contributor_interview_packet": true,
+    "practitioner_handoff": true,
+    "filing_readiness_index": true
+  },
+  "blocking_gates": {
+    "verified_prior_art_references": false,
+    "contributor_interviews_complete": false,
+    "inventorship_determined": false,
+    "earliest_public_disclosure_audited": false,
+    "executable_negative_fixtures_preserved": false,
+    "formal_drawings_approved": false,
+    "practitioner_written_recommendation": false,
+    "owner_filing_authorization": false
+  },
+  "next_machine_tasks": [
+    "collect exact source implementation commit anchors",
+    "collect validator and test paths from destination repositories",
+    "preserve executable negative fixtures and outputs",
+    "populate stable prior art publication identifiers after verified search"
+  ],
+  "next_human_tasks": [
+    "conduct contributor interviews",
+    "review inventorship claim by claim",
+    "audit public disclosures",
+    "obtain qualified patent practitioner review",
+    "decide whether to file"
+  ],
+  "legal_notice": "Working technical portfolio status only. Not legal advice and not a filed patent application."
+}
