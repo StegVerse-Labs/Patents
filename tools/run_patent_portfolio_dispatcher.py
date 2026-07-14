@@ -50,6 +50,7 @@ def build_commands() -> list[dict[str, Any]]:
         {"id": "pat001_readiness", "command": [py, "tools/validate_patent_readiness.py", "--family", "PAT-001", "--root", "."], "accepted_returncodes": {0, 2}},
         {"id": "pat001_source_corroboration", "command": [py, "tools/validate_source_corroboration.py", "data/PAT-001-source-corroboration.json"], "accepted_returncodes": {0}},
         {"id": "pat001_canonical_source_search", "command": [py, "tools/validate_canonical_source_search_receipt.py", "data/PAT-001-canonical-source-search-receipt.json"], "accepted_returncodes": {0}},
+        {"id": "pat005_implementation_anchors", "command": [py, "tools/validate_pat005_implementation_anchors.py", "data/PAT-005-implementation-anchors.json"], "accepted_returncodes": {0}},
         {"id": "pat001_drawing_sources", "command": [py, "tools/lint_patent_drawings.py", "figures"], "accepted_returncodes": {0}},
         {"id": "pat001_rendered_drawings", "command": [py, "tools/verify_rendered_drawings.py", "rendered/PAT-001/manifest.json", "--repo-root", "."], "accepted_returncodes": {0}},
         {"id": "evidence_queue_build", "command": [py, "tools/build_patent_evidence_queue.py", *active_status, "--output", evidence_queue], "accepted_returncodes": {0}},
@@ -73,7 +74,7 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
     evidence_queue = next((r.get("parsed_result") for r in results if r["id"] == "evidence_queue_build"), None)
     decision = "PORTFOLIO_MACHINE_VALIDATION_PASSED" if not failures else "PORTFOLIO_MACHINE_VALIDATION_FAILED"
     return {
-        "schema_version": "1.8",
+        "schema_version": "1.9",
         "generated_at": _utc_now(),
         "decision": decision,
         "failed_checks": failures,
