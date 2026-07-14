@@ -1,0 +1,13 @@
+flowchart TD
+    A[Receive governed request] --> B{Required fields complete?}
+    B -->|No| FC[FAIL_CLOSED]
+    B -->|Yes| C{Delegation or authority standing valid?}
+    C -->|No| DN1[DENY]
+    C -->|Yes| D{Policy and admissibility standing valid?}
+    D -->|No| DN2[DENY]
+    D -->|Yes| AL[ALLOW]
+    FC --> R[Issue receipt and return evidence]
+    DN1 --> R
+    DN2 --> R
+    AL --> R
+    R --> W[Build reconstruction witness]
