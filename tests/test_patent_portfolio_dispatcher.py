@@ -16,6 +16,7 @@ def test_build_commands_covers_active_machine_surface() -> None:
         "pat001_readiness",
         "pat001_source_corroboration",
         "pat001_canonical_source_search",
+        "pat001_lifecycle_evidence",
         "pat005_implementation_anchors",
         "pat005_negative_cases",
         "pat001_drawing_sources",
@@ -37,6 +38,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
         "pat001_readiness": (2, {"decision": "FAIL_CLOSED_BLOCKERS"}),
         "pat001_source_corroboration": (0, {"decision": "CORROBORATION_RECORD_VALID"}),
         "pat001_canonical_source_search": (0, {"decision": "SOURCE_SEARCH_RECEIPT_VALID"}),
+        "pat001_lifecycle_evidence": (0, {"decision": "PAT001_LIFECYCLE_EVIDENCE_VALID"}),
         "pat005_implementation_anchors": (0, {"decision": "PAT005_IMPLEMENTATION_ANCHORS_VALID"}),
         "pat005_negative_cases": (0, {"decision": "PAT005_NEGATIVE_CASES_REPLAYED", "passed_count": 8}),
         "pat001_drawing_sources": (0, {"decision": "DRAWING_SOURCES_VALID"}),
@@ -62,6 +64,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
     assert receipt["workstream_decision"] == "CONTINUE_ACTIVE_PATENT_WORK"
     assert receipt["machine_queue_size"] == 1
     assert receipt["evidence_queue_size"] == 1
+    assert receipt["schema_version"] == "2.1"
     assert receipt["authority_boundary"]["filing_performed"] is False
 
 
@@ -70,11 +73,11 @@ def test_dispatch_reports_failed_check(monkeypatch, tmp_path: Path) -> None:
 
     def fake_run(command, cwd, text, capture_output, check):
         check_id = next(command_ids)
-        returncode = 2 if check_id == "pat005_negative_cases" else 0
-        payload = {"decision": "PAT005_NEGATIVE_CASES_INVALID"} if returncode else {"decision": "OK"}
+        returncode = 2 if check_id == "pat001_lifecycle_evidence" else 0
+        payload = {"decision": "INVALID_PAT001_LIFECYCLE_EVIDENCE"} if returncode else {"decision": "OK"}
         return SimpleNamespace(returncode=returncode, stdout=json.dumps(payload), stderr="")
 
     monkeypatch.setattr(dispatcher.subprocess, "run", fake_run)
     receipt = dispatcher.dispatch(tmp_path)
     assert receipt["decision"] == "PORTFOLIO_MACHINE_VALIDATION_FAILED"
-    assert receipt["failed_checks"] == ["pat005_negative_cases"]
+    assert receipt["failed_checks"] == ["pat001_lifecycle_evidence"]
