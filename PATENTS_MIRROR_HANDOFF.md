@@ -19,11 +19,11 @@ PAT-005 is an urgent provisional-review candidate because a public technical pap
 ## Current execution order
 
 1. Lock PAT-001 claim scope, technical evidence, inventorship, and disclosure chronology.
-2. Produce a provisional-quality PAT-001 specification without waiting for the remaining families.
+2. Review and harden the new PAT-001 working provisional draft without treating unsupported refinements as established priority material.
 3. Preserve reusable shared claim structures for PAT-002 through PAT-004.
 4. Triage PAT-005 disclosure timing and prepare its provisional-review package without displacing PAT-001 unless legal review determines urgency requires reprioritization.
 5. Prepare dependent family drafts in parallel without delaying the earliest defensible filing.
-6. Validate the filing-packet engine against a claim-sensitive family only after its source draft is ready for authorized review.
+6. Validate the filing-packet engine against a claim-sensitive family only after its source draft is authorized for packet generation.
 
 ## Current evidence findings
 
@@ -31,16 +31,18 @@ A dated architecture document titled `StegVerse-Micro-Node-Agency.md` was create
 
 This evidence predates the later June 28–July 2 runtime implementation discussions and must be treated as an earlier documented conception milestone, subject to inventorship and corroboration review.
 
-PAT-005 has a public-disclosure triage package under `disclosures/`, `claims/`, `evidence/`, and `triage/`. Do not use `patent pending` unless an application has actually been filed.
+PAT-005 has a public-disclosure triage package under `disclosures/`, `claims/`, `evidence/`, `figures/`, `provisionals/`, and `triage/`. Do not use `patent pending` unless an application has actually been filed.
 
 PAT-001 now has:
 
 - `evidence/PAT-001_CONCEPTION_AND_DISCLOSURE_CHRONOLOGY.md`;
 - `evidence/PAT-001_CLAIM_ELEMENT_EVIDENCE_MAP.md`, including verified July 2 runtime commits and explicit separation between evidenced limitations and later claim refinements;
 - `evidence/PAT-001_INVENTORSHIP_WORKSHEET.md`, requiring human contribution analysis limitation by limitation and for the claimed combinations;
-- `evidence/PAT-001_PRIOR_ART_SEARCH_LEDGER.md`, separating patentability searching from freedom-to-operate analysis and preserving reproducible search events.
+- `evidence/PAT-001_PRIOR_ART_SEARCH_LEDGER.md`, separating patentability searching from freedom-to-operate analysis and preserving reproducible search events;
+- `figures/PAT-001_FIGURE_DESCRIPTIONS.md`, a ten-figure drawing plan that distinguishes verified runtime behavior from uncorroborated capability-resolution, construction, expiry, lease, context-retention, and heartbeat-retention embodiments;
+- `provisionals/PAT-001_provisional.md`, a working technical provisional draft containing background, summary, detailed description, examples, alternatives, working claims, and abstract.
 
-The strongest currently verified PAT-001 implementation combination is transition-table role execution, distinct authority and admissibility evaluation, fail-closed behavior, deterministic hash-bound receipts, governed return-path evidence, and reconstruction witnesses. Demand-only construction, minimum manifest-derived addressability, default expiry, usage-only delayed retention, bounded context reuse, and prohibition on heartbeat-only persistence remain high-value limitations requiring corroboration or implementation evidence.
+The strongest currently verified PAT-001 implementation combination is transition-table role execution, distinct authority and admissibility evaluation, fail-closed behavior, deterministic hash-bound receipts, governed return-path evidence, and reconstruction witnesses. Demand-only construction, minimum manifest-derived addressability, default expiry, usage-only delayed retention, bounded context reuse, and prohibition on heartbeat-only persistence remain high-value limitations requiring corroboration or implementation evidence. The working draft labels those later embodiments as requiring verified support and filing review.
 
 ## Filing-packet engine installed
 
@@ -74,6 +76,8 @@ No combined status checks were attached to the latest direct commit. Full author
 
 No automated component may submit a filing to the USPTO or another jurisdiction. The packet emitter may prepare and hash filing artifacts, but the submission, certification, fee confirmation, and recording of the actual filing receipt remain human-controlled transitions. Filed dates must remain null until the human records the actual filing event.
 
+The presence of a working provisional draft does not mean an application was filed and does not authorize `patent pending` language.
+
 ## StegFin integration boundary
 
 The Patents repository or a future patent-registry component may reference these governed services without making them filing authorities:
@@ -89,7 +93,7 @@ Dependency rule: patent registry or packet tooling may consume StegFin services 
 
 ## Repository state
 
-The repository contains the claim schemas and master data, family renderer, patent doctrine documentation, filing-packet tools, binary and Markdown sample fixtures, test suites, PAT-001 chronology/evidence/inventorship/prior-art controls, and the PAT-005 triage package.
+The repository contains the claim schemas and master data, family renderer, patent doctrine documentation, filing-packet tools, binary and Markdown sample fixtures, test suites, PAT-001 chronology/evidence/inventorship/prior-art controls, PAT-001 figure descriptions and working provisional draft, and the PAT-005 triage and working filing package.
 
 Priority tracking issue: #1.
 
@@ -99,15 +103,16 @@ Priority tracking issue: #1.
 - locate executable evidence for active-node capability resolution, minimum node construction, expiry, usage leases, bounded context retention, and heartbeat non-self-retention;
 - populate PAT-001 inventor candidates, corroborators, evidence, and contribution distinctions through human fact collection and counsel review;
 - execute and populate the PAT-001 prior-art search ledger using verified patent and non-patent databases;
-- PAT-001 provisional specification draft;
-- PAT-001 figure list and system diagrams;
-- PAT-005 earliest-enabling-disclosure and foreign-filing triage resolution;
+- produce actual PAT-001 drawing files from the committed figure descriptions;
+- review and revise the PAT-001 working provisional draft for support, terminology consistency, claim strategy, inventorship, and disclosure risk;
+- authorize and run the filing-packet emitter against PAT-001 only after review resolves unsupported placeholders and sensitive scope;
+- resolve PAT-005 earliest-enabling-disclosure and foreign-filing triage;
 - run the full repository test suite in the authoritative dispatcher and preserve its receipt;
 - consolidate the current workflow count toward the 1–2 dispatcher standard as a separate remediation task.
 
 ## Ownership and continuation scope
 
-Issue #1 remains the authoritative filing-priority record. Continuation may install tests, fixtures, schemas, dispatch tasks, and filing-readiness documentation. It may not automatically file, declare inventorship from commit metadata, publish claim-sensitive drafts outside the authorized repository, treat StegFin execution as USPTO submission authority, or claim `patent pending` before an application is actually filed.
+Issue #1 remains the authoritative filing-priority record. Continuation may install tests, fixtures, schemas, dispatch tasks, figures, and filing-readiness documentation. It may not automatically file, declare inventorship from commit metadata, publish unsupported limitations as established priority material, treat StegFin execution as USPTO submission authority, or claim `patent pending` before an application is actually filed.
 
 ## Constraints
 
@@ -115,4 +120,4 @@ Issue #1 remains the authoritative filing-priority record. Continuation may inst
 - Human and patent-counsel review is required before filing.
 - Commit authorship does not establish inventorship.
 - Repository publication does not establish novelty.
-- Do not expand public disclosure of claim-sensitive implementation details before filing review.
+- Do not expand public disclosure of unsupported claim-sensitive implementation details beyond the authorized working repository review path.
