@@ -14,6 +14,8 @@
     "figure_descriptions": true,
     "verified_core_drawing_sources": true,
     "formal_drawing_sheet_source": true,
+    "rendered_review_drawings": true,
+    "rendered_drawing_manifest": true,
     "filing_readiness_index": true,
     "readiness_validator": true,
     "readiness_validator_tests": true,
@@ -30,6 +32,8 @@
     "figure_descriptions": "figures/PAT-001_FIGURE_DESCRIPTIONS.md",
     "verified_core_drawing_sources": "figures/PAT-001-FIG-01-system-overview.mmd",
     "formal_drawing_sheet_source": "diagrams/PAT-001-formal-drawing-sheets.md",
+    "rendered_review_drawings": "rendered/PAT-001/PAT-001-FIG-01-system-overview.svg",
+    "rendered_drawing_manifest": "rendered/PAT-001/manifest.json",
     "filing_readiness_index": "filing-readiness/PAT-001_FILING_READINESS_INDEX.md",
     "readiness_validator": "tools/validate_patent_readiness.py",
     "readiness_validator_tests": "tests/test_patent_readiness.py",
@@ -58,13 +62,14 @@
     "collect executable evidence for capability resolution and minimum node construction",
     "collect executable evidence for expiry, usage leases, bounded context retention, and heartbeat non-self-retention",
     "populate stable patent and non-patent prior art identifiers after verified searches",
-    "render verified-core drawings to reviewable monochrome outputs",
+    "verify all rendered drawing hashes and reference numerals through the authoritative dispatcher",
     "run the complete repository validation surface through the authoritative dispatcher"
   ],
   "next_human_tasks": [
     "conduct contributor interviews",
     "determine inventorship limitation by limitation and combination by combination",
     "audit public disclosures and foreign filing implications",
+    "review and approve or reject rendered drawings",
     "obtain qualified patent practitioner review",
     "authorize or deny review packet generation",
     "decide whether to file"
@@ -75,5 +80,5 @@
     "automated_fee_payment_permitted": false,
     "patent_pending_use_permitted": false
   },
-  "legal_notice": "Working technical portfolio status only. Not legal advice and not a filed patent application."
+  "legal_notice": "Working technical portfolio status only. Rendered SVGs are review artifacts, not approved filing drawings. Not legal advice and not a filed patent application."
 }
