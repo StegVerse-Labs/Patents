@@ -21,9 +21,10 @@ PAT-005 is an urgent provisional-review candidate because a public technical pap
 1. Lock PAT-001 claim scope, technical evidence, inventorship, and disclosure chronology.
 2. Review and harden the PAT-001 working provisional draft without treating unsupported refinements as established priority material.
 3. Render and review the verified-core PAT-001 drawings while keeping proposed embodiments visually and evidentially separate.
-4. Preserve reusable shared claim structures for PAT-002 through PAT-004.
-5. Triage PAT-005 disclosure timing and prepare its provisional-review package without displacing PAT-001 unless legal review determines urgency requires reprioritization.
-6. Validate the filing-packet engine against a claim-sensitive family only after its source draft is authorized for packet generation.
+4. Conduct PAT-001 contributor fact development and practitioner review through the committed interview and handoff records.
+5. Preserve reusable shared claim structures for PAT-002 through PAT-004.
+6. Triage PAT-005 disclosure timing and prepare its provisional-review package without displacing PAT-001 unless legal review determines urgency requires reprioritization.
+7. Validate the filing-packet engine against a claim-sensitive family only after its source draft is authorized for packet generation.
 
 ## Current evidence findings
 
@@ -31,19 +32,22 @@ A dated architecture document titled `StegVerse-Micro-Node-Agency.md` was create
 
 This evidence predates the later June 28–July 2 runtime implementation discussions and must be treated as an earlier documented conception milestone, subject to inventorship and corroboration review.
 
-PAT-005 has a public-disclosure triage package, structured family record, evidence maps, conception chronology, prior-art collision chart, inventorship worksheet, formal drawing source, working provisional draft, and filing-readiness index. Do not use `patent pending` unless an application has actually been filed.
+PAT-005 has a public-disclosure triage package, structured family record, evidence maps, conception chronology, prior-art collision chart, inventorship worksheet, formal drawing source, working provisional draft, practitioner handoff, contributor packet, completion status, and filing-readiness index. Do not use `patent pending` unless an application has actually been filed.
 
 PAT-001 now has:
 
 - `evidence/PAT-001_CONCEPTION_AND_DISCLOSURE_CHRONOLOGY.md`;
 - `evidence/PAT-001_CLAIM_ELEMENT_EVIDENCE_MAP.md`, including verified July 2 runtime commits and explicit separation between evidenced limitations and later claim refinements;
 - `evidence/PAT-001_INVENTORSHIP_WORKSHEET.md`, requiring human contribution analysis limitation by limitation and for the claimed combinations;
+- `inventorship/PAT-001-contributor-interview-packet.md`, a structured fact-development packet covering every candidate limitation and three claimed combinations;
+- `reviews/PAT-001-practitioner-handoff.md`, a review package requesting written determinations on support, claim strategy, inventorship, prior art, disclosure, drawings, and packet authorization;
 - `evidence/PAT-001_PRIOR_ART_SEARCH_LEDGER.md`, separating patentability searching from freedom-to-operate analysis and preserving reproducible search events;
 - `figures/PAT-001_FIGURE_DESCRIPTIONS.md`, a ten-figure drawing plan that distinguishes verified runtime behavior from uncorroborated capability-resolution, construction, expiry, lease, context-retention, and heartbeat-retention embodiments;
 - `figures/PAT-001-FIG-01-system-overview.mmd` through `PAT-001-FIG-04-decision-boundary.mmd`, reproducible sources for the verified runtime core;
 - `diagrams/PAT-001-formal-drawing-sheets.md`, a consolidated ten-sheet working source with reference numerals, verified-flow conventions, proposed-flow conventions, and a reference-numeral index;
 - `provisionals/PAT-001_provisional.md`, a working technical provisional draft containing background, summary, detailed description, examples, alternatives, working claims, and abstract;
 - `filing-readiness/PAT-001_FILING_READINESS_INDEX.md`, an explicit gate record separating draft presence, packet authorization, filing, and patent-pending status;
+- `data/PAT-001-completion-status.json`, a machine-readable completion and blocker record whose expected decision is `FAIL_CLOSED_BLOCKERS`;
 - `tools/validate_patent_readiness.py`, a deterministic readiness validator that emits `READY_FOR_REVIEW_PACKET`, `FAIL_CLOSED_BLOCKERS`, or `INVALID_READINESS_RECORD` without performing any external submission;
 - `tests/test_patent_readiness.py`, executable coverage for current fail-closed posture, missing records, missing artifacts, and an authorized complete fixture.
 
@@ -76,7 +80,8 @@ Completed:
 - timestamp regression tests were committed;
 - the original binary DOCX fixture was committed through the Git data API without forcing or overwriting concurrent repository work;
 - four reproducible Mermaid drawing sources and a consolidated formal drawing-sheet source were committed for PAT-001;
-- a deterministic readiness validator and tests were committed. The current PAT-001 readiness record is intentionally expected to fail closed because blocking checkboxes remain unresolved and review-packet authorization is `no`.
+- a deterministic readiness validator and tests were committed;
+- PAT-001 contributor, practitioner, and machine-readable completion records were committed. The current completion record intentionally reports `practitioner_review_ready_with_blockers`, `review_packet_authorized: false`, and expected decision `FAIL_CLOSED_BLOCKERS`.
 
 No pull-request workflow run or combined status checks were attached to the latest direct commits. Full authoritative-dispatcher validation therefore remains required before a release tag or review-packet authorization.
 
@@ -84,7 +89,7 @@ No pull-request workflow run or combined status checks were attached to the late
 
 No automated component may submit a filing to the USPTO or another jurisdiction. The packet emitter may prepare and hash filing artifacts, but the submission, certification, fee confirmation, and recording of the actual filing receipt remain human-controlled transitions. Filed dates must remain null until the human records the actual filing event.
 
-The presence of a working provisional draft, formal drawing source, or readiness validator does not mean an application was filed and does not authorize `patent pending` language.
+The presence of a working provisional draft, formal drawing source, practitioner handoff, contributor packet, completion record, or readiness validator does not mean an application was filed and does not authorize `patent pending` language.
 
 ## StegFin integration boundary
 
@@ -101,7 +106,7 @@ Dependency rule: patent registry or packet tooling may consume StegFin services 
 
 ## Repository state
 
-The repository contains claim schemas and master data, family renderers, patent doctrine documentation, filing-packet tools, readiness validation, binary and Markdown sample fixtures, test suites, PAT-001 chronology/evidence/inventorship/prior-art controls, PAT-001 working and formal drawing sources, a PAT-001 working provisional draft and readiness index, and the PAT-005 triage and working filing package.
+The repository contains claim schemas and master data, family renderers, patent doctrine documentation, filing-packet tools, readiness validation, binary and Markdown sample fixtures, test suites, PAT-001 chronology/evidence/inventorship/prior-art controls, PAT-001 working and formal drawing sources, a PAT-001 working provisional draft, contributor interview packet, practitioner handoff, readiness index and completion status, and the PAT-005 triage and working filing package.
 
 Priority tracking issue: #1.
 
@@ -109,10 +114,11 @@ Priority tracking issue: #1.
 
 - corroborate the canonical June 6 and June 16 PAT-001 architecture sources and commits;
 - locate executable evidence for active-node capability resolution, minimum node construction, expiry, usage leases, bounded context retention, and heartbeat non-self-retention;
-- populate PAT-001 inventor candidates, corroborators, evidence, and contribution distinctions through human fact collection and counsel review;
+- conduct and preserve PAT-001 contributor interviews, then populate candidate inventors, corroborators, evidence, and contribution distinctions;
 - execute and populate the PAT-001 prior-art search ledger using verified patent and non-patent databases;
 - render PAT-001 FIGS. 1–6 to monochrome filing-review SVG/PDF outputs and verify reference numerals against the specification;
 - keep PAT-001 FIGS. 7–10 proposed until capability-resolution, construction, expiry, lease, context-retention, and heartbeat-retention support is corroborated;
+- obtain a written practitioner recommendation using `reviews/PAT-001-practitioner-handoff.md`;
 - review and revise the PAT-001 working provisional draft for support, terminology consistency, claim strategy, inventorship, and disclosure risk;
 - run `tools/validate_patent_readiness.py` through the authoritative dispatcher and preserve the expected fail-closed receipt while blockers remain;
 - authorize and run the filing-packet emitter against PAT-001 only after review resolves unsupported placeholders and sensitive scope;
@@ -122,7 +128,7 @@ Priority tracking issue: #1.
 
 ## Ownership and continuation scope
 
-Issue #1 remains the authoritative filing-priority record. Continuation may install tests, fixtures, schemas, dispatch tasks, figures, readiness validators, and filing-readiness documentation. It may not automatically file, declare inventorship from commit metadata, publish unsupported limitations as established priority material, override unresolved readiness gates, treat StegFin execution as USPTO submission authority, or claim `patent pending` before an application is actually filed.
+Issue #1 remains the authoritative filing-priority record. Continuation may install tests, fixtures, schemas, dispatch tasks, figures, readiness validators, contributor records, practitioner handoffs, completion records, and filing-readiness documentation. It may not automatically file, declare inventorship from commit metadata, publish unsupported limitations as established priority material, override unresolved readiness gates, treat StegFin execution as USPTO submission authority, or claim `patent pending` before an application is actually filed.
 
 ## Constraints
 
