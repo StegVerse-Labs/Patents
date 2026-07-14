@@ -114,7 +114,7 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
     queue = next((r.get("parsed_result") for r in results if r["id"] == "machine_queue"), None)
     decision = "PORTFOLIO_MACHINE_VALIDATION_PASSED" if not failures else "PORTFOLIO_MACHINE_VALIDATION_FAILED"
     return {
-        "schema_version": "1.4",
+        "schema_version": "1.5",
         "generated_at": _utc_now(),
         "decision": decision,
         "failed_checks": failures,
@@ -155,26 +155,22 @@ def main() -> int:
     )
 
     receipt = dispatch(repo_root)
+    receipt["state_synchronization"] = {
+        "performed": not args.skip_state_sync,
+        "status_output": str(status_output.relative_to(repo_root)) if not args.skip_state_sync else None,
+        "continuation_output": str(continuation_output.relative_to(repo_root)) if not args.skip_state_sync else None,
+    }
     receipt_path.parent.mkdir(parents=True, exist_ok=True)
     receipt_path.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
     if not args.skip_state_sync:
-        synchronized = write_synchronized_state(
+        write_synchronized_state(
             repo_root,
             receipt_path,
             status_output,
             continuation_output,
         )
-        receipt["state_synchronization"] = {
-            "performed": True,
-            "status_output": str(status_output.relative_to(repo_root)),
-            "continuation_output": str(continuation_output.relative_to(repo_root)),
-            "machine_task_count": synchronized["status"]["machine_task_count"],
-        }
-    else:
-        receipt["state_synchronization"] = {"performed": False}
 
-    receipt_path.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(receipt, indent=2, sort_keys=True))
     return 0 if receipt["decision"] == "PORTFOLIO_MACHINE_VALIDATION_PASSED" else 2
 
