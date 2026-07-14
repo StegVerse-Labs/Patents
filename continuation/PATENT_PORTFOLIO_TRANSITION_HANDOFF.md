@@ -15,17 +15,17 @@ The ecosystem-candidate review path is armed but not active because PAT-001 and 
 - `tools/validate_completion_status.py`
 - `tests/test_completion_status.py`
 
-Both active-family completion records now contain explicit `artifact_map` entries for every `completed: true` key. PAT-001 also exposes the validator-compatible `expected_decision: FAIL_CLOSED_BLOCKERS` field while retaining its readiness-specific field for compatibility.
+Both active-family completion records contain explicit `artifact_map` entries for every `completed: true` key. The validator fails closed for missing maps, unmapped completion claims, missing files, authority-state conflicts, and patent-pending authorization before filing.
 
-The validator now fails closed when:
+### PAT-001 rendered review drawings
 
-- a completion record omits or empties `artifact_map`;
-- any completed key lacks a mapped repository artifact;
-- any mapped completed artifact is missing;
-- blocking gates conflict with the expected decision;
-- `patent_pending_authorized` is true before `filed` is true.
+- `rendered/PAT-001/PAT-001-FIG-01-system-overview.svg`
+- `rendered/PAT-001/PAT-001-FIG-02-role-sequence.svg`
+- `rendered/PAT-001/PAT-001-FIG-03-receipt-binding.svg`
+- `rendered/PAT-001/PAT-001-FIG-04-decision-boundary.svg`
+- `rendered/PAT-001/manifest.json`
 
-Regression tests validate the real PAT-001 and PAT-005 records against repository state in addition to synthetic invalid fixtures.
+The four verified-core drawings are monochrome SVG review artifacts with fixed reference numerals and SHA-256 values. They are not approved filing drawings. PAT-001 completion state records rendering as complete while the combined rendered-and-approved gate remains false pending hash verification, reference-numeral review, and practitioner approval.
 
 ### Existing PAT-001 machine controls
 
@@ -61,16 +61,16 @@ A review cycle may inspect repositories and commits, identify technical mechanis
 
 ## Current next machine work
 
-1. Corroborate PAT-001 June 6 and June 16 source records and commits.
-2. Preserve executable fixtures for PAT-001 negative and proposed paths where implementation exists.
-3. Render and hash PAT-001 verified-core drawings after source lint passes.
+1. Verify PAT-001 rendered SVG hashes and reference numerals through the authoritative dispatcher.
+2. Corroborate PAT-001 June 6 and June 16 source records and commits.
+3. Preserve executable fixtures for PAT-001 negative and proposed paths where implementation exists.
 4. Run readiness, completion, drawing, and full tests through the authoritative dispatcher.
 5. Complete PAT-005 source-anchor and executable-negative-fixture tasks.
 6. Re-run `tools/select_patent_workstream.py` after each material family-status change.
 
 ## Validation state
 
-The latest direct commit `835340862979f4150450de24f3142e107c43cea2` has no attached pull-request workflow run. Authoritative dispatcher receipts therefore remain required. Absence of a workflow run must not be interpreted as validation success.
+The rendered artifacts were committed directly and have not received a pull-request workflow receipt. Their manifest hashes were calculated from the committed source text but still require authoritative dispatcher verification. Absence of a workflow run must not be interpreted as validation success.
 
 ## Ownership
 
