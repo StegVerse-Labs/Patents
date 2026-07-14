@@ -8,8 +8,18 @@ This repository manages StegVerse invention disclosures, reusable claim data, pr
 2. `PAT-002` — Heartbeat-Governed Entity and Reflected-State Computing
 3. `PAT-003` — Generalized Adaptive Scanner Using Dynamic Micro-Nodes
 4. `PAT-004` — Manifest-Governed Bidirectional Neural Communication
+5. `PAT-005` — Governed Device Continuity and Destination-Bound Hardware Abstraction
 
 `PAT-001` is the foundational computing architecture. The later families express technical extensions and implementations; dependency in this repository does not by itself establish legal priority entitlement.
+
+`PAT-005` is an urgent provisional-review candidate because a public technical paper was committed on 2026-07-13. Its earliest enabling public disclosure, inventorship, claim scope, and foreign-filing consequences remain under review.
+
+## PAT-005 working package
+
+- `disclosures/PAT-005-governed-device-continuity.md`
+- `claims/PAT-005-claim-architecture.md`
+- `evidence/PAT-005-evidence-ledger.md`
+- `triage/PAT-005-public-disclosure-and-filing-triage.md`
 
 ## Structured source of truth
 
@@ -50,6 +60,7 @@ Inventorship is determined from human contribution to conception of the subject 
 - Treat generated claims and drafts as working technical artifacts requiring qualified legal review.
 - Preserve nonpublic material and use allowlists for repositories and paths.
 - Record uncertainty rather than inventing dates, inventors, evidence, or legal conclusions.
+- Do not use `patent pending` unless an application has actually been filed.
 
 ## Versioning
 
