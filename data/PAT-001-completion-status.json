@@ -20,6 +20,22 @@
     "practitioner_handoff": true,
     "filing_packet_engine": true
   },
+  "artifact_map": {
+    "working_provisional_draft": "provisionals/PAT-001_provisional.md",
+    "claim_element_evidence_map": "evidence/PAT-001_CLAIM_ELEMENT_EVIDENCE_MAP.md",
+    "conception_and_disclosure_chronology": "evidence/PAT-001_CONCEPTION_AND_DISCLOSURE_CHRONOLOGY.md",
+    "inventorship_worksheet": "evidence/PAT-001_INVENTORSHIP_WORKSHEET.md",
+    "contributor_interview_packet": "inventorship/PAT-001-contributor-interview-packet.md",
+    "prior_art_search_ledger": "evidence/PAT-001_PRIOR_ART_SEARCH_LEDGER.md",
+    "figure_descriptions": "figures/PAT-001_FIGURE_DESCRIPTIONS.md",
+    "verified_core_drawing_sources": "figures/PAT-001-FIG-01-system-overview.mmd",
+    "formal_drawing_sheet_source": "diagrams/PAT-001-formal-drawing-sheets.md",
+    "filing_readiness_index": "filing-readiness/PAT-001_FILING_READINESS_INDEX.md",
+    "readiness_validator": "tools/validate_patent_readiness.py",
+    "readiness_validator_tests": "tests/test_patent_readiness.py",
+    "practitioner_handoff": "reviews/PAT-001-practitioner-handoff.md",
+    "filing_packet_engine": "tools/filing_packet_emitter.py"
+  },
   "blocking_gates": {
     "canonical_june_6_source_verified": false,
     "canonical_june_16_source_verified": false,
@@ -35,6 +51,7 @@
     "owner_packet_authorization": false,
     "owner_filing_authorization": false
   },
+  "expected_decision": "FAIL_CLOSED_BLOCKERS",
   "expected_readiness_decision": "FAIL_CLOSED_BLOCKERS",
   "next_machine_tasks": [
     "locate canonical June 6 and June 16 source repositories and commit anchors",
