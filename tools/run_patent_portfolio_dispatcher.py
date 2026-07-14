@@ -15,6 +15,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from tools.synchronize_patent_portfolio_state import write_synchronized_state
+
 
 def _utc_now() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
@@ -112,7 +114,7 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
     queue = next((r.get("parsed_result") for r in results if r["id"] == "machine_queue"), None)
     decision = "PORTFOLIO_MACHINE_VALIDATION_PASSED" if not failures else "PORTFOLIO_MACHINE_VALIDATION_FAILED"
     return {
-        "schema_version": "1.3",
+        "schema_version": "1.4",
         "generated_at": _utc_now(),
         "decision": decision,
         "failed_checks": failures,
@@ -134,12 +136,44 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
     parser.add_argument("--receipt", type=Path, default=Path("receipts/patent-portfolio-dispatch.json"))
+    parser.add_argument("--status-output", type=Path, default=Path("data/patent-workstream-status.json"))
+    parser.add_argument(
+        "--continuation-output",
+        type=Path,
+        default=Path("continuation/patent-portfolio-machine-continuation.json"),
+    )
+    parser.add_argument("--skip-state-sync", action="store_true")
     args = parser.parse_args()
 
     repo_root = args.repo_root.resolve()
     receipt_path = args.receipt if args.receipt.is_absolute() else repo_root / args.receipt
+    status_output = args.status_output if args.status_output.is_absolute() else repo_root / args.status_output
+    continuation_output = (
+        args.continuation_output
+        if args.continuation_output.is_absolute()
+        else repo_root / args.continuation_output
+    )
+
     receipt = dispatch(repo_root)
     receipt_path.parent.mkdir(parents=True, exist_ok=True)
+    receipt_path.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+    if not args.skip_state_sync:
+        synchronized = write_synchronized_state(
+            repo_root,
+            receipt_path,
+            status_output,
+            continuation_output,
+        )
+        receipt["state_synchronization"] = {
+            "performed": True,
+            "status_output": str(status_output.relative_to(repo_root)),
+            "continuation_output": str(continuation_output.relative_to(repo_root)),
+            "machine_task_count": synchronized["status"]["machine_task_count"],
+        }
+    else:
+        receipt["state_synchronization"] = {"performed": False}
+
     receipt_path.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(receipt, indent=2, sort_keys=True))
     return 0 if receipt["decision"] == "PORTFOLIO_MACHINE_VALIDATION_PASSED" else 2
