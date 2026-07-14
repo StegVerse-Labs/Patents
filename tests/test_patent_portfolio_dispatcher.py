@@ -15,6 +15,7 @@ def test_build_commands_covers_active_machine_surface() -> None:
         "pat005_completion",
         "pat001_readiness",
         "pat001_source_corroboration",
+        "pat001_canonical_source_search",
         "pat001_drawing_sources",
         "pat001_rendered_drawings",
         "evidence_queue_build",
@@ -33,6 +34,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
         "pat005_completion": (0, {"decision": "VALID_FAIL_CLOSED"}),
         "pat001_readiness": (2, {"decision": "FAIL_CLOSED_BLOCKERS"}),
         "pat001_source_corroboration": (0, {"decision": "CORROBORATION_RECORD_VALID"}),
+        "pat001_canonical_source_search": (0, {"decision": "SOURCE_SEARCH_RECEIPT_VALID"}),
         "pat001_drawing_sources": (0, {"decision": "DRAWING_SOURCES_VALID"}),
         "pat001_rendered_drawings": (0, {"decision": "DRAWING_MANIFEST_VALID"}),
         "evidence_queue_build": (0, {"decision": "EVIDENCE_QUEUE_READY", "queue": [{"task_id": "EVID-PAT-001-0123456789ab"}]}),
@@ -64,11 +66,11 @@ def test_dispatch_reports_failed_check(monkeypatch, tmp_path: Path) -> None:
 
     def fake_run(command, cwd, text, capture_output, check):
         check_id = next(command_ids)
-        returncode = 2 if check_id == "evidence_queue_validate" else 0
-        payload = {"decision": "INVALID_EVIDENCE_QUEUE"} if returncode else {"decision": "OK"}
+        returncode = 2 if check_id == "pat001_canonical_source_search" else 0
+        payload = {"decision": "INVALID_SOURCE_SEARCH_RECEIPT"} if returncode else {"decision": "OK"}
         return SimpleNamespace(returncode=returncode, stdout=json.dumps(payload), stderr="")
 
     monkeypatch.setattr(dispatcher.subprocess, "run", fake_run)
     receipt = dispatcher.dispatch(tmp_path)
     assert receipt["decision"] == "PORTFOLIO_MACHINE_VALIDATION_FAILED"
-    assert receipt["failed_checks"] == ["evidence_queue_validate"]
+    assert receipt["failed_checks"] == ["pat001_canonical_source_search"]
