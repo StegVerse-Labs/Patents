@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "family_id": "PAT-001",
+  "decision": "LIFECYCLE_EVIDENCE_PARTIAL_WITH_EXPLICIT_NEGATIVES",
+  "inspected_repository": "StegVerse-002/micro-node-runtime",
+  "inspected_commit": "c2d5f89b239ff24cf7f40119ad79df526f24b2c4",
+  "positive_anchors": [
+    {
+      "path": "micro_node/contracts.py",
+      "blob_sha": "a6dab6212e4f5494ab7c0a9590f423d45889963b",
+      "supports": [
+        "minimum_request_field_contract",
+        "authority_and_admissibility_role_surface",
+        "terminal_allow_deny_fail_closed_decisions"
+      ]
+    },
+    {
+      "path": "micro_node/runtime.py",
+      "blob_sha": "7a781acf645bba618e40c605159bb00246627ae4",
+      "supports": [
+        "required_field_fail_closed_behavior",
+        "delegation_based_authority_check",
+        "policy_based_admissibility_check",
+        "deterministic_receipt_issuance",
+        "previous_receipt_hash_chaining",
+        "governed_return_path",
+        "reconstruction_witness"
+      ]
+    }
+  ],
+  "explicit_negative_findings": [
+    {
+      "limitation": "default_expiry",
+      "status": "NOT_IMPLEMENTED_IN_INSPECTED_SURFACE",
+      "basis": "MicroNodeRequest and evaluate_transition expose no expiry, TTL, expires_at, or deadline field or branch."
+    },
+    {
+      "limitation": "usage_only_delayed_expiry_or_lease",
+      "status": "NOT_IMPLEMENTED_IN_INSPECTED_SURFACE",
+      "basis": "No lease, usage counter, renewal, delayed expiry, or usage-retention state exists in the inspected contracts or runtime."
+    },
+    {
+      "limitation": "bounded_context_reuse",
+      "status": "NOT_IMPLEMENTED_IN_INSPECTED_SURFACE",
+      "basis": "Payload is accepted as an unbounded dictionary and no context window, reuse bound, eviction, or retention policy is evaluated."
+    },
+    {
+      "limitation": "heartbeat_non_self_retention",
+      "status": "NOT_IMPLEMENTED_IN_INSPECTED_SURFACE",
+      "basis": "No heartbeat field, liveness loop, persistence decision, or rule preventing heartbeat-only retention exists in the inspected surface."
+    },
+    {
+      "limitation": "demand_only_node_construction_when_no_admissible_node_exists",
+      "status": "NOT_ESTABLISHED_BY_INSPECTED_SURFACE",
+      "basis": "The runtime evaluates a supplied MicroNodeRequest but does not resolve or construct nodes from demand."
+    },
+    {
+      "limitation": "active_capability_resolution",
+      "status": "PARTIALLY_SUPPORTED_ONLY",
+      "basis": "Authority and admissibility are evaluated from supplied delegation and policy references, but no registry lookup or capability-selection algorithm is executed."
+    }
+  ],
+  "retry_triggers": [
+    "a later micro-node-runtime commit adds expiry, lease, context, heartbeat, registry lookup, or demand-construction behavior",
+    "an exact implementation path is supplied from another repository",
+    "restored history exposes an earlier implementation"
+  ],
+  "authority_boundary": {
+    "inventorship_determined": false,
+    "patentability_determined": false,
+    "filing_authorized": false,
+    "filing_performed": false,
+    "patent_pending_authorized": false
+  }
+}
