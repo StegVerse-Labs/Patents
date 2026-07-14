@@ -1,0 +1,65 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from types import SimpleNamespace
+
+import tools.run_patent_portfolio_dispatcher as dispatcher
+
+
+def test_build_commands_covers_active_machine_surface() -> None:
+    commands = dispatcher.build_commands()
+    ids = [item["id"] for item in commands]
+    assert ids == [
+        "pat001_completion",
+        "pat005_completion",
+        "pat001_readiness",
+        "pat001_drawing_sources",
+        "pat001_rendered_drawings",
+        "workstream_selection",
+        "pytest",
+    ]
+    readiness = next(item for item in commands if item["id"] == "pat001_readiness")
+    assert readiness["accepted_returncodes"] == {0, 2}
+
+
+def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: Path) -> None:
+    responses = {
+        "pat001_completion": (0, {"decision": "VALID_FAIL_CLOSED"}),
+        "pat005_completion": (0, {"decision": "VALID_FAIL_CLOSED"}),
+        "pat001_readiness": (2, {"decision": "FAIL_CLOSED_BLOCKERS"}),
+        "pat001_drawing_sources": (0, {"decision": "DRAWING_SOURCES_VALID"}),
+        "pat001_rendered_drawings": (0, {"decision": "DRAWING_MANIFEST_VALID"}),
+        "workstream_selection": (0, {"decision": "CONTINUE_ACTIVE_PATENT_WORK"}),
+        "pytest": (0, None),
+    }
+
+    command_ids = iter([item["id"] for item in dispatcher.build_commands()])
+
+    def fake_run(command, cwd, text, capture_output, check):
+        check_id = next(command_ids)
+        returncode, payload = responses[check_id]
+        stdout = json.dumps(payload) if payload is not None else ""
+        return SimpleNamespace(returncode=returncode, stdout=stdout, stderr="")
+
+    monkeypatch.setattr(dispatcher.subprocess, "run", fake_run)
+    receipt = dispatcher.dispatch(tmp_path)
+    assert receipt["decision"] == "PORTFOLIO_MACHINE_VALIDATION_PASSED"
+    assert receipt["failed_checks"] == []
+    assert receipt["workstream_decision"] == "CONTINUE_ACTIVE_PATENT_WORK"
+    assert receipt["authority_boundary"]["filing_performed"] is False
+
+
+def test_dispatch_reports_failed_check(monkeypatch, tmp_path: Path) -> None:
+    command_ids = iter([item["id"] for item in dispatcher.build_commands()])
+
+    def fake_run(command, cwd, text, capture_output, check):
+        check_id = next(command_ids)
+        returncode = 2 if check_id == "pat001_rendered_drawings" else 0
+        payload = {"decision": "INVALID_DRAWING_MANIFEST"} if returncode else {"decision": "OK"}
+        return SimpleNamespace(returncode=returncode, stdout=json.dumps(payload), stderr="")
+
+    monkeypatch.setattr(dispatcher.subprocess, "run", fake_run)
+    receipt = dispatcher.dispatch(tmp_path)
+    assert receipt["decision"] == "PORTFOLIO_MACHINE_VALIDATION_FAILED"
+    assert receipt["failed_checks"] == ["pat001_rendered_drawings"]
