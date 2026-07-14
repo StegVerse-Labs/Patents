@@ -4,73 +4,61 @@
 
 `CONTINUE_ACTIVE_PATENT_WORK`
 
-The ecosystem-candidate review path is armed but not active because PAT-001 and PAT-005 still have authorized machine tasks. The durable controller and synchronized status record determine future transitions; sessions must not activate candidate review merely because external blockers also exist.
+The ecosystem-candidate review path is armed but inactive because PAT-001 and PAT-005 still contain authorized machine tasks.
 
-## Manual-task elimination baseline
+## Canonical automation
 
-All repeatable repository-local validation, task selection, evidence-task normalization, canonical-source search receipt validation, receipt creation, continuation-state synchronization, concurrency protection, operator summarization, and source-corroboration validation are consolidated behind:
-
-- `tools/patent_portfolio.py`
-- `tools/run_patent_portfolio_dispatcher.py`
-- `tools/build_patent_machine_queue.py`
-- `tools/build_patent_evidence_queue.py`
-- `tools/validate_patent_evidence_queue.py`
-- `tools/validate_source_corroboration.py`
-- `tools/validate_canonical_source_search_receipt.py`
-- associated regression tests under `tests/`
-
-The canonical command remains:
+Run:
 
 ```bash
 python tools/patent_portfolio.py --repo-root .
 ```
 
-One invocation validates completion and readiness records, corroboration and canonical-source search receipts, drawing sources and rendered outputs, both task queues, workstream selection, the full test surface, the consolidated receipt, and synchronized continuation state. Concurrent execution fails closed with `PORTFOLIO_EXECUTION_LOCKED`.
+The locked runner validates completion/readiness state, PAT-001 corroboration and negative source-search receipts, PAT-005 implementation anchors, drawings, evidence and machine queues, workstream selection, pytest, consolidated receipts, and synchronized continuation state. It excludes inventorship, practitioner judgment, approval, filing, payment, submission, and patent-pending decisions.
 
-The machine and evidence queues exclude human, practitioner, inventor, approval, authorization, signature, payment, submission, filing, and patent-pending tasks. Those transitions remain non-delegable authority boundaries.
+## PAT-001 state
 
-## Active-family work completed
+- `data/PAT-001-source-corroboration.json` preserves exact adjacent StegDB and Site anchors.
+- `data/PAT-001-canonical-source-search-receipt.json` records `CANONICAL_SOURCE_NOT_RECOVERED` and suppresses repeated June-source searches until a retry trigger occurs.
+- Four monochrome SVG review drawings and a SHA-256 manifest remain under `rendered/PAT-001/`.
+- Capability resolution, minimum construction, expiry, usage leases, bounded context, and heartbeat non-self-retention still require executable evidence or explicit negative evidence.
 
-### PAT-001 and PAT-005 completion controls
+## PAT-005 exact implementation anchors
 
-Every `completed: true` key is artifact-bound. Validation fails closed for missing maps, missing files, authority-state conflicts, and patent-pending authorization before filing.
+The primary source repository is now bound at:
 
-### Automated evidence acquisition
+`StegVerse-Labs/device-continuity-layer@d12e8790b7d426cda0594cd817833d0b76db15ac`
 
-`tools/build_patent_evidence_queue.py` and `tools/validate_patent_evidence_queue.py` convert active-family tasks into stable IDs, priorities, evidence classes, completion predicates, and external-verification requirements without claiming legal effect.
+Exact anchors:
 
-### PAT-001 source corroboration
+- `tools/build_destination_packages.py` — blob `123a6c2779f5d3bf8ef7433ef8ed85ed35d5722e`
+- `tools/validate_destination_packages.py` — blob `498eef1c023d9f4b73c24ddae4b8033c4a8fed0a`
+- `fixtures/acceptance/stegtalk-package.json` — blob `7ec16437b05c61b400c59be4ae89844a4c3d1f12`
 
-`data/PAT-001-source-corroboration.json` binds exact adjacent StegDB and Site repository anchors supporting bounded scope, declared contracts and authority, role separation, lineage, lifecycle timestamps, receipt hashes, and fail-closed states. It does not establish the exact June 6 or June 16 source, conception date, inventorship, patentability, or priority.
+Durable controls:
 
-### PAT-001 canonical-source search receipt
+- `data/PAT-005-implementation-anchors.json`
+- `tools/validate_pat005_implementation_anchors.py`
+- `tests/test_pat005_implementation_anchors.py`
 
-- `data/PAT-001-canonical-source-search-receipt.json`
-- `tools/validate_canonical_source_search_receipt.py`
-- `tests/test_canonical_source_search_receipt.py`
-
-Exact-title, exact-phrase, organization-scoped code, and global commit searches were preserved. The accessible GitHub index returned later Patents references but did not recover the original June source. The receipt records `CANONICAL_SOURCE_NOT_RECOVERED`, preserves negative evidence, and permits retries only when a recorded trigger occurs, such as restored history, a supplied archive or commit, newly accessible repositories, or materially changed index coverage. Missing search results do not establish absence or any legal conclusion.
-
-### PAT-001 rendered review drawings
-
-Four monochrome SVG review drawings and a SHA-256 manifest remain committed under `rendered/PAT-001/`. They are not approved filing drawings.
-
-## Portfolio transition infrastructure
-
-Switch to `REVIEW_ECOSYSTEM_CANDIDATES` only when every higher-priority active family is submission-ready or externally blocked with no authorized machine task remaining. The runner activates and reverses this state automatically from completion records.
+These anchors support destination-bound package construction, source/inventory binding, bounded response options, destination consistency validation, and executable `accepted_observe_only`, `manual_review_required`, and `denied` outcomes. They do not establish inventorship, patentability, filing authority, or patent-pending status.
 
 ## Current next machine work
 
-1. Execute `tools/patent_portfolio.py` through the authoritative execution path.
-2. Do not repeat PAT-001 June-source searches until a recorded retry trigger occurs.
-3. Advance PAT-001 executable evidence for capability resolution, minimum construction, expiry, leases, bounded context, and heartbeat-retention paths.
-4. Complete PAT-005 implementation-anchor and executable-negative-fixture collection.
+1. Execute the canonical runner through the authoritative execution path.
+2. Collect exact StegTalk, StegMusic, and StegGuardian destination-side validator and receipt anchors.
+3. Preserve PAT-005 executable negative fixtures and outputs across source and destination repositories.
+4. Preserve PAT-001 executable or explicit negative lifecycle evidence.
 5. Populate stable prior-art identifiers only from verified patent and non-patent sources.
+
+## Activation boundary
+
+Switch to `REVIEW_ECOSYSTEM_CANDIDATES` only when every higher-priority active family is submission-ready or externally blocked with no authorized machine task remaining. The runner activates and reverses this state automatically.
 
 ## Validation state
 
-The search receipt, validator, tests, dispatcher integration, and completion-state binding are committed. The latest direct commits have no attached pull-request workflow run, so authoritative execution remains unresolved.
+The new PAT-005 record, validator, tests, dispatcher integration, and completion-state binding are committed. No attached workflow run has yet supplied an authoritative execution receipt.
 
 ## Ownership
 
-Issue #1 remains the authoritative filing-priority record. This handoff owns portfolio transition, the concurrency-safe runner, unified dispatcher, both queues, corroboration controls, canonical-source search receipts, and synchronized continuation state.
+Issue #1 remains the authoritative filing-priority record. This handoff owns portfolio transition, the concurrency-safe runner, unified dispatcher, both queues, corroboration controls, source-search receipts, PAT-005 implementation-anchor controls, and synchronized continuation state.
