@@ -1,34 +1,84 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "family_id": "PAT-005",
-  "decision": "IMPLEMENTATION_ANCHORS_PARTIALLY_VERIFIED",
-  "source_repository": "StegVerse-Labs/device-continuity-layer",
-  "source_commit": "d12e8790b7d426cda0594cd817833d0b76db15ac",
+  "decision": "IMPLEMENTATION_ANCHORS_VERIFIED",
   "anchors": [
     {
+      "repository": "StegVerse-Labs/device-continuity-layer",
+      "commit": "d12e8790b7d426cda0594cd817833d0b76db15ac",
       "path": "tools/build_destination_packages.py",
       "blob_sha": "123a6c2779f5d3bf8ef7433ef8ed85ed35d5722e",
       "anchor_type": "executable_builder",
       "supports": ["destination_bound_package_generation", "bounded_response_options", "source_and_inventory_binding"]
     },
     {
+      "repository": "StegVerse-Labs/device-continuity-layer",
+      "commit": "d12e8790b7d426cda0594cd817833d0b76db15ac",
       "path": "tools/validate_destination_packages.py",
       "blob_sha": "498eef1c023d9f4b73c24ddae4b8033c4a8fed0a",
       "anchor_type": "executable_validator",
       "supports": ["required_field_validation", "destination_consistency_validation", "response_option_presence"]
     },
     {
+      "repository": "StegVerse-Labs/device-continuity-layer",
+      "commit": "d12e8790b7d426cda0594cd817833d0b76db15ac",
       "path": "fixtures/acceptance/stegtalk-package.json",
       "blob_sha": "7ec16437b05c61b400c59be4ae89844a4c3d1f12",
       "anchor_type": "acceptance_fixture",
       "supports": ["accepted_observe_only", "manual_review_required", "denied", "destination_bound_fixture"]
+    },
+    {
+      "repository": "StegVerse-Labs/StegTalk",
+      "commit": "0888572be55b5045643fa373bf2e17d829c8dbb4",
+      "path": "tools/validate_device_continuity_handoff.py",
+      "blob_sha": "11d905fdb5b962bac3978503474e2632e227507a",
+      "anchor_type": "executable_validator",
+      "supports": ["installed_non_authorizing_handoff", "destination_repository_binding", "bounded_destination_decisions", "non_authority_rule"]
+    },
+    {
+      "repository": "StegVerse-Labs/StegTalk",
+      "commit": "0888572be55b5045643fa373bf2e17d829c8dbb4",
+      "path": "tools/validate_device_continuity_receipt.py",
+      "blob_sha": "6f79043d457348a65efd895238340340e325178d",
+      "anchor_type": "executable_validator",
+      "supports": ["payload_receipt_binding", "destination_receipt_binding", "allowed_decision_validation", "reconstructability_requirement"]
+    },
+    {
+      "repository": "StegVerse-Labs/StegTalk",
+      "commit": "0888572be55b5045643fa373bf2e17d829c8dbb4",
+      "path": "receipts/device-continuity/stegtalk-device-continuity-receipt.json",
+      "blob_sha": "9ec4e41da35ec2cb11a8a52245bf1f974bae24ef",
+      "anchor_type": "receipt",
+      "supports": ["accepted_observe_only", "non_authorizing_destination_receipt", "reconstructable_destination_receipt"]
+    },
+    {
+      "repository": "StegVerse-Labs/StegMusic",
+      "commit": "a7b1ebb37dd92b9dfef36096c4f414d4f9bab5bc",
+      "path": "tools/validate_device_continuity_handoff.py",
+      "blob_sha": "3bccc370edc0964ec850f20e8094eab08e9a3fc1",
+      "anchor_type": "executable_validator",
+      "supports": ["installed_non_authorizing_handoff", "destination_repository_binding", "bounded_media_destination_decisions", "non_authority_rule"]
+    },
+    {
+      "repository": "StegVerse-Labs/StegMusic",
+      "commit": "a7b1ebb37dd92b9dfef36096c4f414d4f9bab5bc",
+      "path": "tools/validate_device_continuity_receipt.py",
+      "blob_sha": "bb129fd31c004c10b0f64d525a5bc7d7878b5f02",
+      "anchor_type": "executable_validator",
+      "supports": ["payload_receipt_binding", "destination_receipt_binding", "allowed_decision_validation", "reconstructability_requirement"]
+    },
+    {
+      "repository": "StegVerse-Labs/StegMusic",
+      "commit": "a7b1ebb37dd92b9dfef36096c4f414d4f9bab5bc",
+      "path": "receipts/device-continuity/stegmusic-device-continuity-receipt.json",
+      "blob_sha": "c7fa05835c29362086f97499b145931499cac638",
+      "anchor_type": "receipt",
+      "supports": ["accepted_observe_only", "non_authorizing_destination_receipt", "reconstructable_destination_receipt"]
     }
   ],
   "remaining_unverified": [
-    "exact StegTalk destination-side validator and receipt paths",
-    "exact StegMusic destination-side validator and receipt paths",
     "StegGuardian page and receipt paths",
-    "cross-repository negative fixtures",
+    "cross-repository negative fixtures beyond bounded denial and manual-review outcomes",
     "human conception and inventorship facts"
   ],
   "authority_boundary": {
