@@ -17,6 +17,8 @@ def test_build_commands_covers_active_machine_surface() -> None:
         "pat001_source_corroboration",
         "pat001_drawing_sources",
         "pat001_rendered_drawings",
+        "evidence_queue_build",
+        "evidence_queue_validate",
         "machine_queue",
         "workstream_selection",
         "pytest",
@@ -33,11 +35,12 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
         "pat001_source_corroboration": (0, {"decision": "CORROBORATION_RECORD_VALID"}),
         "pat001_drawing_sources": (0, {"decision": "DRAWING_SOURCES_VALID"}),
         "pat001_rendered_drawings": (0, {"decision": "DRAWING_MANIFEST_VALID"}),
+        "evidence_queue_build": (0, {"decision": "EVIDENCE_QUEUE_READY", "queue": [{"task_id": "EVID-PAT-001-0123456789ab"}]}),
+        "evidence_queue_validate": (0, {"decision": "EVIDENCE_QUEUE_VALID"}),
         "machine_queue": (0, {"decision": "MACHINE_QUEUE_READY", "queue": [{"task": "verify hashes"}]}),
         "workstream_selection": (0, {"decision": "CONTINUE_ACTIVE_PATENT_WORK"}),
         "pytest": (0, None),
     }
-
     command_ids = iter([item["id"] for item in dispatcher.build_commands()])
 
     def fake_run(command, cwd, text, capture_output, check):
@@ -52,6 +55,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
     assert receipt["failed_checks"] == []
     assert receipt["workstream_decision"] == "CONTINUE_ACTIVE_PATENT_WORK"
     assert receipt["machine_queue_size"] == 1
+    assert receipt["evidence_queue_size"] == 1
     assert receipt["authority_boundary"]["filing_performed"] is False
 
 
@@ -60,11 +64,11 @@ def test_dispatch_reports_failed_check(monkeypatch, tmp_path: Path) -> None:
 
     def fake_run(command, cwd, text, capture_output, check):
         check_id = next(command_ids)
-        returncode = 2 if check_id == "pat001_source_corroboration" else 0
-        payload = {"decision": "INVALID_CORROBORATION_RECORD"} if returncode else {"decision": "OK"}
+        returncode = 2 if check_id == "evidence_queue_validate" else 0
+        payload = {"decision": "INVALID_EVIDENCE_QUEUE"} if returncode else {"decision": "OK"}
         return SimpleNamespace(returncode=returncode, stdout=json.dumps(payload), stderr="")
 
     monkeypatch.setattr(dispatcher.subprocess, "run", fake_run)
     receipt = dispatcher.dispatch(tmp_path)
     assert receipt["decision"] == "PORTFOLIO_MACHINE_VALIDATION_FAILED"
-    assert receipt["failed_checks"] == ["pat001_source_corroboration"]
+    assert receipt["failed_checks"] == ["evidence_queue_validate"]
