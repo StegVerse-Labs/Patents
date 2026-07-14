@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "family_id": "PAT-005",
+  "decision": "IMPLEMENTATION_ANCHORS_PARTIALLY_VERIFIED",
+  "source_repository": "StegVerse-Labs/device-continuity-layer",
+  "source_commit": "d12e8790b7d426cda0594cd817833d0b76db15ac",
+  "anchors": [
+    {
+      "path": "tools/build_destination_packages.py",
+      "blob_sha": "123a6c2779f5d3bf8ef7433ef8ed85ed35d5722e",
+      "anchor_type": "executable_builder",
+      "supports": ["destination_bound_package_generation", "bounded_response_options", "source_and_inventory_binding"]
+    },
+    {
+      "path": "tools/validate_destination_packages.py",
+      "blob_sha": "498eef1c023d9f4b73c24ddae4b8033c4a8fed0a",
+      "anchor_type": "executable_validator",
+      "supports": ["required_field_validation", "destination_consistency_validation", "response_option_presence"]
+    },
+    {
+      "path": "fixtures/acceptance/stegtalk-package.json",
+      "blob_sha": "7ec16437b05c61b400c59be4ae89844a4c3d1f12",
+      "anchor_type": "acceptance_fixture",
+      "supports": ["accepted_observe_only", "manual_review_required", "denied", "destination_bound_fixture"]
+    }
+  ],
+  "remaining_unverified": [
+    "exact StegTalk destination-side validator and receipt paths",
+    "exact StegMusic destination-side validator and receipt paths",
+    "StegGuardian page and receipt paths",
+    "cross-repository negative fixtures",
+    "human conception and inventorship facts"
+  ],
+  "authority_boundary": {
+    "inventorship_determined": false,
+    "patentability_determined": false,
+    "filing_authorized": false,
+    "filing_performed": false,
+    "patent_pending_authorized": false
+  }
+}
