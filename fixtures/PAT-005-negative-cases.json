@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "family_id": "PAT-005",
+  "source_anchors": [
+    "data/PAT-005-implementation-anchors.json"
+  ],
+  "cases": [
+    {
+      "case_id": "wrong_destination_repo",
+      "validator_surface": "handoff",
+      "mutation": {"destination_repo": "StegVerse-Labs/WrongDestination"},
+      "expected_result": "REJECT",
+      "expected_reason": "wrong destination repo"
+    },
+    {
+      "case_id": "unexpected_handoff_status",
+      "validator_surface": "handoff",
+      "mutation": {"status": "installed_authorizing_handoff"},
+      "expected_result": "REJECT",
+      "expected_reason": "unexpected handoff status"
+    },
+    {
+      "case_id": "unauthorized_destination_decision",
+      "validator_surface": "handoff",
+      "mutation": {"allowed_destination_decisions": ["activate_device"]},
+      "expected_result": "REJECT",
+      "expected_reason": "unexpected destination decision"
+    },
+    {
+      "case_id": "missing_non_authority_rule",
+      "validator_surface": "handoff",
+      "mutation": {"non_authority_rule": "destination may activate"},
+      "expected_result": "REJECT",
+      "expected_reason": "missing non-authority rule"
+    },
+    {
+      "case_id": "payload_receipt_mismatch",
+      "validator_surface": "receipt",
+      "mutation": {"receipt.payload_id": "different-payload"},
+      "expected_result": "REJECT",
+      "expected_reason": "payload mismatch"
+    },
+    {
+      "case_id": "destination_receipt_mismatch",
+      "validator_surface": "receipt",
+      "mutation": {"receipt.destination_repo": "StegVerse-Labs/WrongDestination"},
+      "expected_result": "REJECT",
+      "expected_reason": "destination mismatch"
+    },
+    {
+      "case_id": "receipt_decision_not_allowed",
+      "validator_surface": "receipt",
+      "mutation": {"receipt.decision": "activate_device"},
+      "expected_result": "REJECT",
+      "expected_reason": "decision not allowed"
+    },
+    {
+      "case_id": "receipt_not_reconstructable",
+      "validator_surface": "receipt",
+      "mutation": {"receipt.reconstructable": false},
+      "expected_result": "REJECT",
+      "expected_reason": "receipt must be reconstructable"
+    }
+  ],
+  "authority_boundary": {
+    "filing_performed": false,
+    "filing_authorized": false,
+    "inventorship_determined": false,
+    "patentability_determined": false,
+    "patent_pending_authorized": false
+  }
+}
