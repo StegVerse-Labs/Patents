@@ -112,11 +112,12 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
     queue = next((r.get("parsed_result") for r in results if r["id"] == "machine_queue"), None)
     decision = "PORTFOLIO_MACHINE_VALIDATION_PASSED" if not failures else "PORTFOLIO_MACHINE_VALIDATION_FAILED"
     return {
-        "schema_version": "1.2",
+        "schema_version": "1.3",
         "generated_at": _utc_now(),
         "decision": decision,
         "failed_checks": failures,
         "workstream_decision": workstream.get("decision") if isinstance(workstream, dict) else None,
+        "machine_queue": queue if isinstance(queue, dict) else None,
         "machine_queue_size": len(queue.get("queue", [])) if isinstance(queue, dict) else None,
         "checks": results,
         "authority_boundary": {
