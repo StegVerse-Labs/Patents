@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "family_id": "PAT-005",
   "decision": "IMPLEMENTATION_ANCHORS_VERIFIED",
   "anchors": [
@@ -74,11 +74,26 @@
       "blob_sha": "c7fa05835c29362086f97499b145931499cac638",
       "anchor_type": "receipt",
       "supports": ["accepted_observe_only", "non_authorizing_destination_receipt", "reconstructable_destination_receipt"]
+    },
+    {
+      "repository": "StegVerse-002/stegguardian-wiki",
+      "commit": "8cfa27cae30c314da4cedab5dcd8af0ef2e02977",
+      "path": "pages/device-continuity-guardian-boundary.md",
+      "blob_sha": "777a9aa6f0786c1ac5740f63ff6f9589c512fd53",
+      "anchor_type": "boundary_document",
+      "supports": ["handoff_not_operator_approval", "no_active_device_trust", "no_destination_behavior_authority", "unknown_device_review_only", "destination_receipt_requirement"]
+    },
+    {
+      "repository": "StegVerse-002/stegguardian-wiki",
+      "commit": "8cfa27cae30c314da4cedab5dcd8af0ef2e02977",
+      "path": "receipts/device-continuity-receipt.json",
+      "blob_sha": "37d0e769fbe9aacfa646d66562eaffb0e72deafc",
+      "anchor_type": "receipt",
+      "supports": ["guardian_recording", "reconstructable_guardian_receipt", "source_destination_binding"]
     }
   ],
   "remaining_unverified": [
-    "StegGuardian page and receipt paths",
-    "cross-repository negative fixtures beyond bounded denial and manual-review outcomes",
+    "cross-repository negative fixtures beyond bounded denial, review-only, and non-authority outcomes",
     "human conception and inventorship facts"
   ],
   "authority_boundary": {
