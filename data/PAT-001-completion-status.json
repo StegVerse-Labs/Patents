@@ -19,6 +19,9 @@
     "source_corroboration_record": true,
     "source_corroboration_validator": true,
     "source_corroboration_tests": true,
+    "canonical_source_search_receipt": true,
+    "canonical_source_search_validator": true,
+    "canonical_source_search_tests": true,
     "filing_readiness_index": true,
     "readiness_validator": true,
     "readiness_validator_tests": true,
@@ -40,6 +43,9 @@
     "source_corroboration_record": "data/PAT-001-source-corroboration.json",
     "source_corroboration_validator": "tools/validate_source_corroboration.py",
     "source_corroboration_tests": "tests/test_source_corroboration.py",
+    "canonical_source_search_receipt": "data/PAT-001-canonical-source-search-receipt.json",
+    "canonical_source_search_validator": "tools/validate_canonical_source_search_receipt.py",
+    "canonical_source_search_tests": "tests/test_canonical_source_search_receipt.py",
     "filing_readiness_index": "filing-readiness/PAT-001_FILING_READINESS_INDEX.md",
     "readiness_validator": "tools/validate_patent_readiness.py",
     "readiness_validator_tests": "tests/test_patent_readiness.py",
@@ -64,7 +70,7 @@
   "expected_decision": "FAIL_CLOSED_BLOCKERS",
   "expected_readiness_decision": "FAIL_CLOSED_BLOCKERS",
   "next_machine_tasks": [
-    "locate the exact canonical June 6 and June 16 source repositories and commit anchors while preserving adjacent cross-repository corroboration",
+    "retry exact canonical June 6 and June 16 source recovery only when a recorded retry trigger occurs",
     "collect executable evidence for capability resolution and minimum node construction",
     "collect executable evidence for expiry, usage leases, bounded context retention, and heartbeat non-self-retention",
     "populate stable patent and non-patent prior art identifiers after verified searches",
@@ -85,5 +91,5 @@
     "automated_fee_payment_permitted": false,
     "patent_pending_use_permitted": false
   },
-  "legal_notice": "Working technical portfolio status only. Cross-repository anchors corroborate technical limitations but do not determine conception date, inventorship, patentability, filing authority, or patent-pending status. Rendered SVGs are review artifacts, not approved filing drawings. Not legal advice and not a filed patent application."
+  "legal_notice": "Working technical portfolio status only. Negative search receipts and cross-repository anchors do not determine conception date, inventorship, patentability, filing authority, or patent-pending status. Rendered SVGs are review artifacts, not approved filing drawings. Not legal advice and not a filed patent application."
 }
