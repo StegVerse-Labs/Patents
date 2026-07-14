@@ -14,7 +14,7 @@ Run:
 python tools/patent_portfolio.py --repo-root .
 ```
 
-The locked runner validates completion/readiness state, PAT-001 corroboration and negative source-search receipts, PAT-005 multi-repository implementation anchors, drawings, evidence and machine queues, workstream selection, pytest, consolidated receipts, and synchronized continuation state. It excludes inventorship, practitioner judgment, approval, filing, payment, submission, and patent-pending decisions.
+The locked runner validates completion/readiness state, PAT-001 corroboration and negative source-search receipts, PAT-005 four-repository implementation anchors, drawings, evidence and machine queues, workstream selection, pytest, consolidated receipts, and synchronized continuation state. It excludes inventorship, practitioner judgment, approval, filing, payment, submission, and patent-pending decisions.
 
 ## PAT-001 state
 
@@ -23,15 +23,15 @@ The locked runner validates completion/readiness state, PAT-001 corroboration an
 - Four monochrome SVG review drawings and a SHA-256 manifest remain under `rendered/PAT-001/`.
 - Capability resolution, minimum construction, expiry, usage leases, bounded context, and heartbeat non-self-retention still require executable evidence or explicit negative evidence.
 
-## PAT-005 multi-repository implementation anchors
+## PAT-005 four-repository anchors
 
-`data/PAT-005-implementation-anchors.json` now binds nine exact artifacts across three repositories.
+`data/PAT-005-implementation-anchors.json` binds eleven exact artifacts across four repositories.
 
 ### Source implementation
 
 `StegVerse-Labs/device-continuity-layer@d12e8790b7d426cda0594cd817833d0b76db15ac`
 
-- package builder;
+- destination package builder;
 - package validator;
 - StegTalk acceptance fixture with observe-only, review-required, and denied outcomes.
 
@@ -51,15 +51,21 @@ The locked runner validates completion/readiness state, PAT-001 corroboration an
 - receipt validator — blob `bb129fd31c004c10b0f64d525a5bc7d7878b5f02`;
 - non-authorizing reconstructable receipt — blob `c7fa05835c29362086f97499b145931499cac638`.
 
-The record now supports source-to-destination package creation, installed non-authorizing handoffs, bounded destination decisions, payload and destination receipt binding, accepted observe-only posture, and reconstructability. It does not establish inventorship, patentability, filing authority, or patent-pending status.
+### StegGuardian boundary
+
+`StegVerse-002/stegguardian-wiki@8cfa27cae30c314da4cedab5dcd8af0ef2e02977`
+
+- guardian boundary page — blob `777a9aa6f0786c1ac5740f63ff6f9589c512fd53`;
+- reconstructable guardian receipt — blob `37d0e769fbe9aacfa646d66562eaffb0e72deafc`.
+
+The Guardian page states that a handoff candidate is not operator approval, active device trust, or destination behavior authority; unknown devices remain review-only until destination policy accepts them. The validator explicitly prevents Guardian documentation from being classified as executable authority.
 
 ## Current next machine work
 
 1. Execute the canonical runner through the authoritative execution path.
-2. Locate and verify StegGuardian page and receipt paths, or preserve an explicit absence receipt.
-3. Preserve PAT-005 executable cross-repository negative fixtures and outputs beyond the already anchored denial and manual-review outcomes.
-4. Preserve PAT-001 executable or explicit negative lifecycle evidence.
-5. Populate stable prior-art identifiers only from verified patent and non-patent sources.
+2. Preserve PAT-005 executable cross-repository negative fixtures and outputs beyond the already anchored denial, review-only, and non-authority outcomes.
+3. Preserve PAT-001 executable or explicit negative lifecycle evidence.
+4. Populate stable prior-art identifiers only from verified patent and non-patent sources.
 
 ## Activation boundary
 
@@ -67,8 +73,8 @@ Switch to `REVIEW_ECOSYSTEM_CANDIDATES` only when every higher-priority active f
 
 ## Validation state
 
-The multi-repository anchor record, validator, tests, dispatcher integration, completion-state binding, and this handoff are committed. No attached workflow run has yet supplied an authoritative execution receipt.
+The four-repository anchor record, Guardian-aware validator, regression tests, completion-state binding, and this handoff are committed. No attached workflow run has yet supplied an authoritative execution receipt.
 
 ## Ownership
 
-Issue #1 remains the authoritative filing-priority record. This handoff owns portfolio transition, the concurrency-safe runner, unified dispatcher, both queues, corroboration controls, source-search receipts, PAT-005 multi-repository implementation-anchor controls, and synchronized continuation state.
+Issue #1 remains the authoritative filing-priority record. This handoff owns portfolio transition, the concurrency-safe runner, unified dispatcher, both queues, corroboration controls, source-search receipts, PAT-005 four-repository anchor controls, and synchronized continuation state.
