@@ -35,12 +35,17 @@ The repository now includes:
 - `tools/filing_packet_emitter.py` — filesystem-only provisional packet emitter producing a specification DOCX, cover data, fee estimate, filing checklist, and hash manifest.
 - `docs/FILING_PACKET_SPEC.md` — canonical filing-packet lifecycle, invariants, and StegFin integration boundary.
 - `samples/sample_specification.md` — substantive rendering of the uploaded DOCX sample, pinned to source SHA-256 `0a31faeed211448bafb632ac2a6dc8ea4a977634d3b173badb61de54c9a28c59`.
+- `tests/test_patent_ai.py` — executable coverage for T1 commit-tag, T2 candidate-path, T3 PR-label, negative/no-trigger, and idempotent receipt behavior.
+- `tests/test_filing_packet_emitter.py` — executable coverage for fail-closed missing input, warning state, artifact hashes, null filing dates, packet-emitted state, and populated claim/summary handling.
+- `requirements-dev.txt` — reproducible test dependency declaration.
 
-Local pre-install validation completed:
+Local validation completed:
 
 - `python -m py_compile` passed for both Python tools.
 - imports for `requests` and `python-docx` passed.
 - the uploaded sample DOCX hash was recorded.
+- independent `python -m pytest -q` validation passed: 2 test modules passed in 0.34 seconds.
+- validation exposed two non-blocking `datetime.utcnow()` deprecation warnings; replace naïve UTC generation with timezone-aware UTC values before the next release tag.
 
 ## Human boundary invariant
 
@@ -69,10 +74,14 @@ The repository contains:
 - `scripts/render_patent_families.py`
 - `docs/CLAIM_DATA_MODEL.md`
 - `tests/test_master_claims.py`
+- `tests/test_patent_ai.py`
+- `tests/test_filing_packet_emitter.py`
 - `tools/patent_ai.py`
 - `tools/filing_packet_emitter.py`
 - `docs/FILING_PACKET_SPEC.md`
 - `samples/sample_specification.md`
+- `requirements.txt`
+- `requirements-dev.txt`
 
 Priority tracking issue: #1.
 
@@ -84,11 +93,10 @@ Priority tracking issue: #1.
 - prior-art search ledger
 - provisional specification draft
 - figure list and system diagrams
-- tests for all three positive candidate triggers and negative/no-trigger behavior
-- emitter fixture test verifying fail-closed behavior, warning state, manifest hashes, and null filed dates
-- verify whether `requirements.txt` already includes both `requests` and `python-docx`; update only if needed
+- replace `datetime.utcnow()` with timezone-aware UTC generation and rerun tests
 - commit or regenerate a binary DOCX fixture through a binary-capable repository path
 - consolidate the current workflow count toward the 1–2 dispatcher standard as a separate remediation task
+- run the full repository test suite in the authoritative dispatcher and preserve its receipt
 
 ## Ownership and continuation scope
 
