@@ -46,15 +46,19 @@ def _run(command: list[str], cwd: Path, accepted_returncodes: set[int]) -> dict[
 
 def build_commands() -> list[dict[str, Any]]:
     py = sys.executable
+    active_status = [
+        "data/PAT-001-completion-status.json",
+        "data/PAT-005-completion-status.json",
+    ]
     return [
         {
             "id": "pat001_completion",
-            "command": [py, "tools/validate_completion_status.py", "data/PAT-001-completion-status.json", "--repo-root", "."],
+            "command": [py, "tools/validate_completion_status.py", active_status[0], "--repo-root", "."],
             "accepted_returncodes": {0},
         },
         {
             "id": "pat005_completion",
-            "command": [py, "tools/validate_completion_status.py", "data/PAT-005-completion-status.json", "--repo-root", "."],
+            "command": [py, "tools/validate_completion_status.py", active_status[1], "--repo-root", "."],
             "accepted_returncodes": {0},
         },
         {
@@ -73,13 +77,19 @@ def build_commands() -> list[dict[str, Any]]:
             "accepted_returncodes": {0},
         },
         {
-            "id": "workstream_selection",
+            "id": "machine_queue",
             "command": [
                 py,
-                "tools/select_patent_workstream.py",
-                "data/PAT-001-completion-status.json",
-                "data/PAT-005-completion-status.json",
+                "tools/build_patent_machine_queue.py",
+                *active_status,
+                "--output",
+                "data/patent-machine-queue.json",
             ],
+            "accepted_returncodes": {0},
+        },
+        {
+            "id": "workstream_selection",
+            "command": [py, "tools/select_patent_workstream.py", *active_status],
             "accepted_returncodes": {0},
         },
         {
@@ -99,13 +109,15 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
 
     failures = [result["id"] for result in results if not result["passed"]]
     workstream = next((r.get("parsed_result") for r in results if r["id"] == "workstream_selection"), None)
+    queue = next((r.get("parsed_result") for r in results if r["id"] == "machine_queue"), None)
     decision = "PORTFOLIO_MACHINE_VALIDATION_PASSED" if not failures else "PORTFOLIO_MACHINE_VALIDATION_FAILED"
     return {
-        "schema_version": "1.1",
+        "schema_version": "1.2",
         "generated_at": _utc_now(),
         "decision": decision,
         "failed_checks": failures,
         "workstream_decision": workstream.get("decision") if isinstance(workstream, dict) else None,
+        "machine_queue_size": len(queue.get("queue", [])) if isinstance(queue, dict) else None,
         "checks": results,
         "authority_boundary": {
             "filing_performed": False,
