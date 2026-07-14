@@ -33,6 +33,15 @@ This evidence predates the later June 28–July 2 runtime implementation discuss
 
 PAT-005 has a public-disclosure triage package under `disclosures/`, `claims/`, `evidence/`, and `triage/`. Do not use `patent pending` unless an application has actually been filed.
 
+PAT-001 now has:
+
+- `evidence/PAT-001_CONCEPTION_AND_DISCLOSURE_CHRONOLOGY.md`;
+- `evidence/PAT-001_CLAIM_ELEMENT_EVIDENCE_MAP.md`, including verified July 2 runtime commits and explicit separation between evidenced limitations and later claim refinements;
+- `evidence/PAT-001_INVENTORSHIP_WORKSHEET.md`, requiring human contribution analysis limitation by limitation and for the claimed combinations;
+- `evidence/PAT-001_PRIOR_ART_SEARCH_LEDGER.md`, separating patentability searching from freedom-to-operate analysis and preserving reproducible search events.
+
+The strongest currently verified PAT-001 implementation combination is transition-table role execution, distinct authority and admissibility evaluation, fail-closed behavior, deterministic hash-bound receipts, governed return-path evidence, and reconstruction witnesses. Demand-only construction, minimum manifest-derived addressability, default expiry, usage-only delayed retention, bounded context reuse, and prohibition on heartbeat-only persistence remain high-value limitations requiring corroboration or implementation evidence.
+
 ## Filing-packet engine installed
 
 The repository now includes:
@@ -44,22 +53,20 @@ The repository now includes:
 - `samples/sample_specification.docx` — binary DOCX fixture, SHA-256 `0a31faeed211448bafb632ac2a6dc8ea4a977634d3b173badb61de54c9a28c59`.
 - `tests/test_patent_ai.py` — executable coverage for T1 commit-tag, T2 candidate-path, T3 PR-label, negative/no-trigger, and idempotent receipt behavior.
 - `tests/test_filing_packet_emitter.py` — executable coverage for fail-closed missing input, warning state, artifact hashes, null filing dates, packet-emitted state, and populated claim/summary handling.
+- `tests/test_utc_timestamps.py` — regression coverage requiring timezone-aware, `Z`-normalized timestamps and prohibiting deprecated `utcnow()` use.
 - `requirements-dev.txt` — reproducible test dependency declaration.
 
 ## Validation state
 
-Completed before the latest timestamp remediation:
+Completed:
 
-- `python -m py_compile` passed for both Python tools.
-- imports for `requests` and `python-docx` passed.
-- independent `python -m pytest -q` validation passed for the patent-engine test modules.
-- the uploaded sample DOCX hash was verified and is now preserved as a binary fixture.
-
-Completed in the current continuation:
-
-- replaced naïve `datetime.utcnow()` generation in `tools/patent_ai.py` with timezone-aware UTC helpers producing `Z`-normalized RFC 3339 values;
-- replaced naïve `datetime.utcnow()` generation in `tools/filing_packet_emitter.py` with timezone-aware UTC generation;
-- committed the original binary DOCX fixture through the Git data API without forcing or overwriting concurrent repository work.
+- `python -m py_compile` passed for both Python tools;
+- imports for `requests` and `python-docx` passed;
+- independent `python -m pytest -q` validation passed for the patent-engine test modules before the timestamp remediation;
+- the uploaded sample DOCX hash was verified and preserved as a binary fixture;
+- naïve `datetime.utcnow()` generation was replaced with timezone-aware UTC helpers producing `Z`-normalized RFC 3339 values;
+- timestamp regression tests were committed;
+- the original binary DOCX fixture was committed through the Git data API without forcing or overwriting concurrent repository work.
 
 No combined status checks were attached to the latest direct commit. Full authoritative-dispatcher validation therefore remains required before a release tag.
 
@@ -82,21 +89,21 @@ Dependency rule: patent registry or packet tooling may consume StegFin services 
 
 ## Repository state
 
-The repository contains the claim schemas and master data, family renderer, patent doctrine documentation, filing-packet tools, binary and Markdown sample fixtures, test suites, PAT-001 evidence chronology, and the PAT-005 triage package.
+The repository contains the claim schemas and master data, family renderer, patent doctrine documentation, filing-packet tools, binary and Markdown sample fixtures, test suites, PAT-001 chronology/evidence/inventorship/prior-art controls, and the PAT-005 triage package.
 
 Priority tracking issue: #1.
 
 ## Next required artifacts and validations
 
-- PAT-001 claim-element-to-repository-evidence map
-- PAT-001 human inventorship worksheet by claimed limitation
-- PAT-001 prior-art search ledger
-- PAT-001 provisional specification draft
-- PAT-001 figure list and system diagrams
-- PAT-005 earliest-enabling-disclosure and foreign-filing triage resolution
-- tests asserting every generated timestamp is timezone-aware and `Z` normalized
-- run the full repository test suite in the authoritative dispatcher and preserve its receipt
-- consolidate the current workflow count toward the 1–2 dispatcher standard as a separate remediation task
+- corroborate the canonical June 6 and June 16 PAT-001 architecture sources and commits;
+- locate executable evidence for active-node capability resolution, minimum node construction, expiry, usage leases, bounded context retention, and heartbeat non-self-retention;
+- populate PAT-001 inventor candidates, corroborators, evidence, and contribution distinctions through human fact collection and counsel review;
+- execute and populate the PAT-001 prior-art search ledger using verified patent and non-patent databases;
+- PAT-001 provisional specification draft;
+- PAT-001 figure list and system diagrams;
+- PAT-005 earliest-enabling-disclosure and foreign-filing triage resolution;
+- run the full repository test suite in the authoritative dispatcher and preserve its receipt;
+- consolidate the current workflow count toward the 1–2 dispatcher standard as a separate remediation task.
 
 ## Ownership and continuation scope
 
