@@ -46,9 +46,11 @@ def synchronize(repo_root: Path, receipt_path: Path) -> dict[str, Any]:
     queue = receipt.get("machine_queue")
     if not isinstance(queue, dict):
         raise ValueError("dispatcher receipt missing machine_queue")
-    tasks = queue.get("tasks", [])
+    tasks = queue.get("queue", [])
     if not isinstance(tasks, list):
-        raise ValueError("machine_queue.tasks must be an array")
+        raise ValueError("machine_queue.queue must be an array")
+    if any(not isinstance(item, dict) for item in tasks):
+        raise ValueError("machine_queue.queue entries must be objects")
 
     workstream_decision = receipt.get("workstream_decision")
     if workstream_decision not in {
@@ -112,6 +114,23 @@ def synchronize(repo_root: Path, receipt_path: Path) -> dict[str, Any]:
     return {"status": status, "continuation": continuation}
 
 
+def write_synchronized_state(
+    repo_root: Path,
+    receipt_path: Path,
+    status_output: Path,
+    continuation_output: Path,
+) -> dict[str, Any]:
+    result = synchronize(repo_root, receipt_path)
+    status_output.parent.mkdir(parents=True, exist_ok=True)
+    continuation_output.parent.mkdir(parents=True, exist_ok=True)
+    status_output.write_text(json.dumps(result["status"], indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    continuation_output.write_text(
+        json.dumps(result["continuation"], indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return result
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
@@ -134,21 +153,13 @@ def main() -> int:
 
     repo_root = args.repo_root.resolve()
     receipt_path = args.receipt if args.receipt.is_absolute() else repo_root / args.receipt
-    result = synchronize(repo_root, receipt_path)
-
     status_output = args.status_output if args.status_output.is_absolute() else repo_root / args.status_output
     continuation_output = (
         args.continuation_output
         if args.continuation_output.is_absolute()
         else repo_root / args.continuation_output
     )
-    status_output.parent.mkdir(parents=True, exist_ok=True)
-    continuation_output.parent.mkdir(parents=True, exist_ok=True)
-    status_output.write_text(json.dumps(result["status"], indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    continuation_output.write_text(
-        json.dumps(result["continuation"], indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
+    result = write_synchronized_state(repo_root, receipt_path, status_output, continuation_output)
     print(json.dumps(result, indent=2, sort_keys=True))
     return 0
 
