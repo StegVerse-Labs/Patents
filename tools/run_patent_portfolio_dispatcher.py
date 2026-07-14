@@ -69,6 +69,11 @@ def build_commands() -> list[dict[str, Any]]:
             "accepted_returncodes": {0, 2},
         },
         {
+            "id": "pat001_source_corroboration",
+            "command": [py, "tools/validate_source_corroboration.py", "data/PAT-001-source-corroboration.json"],
+            "accepted_returncodes": {0},
+        },
+        {
             "id": "pat001_drawing_sources",
             "command": [py, "tools/lint_patent_drawings.py", "figures"],
             "accepted_returncodes": {0},
@@ -114,7 +119,7 @@ def dispatch(repo_root: Path) -> dict[str, Any]:
     queue = next((r.get("parsed_result") for r in results if r["id"] == "machine_queue"), None)
     decision = "PORTFOLIO_MACHINE_VALIDATION_PASSED" if not failures else "PORTFOLIO_MACHINE_VALIDATION_FAILED"
     return {
-        "schema_version": "1.5",
+        "schema_version": "1.6",
         "generated_at": _utc_now(),
         "decision": decision,
         "failed_checks": failures,
