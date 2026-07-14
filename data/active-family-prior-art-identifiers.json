@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "decision": "PRIOR_ART_IDENTIFIERS_PARTIALLY_VERIFIED",
+  "verified_at": "2026-07-14",
+  "families": {
+    "PAT-001": {
+      "verified_non_patent_references": [
+        {
+          "identifier_type": "arxiv",
+          "identifier": "arXiv:2204.07210",
+          "title": "A Case for Microservices Orchestration Using Workflow Engines",
+          "publication_date": "2022-04-14",
+          "mapped_collision_zones": ["microservice_orchestration", "workflow_execution"],
+          "source": "https://arxiv.org/abs/2204.07210"
+        }
+      ],
+      "verified_patent_publications": [],
+      "patent_search_status": "NO_PUBLICATION_NUMBER_VERIFIED",
+      "remaining_requirement": "Verify patent publication numbers, priority dates, family members, and relevant claims through USPTO, WIPO, or Espacenet records."
+    },
+    "PAT-005": {
+      "verified_non_patent_references": [
+        {
+          "identifier_type": "arxiv",
+          "identifier": "arXiv:1408.1416",
+          "title": "Mobile Device Identification via Sensor Fingerprinting",
+          "publication_date": "2014-08-06",
+          "mapped_collision_zones": ["sensor_fingerprinting", "hardware_derived_identity"],
+          "source": "https://arxiv.org/abs/1408.1416"
+        },
+        {
+          "identifier_type": "arxiv",
+          "identifier": "arXiv:1804.03852",
+          "title": "IoTSense: Behavioral Fingerprinting of IoT Devices",
+          "publication_date": "2018-04-11",
+          "mapped_collision_zones": ["behavioral_device_fingerprinting", "device_type_classification"],
+          "source": "https://arxiv.org/abs/1804.03852"
+        },
+        {
+          "identifier_type": "arxiv",
+          "identifier": "arXiv:2403.13020",
+          "title": "ASOP: A Sovereign and Secure Device Onboarding Protocol for Cloud-based IoT Services",
+          "publication_date": "2024-03-18",
+          "mapped_collision_zones": ["secure_device_onboarding", "human_in_the_loop_admission"],
+          "source": "https://arxiv.org/abs/2403.13020"
+        }
+      ],
+      "verified_patent_publications": [],
+      "patent_search_status": "NO_PUBLICATION_NUMBER_VERIFIED",
+      "remaining_requirement": "Verify patent publication numbers, priority dates, family members, and relevant claims through USPTO, WIPO, or Espacenet records."
+    }
+  },
+  "search_boundary": {
+    "absence_is_novelty_evidence": false,
+    "patentability_determined": false,
+    "freedom_to_operate_determined": false,
+    "inventorship_determined": false,
+    "filing_authorized": false,
+    "filing_performed": false,
+    "patent_pending_authorized": false
+  }
+}
