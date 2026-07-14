@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "family_id": "PAT-001",
+  "status": "PARTIALLY_CORROBORATED",
+  "generated_from": "cross-repository committed source review",
+  "anchors": [
+    {
+      "anchor_id": "PAT001-A001",
+      "repository": "StegVerse-Labs/StegDB",
+      "commit_sha": "e822a8715dbb45eccb84351d3a6f2ce2169008a7",
+      "path": "master-records/monitoring/entities/micro_node_policy.md",
+      "blob_sha": "58e71aa900a5a8ca2ef1f4a581fa7dbcaf539cc0",
+      "source_date_status": "commit-bound; exact conception date not inferred",
+      "support_level": "implemented_policy",
+      "supported_limitations": [
+        "bounded_scope",
+        "explicit_ignored_domains",
+        "receipt_requirement",
+        "authority_separation",
+        "fail_closed_evaluation",
+        "escalation_when_node_cannot_complete_transition",
+        "source_commit_or_evidence_binding"
+      ],
+      "does_not_establish": [
+        "earliest_conception",
+        "inventorship",
+        "demand_only_construction",
+        "default_expiry",
+        "usage_only_lease_extension",
+        "heartbeat_non_self_retention"
+      ]
+    },
+    {
+      "anchor_id": "PAT001-A002",
+      "repository": "StegVerse-Labs/StegDB",
+      "commit_sha": "e822a8715dbb45eccb84351d3a6f2ce2169008a7",
+      "path": "master-records/monitoring/schemas/monitoring_micro_node_manifest.schema.json",
+      "blob_sha": "6baf52bc874b0eec2eecab4572719f1a1fc69769",
+      "source_date_status": "commit-bound; exact conception date not inferred",
+      "support_level": "executable_schema",
+      "supported_limitations": [
+        "manifest_declared_scope",
+        "manifest_declared_inputs_outputs",
+        "manifest_declared_allowed_postures",
+        "manifest_declared_receipt_requirement",
+        "manifest_declared_escalation_target",
+        "manifest_declared_authority_level",
+        "closed_manifest_shape"
+      ],
+      "does_not_establish": [
+        "dynamic_instantiation",
+        "minimum_addressability",
+        "expiry_or_lease_semantics",
+        "heartbeat_retention_semantics"
+      ]
+    },
+    {
+      "anchor_id": "PAT001-A003",
+      "repository": "StegVerse-Labs/Site",
+      "commit_sha": "03bc107899bf36a635296cc9d19292630bacd5eb",
+      "path": "docs/PUBLICATION_MICRO_NODE_WORKFLOW.md",
+      "blob_sha": "665d9f3e4122537ce70d3eb43946a62449700e63",
+      "source_date_status": "commit-bound; document labels execution as not yet implemented",
+      "support_level": "architecture_reference",
+      "supported_limitations": [
+        "bounded_workflow_function",
+        "ordered_micro_node_sequence",
+        "separate_role_authorities",
+        "instantiate_bounded_child_nodes",
+        "track_node_lineage",
+        "collect_receipts",
+        "terminate_child_nodes",
+        "input_output_hash_binding",
+        "created_at_destroyed_at_lifecycle_fields",
+        "fail_closed_non_publishable_states"
+      ],
+      "does_not_establish": [
+        "runtime_reduction_to_practice",
+        "earliest_conception",
+        "inventorship",
+        "default_expiry",
+        "usage_only_lease_extension",
+        "heartbeat_non_self_retention"
+      ]
+    }
+  ],
+  "corroborated_limitations": [
+    "bounded_scope",
+    "explicit_ignored_domains",
+    "manifest_declared_inputs_outputs",
+    "manifest_declared_allowed_postures",
+    "manifest_declared_receipt_requirement",
+    "manifest_declared_escalation_target",
+    "manifest_declared_authority_level",
+    "authority_separation",
+    "fail_closed_evaluation",
+    "ordered_micro_node_sequence",
+    "instantiate_bounded_child_nodes",
+    "track_node_lineage",
+    "collect_receipts",
+    "terminate_child_nodes",
+    "input_output_hash_binding",
+    "created_at_destroyed_at_lifecycle_fields"
+  ],
+  "still_uncorroborated": [
+    "canonical_2026_06_06_source_and_commit",
+    "canonical_2026_06_16_source_and_commit",
+    "demand_only_construction",
+    "minimum_node_addressability",
+    "default_expiry",
+    "usage_only_delayed_retention",
+    "bounded_context_reuse",
+    "heartbeat_non_self_retention"
+  ],
+  "authority_boundary": {
+    "inventorship_determined": false,
+    "patentability_determined": false,
+    "priority_date_determined": false,
+    "filing_authorized": false,
+    "patent_pending_authorized": false
+  }
+}
