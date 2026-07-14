@@ -246,7 +246,7 @@ def main():
     manifest = {
         "sig": SIG,
         "invention_id": inv_id,
-        "created_utc": dt.datetime.utcnow().isoformat() + "Z",
+        "created_utc": dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
         "entity_status": args.entity_status,
         "source_refs": {
             "provisional": str(provisional_path.relative_to(root)),
