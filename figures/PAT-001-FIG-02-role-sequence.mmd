@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant R as Request
+    participant O as Observer
+    participant I as Interpreter
+    participant A as Authority Checker
+    participant G as Admissibility Gate
+    participant D as Decision Role
+    participant Q as Receipt Issuer
+    participant P as Return-Path Carrier
+    participant W as Reconstruction Witness
+
+    R->>O: transition_id, origin, return_path, action, actor, target, scope
+    O->>I: observed request hash and source evidence
+    I->>A: interpreted transition and missing-field status
+    A->>G: authority standing result
+    G->>D: admissibility standing result
+    D->>Q: ALLOW, DENY, or FAIL_CLOSED
+    Q->>P: decision plus receipt hash
+    P->>W: governed return payload hash
+    W-->>R: reconstruction evidence
