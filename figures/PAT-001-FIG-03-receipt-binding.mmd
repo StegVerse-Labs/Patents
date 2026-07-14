@@ -1,0 +1,15 @@
+flowchart TB
+    A[Request fields] --> H1[Request hash]
+    B[Ordered role results] --> H2[Role-evidence hash]
+    C[Terminal decision] --> R[Receipt constructor]
+    H1 --> R
+    H2 --> R
+    D[Optional previous receipt hash] --> R
+    R --> RH[Receipt hash]
+    RH --> P[Governed return payload]
+    P --> PH[Return-payload hash]
+    H1 --> W[Reconstruction witness]
+    H2 --> W
+    RH --> W
+    PH --> W
+    W --> WH[Reconstruction hash]
