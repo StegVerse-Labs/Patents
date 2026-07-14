@@ -26,7 +26,10 @@
     "multi_repository_implementation_anchor_record": true,
     "multi_repository_implementation_anchor_validator": true,
     "multi_repository_implementation_anchor_tests": true,
-    "guardian_boundary_and_receipt_verified": true
+    "guardian_boundary_and_receipt_verified": true,
+    "executable_negative_case_corpus": true,
+    "executable_negative_case_replay": true,
+    "executable_negative_case_tests": true
   },
   "artifact_map": {
     "technical_disclosure": "disclosures/PAT-005-governed-device-continuity.md",
@@ -51,21 +54,23 @@
     "multi_repository_implementation_anchor_record": "data/PAT-005-implementation-anchors.json",
     "multi_repository_implementation_anchor_validator": "tools/validate_pat005_implementation_anchors.py",
     "multi_repository_implementation_anchor_tests": "tests/test_pat005_implementation_anchors.py",
-    "guardian_boundary_and_receipt_verified": "data/PAT-005-implementation-anchors.json"
+    "guardian_boundary_and_receipt_verified": "data/PAT-005-implementation-anchors.json",
+    "executable_negative_case_corpus": "fixtures/PAT-005-negative-cases.json",
+    "executable_negative_case_replay": "tools/replay_pat005_negative_cases.py",
+    "executable_negative_case_tests": "tests/test_pat005_negative_cases.py"
   },
   "blocking_gates": {
     "verified_prior_art_references": false,
     "contributor_interviews_complete": false,
     "inventorship_determined": false,
     "earliest_public_disclosure_audited": false,
-    "executable_negative_fixtures_preserved": false,
+    "executable_negative_fixtures_preserved": true,
     "formal_drawings_approved": false,
     "practitioner_written_recommendation": false,
     "owner_filing_authorization": false
   },
   "expected_decision": "FAIL_CLOSED_BLOCKERS",
   "next_machine_tasks": [
-    "preserve executable cross-repository negative fixtures and outputs",
     "populate stable prior art publication identifiers after verified search",
     "run the canonical portfolio entry point through the authoritative execution path"
   ],
@@ -76,5 +81,5 @@
     "obtain qualified patent practitioner review",
     "decide whether to file"
   ],
-  "legal_notice": "Working technical portfolio status only. Exact source, StegTalk, StegMusic, and StegGuardian anchors support technical review but do not determine inventorship, patentability, filing authority, or patent-pending status. Guardian documentation and receipts are evidence boundaries, not executable authority. Not legal advice and not a filed patent application."
+  "legal_notice": "Working technical portfolio status only. Exact source, destination, Guardian, and replayed negative-case evidence supports technical review but does not determine inventorship, patentability, filing authority, or patent-pending status. Negative replay evidence is derived from anchored validator semantics and is not a production execution receipt. Not legal advice and not a filed patent application."
 }
