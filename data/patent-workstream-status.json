@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "decision": "CONTINUE_ACTIVE_PATENT_WORK",
+  "candidate_review_armed": true,
+  "candidate_review_active": false,
+  "decision_basis": [
+    "PAT-001 retains authorized machine tasks including source corroboration, negative-fixture preservation, drawing rendering and dispatcher validation",
+    "PAT-005 retains authorized machine tasks identified in its completion status",
+    "ecosystem candidate review activates when every higher-priority active family is submission-ready or externally blocked with no authorized machine task remaining"
+  ],
+  "active_family_status_files": [
+    "data/PAT-001-completion-status.json",
+    "data/PAT-005-completion-status.json"
+  ],
+  "controller": "tools/select_patent_workstream.py",
+  "controller_tests": "tests/test_select_patent_workstream.py",
+  "candidate_policy": "docs/ECOSYSTEM_PATENT_CANDIDATE_REVIEW.md",
+  "candidate_schema": "schemas/ecosystem-patent-candidate.schema.json",
+  "on_transition": {
+    "to_candidate_review": "run a durable ecosystem review cycle and emit candidate records without abandoning active families",
+    "back_to_active_family": "resume the affected family immediately when new evidence, review, authorization, validation or filing events arrive"
+  },
+  "authority_boundaries": {
+    "may_identify_candidates": true,
+    "may_create_working_disclosures": true,
+    "may_declare_inventorship": false,
+    "may_conclude_patentability": false,
+    "may_file": false,
+    "may_authorize_patent_pending": false
+  }
+}
