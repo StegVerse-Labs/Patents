@@ -9,7 +9,8 @@ from tools.validate_pat005_implementation_anchors import validate
 def test_real_pat005_anchor_record_is_valid() -> None:
     result = validate(Path("data/PAT-005-implementation-anchors.json"))
     assert result["decision"] == "PAT005_IMPLEMENTATION_ANCHORS_VALID"
-    assert result["anchor_count"] == 3
+    assert result["anchor_count"] == 9
+    assert result["repository_count"] == 3
 
 
 def test_rejects_authority_escalation(tmp_path: Path) -> None:
@@ -22,11 +23,21 @@ def test_rejects_authority_escalation(tmp_path: Path) -> None:
     assert any("filing_authorized" in error for error in result["errors"])
 
 
-def test_rejects_duplicate_paths(tmp_path: Path) -> None:
+def test_rejects_duplicate_repository_commit_path(tmp_path: Path) -> None:
     source = json.loads(Path("data/PAT-005-implementation-anchors.json").read_text(encoding="utf-8"))
     source["anchors"].append(dict(source["anchors"][0]))
     record = tmp_path / "anchors.json"
     record.write_text(json.dumps(source), encoding="utf-8")
     result = validate(record)
     assert result["decision"] == "INVALID_PAT005_IMPLEMENTATION_ANCHORS"
-    assert any("duplicate path" in error for error in result["errors"])
+    assert any("duplicate anchor" in error for error in result["errors"])
+
+
+def test_verified_state_requires_three_repositories(tmp_path: Path) -> None:
+    source = json.loads(Path("data/PAT-005-implementation-anchors.json").read_text(encoding="utf-8"))
+    source["anchors"] = [item for item in source["anchors"] if item["repository"] == "StegVerse-Labs/device-continuity-layer"]
+    record = tmp_path / "anchors.json"
+    record.write_text(json.dumps(source), encoding="utf-8")
+    result = validate(record)
+    assert result["decision"] == "INVALID_PAT005_IMPLEMENTATION_ANCHORS"
+    assert any("three" in error for error in result["errors"])
