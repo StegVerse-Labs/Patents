@@ -14,6 +14,7 @@ def test_build_commands_covers_active_machine_surface() -> None:
         "pat001_completion",
         "pat005_completion",
         "pat001_readiness",
+        "pat001_source_corroboration",
         "pat001_drawing_sources",
         "pat001_rendered_drawings",
         "machine_queue",
@@ -29,6 +30,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
         "pat001_completion": (0, {"decision": "VALID_FAIL_CLOSED"}),
         "pat005_completion": (0, {"decision": "VALID_FAIL_CLOSED"}),
         "pat001_readiness": (2, {"decision": "FAIL_CLOSED_BLOCKERS"}),
+        "pat001_source_corroboration": (0, {"decision": "CORROBORATION_RECORD_VALID"}),
         "pat001_drawing_sources": (0, {"decision": "DRAWING_SOURCES_VALID"}),
         "pat001_rendered_drawings": (0, {"decision": "DRAWING_MANIFEST_VALID"}),
         "machine_queue": (0, {"decision": "MACHINE_QUEUE_READY", "queue": [{"task": "verify hashes"}]}),
@@ -58,11 +60,11 @@ def test_dispatch_reports_failed_check(monkeypatch, tmp_path: Path) -> None:
 
     def fake_run(command, cwd, text, capture_output, check):
         check_id = next(command_ids)
-        returncode = 2 if check_id == "pat001_rendered_drawings" else 0
-        payload = {"decision": "INVALID_DRAWING_MANIFEST"} if returncode else {"decision": "OK"}
+        returncode = 2 if check_id == "pat001_source_corroboration" else 0
+        payload = {"decision": "INVALID_CORROBORATION_RECORD"} if returncode else {"decision": "OK"}
         return SimpleNamespace(returncode=returncode, stdout=json.dumps(payload), stderr="")
 
     monkeypatch.setattr(dispatcher.subprocess, "run", fake_run)
     receipt = dispatcher.dispatch(tmp_path)
     assert receipt["decision"] == "PORTFOLIO_MACHINE_VALIDATION_FAILED"
-    assert receipt["failed_checks"] == ["pat001_rendered_drawings"]
+    assert receipt["failed_checks"] == ["pat001_source_corroboration"]
