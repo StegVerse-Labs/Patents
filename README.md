@@ -16,10 +16,34 @@ This repository manages StegVerse invention disclosures, reusable claim data, pr
 
 ## PAT-005 working package
 
+### Core drafting
+
 - `disclosures/PAT-005-governed-device-continuity.md`
 - `claims/PAT-005-claim-architecture.md`
+- `provisionals/PAT-005-working-provisional-draft.md`
+- `diagrams/PAT-005-figure-descriptions.md`
+
+### Evidence
+
 - `evidence/PAT-005-evidence-ledger.md`
+- `evidence/PAT-005-cross-repository-source-map.md`
+- `evidence/PAT-005-destination-and-guardian-anchors.md`
+- `evidence/PAT-005-end-to-end-reconstruction.md`
+
+### Filing and disclosure triage
+
 - `triage/PAT-005-public-disclosure-and-filing-triage.md`
+
+### Current unresolved review items
+
+- claim-by-claim inventorship;
+- earliest conception and written-description dates;
+- earliest public disclosure for each limitation;
+- formal prior-art search and limitation charts;
+- formal patent drawings;
+- complete negative and failure evidence;
+- successful hosted-release publication receipt, if retained in claim scope;
+- practitioner review of enablement, claim scope, and foreign-filing implications.
 
 ## Structured source of truth
 
