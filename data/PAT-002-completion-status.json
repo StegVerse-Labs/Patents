@@ -16,11 +16,12 @@
     "implementation_source_repositories_identified": true,
     "completion_status_record": true,
     "filing_readiness_index": true,
-    "human_action_packet": true
+    "human_action_packet": true,
+    "limitation_evidence_map_template": true
   },
   "partial": {
-    "invention_capture": "structured claim-family data exists in data/master_claims.json; standalone disclosure not yet verified",
-    "evidence_map": "source repositories identified but exact paths, commits, tests, and receipts are not populated",
+    "invention_capture": "structured claim-family data exists in data/master_claims.json; a standalone disclosure write remains uncommitted and must be generated only through an authorized repository path",
+    "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md now defines limitation and combination evidence requirements; exact paths, commits, tests, receipts, and support classifications remain unpopulated",
     "claim_architecture": "shared clauses and claim identifiers exist; claim text and evidence references require verification",
     "prior_art_distinction": "technical collision themes are implicit but no verified search ledger is populated"
   },
@@ -43,7 +44,8 @@
   },
   "known_source_records": [
     "data/master_claims.json",
-    "PATENTS_MIRROR_HANDOFF.md"
+    "PATENTS_MIRROR_HANDOFF.md",
+    "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md"
   ],
   "candidate_implementation_sources": [
     {
@@ -59,11 +61,11 @@
   ],
   "expected_decision": "FAIL_CLOSED_BLOCKERS",
   "next_machine_tasks": [
-    "create a standalone PAT-002 invention disclosure from verified master-claims content without adding unsupported facts",
     "locate exact implementation paths and commits in StegEntity and Data-Continuation/core-lite",
-    "create a limitation-level evidence map",
+    "populate evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md only from verified anchors",
     "create chronology and public-disclosure audit templates",
     "create a prior-art search ledger without asserting search conclusions",
+    "create a standalone PAT-002 invention disclosure only through an authorized repository write path and only from verified material",
     "draft specification, abstract, and figure plan only to the extent supported by verified evidence"
   ],
   "next_human_tasks": [
