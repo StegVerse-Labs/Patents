@@ -1,12 +1,12 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "family_key": "multi_entity_observer_participant_admissibility",
   "title": "Multi-Entity Observer-Participant Admissibility",
-  "status": "working_disclosure_and_abstract_complete_implementation_blocked",
+  "status": "working_disclosure_abstract_figure_plan_and_distinction_notes_complete_implementation_blocked",
   "invention_capture": "working_technical_disclosure_complete_from_verified_formal_support",
-  "disclosure_chronology": "not_created",
+  "disclosure_chronology": "factual_template_complete_evidence_not_populated",
   "evidence_map": "partial_verified_two_source_inventory",
-  "prior_art_distinction_notes": "multi_agent_consensus_observer_and_audit_distinctions_required",
+  "prior_art_distinction_notes": "bounded_nonlegal_distinction_questions_complete_external_search_and_practitioner_review_pending",
   "specification": "working_disclosure_present_full_specification_not_created",
   "abstract": "working_abstract_complete",
   "claim_themes": "candidate_limitation_clusters_present_not_final",
@@ -15,7 +15,7 @@
   "ownership_fields": "unconfirmed",
   "counsel_questions": "independent_family_dependent_embodiment_or_research_track_unresolved",
   "filing_packet": "not_authorized",
-  "warning_resolution": "blocked_by_implementation_chronology_contributors_and_legal_disposition",
+  "warning_resolution": "blocked_by_implementation_chronology_contributors_external_search_and_legal_disposition",
   "human_filing": "not_started",
   "filing_receipt": null,
   "application_number": null,
@@ -38,25 +38,32 @@
       "support": "relational transition substrate for boundaries, horizons, authority, recoverability, reconstruction, and commit-time evaluation"
     }
   ],
-  "new_artifacts": [
+  "artifacts": [
+    "evidence/PUBLISHER-multi-entity-observer-participant-source-inventory.md",
     "reviews/PUBLISHER-multi-entity-observer-participant-technical-disclosure.md",
-    "reviews/PUBLISHER-multi-entity-observer-participant-abstract-and-figure-plan.md"
+    "reviews/PUBLISHER-multi-entity-observer-participant-abstract-and-figure-plan.md",
+    "reviews/PUBLISHER-multi-entity-observer-participant-chronology-audit.md",
+    "reviews/PUBLISHER-multi-entity-observer-participant-nonlegal-distinction-notes.md",
+    "reviews/PUBLISHER-multi-entity-observer-participant-action-packet.md"
   ],
   "verified_progress": {
     "working_technical_disclosure_complete": true,
     "working_abstract_complete": true,
     "figure_plan_complete": true,
+    "chronology_template_complete": true,
+    "bounded_nonlegal_distinction_notes_complete": true,
     "formal_drawings_complete": false,
     "dedicated_executable_protocol_verified": false,
-    "chronology_verified": false,
-    "contributors_verified": false
+    "chronology_evidence_verified": false,
+    "contributors_verified": false,
+    "external_prior_art_search_verified": false
   },
-  "expected_decision": "FAIL_CLOSED_IMPLEMENTATION_CHRONOLOGY_AND_LEGAL_BLOCKERS",
+  "expected_decision": "FAIL_CLOSED_IMPLEMENTATION_CHRONOLOGY_EXTERNAL_SEARCH_AND_LEGAL_BLOCKERS",
   "next_machine_tasks": [
-    "create chronology and public-disclosure audit templates",
     "create a limitation-level evidence map distinguishing formal support from executable support",
     "create a non-legal overlap report against PAT-002, Distributed Coherence, and Receipt-Based State Transition Validation",
     "locate or receive a dedicated observer-participant protocol or implementation source",
+    "normalize dated chronology records when supplied",
     "convert the figure plan into formal drawings only after implementation fields and flows are verified",
     "expand the working disclosure into a full specification only to the extent supported by verified evidence"
   ],
@@ -64,7 +71,7 @@
     "provide or identify the canonical observer-participant protocol or implementation source",
     "identify factual contributors and contributions",
     "provide dated conception and disclosure records",
-    "obtain practitioner advice on family disposition and claim scope",
+    "obtain a practitioner-directed prior-art search and written family recommendation",
     "obtain inventorship and ownership determinations",
     "record owner disposition only after counsel recommendation"
   ],
