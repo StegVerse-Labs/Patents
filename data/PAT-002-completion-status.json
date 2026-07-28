@@ -1,7 +1,7 @@
 {
   "family_id": "PAT-002",
   "title": "Heartbeat-Governed Entity and Reflected-State Computing",
-  "status": "structured_review_preparation_with_blockers",
+  "status": "structured_review_preparation_with_source_identity_blocker",
   "filed": false,
   "patent_pending_authorized": false,
   "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
@@ -17,15 +17,18 @@
     "completion_status_record": true,
     "filing_readiness_index": true,
     "human_action_packet": true,
-    "limitation_evidence_map_template": true
+    "limitation_evidence_map_template": true,
+    "source_identity_blocker_record": true
   },
   "partial": {
     "invention_capture": "structured claim-family data exists in data/master_claims.json; a standalone disclosure write remains uncommitted and must be generated only through an authorized repository path",
-    "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md now defines limitation and combination evidence requirements; exact paths, commits, tests, receipts, and support classifications remain unpopulated",
+    "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md defines limitation and combination evidence requirements; exact authoritative repository identities, paths, commits, tests, receipts, and support classifications remain unpopulated",
     "claim_architecture": "shared clauses and claim identifiers exist; claim text and evidence references require verification",
-    "prior_art_distinction": "technical collision themes are implicit but no verified search ledger is populated"
+    "prior_art_distinction": "technical collision themes are implicit but no verified search ledger is populated",
+    "source_identity": "recorded candidates StegVerse-Labs/StegEntity and Data-Continuation/core-lite did not resolve through the connected installation; Admissible-Existence/core-lite resolved but must not be substituted without an authoritative succession or canonical-source record"
   },
   "blocking_gates": {
+    "canonical_source_repository_identity_confirmed": false,
     "standalone_invention_disclosure_complete": false,
     "conception_chronology_verified": false,
     "earliest_public_disclosure_audited": false,
@@ -45,23 +48,30 @@
   "known_source_records": [
     "data/master_claims.json",
     "PATENTS_MIRROR_HANDOFF.md",
-    "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md"
+    "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md",
+    "evidence/PAT-002_SOURCE_IDENTITY_BLOCKER.md"
   ],
   "candidate_implementation_sources": [
     {
       "repository": "StegVerse-Labs/StegEntity",
       "description": "Entity lifecycle and orchestration-cycle material relevant to heartbeat-governed state.",
-      "verification_status": "exact paths and commits unresolved"
+      "verification_status": "repository identity did not resolve through current connected installation; canonical URL/name or succession record required"
     },
     {
       "repository": "Data-Continuation/core-lite",
       "description": "Continuity event, reconstruction, intake, export, and reporting mechanisms.",
-      "verification_status": "exact paths and commits unresolved"
+      "verification_status": "repository identity did not resolve through current connected installation; canonical URL/name or succession record required"
+    },
+    {
+      "repository": "Admissible-Existence/core-lite",
+      "description": "A connected repository with the same terminal repository name was discovered, but no authoritative relationship to the recorded PAT-002 source is established.",
+      "verification_status": "excluded from evidence attachment until authoritative succession or canonical-source evidence is committed; code-search index unavailable"
     }
   ],
-  "expected_decision": "FAIL_CLOSED_BLOCKERS",
+  "expected_decision": "FAIL_CLOSED_SOURCE_IDENTITY_UNRESOLVED",
   "next_machine_tasks": [
-    "locate exact implementation paths and commits in StegEntity and Data-Continuation/core-lite",
+    "wait for or locate an authoritative source identity or repository succession record",
+    "after identity resolution, locate exact implementation paths and immutable commits",
     "populate evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md only from verified anchors",
     "create chronology and public-disclosure audit templates",
     "create a prior-art search ledger without asserting search conclusions",
@@ -69,6 +79,9 @@
     "draft specification, abstract, and figure plan only to the extent supported by verified evidence"
   ],
   "next_human_tasks": [
+    "confirm canonical repository URLs or owner/repository names for the two recorded implementation sources",
+    "provide or commit repository succession records if either source was renamed, transferred, archived, or superseded",
+    "ensure authoritative source repositories are connected or provide immutable commit/blob references through an authorized artifact",
     "identify contributors for factual interviews",
     "provide dated conception and disclosure records",
     "obtain claim-by-claim inventorship analysis from qualified counsel",
