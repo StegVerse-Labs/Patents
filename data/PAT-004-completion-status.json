@@ -1,0 +1,49 @@
+{
+  "family_id": "PAT-004",
+  "title": "Manifest-Governed Bidirectional Neural Communication",
+  "status": "structured_review_preparation_with_blockers",
+  "filed": false,
+  "patent_pending_authorized": false,
+  "completed": {
+    "structured_family_record": true,
+    "inventive_center_defined": true,
+    "technical_problem_defined": true,
+    "technical_effects_defined": true,
+    "shared_claim_clauses_identified": true,
+    "method_and_system_claim_ids_present": true
+  },
+  "blocking_gates": {
+    "standalone_invention_disclosure": false,
+    "conception_and_disclosure_chronology": false,
+    "implementation_anchors_verified": false,
+    "limitation_level_evidence_map": false,
+    "prior_art_search_ledger": false,
+    "working_specification": false,
+    "working_abstract": false,
+    "figure_plan": false,
+    "contributor_interviews_complete": false,
+    "inventorship_determined": false,
+    "ownership_confirmed": false,
+    "technical_and_safety_boundary_reviewed": false,
+    "practitioner_written_recommendation": false,
+    "owner_filing_authorization": false,
+    "filing_packet_emitted": false,
+    "filing_receipt_recorded": false
+  },
+  "expected_decision": "FAIL_CLOSED_BLOCKERS",
+  "next_machine_tasks": [
+    "search connected repositories for verified technical source anchors relevant to the family record",
+    "create a standalone technical disclosure using only verified source material",
+    "create a limitation-level evidence map separating supported behavior from proposed embodiments",
+    "create a prior-art search ledger template without adding unverified results",
+    "create a figure plan only after verified system boundaries are established"
+  ],
+  "next_human_tasks": [
+    "identify contributors and preserve factual conception records",
+    "audit public disclosures and exact dates",
+    "identify any actual implementations and retained evidence",
+    "review claim scope, enablement, technical boundaries, inventorship, and filing strategy with qualified counsel",
+    "record an explicit portfolio disposition decision"
+  ],
+  "legal_notice": "Working technical portfolio status only. This record does not establish efficacy, safety, inventorship, ownership, patentability, filing authority, or patent-pending status."
+}
