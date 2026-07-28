@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-07-28",
+  "central_ledger": "data/publisher-family-completion-status.json",
+  "synchronization_status": "DEDICATED_STATUS_RECORDS_AHEAD_OF_CENTRAL_LEDGER",
+  "material_changes": [
+    {
+      "family_key": "receipt_based_state_transition_validation",
+      "prior_central_status": "candidate_family_unregistered",
+      "current_authoritative_detail": "data/publisher-receipt-based-state-transition-status.json",
+      "current_status": "structured_evidence_preparation_with_blockers",
+      "evidence_map": "partial_verified_written_description",
+      "approval_required_now": false
+    },
+    {
+      "family_key": "publisher_governed_disclosure_pipeline",
+      "prior_central_status": "candidate_family_unregistered",
+      "current_authoritative_detail": "data/publisher-governed-disclosure-pipeline-status.json",
+      "current_status": "structured_evidence_preparation_with_blockers",
+      "evidence_map": "partial_verified_written_description",
+      "approval_required_now": false
+    }
+  ],
+  "invariants": {
+    "filed_families": 0,
+    "patent_pending_authorized_families": 0,
+    "calculated_deadlines": 0
+  },
+  "required_next_machine_work": [
+    "replace stale entries in data/publisher-family-completion-status.json through an authorized full-ledger update",
+    "inspect executable Publisher disclosure-pipeline surfaces",
+    "advance Application Correction Gate when Publisher disclosure work reaches its next blocker"
+  ],
+  "warning": "This receipt does not change legal family boundaries, filing status, authority, application numbers, or deadlines."
+}
