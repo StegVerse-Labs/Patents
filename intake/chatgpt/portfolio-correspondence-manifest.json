@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "scope": "PORTFOLIO_WIDE_CHATGPT_CORRESPONDENCE_INTAKE",
+  "governing_contract": "intake/chatgpt/CORRESPONDENCE_INTAKE_CONTRACT.md",
+  "record_schema": "intake/chatgpt/correspondence-record.schema.json",
+  "numbered_families": [
+    "PAT-001",
+    "PAT-002",
+    "PAT-003",
+    "PAT-004",
+    "PAT-005"
+  ],
+  "publisher_candidates": [
+    "Commit-Time Admissibility Gate",
+    "Receipt-Based State Transition Validation",
+    "Publisher Governed Disclosure Pipeline",
+    "Application Correction Gate",
+    "AI Output-to-Action Boundary",
+    "Recoverability-Aware Execution Boundary",
+    "Master-Records Reconstruction and Verification",
+    "Multi-Entity Observer-Participant Admissibility"
+  ],
+  "materialized_conversation_count": 0,
+  "normalized_message_count": 0,
+  "family_index_count": 0,
+  "ingestion_receipt_count": 0,
+  "contradiction_report_count": 0,
+  "current_decision": "FAIL_CLOSED_SOURCE_NOT_MATERIALIZED",
+  "legal_boundary": {
+    "inventorship_determined": false,
+    "ownership_determined": false,
+    "patentability_determined": false,
+    "family_identity_determined": false,
+    "filing_authorized": false,
+    "filing_performed": false,
+    "deadline_calculated": false
+  },
+  "first_adapter": {
+    "family_id": "PAT-005",
+    "family_contract": "intake/chatgpt/PAT-005_CORRESPONDENCE_INTAKE_CONTRACT.md",
+    "family_manifest": "intake/chatgpt/PAT-005-correspondence-manifest.json",
+    "status": "ADAPTER_INSTALLED_SOURCE_NOT_MATERIALIZED"
+  },
+  "required_next_machine_work": [
+    "materialize pertinent ChatGPT conversation exports or bounded excerpts",
+    "preserve stable conversation and message references",
+    "hash source and message content",
+    "normalize records against correspondence-record.schema.json",
+    "classify records across numbered and Publisher-origin families",
+    "emit family indexes, contradiction reports, and ingestion receipts",
+    "feed bounded outputs into family readiness pipelines"
+  ],
+  "warnings": [
+    "No stable ChatGPT source export or excerpt has been committed to the portfolio-wide intake path.",
+    "Assistant-generated text is not independent factual corroboration, inventor testimony, counsel advice, or filing authority.",
+    "Family classification does not establish legal family scope or merge controlled candidates."
+  ]
+}
