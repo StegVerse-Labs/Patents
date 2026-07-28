@@ -170,6 +170,7 @@ Authoritative dispatcher execution and preserved validation output remain pendin
 8. Continue PAT-001 corroboration, drawing review outputs, and authoritative readiness validation.
 9. Preserve PAT-005 fail-closed status until the exact factual, practitioner, owner, and filing-human outputs are committed.
 10. Reconcile Publisher families through explicit controlled disposition records.
+11. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
 
 ## Human-boundary protocol
 
@@ -210,6 +211,40 @@ stegguardian-wiki
 
 Do not expose unpublished claims, inventorship disputes, counsel advice, or unfiled patent-sensitive details.
 
-## Archive readiness
+## Thread archive and orchestration custody
 
-This handoff contains the current family states, exact stasis locations, portfolio ledger, filing invariant, installed portfolio filing-state validator, portfolio-wide ChatGPT correspondence intake boundary, next machine work, and ecosystem continuation boundary. The prior conversation is not required for forward progress.
+Machine-readable source:
+
+```text
+data/thread-archive-custody-status.json
+```
+
+Repository continuation state is preserved, but that state is not equivalent to orchestration custody. The orchestration layer has not been verified as operational, no thread-ingestion receipt is present, remaining tasks have not been accepted or scheduled by an orchestrator, and no continuation checkpoint has been emitted.
+
+Current decision:
+
+```text
+repository continuation state preserved: true
+orchestration custody accepted: false
+thread ready to archive: false
+active working thread still required: true
+```
+
+The phrases `thread ready to archive`, `orchestration has custody`, `autonomous continuation is active`, and `the prior conversation is not required` are prohibited until the required orchestration evidence is committed and verified.
+
+Archive readiness requires, at minimum:
+
+```text
+stable thread or conversation identifier
+orchestration ingestion receipt
+hash or immutable reference to the ingested source
+task extraction manifest
+assignment or scheduling receipt for unfinished work
+orchestrator identity and runtime version
+accepted-custody timestamp
+continuation checkpoint or replay reference
+```
+
+## Continuation state
+
+This handoff preserves repository continuation state for the active working session. It does not authorize archiving the thread, does not establish autonomous continuation, and does not replace the missing orchestration custody receipt.
