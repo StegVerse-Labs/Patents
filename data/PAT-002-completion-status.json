@@ -1,0 +1,77 @@
+{
+  "family_id": "PAT-002",
+  "title": "Heartbeat-Governed Entity and Reflected-State Computing",
+  "status": "structured_review_preparation_with_blockers",
+  "filed": false,
+  "patent_pending_authorized": false,
+  "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
+  "completed": {
+    "family_record_in_master_claims": true,
+    "inventive_center_defined": true,
+    "technical_problem_defined": true,
+    "technical_effects_defined": true,
+    "shared_clause_set_defined": true,
+    "method_claim_concept_registered": true,
+    "system_claim_concept_registered": true,
+    "implementation_source_repositories_identified": true,
+    "completion_status_record": true,
+    "filing_readiness_index": true,
+    "human_action_packet": true
+  },
+  "partial": {
+    "invention_capture": "structured claim-family data exists in data/master_claims.json; standalone disclosure not yet verified",
+    "evidence_map": "source repositories identified but exact paths, commits, tests, and receipts are not populated",
+    "claim_architecture": "shared clauses and claim identifiers exist; claim text and evidence references require verification",
+    "prior_art_distinction": "technical collision themes are implicit but no verified search ledger is populated"
+  },
+  "blocking_gates": {
+    "standalone_invention_disclosure_complete": false,
+    "conception_chronology_verified": false,
+    "earliest_public_disclosure_audited": false,
+    "limitation_evidence_map_complete": false,
+    "verified_prior_art_search_complete": false,
+    "working_specification_complete": false,
+    "working_abstract_complete": false,
+    "formal_drawings_present": false,
+    "contributor_interviews_complete": false,
+    "inventorship_determined": false,
+    "ownership_confirmed": false,
+    "practitioner_written_recommendation": false,
+    "owner_filing_authorization": false,
+    "filing_packet_emitted": false,
+    "filing_receipt_present": false
+  },
+  "known_source_records": [
+    "data/master_claims.json",
+    "PATENTS_MIRROR_HANDOFF.md"
+  ],
+  "candidate_implementation_sources": [
+    {
+      "repository": "StegVerse-Labs/StegEntity",
+      "description": "Entity lifecycle and orchestration-cycle material relevant to heartbeat-governed state.",
+      "verification_status": "exact paths and commits unresolved"
+    },
+    {
+      "repository": "Data-Continuation/core-lite",
+      "description": "Continuity event, reconstruction, intake, export, and reporting mechanisms.",
+      "verification_status": "exact paths and commits unresolved"
+    }
+  ],
+  "expected_decision": "FAIL_CLOSED_BLOCKERS",
+  "next_machine_tasks": [
+    "create a standalone PAT-002 invention disclosure from verified master-claims content without adding unsupported facts",
+    "locate exact implementation paths and commits in StegEntity and Data-Continuation/core-lite",
+    "create a limitation-level evidence map",
+    "create chronology and public-disclosure audit templates",
+    "create a prior-art search ledger without asserting search conclusions",
+    "draft specification, abstract, and figure plan only to the extent supported by verified evidence"
+  ],
+  "next_human_tasks": [
+    "identify contributors for factual interviews",
+    "provide dated conception and disclosure records",
+    "obtain claim-by-claim inventorship analysis from qualified counsel",
+    "obtain practitioner recommendation",
+    "record explicit owner disposition or filing authorization"
+  ],
+  "legal_notice": "Working technical portfolio status only. This record does not determine inventorship, ownership, patentability, filing authority, filing status, or deadlines. No application has been filed and patent-pending language is not authorized."
+}
