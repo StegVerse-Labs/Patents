@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.4",
-  "generated_utc": "2026-07-28T07:01:05Z",
+  "schema_version": "0.5",
+  "generated_utc": "2026-07-28T07:57:36Z",
   "repository": "StegVerse-Labs/Patents",
   "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
   "legal_notice": "Technical portfolio tracking only. Unknown facts, inventorship, ownership, legal conclusions, filing authority, filing dates, application numbers, fees, receipts, and deadlines are not inferred.",
@@ -127,14 +127,46 @@
     }
   ],
   "publisher_invention_families": [
-    {"family_key":"commit_time_admissibility_gate","title":"Commit-Time Admissibility Gate","status":"counsel_packet_draft_exists_mapping_unresolved"},
-    {"family_key":"receipt_based_state_transition_validation","title":"Receipt-Based State Transition Validation","status":"candidate_family_unregistered"},
-    {"family_key":"publisher_governed_disclosure_pipeline","title":"Publisher Governed Disclosure Pipeline","status":"candidate_family_unregistered"},
-    {"family_key":"application_correction_gate","title":"Application Correction Gate","status":"candidate_family_unregistered"},
-    {"family_key":"ai_output_to_action_boundary","title":"AI Output-to-Action Boundary","status":"candidate_family_unregistered"},
-    {"family_key":"recoverability_aware_execution_boundary","title":"Recoverability-Aware Execution Boundary","status":"candidate_family_unregistered"},
-    {"family_key":"master_records_reconstruction_and_verification","title":"Master-Records Reconstruction and Verification","status":"candidate_family_unregistered"},
-    {"family_key":"multi_entity_observer_participant_admissibility","title":"Multi-Entity Observer-Participant Admissibility","status":"candidate_family_unregistered"}
+    {
+      "family_key": "commit_time_admissibility_gate",
+      "title": "Commit-Time Admissibility Gate",
+      "status": "counsel_packet_draft_exists_mapping_unresolved"
+    },
+    {
+      "family_key": "receipt_based_state_transition_validation",
+      "title": "Receipt-Based State Transition Validation",
+      "status": "candidate_family_unregistered"
+    },
+    {
+      "family_key": "publisher_governed_disclosure_pipeline",
+      "title": "Publisher Governed Disclosure Pipeline",
+      "status": "candidate_family_unregistered"
+    },
+    {
+      "family_key": "application_correction_gate",
+      "title": "Application Correction Gate",
+      "status": "candidate_family_unregistered"
+    },
+    {
+      "family_key": "ai_output_to_action_boundary",
+      "title": "AI Output-to-Action Boundary",
+      "status": "candidate_family_unregistered"
+    },
+    {
+      "family_key": "recoverability_aware_execution_boundary",
+      "title": "Recoverability-Aware Execution Boundary",
+      "status": "candidate_family_unregistered"
+    },
+    {
+      "family_key": "master_records_reconstruction_and_verification",
+      "title": "Master-Records Reconstruction and Verification",
+      "status": "candidate_family_unregistered"
+    },
+    {
+      "family_key": "multi_entity_observer_participant_admissibility",
+      "title": "Multi-Entity Observer-Participant Admissibility",
+      "status": "candidate_family_unregistered"
+    }
   ],
   "portfolio_blockers": [
     "Publisher invention families remain legally unmapped to numbered PAT families",
@@ -149,7 +181,13 @@
     "create PAT-002 standalone disclosure and limitation evidence map from verified sources",
     "search connected repositories for PAT-003 source anchors and create its standalone disclosure and evidence map",
     "search connected repositories for PAT-004 source anchors and create its standalone disclosure and evidence map",
-    "create a portfolio filing-state validator that rejects filed, patent-pending, or deadline states without an actual receipt and filing date",
-    "refresh this ledger after every material state change"
-  ]
+    "refresh this ledger after every material state change",
+    "run the portfolio filing-state validator and tests through the authoritative dispatcher and preserve the receipt"
+  ],
+  "portfolio_controls": {
+    "filing_state_validator": "tools/validate_portfolio_filing_state.py",
+    "filing_state_tests": "tests/test_portfolio_filing_state.py",
+    "validator_expected_current_decision": "PORTFOLIO_FILING_STATE_VALID",
+    "authoritative_dispatch_validation": "pending"
+  }
 }
