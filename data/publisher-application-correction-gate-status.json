@@ -1,19 +1,19 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "family_key": "application_correction_gate",
   "title": "Application Correction Gate",
-  "status": "source_material_not_located",
-  "invention_capture": "candidate concept only",
+  "status": "partial_technical_adjacency_located_direct_source_pending",
+  "invention_capture": "candidate concept with bounded correction-after-validation-failure adjacency",
   "disclosure_chronology": "not created",
-  "evidence_map": "blocked pending source material",
-  "prior_art_distinction_notes": "not started; dense correction and validation prior art expected",
+  "evidence_map": "partial source-candidate review present; direct family support pending",
+  "prior_art_distinction_notes": "not started",
   "specification": "not created",
   "abstract": "not created",
-  "claim_themes": "not extracted",
+  "claim_themes": "validation refusal, correction retry, logging, and escalation are candidate themes only",
   "drawings": "not created",
   "inventor_fields": "undetermined",
   "ownership_fields": "unconfirmed",
-  "counsel_questions": "technical correction gate versus legal prosecution correction unresolved",
+  "counsel_questions": "scope and family relationship unresolved",
   "filing_packet": "not authorized",
   "warning_resolution": "blocked",
   "human_filing": "not started",
@@ -22,21 +22,26 @@
   "actual_filing_date": null,
   "nonprovisional_deadline": null,
   "searches_performed": [
-    "GCAT-BCAT-Engine/Publisher: correction gate application correction warning repair validation",
-    "StegVerse-Labs/Patents: Application Correction Gate correction warning resolution",
-    "StegVerse-Labs organization: correction gate warning repair application packet validation"
+    "GCAT-BCAT-Engine/Publisher correction validation repair search",
+    "StegVerse-Labs organization Application Correction Gate search",
+    "hybrid-collab-bridge malformed output retry correction review"
   ],
-  "located_sources": [],
-  "decision": "FAIL_CLOSED_SOURCE_MATERIAL_REQUIRED",
+  "located_sources": [
+    {
+      "repository": "StegVerse-Labs/hybrid-collab-bridge",
+      "path": "docs/AI-Entity-Governance-Rules.md",
+      "blob_sha": "51f81ca4041e0d0830141d852a483ea38de2814e",
+      "classification": "PARTIAL_TECHNICAL_ADJACENCY_ONLY"
+    }
+  ],
+  "evidence_review": "evidence/PUBLISHER-application-correction-gate-source-candidate-review-2026-07-28.md",
+  "decision": "FAIL_CLOSED_DIRECT_FAMILY_SOURCE_REQUIRED",
   "approval_required_now": false,
-  "required_next_input": "an exact repository/path, bounded source excerpt, design note, issue, pull request, or conversation export describing the technical Application Correction Gate",
-  "legal_boundary": "Do not infer a patent-office correction procedure, prosecution strategy, inventorship correction, priority correction, or legal remedy from the family title.",
+  "required_next_input": "an exact first-party source describing a distinct technical application-state correction gate or complete correction-state and receipt combination",
   "next_machine_work_after_source": [
     "verify immutable source identifiers",
-    "separate technical application-state correction from legal filing correction",
     "build a limitation-level evidence map",
     "draft a bounded invention disclosure",
-    "create prior-art distinction questions without conclusions",
-    "prepare a counsel boundary packet"
+    "create distinction questions without conclusions"
   ]
 }
