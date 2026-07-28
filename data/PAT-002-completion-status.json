@@ -1,7 +1,7 @@
 {
   "family_id": "PAT-002",
   "title": "Heartbeat-Governed Entity and Reflected-State Computing",
-  "status": "structured_review_preparation_with_formal_authority_resolved",
+  "status": "structured_review_preparation_with_partial_source_anchors_verified",
   "filed": false,
   "patent_pending_authorized": false,
   "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
@@ -21,17 +21,22 @@
     "source_identity_blocker_record": true,
     "formal_authority_organization_confirmed": true,
     "source_identity_resolution_record": true,
+    "bounded_source_anchor_manifest": true,
     "new_repository_required": false
   },
   "partial": {
     "invention_capture": "structured claim-family data exists in data/master_claims.json; a standalone disclosure remains to be generated from verified material",
-    "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md defines limitation and combination evidence requirements; exact paths, commits, tests, receipts, and support classifications remain unpopulated",
+    "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md defines limitation and combination evidence requirements; general formal and runtime-integration anchors are now verified, but heartbeat and reflected-state combination support remains unpopulated",
     "claim_architecture": "shared clauses and claim identifiers exist; claim text and evidence references require verification",
     "prior_art_distinction": "technical collision themes are implicit but no verified search ledger is populated",
-    "source_identity": "the owner confirmed that Admissible-Existence maintains the relevant formal protocol documentation; AE and DC are formal-source candidates and core-lite is an implementation/integration candidate, while historical StegVerse-Labs/StegEntity and Data-Continuation/core-lite identities remain unresolved"
+    "source_identity": "Admissible-Existence/AE and DC are verified formal-source authorities at their root README blobs; Admissible-Existence/core-lite is verified as implementation/integration evidence only. Exact heartbeat and reflected-state sources remain unresolved."
   },
   "blocking_gates": {
     "formal_authority_organization_confirmed": true,
+    "general_formal_source_anchors_verified": true,
+    "runtime_integration_anchor_verified": true,
+    "heartbeat_specific_anchor_verified": false,
+    "reflected_state_specific_anchor_verified": false,
     "exact_limitation_source_anchors_verified": false,
     "historical_repository_succession_resolved": false,
     "standalone_invention_disclosure_complete": false,
@@ -55,26 +60,27 @@
     "PATENTS_MIRROR_HANDOFF.md",
     "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md",
     "evidence/PAT-002_SOURCE_IDENTITY_BLOCKER.md",
-    "evidence/PAT-002_SOURCE_IDENTITY_RESOLUTION.md"
+    "evidence/PAT-002_SOURCE_IDENTITY_RESOLUTION.md",
+    "data/PAT-002-source-anchor-manifest-2026-07-28.json"
   ],
-  "current_source_routing": [
+  "verified_source_anchors": [
     {
       "repository": "Admissible-Existence/AE",
-      "role": "root formal source for admissible existence and existence-level transition conditions",
-      "authority_class": "FORMAL_SOURCE_AUTHORITY",
-      "verification_status": "repository connected; exact PAT-002 paths and immutable anchors pending"
+      "path": "README.md",
+      "blob_sha": "d593c2913a26e62062ad68bd5e99619324cdf6ae",
+      "support_class": "VERIFIED_GENERAL_FORMAL_SUPPORT"
     },
     {
       "repository": "Admissible-Existence/DC",
-      "role": "formal source for distributed coherence, multi-entity observation, lag, reconciliation, and global state",
-      "authority_class": "FORMAL_SOURCE_AUTHORITY",
-      "verification_status": "repository connected; exact PAT-002 paths and immutable anchors pending"
+      "path": "README.md",
+      "blob_sha": "415ddab2ec9b11b39243e3ee5b0dd78bafd2cf6a",
+      "support_class": "VERIFIED_DISTRIBUTED_STATE_FORMAL_SUPPORT"
     },
     {
       "repository": "Admissible-Existence/core-lite",
-      "role": "receipt-bound intake, validation, output, and next-step integration evidence",
-      "authority_class": "IMPLEMENTATION_AND_INTEGRATION_EVIDENCE_CANDIDATE",
-      "verification_status": "repository connected; exact PAT-002 paths and immutable anchors pending; not formal source authority"
+      "path": "README.md",
+      "blob_sha": "6de7449101769e079078e4e65e9e469c7b997241",
+      "support_class": "VERIFIED_RECEIPT_BOUND_RUNTIME_INTEGRATION_SUPPORT"
     }
   ],
   "unresolved_historical_candidates": [
@@ -89,13 +95,12 @@
       "note": "no connected repository or succession record located; Admissible-Existence/core-lite is not assumed to be its successor"
     }
   ],
-  "expected_decision": "FAIL_CLOSED_EXACT_ANCHORS_PENDING",
+  "expected_decision": "FAIL_CLOSED_HEARTBEAT_AND_REFLECTED_STATE_ANCHORS_PENDING",
   "next_machine_tasks": [
-    "locate exact PAT-002 formal anchors and immutable identifiers in Admissible-Existence/AE",
-    "locate exact PAT-002 distributed and observer-state anchors and immutable identifiers in Admissible-Existence/DC",
-    "locate exact receipt-bound intake and runtime-integration anchors and immutable identifiers in Admissible-Existence/core-lite",
+    "inspect the formal documents and runtime manifests referenced by the verified root anchors",
+    "locate exact heartbeat, liveness, reflected-state, observer-state, and entity-continuity anchors",
     "populate evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md only from verified anchors",
-    "emit a source-anchor manifest distinguishing formal written-description support from executable support",
+    "emit a deeper source-anchor manifest distinguishing written-description support from executable support",
     "create chronology and public-disclosure audit templates",
     "create a prior-art search ledger without asserting search conclusions",
     "create a standalone PAT-002 invention disclosure only from verified material",
