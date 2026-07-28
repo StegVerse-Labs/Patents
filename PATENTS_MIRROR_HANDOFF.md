@@ -78,7 +78,36 @@ expected decision: FAIL_CLOSED_BLOCKERS
 human action packet: reviews/PAT-005-human-action-packet.md
 ```
 
-The PAT-005 technical package includes its disclosure, working provisional, claim architecture, evidence maps, drawings, prior-art working charts, conception and contribution worksheets, practitioner handoff, validators, and executable negative-case records. It remains blocked by verified prior-art references, interviews, inventorship, disclosure audit, drawing approval, practitioner recommendation, and explicit owner filing authorization.
+The PAT-005 technical package includes its disclosure, working provisional, claim architecture, evidence maps, drawings, prior-art working charts, conception and contribution worksheets, practitioner handoff, validators, executable negative-case records, and a Steps 1–4 pre-owner preparation pipeline. It remains blocked by verified prior-art references, attributable contributor facts, inventorship, completed disclosure audit, authorized drawing approval, practitioner recommendation, and explicit owner filing authorization.
+
+## Portfolio-wide ChatGPT correspondence intake
+
+Installed:
+
+```text
+intake/chatgpt/CORRESPONDENCE_INTAKE_CONTRACT.md
+intake/chatgpt/correspondence-record.schema.json
+intake/chatgpt/portfolio-correspondence-manifest.json
+```
+
+The intake contract applies to every numbered family and each controlled Publisher-origin candidate. It preserves conversation and message provenance, author role, content hashes, chronology relationships, corrections, contradictions, supersession, confidentiality, proposed family mappings, claim or figure relationships, and review status.
+
+ChatGPT correspondence may feed invention capture, chronology, contributor assertions, disclosure leads, implementation-evidence leads, drafting, prior-art distinction hypotheses, counsel questions, drawings, and owner-decision inputs. Assistant-authored material is not independent corroboration, inventor testimony, counsel advice, ownership evidence, filing authority, or a legal conclusion.
+
+PAT-005 remains the first family adapter:
+
+```text
+intake/chatgpt/PAT-005_CORRESPONDENCE_INTAKE_CONTRACT.md
+intake/chatgpt/PAT-005-correspondence-manifest.json
+```
+
+Current portfolio intake decision:
+
+```text
+FAIL_CLOSED_SOURCE_NOT_MATERIALIZED
+```
+
+No stable ChatGPT conversation export or bounded excerpt has yet been committed to the portfolio-wide intake path. Therefore no normalized message count, family index, contradiction report, or ingestion receipt is claimed.
 
 ## Publisher-family reconciliation
 
@@ -108,7 +137,7 @@ nonprovisional deadline: null
 PCT deadline: null
 ```
 
-No deadline may be calculated from a draft date, packet-generation date, repository commit, or assumed submission date.
+No deadline may be calculated from a draft date, packet-generation date, repository commit, conversation timestamp, correspondence export, or assumed submission date.
 
 ## Portfolio filing-state validator
 
@@ -132,12 +161,15 @@ Authoritative dispatcher execution and preserved validation output remain pendin
 ## Current next machine work
 
 1. Run `tools/validate_portfolio_filing_state.py` and `tests/test_portfolio_filing_state.py` through the authoritative dispatcher and preserve the output receipt.
-2. Locate exact PAT-002 implementation anchors and build its standalone disclosure and limitation evidence map.
-3. Locate verified PAT-003 source anchors and build its standalone disclosure and limitation evidence map.
-4. Locate verified PAT-004 source anchors and build its standalone disclosure and limitation evidence map while keeping supported and proposed embodiments distinct.
-5. Continue PAT-001 corroboration, drawing review outputs, and authoritative readiness validation.
-6. Preserve PAT-005 fail-closed status until the exact factual, practitioner, owner, and filing-human outputs are committed.
-7. Reconcile Publisher families through explicit controlled disposition records.
+2. Materialize pertinent ChatGPT conversation exports or bounded excerpts; preserve stable conversation/message identifiers, hashes, and confidentiality classes.
+3. Build the portfolio-wide correspondence normalizer, schema validator, family indexes, contradiction reports, and hash-chained ingestion receipts.
+4. Feed normalized correspondence into PAT-005 Steps 1–4 preparation and then extend the adapter to PAT-001 through PAT-004 and the eight Publisher candidates.
+5. Locate exact PAT-002 implementation anchors and build its standalone disclosure and limitation evidence map.
+6. Locate verified PAT-003 source anchors and build its standalone disclosure and limitation evidence map.
+7. Locate verified PAT-004 source anchors and build its standalone disclosure and limitation evidence map while keeping supported and proposed embodiments distinct.
+8. Continue PAT-001 corroboration, drawing review outputs, and authoritative readiness validation.
+9. Preserve PAT-005 fail-closed status until the exact factual, practitioner, owner, and filing-human outputs are committed.
+10. Reconcile Publisher families through explicit controlled disposition records.
 
 ## Human-boundary protocol
 
@@ -180,4 +212,4 @@ Do not expose unpublished claims, inventorship disputes, counsel advice, or unfi
 
 ## Archive readiness
 
-This handoff contains the current family states, exact stasis locations, portfolio ledger, filing invariant, installed portfolio filing-state validator, next machine work, and ecosystem continuation boundary. The prior conversation is not required for forward progress.
+This handoff contains the current family states, exact stasis locations, portfolio ledger, filing invariant, installed portfolio filing-state validator, portfolio-wide ChatGPT correspondence intake boundary, next machine work, and ecosystem continuation boundary. The prior conversation is not required for forward progress.
