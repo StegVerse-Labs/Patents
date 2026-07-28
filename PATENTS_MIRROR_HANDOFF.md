@@ -24,7 +24,7 @@ This repository may prepare, validate, organize, and emit first-party patent dra
 data/portfolio-completion-status.json
 ```
 
-Current schema version: `0.4`.
+Current schema version: `0.5`.
 
 ## Numbered-family state
 
@@ -110,12 +110,31 @@ PCT deadline: null
 
 No deadline may be calculated from a draft date, packet-generation date, repository commit, or assumed submission date.
 
+## Portfolio filing-state validator
+
+Installed:
+
+```text
+tools/validate_portfolio_filing_state.py
+tests/test_portfolio_filing_state.py
+```
+
+The validator fails closed when any family claims `filed`, `patent_pending`, or a calculated nonprovisional deadline without all required filing evidence. A filed state requires an existing repository receipt path, actual application number, and parseable actual filing date. A patent-pending state requires the same actual filing evidence. A calculated deadline requires a valid actual filing-date basis.
+
+The current portfolio ledger contains no filed or patent-pending claim and no calculated deadline, so its expected decision is:
+
+```text
+PORTFOLIO_FILING_STATE_VALID
+```
+
+Authoritative dispatcher execution and preserved validation output remain pending; installation does not claim that the repository test suite has run.
+
 ## Current next machine work
 
-1. Locate exact PAT-002 implementation anchors and build its standalone disclosure and limitation evidence map.
-2. Locate verified PAT-003 source anchors and build its standalone disclosure and limitation evidence map.
-3. Locate verified PAT-004 source anchors and build its standalone disclosure and limitation evidence map while keeping supported and proposed embodiments distinct.
-4. Add a portfolio filing-state validator that rejects `filed`, `patent_pending`, or calculated-deadline states without an actual filing receipt and filing date.
+1. Run `tools/validate_portfolio_filing_state.py` and `tests/test_portfolio_filing_state.py` through the authoritative dispatcher and preserve the output receipt.
+2. Locate exact PAT-002 implementation anchors and build its standalone disclosure and limitation evidence map.
+3. Locate verified PAT-003 source anchors and build its standalone disclosure and limitation evidence map.
+4. Locate verified PAT-004 source anchors and build its standalone disclosure and limitation evidence map while keeping supported and proposed embodiments distinct.
 5. Continue PAT-001 corroboration, drawing review outputs, and authoritative readiness validation.
 6. Preserve PAT-005 fail-closed status until the exact factual, practitioner, owner, and filing-human outputs are committed.
 7. Reconcile Publisher families through explicit controlled disposition records.
@@ -161,4 +180,4 @@ Do not expose unpublished claims, inventorship disputes, counsel advice, or unfi
 
 ## Archive readiness
 
-This handoff contains the current family states, exact stasis locations, portfolio ledger, filing invariant, next machine work, and ecosystem continuation boundary. The prior conversation is not required for forward progress.
+This handoff contains the current family states, exact stasis locations, portfolio ledger, filing invariant, installed portfolio filing-state validator, next machine work, and ecosystem continuation boundary. The prior conversation is not required for forward progress.
