@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "scope": "PORTFOLIO_CHATGPT_CORRESPONDENCE_NORMALIZER",
+  "governing_handoff": "PATENTS_MIRROR_HANDOFF.md",
+  "implementation_contract": "intake/chatgpt/NORMALIZER_IMPLEMENTATION_CONTRACT.md",
+  "record_schema": "intake/chatgpt/correspondence-record.schema.json",
+  "contract_installed": true,
+  "executable_installed": false,
+  "regression_tests_installed": false,
+  "authoritative_execution_completed": false,
+  "materialized_source_count": 0,
+  "normalized_message_count": 0,
+  "family_index_count": 0,
+  "ingestion_receipt_count": 0,
+  "current_decision": "FAIL_CLOSED_IMPLEMENTATION_PENDING",
+  "blocked_write": {
+    "path": "tools/normalize_chatgpt_correspondence.py",
+    "reason": "Repository connector safety boundary blocked the executable write in the current run.",
+    "treated_as_installed": false
+  },
+  "required_next_machine_work": [
+    "install tools/normalize_chatgpt_correspondence.py from the implementation contract",
+    "install tests/test_correspondence_intake.py",
+    "materialize a bounded source export or excerpt",
+    "run schema and regression validation through the authoritative dispatcher",
+    "preserve normalized records, family indexes, contradiction reports, and ingestion receipts",
+    "route reviewed results into PAT-005 Steps 1-4 preparation"
+  ],
+  "legal_boundary": {
+    "inventorship_determined": false,
+    "ownership_determined": false,
+    "patentability_determined": false,
+    "family_identity_determined": false,
+    "filing_authorized": false,
+    "filing_performed": false,
+    "deadline_calculated": false
+  }
+}
