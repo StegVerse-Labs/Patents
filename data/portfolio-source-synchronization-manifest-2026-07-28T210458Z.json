@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "generated_utc": "2026-07-28T21:04:58Z",
+  "repository": "StegVerse-Labs/Patents",
+  "purpose": "Bounded source-hierarchy synchronization manifest. This file does not mutate lifecycle state, determine legal family boundaries, authorize filing, or calculate deadlines.",
+  "source_hierarchy": [
+    {
+      "priority": 1,
+      "path": "PATENTS_MIRROR_HANDOFF.md",
+      "blob_sha": "430c2769f749057092e587a7bcbbf0ef31bee4fc",
+      "role": "root numbered-family and filing-boundary handoff"
+    },
+    {
+      "priority": 2,
+      "path": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
+      "blob_sha": "426ed64c8aa0d8bed5ee086de44d724e4c0c09a3",
+      "role": "Publisher-origin family reconciliation handoff"
+    },
+    {
+      "priority": 3,
+      "path": "data/publisher-family-completion-status.json",
+      "blob_sha": "35e085b1e066bb8f51d409f650f3558cdf3af8b9",
+      "role": "current detailed Publisher-family lifecycle field ledger"
+    },
+    {
+      "priority": 4,
+      "path": "data/portfolio-completion-status.json",
+      "blob_sha": "3b189494427af5a8ac93c15ad1791214230b375b",
+      "role": "numbered-family portfolio ledger; Publisher summary section is stale and must not override the dedicated Publisher ledger"
+    }
+  ],
+  "registry_observation": {
+    "repository": "StegVerse-Labs/patent-registry",
+    "handoff": "PATENT_REGISTRY_MIRROR_HANDOFF.md",
+    "handoff_blob_sha": "dd3a5cc6df6643c8c7cf1f61157ad76b0118d699",
+    "approved_source_snapshot": "data/approved-source-snapshot-2026-07-28T200225Z.json",
+    "approved_source_snapshot_commit": "0cb379bd5878d9ea246de59ba89fb74140309adb",
+    "authoritative_execution": "pending",
+    "canonical_lifecycle_mutation": false
+  },
+  "family_counts": {
+    "numbered_families": 5,
+    "publisher_origin_candidates": 8,
+    "filed_families": 0,
+    "patent_pending_authorized_families": 0,
+    "application_numbers_recorded": 0,
+    "filing_receipts_recorded": 0,
+    "calculated_deadlines": 0,
+    "ready_for_owner_decision": 0
+  },
+  "publisher_families": [
+    "Commit-Time Admissibility Gate",
+    "Receipt-Based State Transition Validation",
+    "Publisher Governed Disclosure Pipeline",
+    "Application Correction Gate",
+    "AI Output-to-Action Boundary",
+    "Recoverability-Aware Execution Boundary",
+    "Master-Records Reconstruction and Verification",
+    "Multi-Entity Observer-Participant Admissibility"
+  ],
+  "current_decision": "FAIL_CLOSED_AUTHORITATIVE_EXECUTION_AND_HUMAN_LEGAL_GATES_PENDING",
+  "next_bounded_actions": [
+    "refresh data/portfolio-completion-status.json Publisher summaries from the dedicated Publisher ledger",
+    "run authoritative portfolio filing-state validation and preserve output receipts",
+    "run authoritative patent-registry tests and status-only import or refusal pass",
+    "continue PAT-005 factual disclosure chronology and contributor evidence",
+    "preserve all filing and deadline fields as null until official filing evidence exists"
+  ]
+}
