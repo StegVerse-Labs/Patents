@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "family_id": "PAT-002",
+  "title": "Heartbeat-Governed Entity and Reflected-State Computing",
+  "generated_date": "2026-07-28",
+  "purpose": "Record verified immutable source anchors and their bounded support classifications without asserting inventorship, patentability, legal family scope, or filing readiness.",
+  "search_result": {
+    "connected_code_search_terms": [
+      "heartbeat",
+      "reflected state",
+      "observer state",
+      "global state",
+      "entity transition coherence receipt"
+    ],
+    "indexed_exact_term_hits": 0,
+    "interpretation": "No indexed exact-term result was treated as absence of support. Repository root sources were inspected directly."
+  },
+  "anchors": [
+    {
+      "repository": "Admissible-Existence/AE",
+      "path": "README.md",
+      "blob_sha": "d593c2913a26e62062ad68bd5e99619324cdf6ae",
+      "authority_class": "FORMAL_SOURCE_AUTHORITY",
+      "support_class": "VERIFIED_GENERAL_FORMAL_SUPPORT",
+      "supported_topics": [
+        "coherent identity across transition",
+        "recoverability",
+        "observability",
+        "post-transition admissibility",
+        "entity or system state over time"
+      ],
+      "not_yet_supported": [
+        "heartbeat mechanism",
+        "reflected-state synchronization protocol",
+        "specific PAT-002 claim combination"
+      ]
+    },
+    {
+      "repository": "Admissible-Existence/DC",
+      "path": "README.md",
+      "blob_sha": "415ddab2ec9b11b39243e3ee5b0dd78bafd2cf6a",
+      "authority_class": "FORMAL_SOURCE_AUTHORITY",
+      "support_class": "VERIFIED_DISTRIBUTED_STATE_FORMAL_SUPPORT",
+      "supported_topics": [
+        "multi-entity state",
+        "partial observability and lag",
+        "global coherence",
+        "authority drift",
+        "receipt divergence",
+        "reconciliation and recoverability across nodes"
+      ],
+      "not_yet_supported": [
+        "specific heartbeat cadence or liveness algorithm",
+        "reflected-state data structure",
+        "specific PAT-002 claim combination"
+      ]
+    },
+    {
+      "repository": "Admissible-Existence/core-lite",
+      "path": "README.md",
+      "blob_sha": "6de7449101769e079078e4e65e9e469c7b997241",
+      "authority_class": "IMPLEMENTATION_AND_INTEGRATION_EVIDENCE_CANDIDATE",
+      "support_class": "VERIFIED_RECEIPT_BOUND_RUNTIME_INTEGRATION_SUPPORT",
+      "supported_topics": [
+        "receipt-bound intake",
+        "validation reports",
+        "receiver-declared next-step receipts",
+        "execution-authority separation",
+        "fail-closed integration boundary"
+      ],
+      "not_yet_supported": [
+        "formal source authority",
+        "heartbeat-governed entity implementation",
+        "reflected-state runtime implementation"
+      ]
+    }
+  ],
+  "current_decision": "PARTIAL_ANCHORS_VERIFIED_HEARTBEAT_AND_REFLECTED_STATE_COMBINATION_PENDING",
+  "next_machine_actions": [
+    "inspect linked formal documents and runtime manifests referenced by the verified README anchors",
+    "identify exact text or executable structures for heartbeat, liveness, reflected state, observer state, and entity continuity",
+    "populate the PAT-002 claim-element evidence map only with supported limitation classifications",
+    "preserve unsupported claim elements as OPEN rather than inferred"
+  ],
+  "legal_notice": "Technical evidence-routing record only. It does not determine inventorship, ownership, patentability, legal family boundaries, public-disclosure consequences, filing authority, or deadlines."
+}
