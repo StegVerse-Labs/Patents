@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "family_key": "master_records_reconstruction_and_verification",
+  "title": "Master-Records Reconstruction and Verification",
+  "status": "structured_evidence_preparation_with_source_identity_blocker",
+  "invention_capture": "partial_verified_executable_and_formal_support",
+  "disclosure_chronology": "not_created",
+  "evidence_map": "partial_verified_two_source_inventory",
+  "prior_art_distinction_notes": "ledger_custody_reconstruction_and_audit_distinctions_required",
+  "specification": "not_created",
+  "abstract": "not_created",
+  "claim_themes": "candidate_limitation_clusters_present_not_final",
+  "drawings": "not_created",
+  "inventor_fields": "undetermined",
+  "ownership_fields": "unconfirmed",
+  "counsel_questions": "independent_family_dependent_embodiment_or_shared_infrastructure_unresolved",
+  "filing_packet": "not_authorized",
+  "warning_resolution": "blocked",
+  "human_filing": "not_started",
+  "filing_receipt": null,
+  "application_number": null,
+  "actual_filing_date": null,
+  "nonprovisional_deadline": null,
+  "pct_deadline": null,
+  "patent_pending_authorized": false,
+  "approval_required_now": false,
+  "verified_sources": [
+    {
+      "repository": "GCAT-BCAT-Engine/Publisher",
+      "path": "scripts/import_ecosystem_chat_activation.py",
+      "blob_sha": "a2186f2634f5acf5253f9f26b28b673c2afc2b8a",
+      "support": "executable downstream verification of hash-bound state, propagation, custody, reconstruction, exact-commit, stage-chain, supersession, and authority boundaries"
+    },
+    {
+      "repository": "Admissible-Existence/DaCo",
+      "path": "README.md",
+      "blob_sha": "ddaf6bdfb83dfc3b765183e9161f1688cd28e7c4",
+      "support": "formal continuity, receipt linkage, reconstruction, gap honesty, state references, provenance, and master-record integration"
+    }
+  ],
+  "source_identity": {
+    "recorded_repository": "master-records/orchestration",
+    "connected": false,
+    "substitute_inferred": false,
+    "resolution_path": "evidence/PUBLISHER_MASTER_RECORDS_SOURCE_IDENTITY_RESOLUTION.md"
+  },
+  "expected_decision": "FAIL_CLOSED_CANONICAL_SOURCE_CHRONOLOGY_AND_LEGAL_BLOCKERS",
+  "next_machine_tasks": [
+    "resolve or receive the canonical master-records/orchestration repository identity",
+    "inspect custody schemas, writers, validators, tests, retained receipts, and reconstruction reports",
+    "build a limitation-level evidence map distinguishing custody creation from downstream verification",
+    "create a working technical disclosure from verified evidence",
+    "create an abstract and figure plan from verified evidence",
+    "create chronology and public-disclosure audit templates",
+    "create a non-legal overlap report against Receipt-Based State Transition Validation and PAT-002"
+  ],
+  "next_human_or_counsel_tasks": [
+    "provide the canonical repository URL or immutable source references if the repository remains unconnected",
+    "identify factual contributors and contribution details",
+    "provide dated conception and disclosure records",
+    "obtain practitioner advice on independent family versus dependent embodiment versus shared infrastructure",
+    "obtain inventorship and ownership determinations",
+    "record owner disposition only after counsel recommendation"
+  ],
+  "legal_notice": "Technical tracking only. This status does not determine inventorship, ownership, patentability, priority, filing strategy, filing authority, filing status, application number, receipt, or deadline."
+}
