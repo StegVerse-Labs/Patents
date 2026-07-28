@@ -1,0 +1,46 @@
+{
+  "family_id": "PAT-003",
+  "title": "Generalized Adaptive Scanner Using Dynamic Micro-Nodes",
+  "status": "structured_review_preparation_with_blockers",
+  "filed": false,
+  "patent_pending_authorized": false,
+  "completed": {
+    "structured_family_record": true,
+    "inventive_center_defined": true,
+    "technical_problem_defined": true,
+    "technical_effects_defined": true,
+    "shared_claim_clauses_identified": true,
+    "method_and_system_claim_ids_present": true
+  },
+  "blocking_gates": {
+    "standalone_invention_disclosure": false,
+    "conception_and_disclosure_chronology": false,
+    "implementation_anchors_verified": false,
+    "limitation_level_evidence_map": false,
+    "prior_art_search_ledger": false,
+    "working_specification": false,
+    "working_abstract": false,
+    "figure_plan": false,
+    "contributor_interviews_complete": false,
+    "inventorship_determined": false,
+    "ownership_confirmed": false,
+    "practitioner_written_recommendation": false,
+    "owner_filing_authorization": false,
+    "filing_packet_emitted": false,
+    "filing_receipt_recorded": false
+  },
+  "expected_decision": "FAIL_CLOSED_BLOCKERS",
+  "next_machine_tasks": [
+    "identify candidate source repositories and exact paths from existing scanner, sensing, transition, micro-node, and observation artifacts",
+    "create a standalone technical disclosure using only verified source material",
+    "create a limitation-level evidence map that separates implemented behavior from proposed embodiments",
+    "create a prior-art search ledger template without adding unverified results",
+    "create a figure plan after verified system boundaries are established"
+  ],
+  "next_human_tasks": [
+    "identify contributors and preserve factual conception records",
+    "audit public disclosures and exact dates",
+    "review claim scope and supporting evidence with a qualified practitioner",
+    "record an explicit portfolio disposition decision"
+  ]
+}
