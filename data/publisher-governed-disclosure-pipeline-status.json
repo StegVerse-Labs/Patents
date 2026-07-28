@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "family_key": "publisher_governed_disclosure_pipeline",
+  "title": "Publisher Governed Disclosure Pipeline",
+  "status": "structured_evidence_preparation_with_blockers",
+  "source_handoff": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
+  "verified_primary_source": {
+    "repository": "GCAT-BCAT-Engine/Publisher",
+    "path": "docs/PUBLISHER_MIRROR_HANDOFF.md",
+    "blob_sha": "f72c74af785973d8391323a47cdae973459958f7",
+    "support_state": "VERIFIED_WRITTEN_DESCRIPTION"
+  },
+  "invention_capture": "technical workflow themes extracted",
+  "disclosure_chronology": "audit_required",
+  "evidence_map": "partial_verified_written_description",
+  "prior_art_distinction_notes": "not_created",
+  "specification": "not_created",
+  "abstract": "not_created",
+  "claim_themes": "candidate_limitation_leads_present_not_final",
+  "drawings": "not_created",
+  "inventor_fields": "undetermined",
+  "ownership_fields": "unconfirmed",
+  "counsel_questions": "separate_family_product_process_or_dependent_embodiment_unresolved",
+  "filing_packet": "not_authorized",
+  "warning_resolution": "blocked",
+  "human_filing": "not_started",
+  "filing_receipt": null,
+  "application_number": null,
+  "actual_filing_date": null,
+  "nonprovisional_deadline": null,
+  "candidate_limitations": [
+    "governed workload intake against handoff and orchestration state",
+    "preservation of active workload ownership",
+    "parallel-safe bounded work while upstream evidence is incomplete",
+    "independent acquisition and validation of upstream publication packets",
+    "explicit separation of awareness, readiness, publication, activation, custody, execution, and admissibility",
+    "fail-closed pending state until fresh ordered evidence exists",
+    "verification receipts that do not convert into activation authority",
+    "sandbox-first validation before merge or publication decision"
+  ],
+  "executable_surfaces_pending_inspection": [
+    "data/publisher-orchestration-state.json",
+    "tools/run_sandbox_validation.py",
+    "tools/check_st017_sandbox_adoption.py",
+    "tools/acquire_site_ecosystem_chat_propagation.py",
+    "tools/check_site_ecosystem_chat_propagation.py",
+    "tools/check_publisher_closure_evidence_production.py",
+    "tools/write_verification_run_receipt.py",
+    ".github/workflows/validate-governed-ecosystem-awareness.yml"
+  ],
+  "approval_required_now": false,
+  "approval_gate": {
+    "stage": "owner_family_disposition_after_counsel_review",
+    "required_before": "filing packet emission, trade-secret election, defensive publication, abandonment, or filing authorization",
+    "current_readiness": "NOT_REACHED"
+  },
+  "expected_decision": "FAIL_CLOSED_EXECUTABLE_CHRONOLOGY_AND_LEGAL_BLOCKERS"
+}
