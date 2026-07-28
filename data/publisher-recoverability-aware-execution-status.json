@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "family_key": "recoverability_aware_execution_boundary",
+  "title": "Recoverability-Aware Execution Boundary",
+  "status": "structured_evidence_preparation_with_blockers",
+  "filed": false,
+  "patent_pending_authorized": false,
+  "invention_capture": "partial_verified_written_description",
+  "disclosure_chronology": "not_verified",
+  "evidence_map": "three_verified_written_description_sources",
+  "prior_art_distinction_notes": "not_verified",
+  "specification": "not_created",
+  "abstract": "not_created",
+  "claim_themes": "candidate_limitation_clusters_present_not_final",
+  "drawings": "not_created",
+  "inventor_fields": "undetermined",
+  "ownership_fields": "unconfirmed",
+  "counsel_questions": "family_boundary_and_recoverability_scope_unresolved",
+  "filing_packet": "not_authorized",
+  "warning_resolution": "blocked",
+  "human_filing": "not_started",
+  "filing_receipt": null,
+  "application_number": null,
+  "actual_filing_date": null,
+  "nonprovisional_deadline": null,
+  "pct_deadline": null,
+  "approval_required_now": false,
+  "source_inventory": "evidence/PUBLISHER-recoverability-aware-execution-source-inventory.md",
+  "verified_sources": [
+    {
+      "repository": "GCAT-BCAT-Engine/Publisher",
+      "path": "papers/GCAT-BCAT/P0_CommitTime_Synthesis_v1.tex",
+      "blob_sha": "4be83f75d214b44495d7f3c95628f888a76c89c8",
+      "evidence_class": "MATHEMATICAL_TECHNICAL_WRITTEN_DESCRIPTION"
+    },
+    {
+      "repository": "GCAT-BCAT-Engine/Publisher",
+      "path": "papers/GCAT-BCAT/P10_ConsequenceHorizon_v1.tex",
+      "blob_sha": "4d7194bf38c0354a8b634795f9755bd3d6776926",
+      "evidence_class": "MATHEMATICAL_CONCEPTUAL_WRITTEN_DESCRIPTION"
+    },
+    {
+      "repository": "Admissible-Existence/CHF",
+      "path": "README.md",
+      "blob_sha": "cd1fb2277595047bf8ebbf1902152b8d87b0689c",
+      "evidence_class": "FORMAL_SOURCE_AUTHORITY"
+    }
+  ],
+  "expected_decision": "FAIL_CLOSED_EXECUTABLE_CHRONOLOGY_AND_FAMILY_BOUNDARY_BLOCKERS",
+  "next_machine_tasks": [
+    "locate canonical executable implementation and immutable anchors",
+    "build limitation-level evidence map separating formal mathematical and executable support",
+    "create working disclosure and abstract only from verified evidence",
+    "create figure plan for commit boundary, consequence horizon, threshold evaluation, and post-crossing quarantine",
+    "create non-legal overlap report against Commit-Time Admissibility Gate and AI Output-to-Action Boundary",
+    "create chronology and public-disclosure audit templates"
+  ],
+  "next_human_or_counsel_tasks": [
+    "identify contributors and attributable technical contributions",
+    "provide dated conception and disclosure records",
+    "obtain counsel determination whether this is an independent family, dependent embodiment, continuation candidate, or claim cluster",
+    "obtain inventorship and ownership determinations",
+    "record explicit owner disposition only after counsel packet completion"
+  ],
+  "legal_notice": "Technical preparation only. No legal family boundary, inventorship, ownership, patentability, filing authority, filing status, application number, receipt, or deadline is inferred."
+}
