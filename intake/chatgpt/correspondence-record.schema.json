@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stegverse.org/schemas/patents/chatgpt-correspondence-record.schema.json",
+  "title": "StegVerse Patent Correspondence Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_system",
+    "conversation_id",
+    "message_id_or_ordinal",
+    "author_role",
+    "source_reference",
+    "content_sha256",
+    "ingested_utc",
+    "classification_version",
+    "related_families",
+    "categories",
+    "relationship_status",
+    "review_status",
+    "confidentiality_class"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "source_system": {"const": "ChatGPT"},
+    "conversation_id": {"type": "string", "minLength": 1},
+    "conversation_title": {"type": ["string", "null"]},
+    "message_id_or_ordinal": {"type": ["string", "integer"]},
+    "timestamp_utc_or_null": {"type": ["string", "null"], "format": "date-time"},
+    "author_role": {"enum": ["USER", "ASSISTANT", "COUNSEL", "SYSTEM", "UNKNOWN"]},
+    "author_attribution_or_null": {"type": ["string", "null"]},
+    "source_reference": {"type": "string", "minLength": 1},
+    "verbatim_content_path_or_inline_hash": {"type": ["string", "null"]},
+    "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "ingested_utc": {"type": "string", "format": "date-time"},
+    "classification_version": {"type": "string", "minLength": 1},
+    "related_families": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "INVENTION_CAPTURE",
+          "CONCEPTION_CHRONOLOGY",
+          "CONTRIBUTOR_ASSERTION",
+          "CORROBORATION_LEAD",
+          "PUBLIC_DISCLOSURE_LEAD",
+          "IMPLEMENTATION_EVIDENCE_LEAD",
+          "CLAIM_OR_LIMITATION_DRAFT",
+          "WRITTEN_DESCRIPTION_SUPPORT",
+          "ENABLEMENT_SUPPORT",
+          "PRIOR_ART_DISTINCTION_HYPOTHESIS",
+          "COUNSEL_QUESTION",
+          "DRAWING_OR_FIGURE_INPUT",
+          "OWNER_PREFERENCE",
+          "FILING_CLERICAL_INPUT",
+          "CONTRADICTION",
+          "CORRECTION",
+          "SUPERSESSION",
+          "OUT_OF_SCOPE"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "related_claims_or_limitations": {"type": "array", "items": {"type": "string"}},
+    "related_figures": {"type": "array", "items": {"type": "string"}},
+    "related_chronology_entries": {"type": "array", "items": {"type": "string"}},
+    "relationship_status": {
+      "enum": ["STANDALONE", "CONFIRMS", "NARROWS", "CONTRADICTS", "CORRECTS", "SUPERSEDES", "IS_SUPERSEDED_BY"]
+    },
+    "related_message_refs": {"type": "array", "items": {"type": "string"}},
+    "review_status": {
+      "enum": [
+        "UNREVIEWED",
+        "ROUTED_UNCONFIRMED",
+        "USER_ATTRIBUTED",
+        "CORROBORATION_PENDING",
+        "CORROBORATED_BY_EXTERNAL_RECORD",
+        "CONTRADICTED",
+        "SUPERSEDED",
+        "COUNSEL_REVIEW_PENDING",
+        "COUNSEL_ATTRIBUTED",
+        "OWNER_DECISION_INPUT_ONLY",
+        "EXCLUDED"
+      ]
+    },
+    "confidentiality_class": {
+      "enum": ["PUBLIC", "INTERNAL", "COUNSEL_RESTRICTED", "PERSONAL_RESTRICTED", "EXCLUDED"]
+    },
+    "external_corroboration_refs": {"type": "array", "items": {"type": "string"}},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  }
+}
