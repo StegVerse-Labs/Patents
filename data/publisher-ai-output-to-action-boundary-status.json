@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "family_key": "ai_output_to_action_boundary",
+  "title": "AI Output-to-Action Boundary",
+  "status": "structured_evidence_preparation_with_blockers",
+  "invention_capture": "bounded technical source identified",
+  "disclosure_chronology": "audit required",
+  "evidence_map": "partial verified executable source",
+  "prior_art_distinction_notes": "output filtering, tool permissioning, workflow approval, and execution-gating distinctions required",
+  "specification": "not created",
+  "abstract": "not created",
+  "claim_themes": "candidate limitation leads present not final",
+  "drawings": "not created",
+  "inventor_fields": "undetermined",
+  "ownership_fields": "unconfirmed",
+  "counsel_questions": "independent family versus dependent embodiment unresolved",
+  "filing_packet": "not authorized",
+  "warning_resolution": "blocked",
+  "human_filing": "not started",
+  "filing_receipt": null,
+  "application_number": null,
+  "actual_filing_date": null,
+  "nonprovisional_deadline": null,
+  "verified_sources": [
+    {
+      "repository": "GCAT-BCAT-Engine/Publisher",
+      "path": "scripts/import_ecosystem_chat_activation.py",
+      "blob_sha": "a2186f2634f5acf5253f9f26b28b673c2afc2b8a",
+      "evidence_type": "EXECUTABLE",
+      "support_summary": "Imports upstream state only after hash, custody, reconstruction, stage-chain, supersession, destination, and authority-boundary checks; output status explicitly leaves publication, release, custody, and execution authority false."
+    }
+  ],
+  "candidate_limitation_leads": [
+    "receive or acquire an AI- or system-generated output packet",
+    "validate schema, digest, provenance, state binding, custody binding, and reconstruction conditions",
+    "verify that the packet expressly denies execution or publication authority",
+    "distinguish verified informational import from permission to act",
+    "emit a bounded status object with execution authorization remaining false",
+    "fail closed or remain pending when required evidence is absent",
+    "permit later action only through a separate authority-bearing transition"
+  ],
+  "combination_level_support": "unverified",
+  "decision": "FAIL_CLOSED_CHRONOLOGY_FAMILY_AND_COUNSEL_BLOCKERS",
+  "approval_required_now": false,
+  "next_machine_work": [
+    "locate additional source files for output generation and downstream authority grants",
+    "create a limitation-level evidence map",
+    "compare non-legally with Commit-Time Admissibility Gate and Publisher Governed Disclosure Pipeline",
+    "draft a bounded technical disclosure from verified sources",
+    "create a counsel question packet"
+  ],
+  "legal_boundary": "This record does not determine inventorship, ownership, patentability, legal family scope, filing strategy, or authority to file."
+}
