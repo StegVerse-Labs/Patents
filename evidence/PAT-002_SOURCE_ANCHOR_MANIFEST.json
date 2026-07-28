@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "family_id": "PAT-002",
+  "title": "Heartbeat-Governed Entity and Reflected-State Computing",
+  "decision": "PARTIAL_VERIFIED_WRITTEN_DESCRIPTION_SUPPORT",
+  "generated_from_connected_repositories": true,
+  "anchors": [
+    {
+      "anchor_id": "PAT-002-AE-README-001",
+      "repository": "Admissible-Existence/AE",
+      "path": "README.md",
+      "blob_sha": "d593c2913a26e62062ad68bd5e99619324cdf6ae",
+      "evidence_type": "WRITTEN_DESCRIPTION",
+      "authority_class": "FORMAL_SOURCE_AUTHORITY",
+      "supports_limitations": ["PAT-002-L2", "PAT-002-L5", "PAT-002-L6"],
+      "support_summary": "Defines admissible transition, coherent persistence, recoverability, observability, receipt chains, state reconstruction, deterministic replay, and failure-closed execution.",
+      "support_state": "VERIFIED_WRITTEN_DESCRIPTION",
+      "does_not_establish": ["inventorship", "ownership", "priority", "novelty", "patentability", "filing_authority"]
+    },
+    {
+      "anchor_id": "PAT-002-DC-README-001",
+      "repository": "Admissible-Existence/DC",
+      "path": "README.md",
+      "blob_sha": "415ddab2ec9b11b39243e3ee5b0dd78bafd2cf6a",
+      "evidence_type": "WRITTEN_DESCRIPTION",
+      "authority_class": "FORMAL_SOURCE_AUTHORITY",
+      "supports_limitations": ["PAT-002-L3", "PAT-002-L5", "PAT-002-L6"],
+      "support_summary": "Defines multi-entity coherence, partial observability, lag, authority drift, conflicting receipts, reconciliation, global state, and recoverability across nodes.",
+      "support_state": "VERIFIED_WRITTEN_DESCRIPTION",
+      "does_not_establish": ["a source heartbeat structure", "a multidimensional delta implementation", "inventorship", "patentability"]
+    },
+    {
+      "anchor_id": "PAT-002-CORE-LITE-README-001",
+      "repository": "Admissible-Existence/core-lite",
+      "path": "README.md",
+      "blob_sha": "6de7449101769e079078e4e65e9e469c7b997241",
+      "evidence_type": "WRITTEN_DESCRIPTION_AND_RUNTIME_SURFACE_INDEX",
+      "authority_class": "IMPLEMENTATION_AND_INTEGRATION_EVIDENCE_CANDIDATE",
+      "supports_limitations": ["PAT-002-L2", "PAT-002-L3", "PAT-002-L6", "PAT-002-L7"],
+      "support_summary": "Identifies receipt-bound intake, validation reports, receiver-declared next-step receipts, execution-authority receipt requirements, validators, reports, dispatcher, and fail-closed non-authority boundaries.",
+      "support_state": "VERIFIED_WRITTEN_DESCRIPTION",
+      "executable_verification_status": "PENDING_EXACT_FILE_AND_TEST_INSPECTION",
+      "does_not_establish": ["formal source authority", "execution authority", "final cross-repository validity", "inventorship", "patentability"]
+    }
+  ],
+  "unsupported_or_unverified_limitations": [
+    {
+      "limitation": "PAT-002-L1",
+      "reason": "No verified anchor yet shows a composite state-bearing heartbeat containing current state, prior subsystem information, context, and routing intent as one claimed object."
+    },
+    {
+      "limitation": "PAT-002-L4",
+      "reason": "No verified anchor yet shows the claimed multidimensional source-to-return delta calculation."
+    }
+  ],
+  "combination_level_support": {
+    "status": "UNVERIFIED",
+    "reason": "Individual written-description anchors do not establish the claimed complete combination or its ordering."
+  },
+  "historical_repository_succession": {
+    "status": "UNRESOLVED",
+    "repositories": ["StegVerse-Labs/StegEntity", "Data-Continuation/core-lite"]
+  },
+  "next_machine_work": [
+    "inspect exact files referenced by Admissible-Existence/core-lite README",
+    "inspect AE and DC formal documents beyond README for limitation-specific language",
+    "update the claim-element evidence map with verified anchors",
+    "preserve unsupported states for PAT-002-L1, PAT-002-L4, and all combination-level claims until direct evidence exists"
+  ]
+}
