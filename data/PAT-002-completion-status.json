@@ -1,7 +1,7 @@
 {
   "family_id": "PAT-002",
   "title": "Heartbeat-Governed Entity and Reflected-State Computing",
-  "status": "structured_review_preparation_with_source_identity_blocker",
+  "status": "structured_review_preparation_with_formal_authority_resolved",
   "filed": false,
   "patent_pending_authorized": false,
   "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
@@ -18,17 +18,22 @@
     "filing_readiness_index": true,
     "human_action_packet": true,
     "limitation_evidence_map_template": true,
-    "source_identity_blocker_record": true
+    "source_identity_blocker_record": true,
+    "formal_authority_organization_confirmed": true,
+    "source_identity_resolution_record": true,
+    "new_repository_required": false
   },
   "partial": {
-    "invention_capture": "structured claim-family data exists in data/master_claims.json; a standalone disclosure write remains uncommitted and must be generated only through an authorized repository path",
-    "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md defines limitation and combination evidence requirements; exact authoritative repository identities, paths, commits, tests, receipts, and support classifications remain unpopulated",
+    "invention_capture": "structured claim-family data exists in data/master_claims.json; a standalone disclosure remains to be generated from verified material",
+    "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md defines limitation and combination evidence requirements; exact paths, commits, tests, receipts, and support classifications remain unpopulated",
     "claim_architecture": "shared clauses and claim identifiers exist; claim text and evidence references require verification",
     "prior_art_distinction": "technical collision themes are implicit but no verified search ledger is populated",
-    "source_identity": "recorded candidates StegVerse-Labs/StegEntity and Data-Continuation/core-lite did not resolve through the connected installation; Admissible-Existence/core-lite resolved but must not be substituted without an authoritative succession or canonical-source record"
+    "source_identity": "the owner confirmed that Admissible-Existence maintains the relevant formal protocol documentation; AE and DC are formal-source candidates and core-lite is an implementation/integration candidate, while historical StegVerse-Labs/StegEntity and Data-Continuation/core-lite identities remain unresolved"
   },
   "blocking_gates": {
-    "canonical_source_repository_identity_confirmed": false,
+    "formal_authority_organization_confirmed": true,
+    "exact_limitation_source_anchors_verified": false,
+    "historical_repository_succession_resolved": false,
     "standalone_invention_disclosure_complete": false,
     "conception_chronology_verified": false,
     "earliest_public_disclosure_audited": false,
@@ -49,44 +54,64 @@
     "data/master_claims.json",
     "PATENTS_MIRROR_HANDOFF.md",
     "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md",
-    "evidence/PAT-002_SOURCE_IDENTITY_BLOCKER.md"
+    "evidence/PAT-002_SOURCE_IDENTITY_BLOCKER.md",
+    "evidence/PAT-002_SOURCE_IDENTITY_RESOLUTION.md"
   ],
-  "candidate_implementation_sources": [
+  "current_source_routing": [
     {
-      "repository": "StegVerse-Labs/StegEntity",
-      "description": "Entity lifecycle and orchestration-cycle material relevant to heartbeat-governed state.",
-      "verification_status": "repository identity did not resolve through current connected installation; canonical URL/name or succession record required"
+      "repository": "Admissible-Existence/AE",
+      "role": "root formal source for admissible existence and existence-level transition conditions",
+      "authority_class": "FORMAL_SOURCE_AUTHORITY",
+      "verification_status": "repository connected; exact PAT-002 paths and immutable anchors pending"
     },
     {
-      "repository": "Data-Continuation/core-lite",
-      "description": "Continuity event, reconstruction, intake, export, and reporting mechanisms.",
-      "verification_status": "repository identity did not resolve through current connected installation; canonical URL/name or succession record required"
+      "repository": "Admissible-Existence/DC",
+      "role": "formal source for distributed coherence, multi-entity observation, lag, reconciliation, and global state",
+      "authority_class": "FORMAL_SOURCE_AUTHORITY",
+      "verification_status": "repository connected; exact PAT-002 paths and immutable anchors pending"
     },
     {
       "repository": "Admissible-Existence/core-lite",
-      "description": "A connected repository with the same terminal repository name was discovered, but no authoritative relationship to the recorded PAT-002 source is established.",
-      "verification_status": "excluded from evidence attachment until authoritative succession or canonical-source evidence is committed; code-search index unavailable"
+      "role": "receipt-bound intake, validation, output, and next-step integration evidence",
+      "authority_class": "IMPLEMENTATION_AND_INTEGRATION_EVIDENCE_CANDIDATE",
+      "verification_status": "repository connected; exact PAT-002 paths and immutable anchors pending; not formal source authority"
     }
   ],
-  "expected_decision": "FAIL_CLOSED_SOURCE_IDENTITY_UNRESOLVED",
+  "unresolved_historical_candidates": [
+    {
+      "repository": "StegVerse-Labs/StegEntity",
+      "status": "UNRESOLVED_PRIOR_CANDIDATE",
+      "note": "no connected repository or succession record located"
+    },
+    {
+      "repository": "Data-Continuation/core-lite",
+      "status": "UNRESOLVED_PRIOR_CANDIDATE",
+      "note": "no connected repository or succession record located; Admissible-Existence/core-lite is not assumed to be its successor"
+    }
+  ],
+  "expected_decision": "FAIL_CLOSED_EXACT_ANCHORS_PENDING",
   "next_machine_tasks": [
-    "wait for or locate an authoritative source identity or repository succession record",
-    "after identity resolution, locate exact implementation paths and immutable commits",
+    "locate exact PAT-002 formal anchors and immutable identifiers in Admissible-Existence/AE",
+    "locate exact PAT-002 distributed and observer-state anchors and immutable identifiers in Admissible-Existence/DC",
+    "locate exact receipt-bound intake and runtime-integration anchors and immutable identifiers in Admissible-Existence/core-lite",
     "populate evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md only from verified anchors",
+    "emit a source-anchor manifest distinguishing formal written-description support from executable support",
     "create chronology and public-disclosure audit templates",
     "create a prior-art search ledger without asserting search conclusions",
-    "create a standalone PAT-002 invention disclosure only through an authorized repository write path and only from verified material",
+    "create a standalone PAT-002 invention disclosure only from verified material",
     "draft specification, abstract, and figure plan only to the extent supported by verified evidence"
   ],
   "next_human_tasks": [
-    "confirm canonical repository URLs or owner/repository names for the two recorded implementation sources",
-    "provide or commit repository succession records if either source was renamed, transferred, archived, or superseded",
-    "ensure authoritative source repositories are connected or provide immutable commit/blob references through an authorized artifact",
     "identify contributors for factual interviews",
     "provide dated conception and disclosure records",
     "obtain claim-by-claim inventorship analysis from qualified counsel",
     "obtain practitioner recommendation",
     "record explicit owner disposition or filing authorization"
   ],
+  "repository_creation_decision": {
+    "new_repository_required_now": false,
+    "reason": "existing Admissible-Existence repositories already provide formal-source and runtime-integration homes",
+    "future_creation_condition": "create a distinct repository only if a standalone executable entity or heartbeat implementation is intentionally established as an independent authority surface and cannot be coherently maintained in an existing repository"
+  },
   "legal_notice": "Working technical portfolio status only. This record does not determine inventorship, ownership, patentability, filing authority, filing status, or deadlines. No application has been filed and patent-pending language is not authorized."
 }
