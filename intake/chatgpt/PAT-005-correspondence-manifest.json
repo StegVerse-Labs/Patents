@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "family_id": "PAT-005",
+  "source_type": "CHATGPT_CORRESPONDENCE",
+  "record_status": "INTAKE_OPEN",
+  "legal_notice": "Correspondence intake only. Records do not determine inventorship, ownership, patentability, disclosure consequences, drawing approval, filing authorization, filing status, or deadlines.",
+  "source_exports": [],
+  "records": [],
+  "unresolved_requirements": [
+    "Materialize or export pertinent ChatGPT conversations with stable conversation and message references.",
+    "Hash each preserved source or pertinent excerpt.",
+    "Classify each record under the governed status and category vocabulary.",
+    "Route relevant records into PAT-005 Stages A through D while preserving provenance.",
+    "Resolve contradictions and obtain factual confirmations where required."
+  ],
+  "decision": "FAIL_CLOSED_NO_CORRESPONDENCE_MATERIALIZED"
+}
