@@ -12,6 +12,7 @@ GCAT-BCAT-Engine/Publisher/docs/PUBLISHER_MIRROR_HANDOFF.md
 data/publisher-family-completion-status.json
 reviews/PUBLISHER_FAMILY_READINESS_MATRIX_2026-07-28.md
 reviews/PUBLISHER_FAMILY_NONLEGAL_OVERLAP_MATRIX_2026-07-28.md
+data/thread-archive-custody-status.json
 ```
 
 Dedicated family records control when this summary conflicts with a more specific immutable source or status record.
@@ -129,28 +130,7 @@ data/publisher-family-completion-status.json
 schema_version: 0.2
 ```
 
-The ledger now tracks every family across:
-
-```text
-invention capture
-disclosure chronology
-evidence map
-prior-art distinction notes
-specification
-abstract
-claim themes
-drawings
-inventor fields
-ownership fields
-counsel questions
-filing packet
-warning resolution
-human filing
-filing receipt
-application number
-actual filing date
-nonprovisional deadline
-```
+The ledger tracks every family across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline.
 
 The non-legal overlap matrix records technical adjacency only. It does not determine legal family boundaries.
 
@@ -185,13 +165,13 @@ Direct commits require later authoritative validation before release or filing-p
 
 ## Next machine work
 
-1. Refresh the patent-registry exact-hash source snapshot.
-2. Perform the bounded status-only registry import or produce a deterministic refusal receipt.
-3. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
-4. Resolve canonical source identities for Commit-Time, Master-Records, Application Correction, and other implementation-blocked families.
-5. Expand executable limitation maps and working disclosures only where immutable source support exists.
-6. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
-7. Refresh this handoff and the central ledger after each material status change.
+1. Perform the bounded status-only registry import or produce a deterministic refusal receipt using the refreshed exact-hash snapshot.
+2. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
+3. Resolve canonical source identities for Commit-Time, Master-Records, Application Correction, and other implementation-blocked families.
+4. Expand executable limitation maps and working disclosures only where immutable source support exists.
+5. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
+6. Refresh this handoff and the central ledger after each material status change.
+7. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
 
 ## Human and legal boundary
 
@@ -221,6 +201,27 @@ stegguardian-wiki
 
 Do not expose unpublished claims, contributor disputes, counsel advice, or unfiled claim-sensitive details.
 
-## Archive readiness
+## Thread archive and orchestration custody
 
-This handoff, the synchronized central ledger, consolidated readiness matrix, non-legal overlap matrix, dedicated family records, and exact action packets contain the current continuation state. No prior conversation is required for forward progress.
+Machine-readable source:
+
+```text
+data/thread-archive-custody-status.json
+```
+
+The family records preserve repository continuation state but do not demonstrate orchestration custody. No verified orchestration ingestion receipt, task extraction manifest, assignment receipt, accepted-custody timestamp, or continuation checkpoint exists.
+
+Current decision:
+
+```text
+repository continuation state preserved: true
+orchestration custody accepted: false
+thread ready to archive: false
+active working thread still required: true
+```
+
+No Publisher-family handoff may state that the prior conversation is unnecessary or that the thread is ready to archive until the required orchestration evidence is committed and verified.
+
+## Continuation state
+
+This handoff preserves Publisher-family repository state for the active working session. It does not establish autonomous continuation and does not authorize thread archival.
