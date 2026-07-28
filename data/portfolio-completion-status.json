@@ -1,0 +1,201 @@
+{
+  "schema_version": "0.1",
+  "generated_utc": "2026-07-28T03:59:40Z",
+  "repository": "StegVerse-Labs/Patents",
+  "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
+  "legal_notice": "Technical portfolio tracking only. Unknown facts, inventorship, legal conclusions, filing authority, filing dates, application numbers, and deadlines are not inferred.",
+  "numbered_families": [
+    {
+      "family_id": "PAT-001",
+      "title": "Transition-Table-Native Dynamic Micro-Node Computing",
+      "status": "practitioner_review_ready_with_blockers",
+      "invention_capture": "complete",
+      "disclosure_chronology": "partial_requires_corroboration",
+      "evidence_map": "complete_for_verified_core",
+      "prior_art_distinction_notes": "ledger_present_unpopulated",
+      "specification": "working_draft_present",
+      "abstract": "working_draft_present",
+      "claims": "working_claims_present",
+      "drawings": "source_sheets_present_rendering_pending",
+      "inventor_fields": "undetermined",
+      "ownership_fields": "unconfirmed",
+      "counsel_questions": "practitioner_handoff_present",
+      "filing_packet": "not_authorized",
+      "warning_resolution": "blocked",
+      "human_filing": "not_started",
+      "filing_receipt": null,
+      "application_number": null,
+      "nonprovisional_deadline": null,
+      "primary_blockers": [
+        "corroboration of early architecture sources",
+        "verified prior-art search results",
+        "claim-by-claim inventorship determination",
+        "practitioner written recommendation",
+        "owner filing authorization",
+        "authoritative dispatcher validation"
+      ]
+    },
+    {
+      "family_id": "PAT-002",
+      "title": "Heartbeat-Governed Entity and Reflected-State Computing",
+      "status": "structured_completion_not_started",
+      "invention_capture": "unknown",
+      "disclosure_chronology": "not_created",
+      "evidence_map": "not_created",
+      "prior_art_distinction_notes": "not_created",
+      "specification": "not_created",
+      "abstract": "not_created",
+      "claims": "shared_clauses_only_or_unknown",
+      "drawings": "not_created",
+      "inventor_fields": "undetermined",
+      "ownership_fields": "unconfirmed",
+      "counsel_questions": "not_created",
+      "filing_packet": "not_started",
+      "warning_resolution": "not_started",
+      "human_filing": "not_started",
+      "filing_receipt": null,
+      "application_number": null,
+      "nonprovisional_deadline": null
+    },
+    {
+      "family_id": "PAT-003",
+      "title": "Generalized Adaptive Scanner Using Dynamic Micro-Nodes",
+      "status": "structured_completion_not_started",
+      "invention_capture": "unknown",
+      "disclosure_chronology": "not_created",
+      "evidence_map": "not_created",
+      "prior_art_distinction_notes": "not_created",
+      "specification": "not_created",
+      "abstract": "not_created",
+      "claims": "shared_clauses_only_or_unknown",
+      "drawings": "not_created",
+      "inventor_fields": "undetermined",
+      "ownership_fields": "unconfirmed",
+      "counsel_questions": "not_created",
+      "filing_packet": "not_started",
+      "warning_resolution": "not_started",
+      "human_filing": "not_started",
+      "filing_receipt": null,
+      "application_number": null,
+      "nonprovisional_deadline": null
+    },
+    {
+      "family_id": "PAT-004",
+      "title": "Manifest-Governed Bidirectional Neural Communication",
+      "status": "structured_completion_not_started",
+      "invention_capture": "unknown",
+      "disclosure_chronology": "not_created",
+      "evidence_map": "not_created",
+      "prior_art_distinction_notes": "not_created",
+      "specification": "not_created",
+      "abstract": "not_created",
+      "claims": "shared_clauses_only_or_unknown",
+      "drawings": "not_created",
+      "inventor_fields": "undetermined",
+      "ownership_fields": "unconfirmed",
+      "counsel_questions": "not_created",
+      "filing_packet": "not_started",
+      "warning_resolution": "not_started",
+      "human_filing": "not_started",
+      "filing_receipt": null,
+      "application_number": null,
+      "nonprovisional_deadline": null
+    },
+    {
+      "family_id": "PAT-005",
+      "title": "Governed Device Continuity and Destination-Bound Hardware Abstraction",
+      "status": "practitioner_review_ready",
+      "invention_capture": "complete",
+      "disclosure_chronology": "worksheet_present_audit_pending",
+      "evidence_map": "complete",
+      "prior_art_distinction_notes": "initial_charts_present_verified_identifiers_pending",
+      "specification": "working_draft_present",
+      "abstract": "working_draft_or_unverified",
+      "claims": "claim_architecture_present",
+      "drawings": "source_sheets_present_approval_pending",
+      "inventor_fields": "undetermined",
+      "ownership_fields": "unconfirmed",
+      "counsel_questions": "practitioner_handoff_present",
+      "filing_packet": "not_authorized",
+      "warning_resolution": "blocked",
+      "human_filing": "not_started",
+      "filing_receipt": null,
+      "application_number": null,
+      "nonprovisional_deadline": null,
+      "disclosure_risk": "urgent_review_due_to_public_technical_paper_committed_2026-07-13",
+      "primary_blockers": [
+        "verified prior-art references",
+        "contributor interviews",
+        "inventorship determination",
+        "earliest public-disclosure audit",
+        "formal drawing approval",
+        "practitioner written recommendation",
+        "owner filing authorization"
+      ]
+    }
+  ],
+  "publisher_invention_families": [
+    {
+      "family_key": "commit_time_admissibility_gate",
+      "title": "Commit-Time Admissibility Gate",
+      "status": "counsel_packet_draft_exists_external_to_numbered_family_registry",
+      "numbered_family_mapping": "unresolved",
+      "required_next_action": "decide whether to map into PAT-001, create a new PAT family, or retain as a root umbrella filing"
+    },
+    {
+      "family_key": "receipt_based_state_transition_validation",
+      "title": "Receipt-Based State Transition Validation",
+      "status": "candidate_family_unregistered",
+      "numbered_family_mapping": "unresolved"
+    },
+    {
+      "family_key": "publisher_governed_disclosure_pipeline",
+      "title": "Publisher Governed Disclosure Pipeline",
+      "status": "candidate_family_unregistered",
+      "numbered_family_mapping": "unresolved"
+    },
+    {
+      "family_key": "application_correction_gate",
+      "title": "Application Correction Gate",
+      "status": "candidate_family_unregistered",
+      "numbered_family_mapping": "unresolved"
+    },
+    {
+      "family_key": "ai_output_to_action_boundary",
+      "title": "AI Output-to-Action Boundary",
+      "status": "candidate_family_unregistered",
+      "numbered_family_mapping": "unresolved"
+    },
+    {
+      "family_key": "recoverability_aware_execution_boundary",
+      "title": "Recoverability-Aware Execution Boundary",
+      "status": "candidate_family_unregistered",
+      "numbered_family_mapping": "unresolved"
+    },
+    {
+      "family_key": "master_records_reconstruction_and_verification",
+      "title": "Master-Records Reconstruction and Verification",
+      "status": "candidate_family_unregistered",
+      "numbered_family_mapping": "unresolved"
+    },
+    {
+      "family_key": "multi_entity_observer_participant_admissibility",
+      "title": "Multi-Entity Observer-Participant Admissibility",
+      "status": "candidate_family_unregistered",
+      "numbered_family_mapping": "unresolved"
+    }
+  ],
+  "portfolio_blockers": [
+    "Publisher invention families are not yet reconciled with PAT-001 through PAT-005",
+    "No filed application receipt or application number is recorded",
+    "No nonprovisional deadline may be calculated until an actual filing date exists",
+    "PAT-002 through PAT-004 require structured family completion passes"
+  ],
+  "next_machine_actions": [
+    "create a reconciliation map between Publisher invention families and numbered PAT families",
+    "create PAT-002 completion status and stasis packet",
+    "create PAT-003 completion status and stasis packet",
+    "create PAT-004 completion status and stasis packet",
+    "refresh this ledger after every material family-state change"
+  ]
+}
