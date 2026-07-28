@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "scope": "PORTFOLIO_CHATGPT_CORRESPONDENCE_NORMALIZER",
   "governing_handoff": "PATENTS_MIRROR_HANDOFF.md",
   "implementation_contract": "intake/chatgpt/NORMALIZER_IMPLEMENTATION_CONTRACT.md",
@@ -14,12 +14,21 @@
   "normalized_message_count": 0,
   "family_index_count": 0,
   "ingestion_receipt_count": 0,
-  "current_decision": "FAIL_CLOSED_UNTIL_AUTHORITATIVE_TEST_AND_SOURCE",
-  "blocked_write": null,
+  "current_decision": "FAIL_CLOSED_SOURCE_WRITE_BLOCKED",
+  "blocked_write": {
+    "date": "2026-07-28",
+    "target_directory": "intake/chatgpt/conversations/",
+    "attempted_scope": "bounded current-chat patent-pipeline correspondence excerpt",
+    "result": "REPOSITORY_CONNECTOR_SAFETY_BLOCK",
+    "attempt_count": 2,
+    "durable_source_created": false,
+    "facts_invented": false
+  },
   "required_next_machine_work": [
     "run python -m unittest tests/test_correspondence_intake.py through the authoritative dispatcher",
     "preserve complete test output and dispatcher receipt",
-    "materialize a bounded source export or pertinent excerpt with stable provenance",
+    "materialize a bounded source export or pertinent excerpt through an authorized repository path",
+    "retain null timestamps where the platform does not expose exact message times",
     "run tools/normalize_chatgpt_correspondence.py against the approved source",
     "preserve normalized records, family indexes, contradiction reports, and ingestion receipts",
     "route reviewed PAT-005 results into the Steps 1-4 pre-owner preparation pipeline",
