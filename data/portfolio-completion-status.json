@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.2",
-  "generated_utc": "2026-07-28T05:04:20Z",
+  "schema_version": "0.3",
+  "generated_utc": "2026-07-28T05:55:05Z",
   "repository": "StegVerse-Labs/Patents",
   "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
   "legal_notice": "Technical portfolio tracking only. Unknown facts, inventorship, ownership, legal conclusions, filing authority, filing dates, application numbers, fees, receipts, and deadlines are not inferred.",
@@ -55,23 +55,27 @@
     {
       "family_id": "PAT-003",
       "title": "Generalized Adaptive Scanner Using Dynamic Micro-Nodes",
-      "status": "structured_completion_not_started",
-      "invention_capture": "structured_family_record_only",
-      "disclosure_chronology": "not_created",
-      "evidence_map": "not_created",
-      "prior_art_distinction_notes": "not_created",
+      "status": "structured_review_preparation_with_blockers",
+      "invention_capture": "partial_structured_family_record_present",
+      "disclosure_chronology": "factual_records_and_audit_required",
+      "evidence_map": "candidate_source_discovery_required",
+      "prior_art_distinction_notes": "search_ledger_required",
       "specification": "not_created",
       "abstract": "not_created",
       "claims": "shared_clauses_and_claim_ids_present",
       "drawings": "not_created",
       "inventor_fields": "undetermined",
       "ownership_fields": "unconfirmed",
-      "counsel_questions": "not_created",
-      "filing_packet": "not_started",
+      "counsel_questions": "human_action_packet_present_practitioner_handoff_pending",
+      "filing_packet": "not_authorized",
+      "warning_resolution": "blocked",
       "human_filing": "not_started",
       "filing_receipt": null,
       "application_number": null,
-      "nonprovisional_deadline": null
+      "nonprovisional_deadline": null,
+      "status_record": "data/PAT-003-completion-status.json",
+      "readiness_index": "filing-readiness/PAT-003_FILING_READINESS_INDEX.md",
+      "human_action_packet": "reviews/PAT-003-human-action-packet.md"
     },
     {
       "family_id": "PAT-004",
@@ -132,13 +136,15 @@
     "Publisher invention families remain legally unmapped to numbered PAT families",
     "No filed application receipt or application number is recorded",
     "No nonprovisional deadline may be calculated until an actual filing date exists",
-    "PAT-003 and PAT-004 require structured completion and exact stasis packets",
-    "PAT-002 requires exact implementation anchors, factual chronology, evidence map, drafts, interviews, and practitioner review"
+    "PAT-004 requires structured completion and an exact stasis packet",
+    "PAT-002 requires exact implementation anchors, factual chronology, evidence map, drafts, interviews, and practitioner review",
+    "PAT-003 requires source discovery, factual chronology, evidence classification, drafts, interviews, and practitioner review"
   ],
   "next_machine_actions": [
     "locate PAT-002 implementation anchors in StegEntity and Data-Continuation/core-lite",
     "create PAT-002 standalone disclosure and limitation evidence map from verified sources",
-    "create PAT-003 completion status, readiness index, and exact human-action packet",
+    "search connected repositories for PAT-003 scanner, sensing, observation, return-delta, non-inference, and micro-node anchors",
+    "create PAT-003 standalone disclosure and limitation evidence map from verified sources",
     "create PAT-004 completion status, readiness index, and exact human-action packet",
     "refresh this ledger after every material state change"
   ]
