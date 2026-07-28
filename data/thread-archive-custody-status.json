@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "generated_date": "2026-07-28",
+  "repository": "StegVerse-Labs/Patents",
+  "purpose": "Fail-closed determination of whether an active ChatGPT working thread may be declared ready for archive under the StegVerse orchestration model.",
+  "archive_term_definition": {
+    "repository_continuation_state_preserved": "Repository handoffs and ledgers preserve enough state for a human or later session to resume work.",
+    "orchestration_custody_accepted": "An active orchestration layer has ingested the thread, emitted a bounded receipt, assigned or scheduled remaining tasks, and accepted continuation responsibility.",
+    "thread_ready_to_archive": "Allowed only when both repository continuation state is preserved and orchestration custody is verified."
+  },
+  "observed_state": {
+    "repository_continuation_state_preserved": true,
+    "orchestration_layer_operational": false,
+    "orchestration_ingestion_receipt_present": false,
+    "remaining_tasks_assigned_or_scheduled_by_orchestrator": false,
+    "orchestration_custody_accepted": false,
+    "thread_ready_to_archive": false
+  },
+  "current_decision": "FAIL_CLOSED_ACTIVE_THREAD_REMAINS_REQUIRED",
+  "prohibited_claims": [
+    "thread ready to archive",
+    "orchestration has custody",
+    "autonomous continuation is active",
+    "the prior conversation is not required"
+  ],
+  "required_evidence_before_archive_claim": [
+    "stable thread or conversation identifier",
+    "orchestration ingestion receipt",
+    "hash or immutable reference to ingested source",
+    "task extraction manifest",
+    "assignment or scheduling receipt for unfinished work",
+    "orchestrator identity and runtime version",
+    "accepted-custody timestamp",
+    "continuation checkpoint or replay reference"
+  ],
+  "next_machine_actions": [
+    "preserve this fail-closed archive-custody state in each patent-related mirror handoff",
+    "remove or qualify any archive-readiness statement that relies only on repository documentation",
+    "when orchestration becomes available, ingest the active thread and emit the required custody evidence",
+    "change thread_ready_to_archive only after all required evidence is verified"
+  ],
+  "legal_or_filing_effect": "none"
+}
