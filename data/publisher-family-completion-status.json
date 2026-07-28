@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.2",
-  "generated_utc": "2026-07-28T19:00:00Z",
+  "schema_version": "0.3",
+  "generated_utc": "2026-07-28T22:56:24Z",
   "repository": "StegVerse-Labs/Patents",
   "source_handoff": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
   "legal_notice": "Technical tracking only. No legal family boundary, inventorship, ownership, patentability, disclosure consequence, filing strategy, filing authority, application number, receipt, or deadline is inferred.",
@@ -86,28 +86,29 @@
     {
       "family_key": "application_correction_gate",
       "title": "Application Correction Gate",
-      "status": "source_material_blocked",
-      "invention_capture": "candidate_concept_only",
+      "status": "partial_technical_adjacency_located_direct_source_pending",
+      "invention_capture": "candidate_concept_with_bounded_correction_after_validation_failure_adjacency",
       "disclosure_chronology": "not_created",
-      "evidence_map": "blocked_pending_authoritative_source_material",
-      "prior_art_distinction_notes": "not_created",
+      "evidence_map": "partial_source_candidate_review_present_direct_family_support_pending",
+      "prior_art_distinction_notes": "not_started",
       "specification": "not_created",
       "abstract": "not_created",
-      "claim_themes": "not_extracted",
+      "claim_themes": "validation_refusal_correction_retry_logging_and_escalation_candidate_themes_only",
       "drawings": "not_created",
       "inventor_fields": "undetermined",
       "ownership_fields": "unconfirmed",
-      "counsel_questions": "technical_meaning_and_family_relationship_unresolved",
+      "counsel_questions": "scope_and_family_relationship_unresolved",
       "filing_packet": "not_authorized",
-      "warning_resolution": "source_material_required",
+      "warning_resolution": "blocked_direct_family_source_required",
       "human_filing": "not_started",
       "filing_receipt": null,
       "application_number": null,
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-application-correction-gate-status.json",
-      "action_packet": "data/publisher-application-correction-gate-status.json",
-      "current_decision": "FAIL_CLOSED_SOURCE_MATERIAL_REQUIRED"
+      "evidence_review": "evidence/PUBLISHER-application-correction-gate-source-candidate-review-2026-07-28.md",
+      "action_packet": "reviews/PUBLISHER-application-correction-gate-action-packet.md",
+      "current_decision": "FAIL_CLOSED_DIRECT_FAMILY_SOURCE_REQUIRED"
     },
     {
       "family_key": "ai_output_to_action_boundary",
@@ -224,10 +225,9 @@
     "deadline_basis": "actual_filing_receipt_application_number_and_actual_filing_date_only"
   },
   "next_machine_actions": [
-    "create_cross_family_nonlegal_overlap_matrix",
-    "refresh_patent_registry_exact_hash_source_snapshot",
     "perform_status_only_registry_import_or_refusal_pass",
     "continue_pat005_chronology_contributor_disclosure_audit_and_practitioner_preparation",
+    "locate_direct_application_correction_gate_source_or_preserve_exact_blocker",
     "resolve_canonical_source_identities_for_implementation_blocked_families",
     "run_authoritative_filing_state_validation_when_dispatcher_execution_is_available"
   ]
