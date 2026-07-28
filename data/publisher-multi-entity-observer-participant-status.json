@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "family_key": "multi_entity_observer_participant_admissibility",
+  "title": "Multi-Entity Observer-Participant Admissibility",
+  "status": "structured_formal_evidence_preparation_with_implementation_blocker",
+  "invention_capture": "partial_verified_formal_support",
+  "disclosure_chronology": "not_created",
+  "evidence_map": "partial_verified_two_source_inventory",
+  "prior_art_distinction_notes": "multi_agent_consensus_observer_and_audit_distinctions_required",
+  "specification": "not_created",
+  "abstract": "not_created",
+  "claim_themes": "candidate_limitation_clusters_present_not_final",
+  "drawings": "not_created",
+  "inventor_fields": "undetermined",
+  "ownership_fields": "unconfirmed",
+  "counsel_questions": "independent_family_dependent_embodiment_or_research_track_unresolved",
+  "filing_packet": "not_authorized",
+  "warning_resolution": "blocked",
+  "human_filing": "not_started",
+  "filing_receipt": null,
+  "application_number": null,
+  "actual_filing_date": null,
+  "nonprovisional_deadline": null,
+  "pct_deadline": null,
+  "patent_pending_authorized": false,
+  "approval_required_now": false,
+  "verified_sources": [
+    {
+      "repository": "Admissible-Existence/DC",
+      "path": "README.md",
+      "blob_sha": "415ddab2ec9b11b39243e3ee5b0dd78bafd2cf6a",
+      "support": "multi-entity coherence, observers, lag, authority relations, receipt reconciliation, local/global coherence, and distributed failure modes"
+    },
+    {
+      "repository": "Admissible-Existence/RTG",
+      "path": "README.md",
+      "blob_sha": "8e68292d2ce914b50df7713683c2bf20a1bd86ff",
+      "support": "relational transition substrate for boundaries, horizons, authority, recoverability, reconstruction, and commit-time evaluation"
+    }
+  ],
+  "expected_decision": "FAIL_CLOSED_IMPLEMENTATION_CHRONOLOGY_AND_LEGAL_BLOCKERS",
+  "next_machine_tasks": [
+    "locate or receive a dedicated observer-participant protocol or implementation source",
+    "build a limitation-level evidence map distinguishing formal support from executable support",
+    "create a working technical disclosure from verified evidence",
+    "create an abstract and figure plan from verified evidence",
+    "create chronology and public-disclosure audit templates",
+    "create a non-legal overlap report against PAT-002, Distributed Coherence, and Receipt-Based State Transition Validation"
+  ],
+  "next_human_or_counsel_tasks": [
+    "provide or identify the canonical observer-participant protocol or implementation source",
+    "identify factual contributors and contributions",
+    "provide dated conception and disclosure records",
+    "obtain practitioner advice on family disposition and claim scope",
+    "obtain inventorship and ownership determinations",
+    "record owner disposition only after counsel recommendation"
+  ],
+  "legal_notice": "Technical tracking only. This status does not determine inventorship, ownership, patentability, priority, filing strategy, filing authority, filing status, application number, receipt, or deadline."
+}
