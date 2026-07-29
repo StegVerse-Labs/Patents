@@ -1,10 +1,12 @@
 {
+  "schema_version": "1.1.0",
   "family_id": "PAT-001",
-  "status": "practitioner_review_ready_with_blockers",
+  "status": "practitioner_review_ready_with_blockers_and_dedicated_handoff",
   "filed": false,
   "patent_pending_authorized": false,
   "review_packet_authorized": false,
   "completed": {
+    "dedicated_mirror_handoff": true,
     "working_provisional_draft": true,
     "claim_element_evidence_map": true,
     "conception_and_disclosure_chronology": true,
@@ -32,6 +34,7 @@
     "filing_packet_engine": true
   },
   "artifact_map": {
+    "dedicated_mirror_handoff": "PAT-001_MIRROR_HANDOFF.md",
     "working_provisional_draft": "provisionals/PAT-001_provisional.md",
     "claim_element_evidence_map": "evidence/PAT-001_CLAIM_ELEMENT_EVIDENCE_MAP.md",
     "conception_and_disclosure_chronology": "evidence/PAT-001_CONCEPTION_AND_DISCLOSURE_CHRONOLOGY.md",
@@ -78,7 +81,8 @@
   "next_machine_tasks": [
     "retry canonical-source and lifecycle implementation searches only when a recorded retry trigger occurs",
     "populate stable patent and non-patent prior art identifiers after verified searches",
-    "run the canonical portfolio entry point through the authoritative execution path"
+    "run the canonical portfolio entry point through the authoritative execution path",
+    "reconcile PAT-001_MIRROR_HANDOFF.md into the root portfolio handoff and registry source snapshot"
   ],
   "next_human_tasks": [
     "conduct contributor interviews",
