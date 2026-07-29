@@ -1,14 +1,14 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.4.0",
   "family_key": "recoverability_aware_execution_boundary",
   "title": "Recoverability-Aware Execution Boundary",
-  "status": "working_disclosure_abstract_figure_plan_chronology_and_adjacent_artifact_inspection_complete_direct_executable_blocked",
+  "status": "limitation_map_overlap_notes_and_adjacent_artifact_inspection_complete_direct_executable_blocked",
   "filed": false,
   "patent_pending_authorized": false,
   "invention_capture": "working_technical_disclosure_complete_from_verified_sources",
   "disclosure_chronology": "factual_intake_template_complete_evidence_not_populated",
-  "evidence_map": "three_verified_written_description_sources_plus_one_inspected_adjacent_workflow_artifact_limitation_map_pending",
-  "prior_art_distinction_notes": "not_verified",
+  "evidence_map": "limitation_level_written_support_map_complete_with_adjacent_artifact_exclusion_direct_executable_support_absent",
+  "prior_art_distinction_notes": "bounded_nonlegal_overlap_notes_complete_verified_external_search_pending",
   "specification": "bounded_working_disclosure_present_full_specification_incomplete",
   "abstract": "working_abstract_complete",
   "claim_themes": "candidate_limitation_clusters_present_not_final",
@@ -26,9 +26,11 @@
   "pct_deadline": null,
   "approval_required_now": false,
   "source_inventory": "evidence/PUBLISHER-recoverability-aware-execution-source-inventory.md",
+  "limitation_map": "evidence/PUBLISHER-recoverability-aware-execution-limitation-map.md",
   "working_disclosure": "reviews/PUBLISHER-recoverability-aware-execution-technical-disclosure.md",
   "abstract_and_figure_plan": "reviews/PUBLISHER-recoverability-aware-execution-abstract-and-figure-plan.md",
   "chronology_template": "evidence/PUBLISHER-recoverability-aware-execution-chronology.md",
+  "nonlegal_overlap_notes": "reviews/PUBLISHER-recoverability-aware-execution-nonlegal-overlap-notes.md",
   "rtg_artifact_inspection_evidence": "evidence/PUBLISHER-recoverability-aware-execution-rtg001-artifact-watch-2026-07-29.md",
   "action_packet": "reviews/PUBLISHER-recoverability-aware-execution-action-packet.md",
   "verified_sources": [
@@ -58,12 +60,6 @@
       "zip_sha256": "1bf5f2d57b69648772c3115b3ec5b6d035a646a170185c2c7a05aaf02f24d3c5",
       "evidence_class": "INSPECTED_ADJACENT_WORKFLOW_OUTPUT",
       "direct_recoverability_support": false,
-      "artifact_contents": [
-        "ext2_phase1.json",
-        "ext2_phase3.json",
-        "ext2_report.json",
-        "ext2_sources.json"
-      ],
       "rtg_state_updated": false,
       "final_correctness_claimed": false
     }
@@ -74,10 +70,11 @@
     "rtg_artifact_7658749562_direct_family_support": false,
     "runtime_decision_traces_verified": false,
     "calibration_provenance_verified": false,
-    "limitation_evidence_map_complete": false,
+    "limitation_evidence_map_complete": true,
+    "bounded_nonlegal_overlap_notes_complete": true,
     "chronology_evidence_populated": false,
     "contributors_verified": false,
-    "prior_art_review_complete": false,
+    "verified_external_prior_art_search_complete": false,
     "formal_drawings_complete": false,
     "family_disposition_determined_by_counsel": false,
     "inventorship_determined": false,
@@ -90,10 +87,9 @@
     "continue first-party search for direct recoverability controller and commit-boundary implementation",
     "locate certified-safe-region generation calibration reserve barrier and recovery logic",
     "locate retained ALLOW DENY RESTRICT DEFER QUARANTINE and FAIL_CLOSED traces",
-    "build limitation-level evidence map separating formal mathematical executable test trace and unsupported support",
-    "create bounded non-legal overlap report against Commit-Time Admissibility Gate and AI Output-to-Action Boundary",
     "populate formal drawing sources only after implementation fields and trace structures are verified",
-    "refresh Publisher handoff and central ledger after material source or factual evidence changes"
+    "refresh Publisher handoff and central ledger",
+    "prepare practitioner review questions from the completed limitation and overlap maps"
   ],
   "next_human_or_counsel_tasks": [
     "identify contributors and attributable technical contributions",
@@ -103,5 +99,5 @@
     "obtain inventorship and ownership determinations",
     "record explicit owner disposition only after counsel packet completion"
   ],
-  "legal_notice": "Technical preparation only. The inspected artifact is adjacent staged-analysis output and is not recoverability execution, theorem correctness, legal family boundary, inventorship, ownership, patentability, filing authority, filing status, application number, receipt, or deadline evidence."
+  "legal_notice": "Technical preparation only. The limitation map and overlap notes are non-legal drafting artifacts. The inspected workflow artifact is adjacent staged-analysis output and is not recoverability execution, theorem correctness, legal family boundary, inventorship, ownership, patentability, filing authority, filing status, application number, receipt, or deadline evidence."
 }
