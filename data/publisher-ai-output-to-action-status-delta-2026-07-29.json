@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "family_key": "ai_output_to_action_boundary",
+  "title": "AI Output-to-Action Boundary",
+  "previous_status_record": "data/publisher-ai-output-to-action-boundary-status.json",
+  "previous_status_schema": "1.1.0",
+  "bounded_progress": {
+    "limitation_map": "evidence/PUBLISHER-ai-output-to-action-limitation-map.md",
+    "abstract_and_figure_plan": "reviews/PUBLISHER-ai-output-to-action-abstract-and-figure-plan.md",
+    "chronology_template": "evidence/PUBLISHER-ai-output-to-action-chronology.md",
+    "nonlegal_overlap_notes": "reviews/PUBLISHER-ai-output-to-action-nonlegal-overlap-notes.md"
+  },
+  "current_technical_state": "bounded_drafting_surfaces_complete_generalized_action_transition_blocked",
+  "unresolved": [
+    "general AI output schema",
+    "canonical action-request object",
+    "approval or authority-grant mechanism",
+    "grant scope duration expiration revocation and consumption",
+    "tool-specific execution grant",
+    "complete output-to-action transition implementation",
+    "retained negative-path and execution outputs",
+    "attributable chronology",
+    "contributors and contributions",
+    "family disposition",
+    "inventor fields",
+    "ownership fields",
+    "filing authorization"
+  ],
+  "filing_state": {
+    "filed": false,
+    "patent_pending_authorized": false,
+    "filing_receipt": null,
+    "application_number": null,
+    "actual_filing_date": null,
+    "nonprovisional_deadline": null
+  },
+  "decision": "FAIL_CLOSED_GENERALIZED_SOURCE_CHRONOLOGY_FAMILY_AND_COUNSEL_BLOCKERS",
+  "notice": "Technical tracking only; no legal or filing conclusion is created by this delta."
+}
