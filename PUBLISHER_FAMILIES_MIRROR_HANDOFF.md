@@ -2,7 +2,7 @@
 
 ## Purpose and authority
 
-This handoff is the source of truth for reconciling Publisher-origin invention candidates with numbered families in `StegVerse-Labs/Patents`.
+This handoff is the source of truth for reconciling Publisher-origin invention candidates with numbered families in `StegVerse-Labs/Patents`. Dedicated family records control when this summary conflicts with a more specific immutable source or status record.
 
 Companion sources:
 
@@ -15,13 +15,9 @@ reviews/PUBLISHER_FAMILY_NONLEGAL_OVERLAP_MATRIX_2026-07-28.md
 data/thread-archive-custody-status.json
 ```
 
-Dedicated family records control when this summary conflicts with a more specific immutable source or status record.
-
 ## Governing objective
 
-Move every Publisher-origin family into one explicit controlled state: mapped to an existing numbered family, registered as a new family, dependent embodiment, continuation candidate, retained as trade secret, defensively published, deferred for evidence, abandoned, or filed after explicit authorization.
-
-No family may be silently merged, omitted, published, abandoned, or treated as covered.
+Move every Publisher-origin family into one explicit controlled state: mapped to an existing numbered family, registered as a new family, dependent embodiment, continuation candidate, retained as trade secret, defensively published, deferred for evidence, abandoned, or filed after explicit authorization. No family may be silently merged, omitted, published, abandoned, or treated as covered.
 
 ## Current family records
 
@@ -69,28 +65,35 @@ primary blocker: no direct first-party source defining the complete application-
 approval required now: false
 ```
 
-The verified adjacency source supports validation refusal, logged correction, retry, and escalation behavior only. It does not establish the complete candidate family combination and must not be used as complete written-description support.
+The verified adjacency supports validation refusal, logged correction, retry, and escalation only. It does not establish the complete candidate family combination.
 
 ### AI Output-to-Action Boundary
 
 ```text
-status: structured evidence preparation with blockers
+status: working technical disclosure complete; generalized combination blocked
 evidence inventory: evidence/PUBLISHER-ai-output-to-action-source-inventory.md
 status record: data/publisher-ai-output-to-action-boundary-status.json
-primary blocker: generalized output-to-action combination support, chronology, contributors, and legal disposition
+working disclosure: reviews/PUBLISHER-ai-output-to-action-technical-disclosure.md
+action packet: reviews/PUBLISHER-ai-output-to-action-action-packet.md
+primary blocker: generalized action-request, authority-transition, execution-grant, chronology, contributors, and legal disposition evidence
 approval required now: false
 ```
 
 ### Recoverability-Aware Execution Boundary
 
 ```text
-status: structured evidence preparation with blockers
+status: working disclosure, abstract, figure plan, and chronology template complete; executable implementation blocked
 evidence inventory: evidence/PUBLISHER-recoverability-aware-execution-source-inventory.md
 status record: data/publisher-recoverability-aware-execution-status.json
+working disclosure: reviews/PUBLISHER-recoverability-aware-execution-technical-disclosure.md
+abstract and figure plan: reviews/PUBLISHER-recoverability-aware-execution-abstract-and-figure-plan.md
+chronology intake: evidence/PUBLISHER-recoverability-aware-execution-chronology.md
 action packet: reviews/PUBLISHER-recoverability-aware-execution-action-packet.md
-primary blocker: executable source, calibration provenance, chronology, contributors, and legal family boundary
+primary blocker: canonical executable source, runtime decision traces, calibration provenance, populated chronology, contributors, and legal family boundary
 approval required now: false
 ```
+
+The verified sources support commit-boundary evaluation, candidate post-state analysis, recoverability, observability, absorption capacity, coherence retention, conservative certified regions, fail-closed denial, and post-crossing quarantine. They do not establish a canonical production implementation or threshold calibration.
 
 ### Master-Records Reconstruction and Verification
 
@@ -106,11 +109,11 @@ approval required now: false
 ### Multi-Entity Observer-Participant Admissibility
 
 ```text
-status: structured formal evidence preparation with implementation blocker
+status: working disclosure, abstract, figure plan, chronology template, and non-legal distinction notes complete; implementation blocked
 evidence inventory: evidence/PUBLISHER-multi-entity-observer-participant-source-inventory.md
 status record: data/publisher-multi-entity-observer-participant-status.json
 action packet: reviews/PUBLISHER-multi-entity-observer-participant-action-packet.md
-primary blocker: dedicated observer-participant protocol and implementation evidence
+primary blocker: dedicated observer-participant protocol, executable implementation, populated chronology, and contributors
 approval required now: false
 ```
 
@@ -121,9 +124,7 @@ data/publisher-family-completion-status.json
 schema_version: 0.3
 ```
 
-The ledger tracks every family across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline.
-
-The non-legal overlap matrix records technical adjacency only. It does not determine legal family boundaries.
+The ledger tracks every family across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline. Dedicated status records may be newer than the consolidated ledger until the next bounded reconciliation.
 
 ## Filing and deadline invariant
 
@@ -158,12 +159,13 @@ Direct commits require later authoritative validation before release or filing-p
 
 1. Perform the bounded status-only registry import or produce a deterministic refusal receipt using the refreshed exact-hash snapshot.
 2. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
-3. Locate a direct first-party Application Correction Gate source or preserve its exact blocker packet.
-4. Resolve canonical source identities for Commit-Time, Master-Records, and other implementation-blocked families.
-5. Expand executable limitation maps and working disclosures only where immutable source support exists.
-6. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
-7. Refresh this handoff and the central ledger after each material status change.
-8. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
+3. Locate canonical executable and trace sources for Recoverability-Aware Execution Boundary.
+4. Build its limitation-level evidence map and bounded non-legal overlap report.
+5. Locate direct first-party sources for Application Correction Gate and generalized AI Output-to-Action behavior.
+6. Resolve canonical source identities for Commit-Time, Master-Records, and other implementation-blocked families.
+7. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
+8. Refresh the central ledger after each material dedicated-family status change.
+9. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
 
 ## Human and legal boundary
 
@@ -192,7 +194,7 @@ Machine-readable source:
 data/thread-archive-custody-status.json
 ```
 
-The family records preserve repository continuation state but do not demonstrate orchestration custody. No verified orchestration ingestion receipt, task extraction manifest, assignment receipt, accepted-custody timestamp, or continuation checkpoint exists.
+Repository continuation state is preserved, but orchestration custody is not demonstrated. No verified orchestration ingestion receipt, task extraction manifest, assignment receipt, accepted-custody timestamp, or continuation checkpoint exists.
 
 ```text
 repository continuation state preserved: true
