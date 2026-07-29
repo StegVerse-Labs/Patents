@@ -1,53 +1,58 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "family_key": "ai_output_to_action_boundary",
   "title": "AI Output-to-Action Boundary",
-  "status": "structured_evidence_preparation_with_blockers",
-  "invention_capture": "bounded technical source identified",
-  "disclosure_chronology": "audit required",
-  "evidence_map": "partial verified executable source",
-  "prior_art_distinction_notes": "output filtering, tool permissioning, workflow approval, and execution-gating distinctions required",
-  "specification": "not created",
-  "abstract": "not created",
-  "claim_themes": "candidate limitation leads present not final",
-  "drawings": "not created",
+  "status": "working_technical_disclosure_complete_generalized_combination_blocked",
+  "invention_capture": "working technical disclosure complete from bounded verified executable source",
+  "disclosure_chronology": "not populated; exact evidence intake defined in action packet",
+  "evidence_map": "partial verified executable source; limitation-level map pending additional anchors",
+  "prior_art_distinction_notes": "output filtering, tool permissioning, workflow approval, execution gating, and commit-time admissibility distinctions required",
+  "specification": "working technical disclosure present; full specification incomplete",
+  "abstract": "not yet separated from working disclosure",
+  "claim_themes": "candidate limitation clusters present; not final claims",
+  "drawings": "not created; generalized protocol structure unverified",
   "inventor_fields": "undetermined",
   "ownership_fields": "unconfirmed",
   "counsel_questions": "independent family versus dependent embodiment unresolved",
   "filing_packet": "not authorized",
-  "warning_resolution": "blocked",
+  "warning_resolution": "blocked by generalized source, chronology, contributor, family, and counsel fields",
   "human_filing": "not started",
   "filing_receipt": null,
   "application_number": null,
   "actual_filing_date": null,
   "nonprovisional_deadline": null,
+  "pct_deadline": null,
+  "patent_pending_authorized": false,
+  "approval_required_now": false,
   "verified_sources": [
     {
       "repository": "GCAT-BCAT-Engine/Publisher",
       "path": "scripts/import_ecosystem_chat_activation.py",
       "blob_sha": "a2186f2634f5acf5253f9f26b28b673c2afc2b8a",
       "evidence_type": "EXECUTABLE",
-      "support_summary": "Imports upstream state only after hash, custody, reconstruction, stage-chain, supersession, destination, and authority-boundary checks; output status explicitly leaves publication, release, custody, and execution authority false."
+      "support_summary": "Validates hashes, custody, reconstruction, stage chain, supersession, destination, and authority boundaries while preserving publication, release, custody, and execution authorization as false."
     }
   ],
-  "candidate_limitation_leads": [
-    "receive or acquire an AI- or system-generated output packet",
-    "validate schema, digest, provenance, state binding, custody binding, and reconstruction conditions",
-    "verify that the packet expressly denies execution or publication authority",
-    "distinguish verified informational import from permission to act",
-    "emit a bounded status object with execution authorization remaining false",
-    "fail closed or remain pending when required evidence is absent",
-    "permit later action only through a separate authority-bearing transition"
-  ],
+  "artifacts": {
+    "source_inventory": "evidence/PUBLISHER-ai-output-to-action-source-inventory.md",
+    "working_disclosure": "reviews/PUBLISHER-ai-output-to-action-technical-disclosure.md",
+    "action_packet": "reviews/PUBLISHER-ai-output-to-action-action-packet.md"
+  },
   "combination_level_support": "unverified",
-  "decision": "FAIL_CLOSED_CHRONOLOGY_FAMILY_AND_COUNSEL_BLOCKERS",
-  "approval_required_now": false,
+  "decision": "FAIL_CLOSED_GENERALIZED_SOURCE_CHRONOLOGY_FAMILY_AND_COUNSEL_BLOCKERS",
   "next_machine_work": [
-    "locate additional source files for output generation and downstream authority grants",
+    "locate source files defining action requests and downstream authority grants",
     "create a limitation-level evidence map",
-    "compare non-legally with Commit-Time Admissibility Gate and Publisher Governed Disclosure Pipeline",
-    "draft a bounded technical disclosure from verified sources",
-    "create a counsel question packet"
+    "create bounded non-legal overlap notes",
+    "create a chronology and disclosure audit template",
+    "draft a separate abstract and figure plan only from verified evidence",
+    "refresh the Publisher family ledger and handoff"
   ],
-  "legal_boundary": "This record does not determine inventorship, ownership, patentability, legal family scope, filing strategy, or authority to file."
+  "next_human_or_counsel_work": [
+    "identify canonical implementation sources",
+    "provide dated conception and disclosure records",
+    "identify factual contributors and contributions",
+    "obtain counsel family, inventorship, ownership, disclosure, and filing recommendations"
+  ],
+  "legal_boundary": "This record does not determine inventorship, ownership, patentability, legal family scope, filing strategy, filing authority, filing status, application number, receipt, or deadline."
 }
