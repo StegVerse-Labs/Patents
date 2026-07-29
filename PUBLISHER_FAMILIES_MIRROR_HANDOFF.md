@@ -35,8 +35,6 @@ primary blocker: canonical executable triage implementation, authoritative trace
 approval required now: false
 ```
 
-The verified written sources support commit-boundary identification, candidate post-state evaluation, sufficiency/admissibility separation, fail-closed behavior, recoverability analysis, bounded outcomes, and decision-record concepts. They do not establish the canonical executable triage implementation or retained authoritative outputs.
-
 ### Receipt-Based State Transition Validation
 
 ```text
@@ -51,8 +49,6 @@ action packet: reviews/PUBLISHER-receipt-based-state-transition-action-packet.md
 primary blocker: canonical receipt generator and validator paths, retained runtime outputs, populated chronology, contributors, and legal disposition
 approval required now: false
 ```
-
-The verified sources support receipt-linked pre-state, transition, authority, post-state or denied-state, integrity, uncertainty, and reconstruction relationships. They do not establish a canonical production implementation or retained authoritative execution outputs.
 
 ### Publisher Governed Disclosure Pipeline
 
@@ -69,8 +65,6 @@ verified executable source repository: GCAT-BCAT-Engine/Publisher
 primary blocker: generalized disclosure and publication schemas, redaction or secrecy controls, closure and authorization receipts, retained runtime traces, populated chronology, contributors, and legal disposition
 approval required now: false
 ```
-
-The verified executable sources support declared-source and destination validation, canonical-integrity checks, refusal of incoming authority escalation, exact blocker preservation, pending or ingestion-ready awareness states, and non-activating verification receipts. They do not establish a generalized publication decision engine, production closure receipt, or claim-sensitive disclosure filter.
 
 ### Application Correction Gate
 
@@ -103,16 +97,22 @@ approval required now: false
 ### Recoverability-Aware Execution Boundary
 
 ```text
-status: working disclosure, abstract, figure plan, and chronology template complete; executable implementation blocked
+status: working disclosure, abstract, figure plan, chronology intake, limitation map, overlap notes, and adjacent-artifact inspection complete; direct executable implementation blocked
 evidence inventory: evidence/PUBLISHER-recoverability-aware-execution-source-inventory.md
+limitation map: evidence/PUBLISHER-recoverability-aware-execution-limitation-map.md
 status record: data/publisher-recoverability-aware-execution-status.json
 working disclosure: reviews/PUBLISHER-recoverability-aware-execution-technical-disclosure.md
 abstract and figure plan: reviews/PUBLISHER-recoverability-aware-execution-abstract-and-figure-plan.md
 chronology intake: evidence/PUBLISHER-recoverability-aware-execution-chronology.md
+non-legal overlap notes: reviews/PUBLISHER-recoverability-aware-execution-nonlegal-overlap-notes.md
+adjacent artifact inspection: evidence/PUBLISHER-recoverability-aware-execution-rtg001-artifact-watch-2026-07-29.md
+dedicated handoff: RECOVERABILITY_AWARE_EXECUTION_MIRROR_HANDOFF.md
 action packet: reviews/PUBLISHER-recoverability-aware-execution-action-packet.md
 primary blocker: canonical executable source, runtime decision traces, calibration provenance, populated chronology, contributors, and legal family boundary
 approval required now: false
 ```
+
+The RTG-001 workflow artifact is inspected adjacent staged-analysis output. It does not establish a recoverability controller, runtime decision, RTG state update, theorem correctness, or direct family support.
 
 ### Master-Records Reconstruction and Verification
 
@@ -146,8 +146,8 @@ approval required now: false
 
 ```text
 data/publisher-family-completion-status.json
-schema_version: 0.5
-reconciled_utc: 2026-07-29T12:03:44Z
+schema_version: 0.6
+reconciled_utc: 2026-07-29T13:44:00Z
 ```
 
 The central ledger reflects the current dedicated lifecycle records for all eight Publisher families across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline.
@@ -183,7 +183,7 @@ Direct commits require later authoritative validation before release or filing-p
 
 ## Next machine work
 
-1. Refresh the patent-registry exact-hash snapshot for ledger schema `0.5` and this handoff.
+1. Refresh the patent-registry exact-hash snapshot for ledger schema `0.6` and this handoff.
 2. Perform the bounded status-only registry import or produce a deterministic refusal receipt.
 3. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
 4. Locate canonical executable receipt generation, validation, reconstruction, tests, fixtures, and retained outputs for Receipt-Based State Transition Validation.
