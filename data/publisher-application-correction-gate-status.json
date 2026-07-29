@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "family_key": "application_correction_gate",
   "title": "Application Correction Gate",
-  "status": "chronology_and_nonlegal_distinction_surfaces_complete_direct_source_pending",
+  "status": "dedicated_handoff_chronology_and_nonlegal_distinction_surfaces_complete_direct_source_pending",
   "invention_capture": "candidate concept with bounded correction-after-validation-failure adjacency",
   "disclosure_chronology": "intake template complete; attributable evidence not populated",
   "evidence_map": "partial source-candidate review present; direct family support pending",
@@ -21,6 +21,7 @@
   "application_number": null,
   "actual_filing_date": null,
   "nonprovisional_deadline": null,
+  "dedicated_handoff": "APPLICATION_CORRECTION_GATE_MIRROR_HANDOFF.md",
   "searches_performed": [
     "GCAT-BCAT-Engine/Publisher correction validation repair search",
     "StegVerse-Labs organization Application Correction Gate search",
