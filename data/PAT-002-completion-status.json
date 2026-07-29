@@ -1,7 +1,8 @@
 {
+  "schema_version": "1.1.0",
   "family_id": "PAT-002",
   "title": "Heartbeat-Governed Entity and Reflected-State Computing",
-  "status": "structured_review_preparation_with_partial_source_anchors_verified",
+  "status": "structured_review_preparation_with_partial_source_anchors_and_intake_surfaces_complete",
   "filed": false,
   "patent_pending_authorized": false,
   "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
@@ -22,14 +23,18 @@
     "formal_authority_organization_confirmed": true,
     "source_identity_resolution_record": true,
     "bounded_source_anchor_manifest": true,
+    "disclosure_chronology_intake": true,
+    "technical_comparison_research_ledger": true,
+    "dedicated_mirror_handoff": false,
     "new_repository_required": false
   },
   "partial": {
     "invention_capture": "structured claim-family data exists in data/master_claims.json; a standalone disclosure remains to be generated from verified material",
-    "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md defines limitation and combination evidence requirements; general formal and runtime-integration anchors are now verified, but heartbeat and reflected-state combination support remains unpopulated",
+    "disclosure_chronology": "evidence/PAT-002_DISCLOSURE_CHRONOLOGY.md now defines exact factual intake fields; no dated evidence is populated",
+    "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md defines limitation and combination evidence requirements; general formal and runtime-integration anchors are verified, but heartbeat and reflected-state combination support remains unpopulated",
     "claim_architecture": "shared clauses and claim identifiers exist; claim text and evidence references require verification",
-    "prior_art_distinction": "technical collision themes are implicit but no verified search ledger is populated",
-    "source_identity": "Admissible-Existence/AE and DC are verified formal-source authorities at their root README blobs; Admissible-Existence/core-lite is verified as implementation/integration evidence only. Exact heartbeat and reflected-state sources remain unresolved."
+    "prior_art_distinction": "reviews/PAT-002_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md defines bounded research clusters and candidate-reference fields; no verified external references or conclusions are populated",
+    "source_identity": "Admissible-Existence/AE and DC are verified formal-source authorities at their root README blobs; Admissible-Existence/core-lite is verified as implementation/integration evidence only. Exact heartbeat and reflected-state sources remain unresolved. A connected repository search returned no heartbeat-specific match in these three repositories during the current review."
   },
   "blocking_gates": {
     "formal_authority_organization_confirmed": true,
@@ -61,7 +66,9 @@
     "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md",
     "evidence/PAT-002_SOURCE_IDENTITY_BLOCKER.md",
     "evidence/PAT-002_SOURCE_IDENTITY_RESOLUTION.md",
-    "data/PAT-002-source-anchor-manifest-2026-07-28.json"
+    "data/PAT-002-source-anchor-manifest-2026-07-28.json",
+    "evidence/PAT-002_DISCLOSURE_CHRONOLOGY.md",
+    "reviews/PAT-002_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md"
   ],
   "verified_source_anchors": [
     {
@@ -95,20 +102,21 @@
       "note": "no connected repository or succession record located; Admissible-Existence/core-lite is not assumed to be its successor"
     }
   ],
-  "expected_decision": "FAIL_CLOSED_HEARTBEAT_AND_REFLECTED_STATE_ANCHORS_PENDING",
+  "expected_decision": "FAIL_CLOSED_HEARTBEAT_REFLECTED_STATE_CHRONOLOGY_AND_FAMILY_REVIEW_BLOCKERS",
   "next_machine_tasks": [
-    "inspect the formal documents and runtime manifests referenced by the verified root anchors",
-    "locate exact heartbeat, liveness, reflected-state, observer-state, and entity-continuity anchors",
+    "inspect formal documents and runtime manifests referenced by verified root anchors",
+    "locate exact heartbeat liveness reflected-state observer-state and entity-continuity anchors",
     "populate evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md only from verified anchors",
     "emit a deeper source-anchor manifest distinguishing written-description support from executable support",
-    "create chronology and public-disclosure audit templates",
-    "create a prior-art search ledger without asserting search conclusions",
+    "populate chronology only from supplied dated evidence",
+    "populate the technical comparison ledger only from verified references",
     "create a standalone PAT-002 invention disclosure only from verified material",
-    "draft specification, abstract, and figure plan only to the extent supported by verified evidence"
+    "draft specification abstract and figure plan only to the extent supported by verified evidence"
   ],
   "next_human_tasks": [
     "identify contributors for factual interviews",
     "provide dated conception and disclosure records",
+    "provide any exact repository path or retained artifact for heartbeat and reflected-state behavior",
     "obtain claim-by-claim inventorship analysis from qualified counsel",
     "obtain practitioner recommendation",
     "record explicit owner disposition or filing authorization"
@@ -117,6 +125,14 @@
     "new_repository_required_now": false,
     "reason": "existing Admissible-Existence repositories already provide formal-source and runtime-integration homes",
     "future_creation_condition": "create a distinct repository only if a standalone executable entity or heartbeat implementation is intentionally established as an independent authority surface and cannot be coherently maintained in an existing repository"
+  },
+  "filing_state": {
+    "filing_packet": "not_authorized",
+    "human_filing": "not_started",
+    "filing_receipt": null,
+    "application_number": null,
+    "actual_filing_date": null,
+    "nonprovisional_deadline": null
   },
   "legal_notice": "Working technical portfolio status only. This record does not determine inventorship, ownership, patentability, filing authority, filing status, or deadlines. No application has been filed and patent-pending language is not authorized."
 }
