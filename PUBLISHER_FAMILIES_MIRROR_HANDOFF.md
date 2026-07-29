@@ -98,13 +98,18 @@ The verified sources support commit-boundary evaluation, candidate post-state an
 ### Master-Records Reconstruction and Verification
 
 ```text
-status: structured evidence preparation with canonical-source blocker
+status: bounded source identity resolved and working technical disclosure complete
+source identity resolution: evidence/PUBLISHER_MASTER_RECORDS_SOURCE_IDENTITY_RESOLUTION.md
 evidence inventory: evidence/PUBLISHER-master-records-reconstruction-source-inventory.md
 status record: data/publisher-master-records-reconstruction-status.json
+working disclosure: reviews/PUBLISHER-master-records-reconstruction-technical-disclosure.md
 action packet: reviews/PUBLISHER-master-records-reconstruction-action-packet.md
-primary blocker: canonical master-records/orchestration source access and identity
+verified implementation source: master-records/core-lite
+primary blocker: limitation-level mapping, complete production custody and reconstruction behavior, chronology, contributors, historical succession, and legal family disposition
 approval required now: false
 ```
+
+The connected `master-records/core-lite` package verifies a bounded ordered receipt chain, origin and destination bindings, source-record hashing, terminal-receipt consistency, required-order and required-field validation, fail-closed checking, and downstream independent-verification separation. It does not establish a complete production custody lifecycle, arbitrary-record reconstruction, or succession from any distinct `master-records/orchestration` repository.
 
 ### Multi-Entity Observer-Participant Admissibility
 
@@ -159,13 +164,14 @@ Direct commits require later authoritative validation before release or filing-p
 
 1. Perform the bounded status-only registry import or produce a deterministic refusal receipt using the refreshed exact-hash snapshot.
 2. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
-3. Locate canonical executable and trace sources for Recoverability-Aware Execution Boundary.
-4. Build its limitation-level evidence map and bounded non-legal overlap report.
-5. Locate direct first-party sources for Application Correction Gate and generalized AI Output-to-Action behavior.
-6. Resolve canonical source identities for Commit-Time, Master-Records, and other implementation-blocked families.
-7. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
-8. Refresh the central ledger after each material dedicated-family status change.
-9. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
+3. Inspect and hash the `master-records/core-lite` mapper and tests, then build the Master-Records limitation-level evidence map.
+4. Create the Master-Records abstract, figure plan, chronology intake, and bounded overlap report.
+5. Locate canonical executable and trace sources for Recoverability-Aware Execution Boundary.
+6. Locate direct first-party sources for Application Correction Gate and generalized AI Output-to-Action behavior.
+7. Resolve remaining canonical source identities for Commit-Time and other implementation-blocked families.
+8. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
+9. Refresh the central ledger after each material dedicated-family status change.
+10. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
 
 ## Human and legal boundary
 
