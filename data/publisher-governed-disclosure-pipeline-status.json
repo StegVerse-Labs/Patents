@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "family_key": "publisher_governed_disclosure_pipeline",
   "title": "Publisher Governed Disclosure Pipeline",
-  "status": "working_disclosure_limitation_map_abstract_and_figure_plan_complete_generalized_pipeline_blocked",
+  "status": "working_disclosure_limitation_map_abstract_figure_plan_chronology_and_distinction_notes_complete_generalized_pipeline_blocked",
   "source_handoff": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
   "verified_primary_source": {
     "repository": "GCAT-BCAT-Engine/Publisher",
@@ -28,9 +28,9 @@
     }
   ],
   "invention_capture": "working_technical_disclosure_complete",
-  "disclosure_chronology": "audit_required_not_populated",
+  "disclosure_chronology": "intake_template_complete_attributable_evidence_not_populated",
   "evidence_map": "bounded_limitation_level_map_complete",
-  "prior_art_distinction_notes": "not_created",
+  "prior_art_distinction_notes": "bounded_nonlegal_comparison_notes_complete_verified_external_search_pending",
   "specification": "bounded_working_disclosure_present_full_specification_incomplete",
   "abstract": "working_abstract_complete",
   "claim_themes": "candidate_limitation_leads_present_not_final",
@@ -58,7 +58,9 @@
   "completed_artifacts": [
     "evidence/PUBLISHER-governed-disclosure-pipeline-limitation-map.md",
     "reviews/PUBLISHER-governed-disclosure-pipeline-technical-disclosure.md",
-    "reviews/PUBLISHER-governed-disclosure-pipeline-abstract-and-figure-plan.md"
+    "reviews/PUBLISHER-governed-disclosure-pipeline-abstract-and-figure-plan.md",
+    "evidence/PUBLISHER-governed-disclosure-pipeline-chronology.md",
+    "reviews/PUBLISHER-governed-disclosure-pipeline-nonlegal-distinction-notes.md"
   ],
   "remaining_technical_blockers": [
     "generalized disclosure-object schema",
@@ -68,7 +70,8 @@
     "generalized downstream publication decision engine",
     "production custody and reconstruction behavior",
     "retained authoritative negative and positive runtime traces",
-    "populated chronology and contributor evidence"
+    "populated chronology and contributor evidence",
+    "verified external prior-art search"
   ],
   "approval_required_now": false,
   "approval_gate": {
