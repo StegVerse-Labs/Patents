@@ -1,28 +1,29 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "family_key": "receipt_based_state_transition_validation",
   "title": "Receipt-Based State Transition Validation",
-  "status": "structured_evidence_preparation_with_blockers",
+  "status": "working_disclosure_abstract_figure_plan_chronology_and_distinction_notes_complete_executable_blocked",
   "filed": false,
   "patent_pending_authorized": false,
-  "invention_capture": "bounded technical themes extracted from verified Publisher and Admissible-Existence sources",
-  "disclosure_chronology": "not_verified",
-  "evidence_map": "partial_verified_written_description",
-  "prior_art_distinction_notes": "drafting_hypothesis_only_search_required",
-  "specification": "not_created",
-  "abstract": "not_created",
-  "claim_themes": "candidate_limitation_leads_present_not_final",
-  "drawings": "not_created",
+  "invention_capture": "working technical disclosure complete from verified written-description sources",
+  "disclosure_chronology": "intake template complete; attributable evidence not populated",
+  "evidence_map": "partial verified written description; limitation-level executable map pending",
+  "prior_art_distinction_notes": "bounded non-legal technical comparison notes complete; verified search required",
+  "specification": "bounded working disclosure present; full specification incomplete",
+  "abstract": "working abstract complete",
+  "claim_themes": "candidate limitation leads present; not final claims",
+  "drawings": "figure plan complete; formal drawings blocked by missing executable schemas and fixtures",
   "inventor_fields": "undetermined",
   "ownership_fields": "unconfirmed",
-  "counsel_questions": "separate_dependent_or_numbered_family_mapping_unresolved",
+  "counsel_questions": "separate, dependent, continuation, numbered-family mapping, or non-patent disposition unresolved",
   "filing_packet": "not_authorized",
-  "warning_resolution": "blocked",
+  "warning_resolution": "blocked on executable evidence, chronology, contributors, counsel, and owner disposition",
   "human_filing": "not_started",
   "filing_receipt": null,
   "application_number": null,
   "actual_filing_date": null,
   "nonprovisional_deadline": null,
+  "pct_deadline": null,
   "verified_sources": [
     {
       "repository": "GCAT-BCAT-Engine/Publisher",
@@ -37,12 +38,25 @@
       "support_class": "FORMAL_WRITTEN_DESCRIPTION"
     }
   ],
+  "artifacts": {
+    "source_inventory": "evidence/PUBLISHER-receipt-based-state-transition-source-inventory.md",
+    "working_disclosure": "reviews/PUBLISHER-receipt-based-state-transition-technical-disclosure.md",
+    "abstract_and_figure_plan": "reviews/PUBLISHER-receipt-based-state-transition-abstract-and-figure-plan.md",
+    "chronology_intake": "evidence/PUBLISHER-receipt-based-state-transition-chronology.md",
+    "nonlegal_distinction_notes": "reviews/PUBLISHER-receipt-based-state-transition-nonlegal-distinction-notes.md",
+    "action_packet": "reviews/PUBLISHER-receipt-based-state-transition-action-packet.md"
+  },
   "completed": {
     "controlled_candidate_status_created": true,
     "source_inventory_created": true,
     "formal_written_description_anchor_verified": true,
     "publisher_written_description_anchor_verified": true,
     "preliminary_limitation_leads_created": true,
+    "working_technical_disclosure_created": true,
+    "working_abstract_created": true,
+    "figure_plan_created": true,
+    "chronology_intake_created": true,
+    "bounded_nonlegal_distinction_notes_created": true,
     "numbered_family_relationships_flagged_without_merger": true
   },
   "blocking_gates": {
@@ -54,8 +68,7 @@
     "public_disclosure_audited": false,
     "prior_art_search_verified": false,
     "standalone_specification_complete": false,
-    "abstract_complete": false,
-    "drawings_complete": false,
+    "formal_drawings_complete": false,
     "contributor_interviews_complete": false,
     "inventorship_determined": false,
     "ownership_confirmed": false,
@@ -70,10 +83,16 @@
     "locate exact executable receipt generation, validation, replay, and reconstruction paths",
     "verify immutable commits, tests, fixtures, and retained outputs",
     "create limitation-level evidence map distinguishing formal, executable, and combination support",
-    "create disclosure chronology template without inferring dates",
-    "create prior-art search ledger without asserting results",
-    "prepare numbered-family non-legal overlap matrix",
-    "prepare counsel question packet and controlled disposition form"
+    "expand the working disclosure only where executable evidence supports it",
+    "generate formal drawings only from verified schemas and fixtures",
+    "refresh the consolidated Publisher ledger and registry source snapshot"
+  ],
+  "next_human_or_counsel_tasks": [
+    "provide or identify canonical executable receipt sources",
+    "provide attributable conception and disclosure records",
+    "identify contributors and contributions",
+    "obtain practitioner family disposition, prior-art analysis, inventorship, ownership, and filing recommendation",
+    "record owner disposition after practitioner advice"
   ],
   "legal_notice": "Technical tracking only. This record does not determine family boundaries, inventorship, ownership, patentability, disclosure consequences, filing authority, filing status, application numbers, or deadlines."
 }
