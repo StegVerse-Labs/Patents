@@ -24,13 +24,18 @@ Move every Publisher-origin family into one explicit controlled state: mapped to
 ### Commit-Time Admissibility Gate
 
 ```text
-status: verified source inventory and non-legal limitation mapping present
+status: working disclosure, abstract, figure plan, and chronology intake complete; executable implementation blocked
 evidence inventory: evidence/PUBLISHER-commit-time-admissibility-source-inventory.md
 limitation map: evidence/PUBLISHER-commit-time-admissibility-limitation-mapping.md
 status record: data/publisher-commit-time-admissibility-evidence-status.json
-primary blocker: canonical executable triage implementation, chronology, contributors, and legal disposition
+working disclosure: reviews/PUBLISHER-commit-time-admissibility-technical-disclosure.md
+abstract and figure plan: reviews/PUBLISHER-commit-time-admissibility-abstract-and-figure-plan.md
+chronology intake: evidence/PUBLISHER-commit-time-admissibility-chronology.md
+primary blocker: canonical executable triage implementation, authoritative traces and tests, populated chronology, contributors, and legal disposition
 approval required now: false
 ```
+
+The verified written sources support commit-boundary identification, candidate post-state evaluation, sufficiency/admissibility separation, fail-closed behavior, recoverability analysis, bounded outcomes, and decision-record concepts. They do not establish the canonical executable triage implementation or retained authoritative outputs.
 
 ### Receipt-Based State Transition Validation
 
@@ -70,14 +75,18 @@ The verified executable sources support declared-source and destination validati
 ### Application Correction Gate
 
 ```text
-status: partial technical adjacency located; direct family source pending
+status: chronology intake and bounded non-legal distinction notes complete; direct family source pending
 status record: data/publisher-application-correction-gate-status.json
 evidence review: evidence/PUBLISHER-application-correction-gate-source-candidate-review-2026-07-28.md
+chronology intake: evidence/PUBLISHER-application-correction-gate-chronology.md
+non-legal distinction notes: reviews/PUBLISHER-application-correction-gate-nonlegal-distinction-notes.md
 action packet: reviews/PUBLISHER-application-correction-gate-action-packet.md
 verified adjacency source: StegVerse-Labs/hybrid-collab-bridge/docs/AI-Entity-Governance-Rules.md
 primary blocker: no direct first-party source defining the complete application-state correction gate, corrected-state representation, receipt relationship, and supersession or rollback behavior
 approval required now: false
 ```
+
+A specification, abstract, and drawings remain intentionally unwritten because direct support for the complete corrected-state combination has not been verified.
 
 ### AI Output-to-Action Boundary
 
@@ -137,11 +146,11 @@ approval required now: false
 
 ```text
 data/publisher-family-completion-status.json
-schema_version: 0.4
-reconciled_utc: 2026-07-29T08:00:39Z
+schema_version: 0.5
+reconciled_utc: 2026-07-29T12:03:44Z
 ```
 
-The central ledger now reflects the current dedicated lifecycle records for all eight Publisher families across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline.
+The central ledger reflects the current dedicated lifecycle records for all eight Publisher families across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline.
 
 ## Filing and deadline invariant
 
@@ -174,16 +183,15 @@ Direct commits require later authoritative validation before release or filing-p
 
 ## Next machine work
 
-1. Refresh the patent-registry exact-hash snapshot for the reconciled central ledger and handoff.
+1. Refresh the patent-registry exact-hash snapshot for ledger schema `0.5` and this handoff.
 2. Perform the bounded status-only registry import or produce a deterministic refusal receipt.
 3. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
 4. Locate canonical executable receipt generation, validation, reconstruction, tests, fixtures, and retained outputs for Receipt-Based State Transition Validation.
 5. Locate generalized disclosure and publication schemas, redaction controls, closure or authorization receipts, and retained traces for Publisher Governed Disclosure Pipeline.
-6. Locate canonical executable and trace sources for Recoverability-Aware Execution Boundary.
+6. Locate canonical executable and trace sources for Recoverability-Aware Execution Boundary and Commit-Time Admissibility Gate.
 7. Locate direct first-party sources for Application Correction Gate and generalized AI Output-to-Action behavior.
-8. Resolve remaining canonical source identities for Commit-Time and other implementation-blocked families.
-9. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
-10. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
+8. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
+9. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
 
 ## Human and legal boundary
 
