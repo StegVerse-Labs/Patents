@@ -1,49 +1,92 @@
 {
+  "schema_version": "1.1.0",
   "family_id": "PAT-004",
   "title": "Manifest-Governed Bidirectional Neural Communication",
-  "status": "structured_review_preparation_with_blockers",
+  "status": "dedicated_handoff_chronology_comparison_and_boundary_review_complete_implementation_blocked",
   "filed": false,
   "patent_pending_authorized": false,
+  "invention_capture": "structured_family_record_present_standalone_bounded_disclosure_pending",
+  "disclosure_chronology": "factual_intake_complete_supporting_evidence_not_populated",
+  "evidence_map": "structured_shared_clauses_and_concept_claim_ids_present_direct_implementation_mapping_absent",
+  "prior_art_distinction_notes": "bounded_technical_comparison_ledger_complete_verified_external_references_pending",
+  "specification": "not_created_supported_implementation_and_safety_boundary_unresolved",
+  "abstract": "not_created_supported_complete_combination_unresolved",
+  "claim_themes": "concept_method_and_system_identifiers_present_evidence_links_absent",
+  "drawings": "not_created_actual_components_signal_flows_and_authority_transitions_unverified",
+  "inventor_fields": "undetermined",
+  "ownership_fields": "unconfirmed",
+  "counsel_questions": "enablement_safety_subject_matter_family_relationships_inventorship_ownership_disclosure_consequences_and_filing_strategy_open",
+  "filing_packet": "not_authorized",
+  "warning_resolution": "blocked_by_implementation_chronology_contributor_safety_specialist_and_legal_gates",
+  "human_filing": "not_started",
+  "filing_receipt": null,
+  "application_number": null,
+  "actual_filing_date": null,
+  "nonprovisional_deadline": null,
+  "pct_deadline": null,
   "completed": {
     "structured_family_record": true,
     "inventive_center_defined": true,
     "technical_problem_defined": true,
     "technical_effects_defined": true,
     "shared_claim_clauses_identified": true,
-    "method_and_system_claim_ids_present": true
+    "method_and_system_claim_ids_present": true,
+    "dedicated_mirror_handoff": true,
+    "chronology_intake": true,
+    "technical_comparison_framework": true,
+    "technical_and_safety_boundary_review_surface": true
   },
+  "artifacts": {
+    "mirror_handoff": "PAT-004_MIRROR_HANDOFF.md",
+    "chronology_intake": "evidence/PAT-004_DISCLOSURE_CHRONOLOGY.md",
+    "technical_comparison_ledger": "reviews/PAT-004_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md",
+    "technical_and_safety_boundary_review": "reviews/PAT-004-technical-and-safety-boundary-review.md",
+    "readiness_index": "filing-readiness/PAT-004_FILING_READINESS_INDEX.md",
+    "action_packet": "reviews/PAT-004-human-action-packet.md"
+  },
+  "verified_sources": [
+    {
+      "repository": "StegVerse-Labs/Patents",
+      "path": "data/master_claims.json",
+      "blob_sha": "2fd171b71162130e8fe90b0b0be7c03af3d4a747",
+      "evidence_class": "STRUCTURED_FAMILY_AND_CONCEPT_CLAIM_RECORD",
+      "implementation_support": false
+    }
+  ],
   "blocking_gates": {
     "standalone_invention_disclosure": false,
-    "conception_and_disclosure_chronology": false,
+    "chronology_evidence_populated": false,
     "implementation_anchors_verified": false,
     "limitation_level_evidence_map": false,
-    "prior_art_search_ledger": false,
+    "verified_external_comparison_references": false,
     "working_specification": false,
     "working_abstract": false,
     "figure_plan": false,
     "contributor_interviews_complete": false,
     "inventorship_determined": false,
     "ownership_confirmed": false,
-    "technical_and_safety_boundary_reviewed": false,
+    "implementation_specific_safety_review_complete": false,
+    "required_specialist_reviews_complete": false,
     "practitioner_written_recommendation": false,
     "owner_filing_authorization": false,
     "filing_packet_emitted": false,
     "filing_receipt_recorded": false
   },
-  "expected_decision": "FAIL_CLOSED_BLOCKERS",
+  "expected_decision": "FAIL_CLOSED_IMPLEMENTATION_CHRONOLOGY_SAFETY_SPECIALIST_AND_LEGAL_BLOCKERS",
   "next_machine_tasks": [
-    "search connected repositories for verified technical source anchors relevant to the family record",
-    "create a standalone technical disclosure using only verified source material",
-    "create a limitation-level evidence map separating supported behavior from proposed embodiments",
-    "create a prior-art search ledger template without adding unverified results",
-    "create a figure plan only after verified system boundaries are established"
+    "locate immutable first-party neural observation calibration interpretation communication coupling stimulation disengagement and recovery sources",
+    "classify each element as implemented tested written-description-only proposed or unsupported",
+    "build a limitation-level evidence map separating passive observation interpretation communication and stimulation authority",
+    "preserve positive negative failure disengagement recovery and receipt traces",
+    "draft a standalone technical disclosure abstract figure plan and specification only after supported boundaries are established",
+    "refresh PAT-004 handoff root portfolio ledger and registry snapshot after material evidence changes"
   ],
-  "next_human_tasks": [
-    "identify contributors and preserve factual conception records",
-    "audit public disclosures and exact dates",
-    "identify any actual implementations and retained evidence",
-    "review claim scope, enablement, technical boundaries, inventorship, and filing strategy with qualified counsel",
-    "record an explicit portfolio disposition decision"
+  "next_human_or_counsel_tasks": [
+    "identify contributors and preserve attributable conception implementation and disclosure records",
+    "identify actual implementations tests calibration outputs and safety interlock evidence",
+    "obtain qualified specialist review appropriate to the actual supported neural observation or stimulation embodiment",
+    "obtain counsel review of enablement safety boundaries claim scope family relationships inventorship ownership disclosure consequences and filing strategy",
+    "record an explicit owner disposition only after practitioner preparation is complete"
   ],
-  "legal_notice": "Working technical portfolio status only. This record does not establish efficacy, safety, inventorship, ownership, patentability, filing authority, or patent-pending status."
+  "legal_notice": "Working technical portfolio status only. This record does not establish efficacy, safety, human-subject authorization, regulatory status, inventorship, ownership, patentability, filing authority, patent-pending status, application number, filing receipt, or deadline."
 }
