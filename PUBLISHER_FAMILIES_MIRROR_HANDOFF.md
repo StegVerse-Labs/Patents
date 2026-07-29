@@ -52,12 +52,20 @@ The verified sources support receipt-linked pre-state, transition, authority, po
 ### Publisher Governed Disclosure Pipeline
 
 ```text
-status: structured evidence preparation with blockers
+status: working disclosure, limitation map, abstract, figure plan, chronology intake, and non-legal distinction notes complete; generalized pipeline blocked
 status record: data/publisher-governed-disclosure-pipeline-status.json
+limitation map: evidence/PUBLISHER-governed-disclosure-pipeline-limitation-map.md
+working disclosure: reviews/PUBLISHER-governed-disclosure-pipeline-technical-disclosure.md
+abstract and figure plan: reviews/PUBLISHER-governed-disclosure-pipeline-abstract-and-figure-plan.md
+chronology intake: evidence/PUBLISHER-governed-disclosure-pipeline-chronology.md
+non-legal distinction notes: reviews/PUBLISHER-governed-disclosure-pipeline-nonlegal-distinction-notes.md
 action packet: reviews/PUBLISHER-governed-disclosure-pipeline-action-packet.md
-primary blocker: immutable executable inventory, chronology, contributors, and legal disposition
+verified executable source repository: GCAT-BCAT-Engine/Publisher
+primary blocker: generalized disclosure and publication schemas, redaction or secrecy controls, closure and authorization receipts, retained runtime traces, populated chronology, contributors, and legal disposition
 approval required now: false
 ```
+
+The verified executable sources support declared-source and destination validation, canonical-integrity checks, refusal of incoming authority escalation, exact blocker preservation, pending or ingestion-ready awareness states, and non-activating verification receipts. They do not establish a generalized publication decision engine, production closure receipt, or claim-sensitive disclosure filter.
 
 ### Application Correction Gate
 
@@ -132,7 +140,7 @@ data/publisher-family-completion-status.json
 schema_version: 0.3
 ```
 
-The central ledger tracks every family across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline. Dedicated status records may be newer until the next bounded central-ledger reconciliation.
+The central ledger tracks every family across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline. Dedicated status records are newer for several families and control until the next bounded central-ledger reconciliation.
 
 ## Filing and deadline invariant
 
@@ -165,11 +173,11 @@ Direct commits require later authoritative validation before release or filing-p
 
 ## Next machine work
 
-1. Perform the bounded status-only registry import or produce a deterministic refusal receipt using the latest exact-hash snapshot.
-2. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
-3. Locate canonical executable receipt generation, validation, reconstruction, tests, fixtures, and retained outputs for Receipt-Based State Transition Validation.
-4. Reconcile the central Publisher ledger with newer dedicated family statuses.
-5. Complete bounded drafting for Publisher Governed Disclosure Pipeline where immutable evidence supports it.
+1. Reconcile the central Publisher ledger with the newer dedicated family statuses.
+2. Perform the bounded status-only registry import or produce a deterministic refusal receipt using a refreshed exact-hash snapshot.
+3. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
+4. Locate canonical executable receipt generation, validation, reconstruction, tests, fixtures, and retained outputs for Receipt-Based State Transition Validation.
+5. Locate generalized disclosure and publication schemas, redaction controls, closure or authorization receipts, and retained traces for Publisher Governed Disclosure Pipeline.
 6. Locate canonical executable and trace sources for Recoverability-Aware Execution Boundary.
 7. Locate direct first-party sources for Application Correction Gate and generalized AI Output-to-Action behavior.
 8. Resolve remaining canonical source identities for Commit-Time and other implementation-blocked families.
