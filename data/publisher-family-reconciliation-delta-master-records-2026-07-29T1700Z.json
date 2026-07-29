@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "generated_utc": "2026-07-29T17:00:00Z",
+  "family_key": "master_records_reconstruction_and_verification",
+  "purpose": "Non-destructive reconciliation delta for the Publisher central family ledger after bounded overlap analysis.",
+  "source_status": {
+    "path": "data/publisher-master-records-reconstruction-status.json",
+    "schema_version": "1.3.0",
+    "blob_sha": "45972bbfa19517b1081140270e223cc671e8c7be"
+  },
+  "replacement_fields": {
+    "status": "limitation_map_abstract_figure_plan_chronology_and_bounded_overlap_notes_complete_production_reconstruction_blocked",
+    "invention_capture": "working_technical_disclosure_complete",
+    "disclosure_chronology": "intake_template_complete_factual_evidence_not_populated",
+    "evidence_map": "limitation_level_map_complete_for_bounded_core_lite_verifier_mapper_and_tests",
+    "prior_art_distinction_notes": "bounded_nonlegal_overlap_notes_complete_verified_external_review_pending",
+    "specification": "bounded_working_disclosure_present_full_specification_incomplete",
+    "abstract": "working_abstract_complete",
+    "claim_themes": "candidate_limitation_clusters_present_not_final",
+    "drawings": "figure_plan_complete_formal_drawings_blocked",
+    "inventor_fields": "undetermined",
+    "ownership_fields": "unconfirmed",
+    "counsel_questions": "independent_family_dependent_embodiment_continuation_shared_infrastructure_or_nonpatent_disposition_unresolved",
+    "filing_packet": "not_authorized",
+    "warning_resolution": "production_reconstruction_independent_verification_chronology_contributor_and_legal_blockers_open",
+    "human_filing": "not_started",
+    "filing_receipt": null,
+    "application_number": null,
+    "actual_filing_date": null,
+    "nonprovisional_deadline": null,
+    "nonlegal_overlap_notes": "reviews/PUBLISHER-master-records-reconstruction-nonlegal-overlap-notes.md",
+    "current_decision": "FAIL_CLOSED_PRODUCTION_RECONSTRUCTION_INDEPENDENT_VERIFICATION_CHRONOLOGY_CONTRIBUTOR_AND_LEGAL_BLOCKERS"
+  },
+  "portfolio_invariants": {
+    "filed_families": 0,
+    "patent_pending_authorized_families": 0,
+    "application_numbers_recorded": 0,
+    "filing_receipts_recorded": 0,
+    "calculated_deadlines": 0,
+    "ready_for_owner_decision": 0
+  },
+  "automation_boundary": "Apply only to the matching family object after loading the complete untruncated central ledger. Do not alter other family objects or infer lifecycle activation.",
+  "legal_notice": "Technical reconciliation only. This delta is not a prior-art conclusion, legal family disposition, filing packet, filing authorization, filing receipt, application number, or deadline evidence."
+}
