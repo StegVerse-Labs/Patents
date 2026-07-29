@@ -1,19 +1,19 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "family_key": "application_correction_gate",
   "title": "Application Correction Gate",
-  "status": "partial_technical_adjacency_located_direct_source_pending",
+  "status": "chronology_and_nonlegal_distinction_surfaces_complete_direct_source_pending",
   "invention_capture": "candidate concept with bounded correction-after-validation-failure adjacency",
-  "disclosure_chronology": "not created",
+  "disclosure_chronology": "intake template complete; attributable evidence not populated",
   "evidence_map": "partial source-candidate review present; direct family support pending",
-  "prior_art_distinction_notes": "not started",
-  "specification": "not created",
-  "abstract": "not created",
-  "claim_themes": "validation refusal, correction retry, logging, and escalation are candidate themes only",
-  "drawings": "not created",
+  "prior_art_distinction_notes": "bounded non-legal comparison notes complete; verified external search pending",
+  "specification": "not created because direct application-state correction support is absent",
+  "abstract": "not created because complete supported combination is absent",
+  "claim_themes": "validation refusal, corrected-state separation, correction authority, linked receipts, independent re-evaluation, retry exhaustion, escalation, rollback, and supersession are candidate themes only",
+  "drawings": "not created because corrected-state structure and flow are unverified",
   "inventor_fields": "undetermined",
   "ownership_fields": "unconfirmed",
-  "counsel_questions": "scope and family relationship unresolved",
+  "counsel_questions": "scope, family relationship, technical distinction, and filing disposition unresolved",
   "filing_packet": "not authorized",
   "warning_resolution": "blocked",
   "human_filing": "not started",
@@ -24,7 +24,9 @@
   "searches_performed": [
     "GCAT-BCAT-Engine/Publisher correction validation repair search",
     "StegVerse-Labs organization Application Correction Gate search",
-    "hybrid-collab-bridge malformed output retry correction review"
+    "hybrid-collab-bridge malformed output retry correction review",
+    "StegVerse-Labs application correction gate corrected state supersession rollback receipt retry validation failure search",
+    "StegVerse-Labs validation failure correction retry escalation corrected output search"
   ],
   "located_sources": [
     {
@@ -35,6 +37,9 @@
     }
   ],
   "evidence_review": "evidence/PUBLISHER-application-correction-gate-source-candidate-review-2026-07-28.md",
+  "chronology_intake": "evidence/PUBLISHER-application-correction-gate-chronology.md",
+  "nonlegal_distinction_notes": "reviews/PUBLISHER-application-correction-gate-nonlegal-distinction-notes.md",
+  "action_packet": "reviews/PUBLISHER-application-correction-gate-action-packet.md",
   "decision": "FAIL_CLOSED_DIRECT_FAMILY_SOURCE_REQUIRED",
   "approval_required_now": false,
   "required_next_input": "an exact first-party source describing a distinct technical application-state correction gate or complete correction-state and receipt combination",
@@ -42,6 +47,8 @@
     "verify immutable source identifiers",
     "build a limitation-level evidence map",
     "draft a bounded invention disclosure",
-    "create distinction questions without conclusions"
-  ]
+    "create an abstract and figure plan only from supported elements",
+    "reconcile the central Publisher family ledger and handoff"
+  ],
+  "legal_notice": "Technical tracking only. This status does not determine inventorship, ownership, patentability, priority, disclosure consequences, filing strategy, filing authority, filing status, application number, receipt, or deadline."
 }
