@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "family_key": "publisher_governed_disclosure_pipeline",
   "title": "Publisher Governed Disclosure Pipeline",
-  "status": "structured_evidence_preparation_with_blockers",
+  "status": "working_disclosure_limitation_map_abstract_and_figure_plan_complete_generalized_pipeline_blocked",
   "source_handoff": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
   "verified_primary_source": {
     "repository": "GCAT-BCAT-Engine/Publisher",
@@ -10,14 +10,31 @@
     "blob_sha": "f72c74af785973d8391323a47cdae973459958f7",
     "support_state": "VERIFIED_WRITTEN_DESCRIPTION"
   },
-  "invention_capture": "technical workflow themes extracted",
-  "disclosure_chronology": "audit_required",
-  "evidence_map": "partial_verified_written_description",
+  "verified_executable_sources": [
+    {
+      "path": "tools/acquire_site_ecosystem_chat_propagation.py",
+      "blob_sha": "b55d7ed7ff83c5a90e3553a5a66d8598fb882d0e",
+      "support": "packet acquisition, destination declaration, canonical hashing, authority-escalation refusal, pending or ingestion-ready awareness output"
+    },
+    {
+      "path": "tools/check_site_ecosystem_chat_propagation.py",
+      "blob_sha": "7ab7a9d5150a1cbfbac96aa3c871671b90b03bfa",
+      "support": "fail-closed identity, integrity, blocker, state, and authority-boundary validation"
+    },
+    {
+      "path": "tools/write_verification_run_receipt.py",
+      "blob_sha": "5668ede1678dd573dd132effbfa97610a439e454",
+      "support": "workflow verification receipt generation with explicit separation from activation and closure receipts"
+    }
+  ],
+  "invention_capture": "working_technical_disclosure_complete",
+  "disclosure_chronology": "audit_required_not_populated",
+  "evidence_map": "bounded_limitation_level_map_complete",
   "prior_art_distinction_notes": "not_created",
-  "specification": "not_created",
-  "abstract": "not_created",
+  "specification": "bounded_working_disclosure_present_full_specification_incomplete",
+  "abstract": "working_abstract_complete",
   "claim_themes": "candidate_limitation_leads_present_not_final",
-  "drawings": "not_created",
+  "drawings": "figure_plan_complete_formal_drawings_blocked",
   "inventor_fields": "undetermined",
   "ownership_fields": "unconfirmed",
   "counsel_questions": "separate_family_product_process_or_dependent_embodiment_unresolved",
@@ -29,24 +46,29 @@
   "actual_filing_date": null,
   "nonprovisional_deadline": null,
   "candidate_limitations": [
-    "governed workload intake against handoff and orchestration state",
-    "preservation of active workload ownership",
-    "parallel-safe bounded work while upstream evidence is incomplete",
-    "independent acquisition and validation of upstream publication packets",
-    "explicit separation of awareness, readiness, publication, activation, custody, execution, and admissibility",
-    "fail-closed pending state until fresh ordered evidence exists",
+    "governed packet intake from a declared upstream source",
+    "destination and canonical-integrity validation",
+    "refusal of incoming authority escalation",
+    "pending versus ingestion-ready awareness classification",
+    "exact blocker preservation while upstream evidence is incomplete",
+    "separation of awareness, validation, closure, publication, activation, custody, execution, and admissibility",
     "verification receipts that do not convert into activation authority",
-    "sandbox-first validation before merge or publication decision"
+    "independent later authority-bearing decision before downstream action"
   ],
-  "executable_surfaces_pending_inspection": [
-    "data/publisher-orchestration-state.json",
-    "tools/run_sandbox_validation.py",
-    "tools/check_st017_sandbox_adoption.py",
-    "tools/acquire_site_ecosystem_chat_propagation.py",
-    "tools/check_site_ecosystem_chat_propagation.py",
-    "tools/check_publisher_closure_evidence_production.py",
-    "tools/write_verification_run_receipt.py",
-    ".github/workflows/validate-governed-ecosystem-awareness.yml"
+  "completed_artifacts": [
+    "evidence/PUBLISHER-governed-disclosure-pipeline-limitation-map.md",
+    "reviews/PUBLISHER-governed-disclosure-pipeline-technical-disclosure.md",
+    "reviews/PUBLISHER-governed-disclosure-pipeline-abstract-and-figure-plan.md"
+  ],
+  "remaining_technical_blockers": [
+    "generalized disclosure-object schema",
+    "publication packet construction implementation",
+    "content redaction, secrecy classification, or claim-sensitive filtering",
+    "production closure receipt writer and retained closure receipt",
+    "generalized downstream publication decision engine",
+    "production custody and reconstruction behavior",
+    "retained authoritative negative and positive runtime traces",
+    "populated chronology and contributor evidence"
   ],
   "approval_required_now": false,
   "approval_gate": {
@@ -54,5 +76,6 @@
     "required_before": "filing packet emission, trade-secret election, defensive publication, abandonment, or filing authorization",
     "current_readiness": "NOT_REACHED"
   },
-  "expected_decision": "FAIL_CLOSED_EXECUTABLE_CHRONOLOGY_AND_LEGAL_BLOCKERS"
+  "expected_decision": "FAIL_CLOSED_GENERALIZED_PIPELINE_CHRONOLOGY_AND_LEGAL_BLOCKERS",
+  "legal_notice": "Technical tracking only. This record does not determine inventorship, ownership, patentability, priority, filing strategy, filing authority, filing status, application number, receipt, or deadline."
 }
