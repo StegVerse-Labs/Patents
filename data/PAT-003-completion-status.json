@@ -1,23 +1,55 @@
 {
+  "schema_version": "1.1.0",
   "family_id": "PAT-003",
   "title": "Generalized Adaptive Scanner Using Dynamic Micro-Nodes",
-  "status": "structured_review_preparation_with_blockers",
+  "status": "structured_review_preparation_chronology_comparison_and_handoff_complete_direct_implementation_blocked",
   "filed": false,
   "patent_pending_authorized": false,
+  "invention_capture": "structured_family_record_present_standalone_bounded_disclosure_pending",
+  "disclosure_chronology": "factual_intake_complete_evidence_not_populated",
+  "evidence_map": "structured_claim_clauses_present_direct_implementation_mapping_absent",
+  "prior_art_distinction_notes": "bounded_technical_comparison_ledger_complete_verified_external_references_pending",
+  "specification": "not_created_direct_implementation_and_supported_embodiment_boundary_pending",
+  "abstract": "not_created_supported_specification_pending",
+  "claim_themes": "concept_level_method_and_system_claim_identifiers_present_evidence_links_absent",
+  "drawings": "not_created_supported_system_boundary_pending",
+  "inventor_fields": "undetermined",
+  "ownership_fields": "unconfirmed",
+  "counsel_questions": "scope_support_diagnostic_boundary_parent_family_relationship_inventorship_ownership_disclosure_consequences_and_disposition_unresolved",
+  "filing_packet": "not_authorized",
+  "warning_resolution": "blocked_direct_implementation_chronology_contributor_and_legal_gates",
+  "human_filing": "not_started",
+  "filing_receipt": null,
+  "application_number": null,
+  "actual_filing_date": null,
+  "nonprovisional_deadline": null,
+  "pct_deadline": null,
   "completed": {
     "structured_family_record": true,
     "inventive_center_defined": true,
     "technical_problem_defined": true,
     "technical_effects_defined": true,
     "shared_claim_clauses_identified": true,
-    "method_and_system_claim_ids_present": true
+    "method_and_system_claim_ids_present": true,
+    "dedicated_mirror_handoff": true,
+    "chronology_intake": true,
+    "technical_comparison_research_ledger": true,
+    "bounded_source_search": true
+  },
+  "artifacts": {
+    "dedicated_handoff": "PAT-003_MIRROR_HANDOFF.md",
+    "chronology_intake": "evidence/PAT-003_DISCLOSURE_CHRONOLOGY.md",
+    "comparison_ledger": "reviews/PAT-003_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md",
+    "readiness_index": "filing-readiness/PAT-003_FILING_READINESS_INDEX.md",
+    "human_action_packet": "reviews/PAT-003-human-action-packet.md",
+    "structured_claim_source": "data/master_claims.json"
   },
   "blocking_gates": {
     "standalone_invention_disclosure": false,
-    "conception_and_disclosure_chronology": false,
+    "chronology_evidence_populated": false,
     "implementation_anchors_verified": false,
     "limitation_level_evidence_map": false,
-    "prior_art_search_ledger": false,
+    "verified_external_comparison_references": false,
     "working_specification": false,
     "working_abstract": false,
     "figure_plan": false,
@@ -29,18 +61,20 @@
     "filing_packet_emitted": false,
     "filing_receipt_recorded": false
   },
-  "expected_decision": "FAIL_CLOSED_BLOCKERS",
+  "expected_decision": "FAIL_CLOSED_DIRECT_IMPLEMENTATION_CHRONOLOGY_AND_LEGAL_BLOCKERS",
   "next_machine_tasks": [
-    "identify candidate source repositories and exact paths from existing scanner, sensing, transition, micro-node, and observation artifacts",
-    "create a standalone technical disclosure using only verified source material",
-    "create a limitation-level evidence map that separates implemented behavior from proposed embodiments",
-    "create a prior-art search ledger template without adding unverified results",
-    "create a figure plan after verified system boundaries are established"
+    "identify canonical scanner signal acquisition adaptive node construction comparative evaluation observation interval non_inference and receipt sources",
+    "validate exact repository paths and immutable commits or blobs",
+    "create a limitation level evidence map separating implemented written_description_only proposed and unsupported behavior",
+    "draft a standalone technical disclosure only after supported boundaries are established",
+    "draft abstract figure plan and specification only from verified support",
+    "preserve authoritative portfolio validation and registry synchronization receipts when dispatcher execution is available"
   ],
   "next_human_tasks": [
-    "identify contributors and preserve factual conception records",
-    "audit public disclosures and exact dates",
-    "review claim scope and supporting evidence with a qualified practitioner",
-    "record an explicit portfolio disposition decision"
-  ]
+    "provide dated conception implementation private disclosure and public disclosure records",
+    "identify contributors and attributable technical contributions",
+    "obtain practitioner review of claim support diagnostic boundaries prior art family relationships inventorship ownership disclosure consequences and filing strategy",
+    "record explicit owner disposition only after practitioner recommendation"
+  ],
+  "legal_notice": "Technical preparation only. No inventorship, ownership, priority, novelty, patentability, disclosure consequence, filing authority, application number, receipt, filing date, or deadline is inferred."
 }
