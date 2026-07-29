@@ -137,10 +137,11 @@ approval required now: false
 
 ```text
 data/publisher-family-completion-status.json
-schema_version: 0.3
+schema_version: 0.4
+reconciled_utc: 2026-07-29T08:00:39Z
 ```
 
-The central ledger tracks every family across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline. Dedicated status records are newer for several families and control until the next bounded central-ledger reconciliation.
+The central ledger now reflects the current dedicated lifecycle records for all eight Publisher families across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline.
 
 ## Filing and deadline invariant
 
@@ -173,8 +174,8 @@ Direct commits require later authoritative validation before release or filing-p
 
 ## Next machine work
 
-1. Reconcile the central Publisher ledger with the newer dedicated family statuses.
-2. Perform the bounded status-only registry import or produce a deterministic refusal receipt using a refreshed exact-hash snapshot.
+1. Refresh the patent-registry exact-hash snapshot for the reconciled central ledger and handoff.
+2. Perform the bounded status-only registry import or produce a deterministic refusal receipt.
 3. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
 4. Locate canonical executable receipt generation, validation, reconstruction, tests, fixtures, and retained outputs for Receipt-Based State Transition Validation.
 5. Locate generalized disclosure and publication schemas, redaction controls, closure or authorization receipts, and retained traces for Publisher Governed Disclosure Pipeline.
