@@ -35,13 +35,19 @@ approval required now: false
 ### Receipt-Based State Transition Validation
 
 ```text
-status: structured evidence preparation with blockers
+status: working disclosure, abstract, figure plan, chronology intake, and non-legal distinction notes complete; executable implementation blocked
 evidence inventory: evidence/PUBLISHER-receipt-based-state-transition-source-inventory.md
 status record: data/publisher-receipt-based-state-transition-status.json
+working disclosure: reviews/PUBLISHER-receipt-based-state-transition-technical-disclosure.md
+abstract and figure plan: reviews/PUBLISHER-receipt-based-state-transition-abstract-and-figure-plan.md
+chronology intake: evidence/PUBLISHER-receipt-based-state-transition-chronology.md
+non-legal distinction notes: reviews/PUBLISHER-receipt-based-state-transition-nonlegal-distinction-notes.md
 action packet: reviews/PUBLISHER-receipt-based-state-transition-action-packet.md
-primary blocker: canonical executable receipt implementation, chronology, contributors, and legal disposition
+primary blocker: canonical receipt generator and validator paths, retained runtime outputs, populated chronology, contributors, and legal disposition
 approval required now: false
 ```
+
+The verified sources support receipt-linked pre-state, transition, authority, post-state or denied-state, integrity, uncertainty, and reconstruction relationships. They do not establish a canonical production implementation or retained authoritative execution outputs.
 
 ### Publisher Governed Disclosure Pipeline
 
@@ -64,8 +70,6 @@ verified adjacency source: StegVerse-Labs/hybrid-collab-bridge/docs/AI-Entity-Go
 primary blocker: no direct first-party source defining the complete application-state correction gate, corrected-state representation, receipt relationship, and supersession or rollback behavior
 approval required now: false
 ```
-
-The verified adjacency supports validation refusal, logged correction, retry, and escalation only. It does not establish the complete candidate family combination.
 
 ### AI Output-to-Action Boundary
 
@@ -93,23 +97,22 @@ primary blocker: canonical executable source, runtime decision traces, calibrati
 approval required now: false
 ```
 
-The verified sources support commit-boundary evaluation, candidate post-state analysis, recoverability, observability, absorption capacity, coherence retention, conservative certified regions, fail-closed denial, and post-crossing quarantine. They do not establish a canonical production implementation or threshold calibration.
-
 ### Master-Records Reconstruction and Verification
 
 ```text
-status: bounded source identity resolved and working technical disclosure complete
+status: limitation map, abstract, figure plan, and chronology template complete; production reconstruction blocked
 source identity resolution: evidence/PUBLISHER_MASTER_RECORDS_SOURCE_IDENTITY_RESOLUTION.md
 evidence inventory: evidence/PUBLISHER-master-records-reconstruction-source-inventory.md
+limitation map: evidence/PUBLISHER-master-records-reconstruction-limitation-map.md
 status record: data/publisher-master-records-reconstruction-status.json
 working disclosure: reviews/PUBLISHER-master-records-reconstruction-technical-disclosure.md
+abstract and figure plan: reviews/PUBLISHER-master-records-reconstruction-abstract-and-figure-plan.md
+chronology intake: evidence/PUBLISHER-master-records-reconstruction-chronology.md
 action packet: reviews/PUBLISHER-master-records-reconstruction-action-packet.md
 verified implementation source: master-records/core-lite
-primary blocker: limitation-level mapping, complete production custody and reconstruction behavior, chronology, contributors, historical succession, and legal family disposition
+primary blocker: authoritative execution outputs, SPE-side verification, production custody and reconstruction behavior, chronology, contributors, and legal family disposition
 approval required now: false
 ```
-
-The connected `master-records/core-lite` package verifies a bounded ordered receipt chain, origin and destination bindings, source-record hashing, terminal-receipt consistency, required-order and required-field validation, fail-closed checking, and downstream independent-verification separation. It does not establish a complete production custody lifecycle, arbitrary-record reconstruction, or succession from any distinct `master-records/orchestration` repository.
 
 ### Multi-Entity Observer-Participant Admissibility
 
@@ -129,7 +132,7 @@ data/publisher-family-completion-status.json
 schema_version: 0.3
 ```
 
-The ledger tracks every family across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline. Dedicated status records may be newer than the consolidated ledger until the next bounded reconciliation.
+The central ledger tracks every family across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline. Dedicated status records may be newer until the next bounded central-ledger reconciliation.
 
 ## Filing and deadline invariant
 
@@ -162,15 +165,15 @@ Direct commits require later authoritative validation before release or filing-p
 
 ## Next machine work
 
-1. Perform the bounded status-only registry import or produce a deterministic refusal receipt using the refreshed exact-hash snapshot.
+1. Perform the bounded status-only registry import or produce a deterministic refusal receipt using the latest exact-hash snapshot.
 2. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
-3. Inspect and hash the `master-records/core-lite` mapper and tests, then build the Master-Records limitation-level evidence map.
-4. Create the Master-Records abstract, figure plan, chronology intake, and bounded overlap report.
-5. Locate canonical executable and trace sources for Recoverability-Aware Execution Boundary.
-6. Locate direct first-party sources for Application Correction Gate and generalized AI Output-to-Action behavior.
-7. Resolve remaining canonical source identities for Commit-Time and other implementation-blocked families.
-8. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
-9. Refresh the central ledger after each material dedicated-family status change.
+3. Locate canonical executable receipt generation, validation, reconstruction, tests, fixtures, and retained outputs for Receipt-Based State Transition Validation.
+4. Reconcile the central Publisher ledger with newer dedicated family statuses.
+5. Complete bounded drafting for Publisher Governed Disclosure Pipeline where immutable evidence supports it.
+6. Locate canonical executable and trace sources for Recoverability-Aware Execution Boundary.
+7. Locate direct first-party sources for Application Correction Gate and generalized AI Output-to-Action behavior.
+8. Resolve remaining canonical source identities for Commit-Time and other implementation-blocked families.
+9. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
 10. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
 
 ## Human and legal boundary
