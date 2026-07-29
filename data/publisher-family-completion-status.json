@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.5",
-  "generated_utc": "2026-07-29T12:03:44Z",
+  "schema_version": "0.6",
+  "generated_utc": "2026-07-29T13:44:00Z",
   "repository": "StegVerse-Labs/Patents",
   "source_handoff": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
   "legal_notice": "Technical tracking only. No legal family boundary, inventorship, ownership, patentability, disclosure consequence, filing strategy, filing authority, application number, receipt, or deadline is inferred.",
@@ -28,10 +28,6 @@
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-commit-time-admissibility-evidence-status.json",
-      "working_disclosure": "reviews/PUBLISHER-commit-time-admissibility-technical-disclosure.md",
-      "abstract_and_figure_plan": "reviews/PUBLISHER-commit-time-admissibility-abstract-and-figure-plan.md",
-      "chronology_intake": "evidence/PUBLISHER-commit-time-admissibility-chronology.md",
-      "action_packet": "reviews/PUBLISHER_COMMIT_TIME_TRIAGE_SOURCE_IDENTITY_RESOLUTION.md",
       "current_decision": "FAIL_CLOSED_EXECUTABLE_FACTUAL_AND_LEGAL_BLOCKERS"
     },
     {
@@ -57,7 +53,6 @@
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-receipt-based-state-transition-status.json",
-      "action_packet": "reviews/PUBLISHER-receipt-based-state-transition-action-packet.md",
       "current_decision": "FAIL_CLOSED_EXECUTABLE_CHRONOLOGY_AND_LEGAL_BLOCKERS"
     },
     {
@@ -83,7 +78,6 @@
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-governed-disclosure-pipeline-status.json",
-      "action_packet": "reviews/PUBLISHER-governed-disclosure-pipeline-action-packet.md",
       "current_decision": "FAIL_CLOSED_GENERALIZED_PIPELINE_CHRONOLOGY_AND_LEGAL_BLOCKERS"
     },
     {
@@ -96,7 +90,7 @@
       "prior_art_distinction_notes": "bounded_nonlegal_comparison_notes_complete_verified_external_search_pending",
       "specification": "not_created_because_direct_application_state_correction_support_is_absent",
       "abstract": "not_created_because_complete_supported_combination_is_absent",
-      "claim_themes": "validation_refusal_corrected_state_separation_correction_authority_linked_receipts_independent_reevaluation_retry_exhaustion_escalation_rollback_and_supersession_candidate_themes_only",
+      "claim_themes": "candidate_themes_only",
       "drawings": "not_created_because_corrected_state_structure_and_flow_are_unverified",
       "inventor_fields": "undetermined",
       "ownership_fields": "unconfirmed",
@@ -109,10 +103,6 @@
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-application-correction-gate-status.json",
-      "evidence_review": "evidence/PUBLISHER-application-correction-gate-source-candidate-review-2026-07-28.md",
-      "chronology_intake": "evidence/PUBLISHER-application-correction-gate-chronology.md",
-      "nonlegal_distinction_notes": "reviews/PUBLISHER-application-correction-gate-nonlegal-distinction-notes.md",
-      "action_packet": "reviews/PUBLISHER-application-correction-gate-action-packet.md",
       "current_decision": "FAIL_CLOSED_DIRECT_FAMILY_SOURCE_REQUIRED"
     },
     {
@@ -138,17 +128,16 @@
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-ai-output-to-action-boundary-status.json",
-      "action_packet": "reviews/PUBLISHER-ai-output-to-action-action-packet.md",
       "current_decision": "FAIL_CLOSED_GENERALIZED_COMBINATION_CHRONOLOGY_AND_LEGAL_BLOCKERS"
     },
     {
       "family_key": "recoverability_aware_execution_boundary",
       "title": "Recoverability-Aware Execution Boundary",
-      "status": "working_disclosure_abstract_figure_plan_and_chronology_template_complete_executable_blocked",
+      "status": "limitation_map_overlap_notes_and_adjacent_artifact_inspection_complete_direct_executable_blocked",
       "invention_capture": "working_technical_disclosure_complete",
       "disclosure_chronology": "intake_template_complete_factual_evidence_not_populated",
-      "evidence_map": "three_verified_written_description_sources_limitation_level_map_pending",
-      "prior_art_distinction_notes": "not_verified",
+      "evidence_map": "limitation_level_written_support_map_complete_direct_executable_support_absent",
+      "prior_art_distinction_notes": "bounded_nonlegal_overlap_notes_complete_verified_external_search_pending",
       "specification": "bounded_working_disclosure_present_full_specification_incomplete",
       "abstract": "working_abstract_complete",
       "claim_themes": "candidate_recoverability_horizon_and_fail_closed_clusters_present_not_final_claims",
@@ -157,15 +146,17 @@
       "ownership_fields": "unconfirmed",
       "counsel_questions": "independent_family_dependent_embodiment_continuation_or_claim_cluster_relationship_unresolved",
       "filing_packet": "not_authorized",
-      "warning_resolution": "executable_calibration_chronology_contributor_and_family_blockers_open",
+      "warning_resolution": "direct_executable_calibration_chronology_contributor_and_family_blockers_open",
       "human_filing": "not_started",
       "filing_receipt": null,
       "application_number": null,
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-recoverability-aware-execution-status.json",
-      "action_packet": "reviews/PUBLISHER-recoverability-aware-execution-action-packet.md",
-      "current_decision": "FAIL_CLOSED_EXECUTABLE_CHRONOLOGY_AND_FAMILY_BOUNDARY_BLOCKERS"
+      "limitation_map": "evidence/PUBLISHER-recoverability-aware-execution-limitation-map.md",
+      "nonlegal_overlap_notes": "reviews/PUBLISHER-recoverability-aware-execution-nonlegal-overlap-notes.md",
+      "dedicated_handoff": "RECOVERABILITY_AWARE_EXECUTION_MIRROR_HANDOFF.md",
+      "current_decision": "FAIL_CLOSED_DIRECT_EXECUTABLE_CHRONOLOGY_AND_FAMILY_BOUNDARY_BLOCKERS"
     },
     {
       "family_key": "master_records_reconstruction_and_verification",
@@ -190,7 +181,6 @@
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-master-records-reconstruction-status.json",
-      "action_packet": "reviews/PUBLISHER-master-records-reconstruction-action-packet.md",
       "current_decision": "FAIL_CLOSED_AUTHORITATIVE_EXECUTION_PRODUCTION_RECONSTRUCTION_CHRONOLOGY_AND_LEGAL_BLOCKERS"
     },
     {
@@ -216,7 +206,6 @@
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-multi-entity-observer-participant-status.json",
-      "action_packet": "reviews/PUBLISHER-multi-entity-observer-participant-action-packet.md",
       "current_decision": "FAIL_CLOSED_IMPLEMENTATION_CHRONOLOGY_AND_LEGAL_BLOCKERS"
     }
   ],
@@ -230,7 +219,7 @@
     "deadline_basis": "actual_filing_receipt_application_number_and_actual_filing_date_only"
   },
   "next_machine_actions": [
-    "refresh_patent_registry_exact_hash_snapshot_for_ledger_schema_0_5_and_current_publisher_handoff",
+    "refresh_patent_registry_exact_hash_snapshot_for_ledger_schema_0_6_and_current_publisher_handoff",
     "perform_status_only_registry_import_or_deterministic_refusal_pass_using_refreshed_exact_hash_snapshot",
     "continue_pat005_chronology_contributor_disclosure_audit_drawing_review_and_practitioner_preparation",
     "locate_direct_application_correction_gate_source_or_preserve_exact_blocker",
