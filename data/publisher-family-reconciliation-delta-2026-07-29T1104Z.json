@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "generated_utc": "2026-07-29T11:04:20Z",
+  "repository": "StegVerse-Labs/Patents",
+  "purpose": "Fail-closed reconciliation delta from dedicated family records to the Publisher handoff and central completion ledger.",
+  "legal_notice": "Technical status synchronization only. No inventorship, ownership, patentability, disclosure consequence, filing authority, filing event, application number, receipt, or deadline is inferred.",
+  "source_records": [
+    {
+      "family_key": "commit_time_admissibility_gate",
+      "path": "data/publisher-commit-time-admissibility-evidence-status.json",
+      "blob_sha": "736a589f07138c30a0228ea9879dcf26a0e4591d",
+      "schema_version": "1.1.0",
+      "status": "working_disclosure_abstract_figure_plan_and_chronology_template_complete_executable_blocked",
+      "changes_from_central_ledger": {
+        "invention_capture": "working technical disclosure complete from verified written sources",
+        "disclosure_chronology": "intake template complete; attributable evidence not populated",
+        "abstract": "working abstract complete",
+        "drawings": "figure plan complete; formal drawings blocked",
+        "warning_resolution": "written-source warnings bounded; executable, chronology, contributor, and legal warnings open"
+      },
+      "filing_state_changed": false
+    },
+    {
+      "family_key": "application_correction_gate",
+      "path": "data/publisher-application-correction-gate-status.json",
+      "blob_sha": "6a50d8cbb0c1ae4a97c40f1ef9ef34031117bfe2",
+      "schema_version": "1.2.0",
+      "status": "chronology_and_nonlegal_distinction_surfaces_complete_direct_source_pending",
+      "changes_from_central_ledger": {
+        "disclosure_chronology": "intake template complete; attributable evidence not populated",
+        "prior_art_distinction_notes": "bounded non-legal comparison notes complete; verified external search pending",
+        "specification": "not created because direct application-state correction support is absent",
+        "abstract": "not created because complete supported combination is absent",
+        "drawings": "not created because corrected-state structure and flow are unverified"
+      },
+      "filing_state_changed": false
+    }
+  ],
+  "portfolio_invariants": {
+    "filed_families": 0,
+    "patent_pending_authorized_families": 0,
+    "application_numbers_recorded": 0,
+    "filing_receipts_recorded": 0,
+    "actual_filing_dates_recorded": 0,
+    "calculated_deadlines": 0,
+    "ready_for_owner_decision": 0
+  },
+  "required_follow_on": [
+    "refresh data/publisher-family-completion-status.json from these dedicated records",
+    "refresh PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
+    "refresh the patent-registry approved-source snapshot after the central ledger blob changes",
+    "run the status-only importer or preserve a deterministic refusal receipt through an authoritative dispatcher"
+  ],
+  "decision": "RECONCILIATION_DELTA_MATERIALIZED_CENTRAL_LEDGER_REFRESH_REQUIRED"
+}
