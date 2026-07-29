@@ -1,16 +1,16 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "family_key": "master_records_reconstruction_and_verification",
   "title": "Master-Records Reconstruction and Verification",
-  "status": "working_technical_disclosure_complete_bounded_source_identity_resolved",
+  "status": "limitation_map_abstract_figure_plan_and_chronology_template_complete_production_reconstruction_blocked",
   "invention_capture": "working_technical_disclosure_complete",
-  "disclosure_chronology": "not_created",
-  "evidence_map": "partial_verified_three_source_inventory_bounded_core_lite_source_resolved",
-  "prior_art_distinction_notes": "ledger_custody_reconstruction_and_audit_distinctions_required",
+  "disclosure_chronology": "intake_template_complete_factual_evidence_not_populated",
+  "evidence_map": "limitation_level_map_complete_for_bounded_core_lite_verifier_mapper_and_tests",
+  "prior_art_distinction_notes": "ledger_custody_reconstruction_audit_event_sourcing_and_schema_mapping_distinctions_required",
   "specification": "bounded_working_disclosure_present_full_specification_incomplete",
-  "abstract": "not_created",
+  "abstract": "working_abstract_complete",
   "claim_themes": "candidate_limitation_clusters_present_not_final",
-  "drawings": "not_created",
+  "drawings": "figure_plan_complete_formal_drawings_blocked",
   "inventor_fields": "undetermined",
   "ownership_fields": "unconfirmed",
   "counsel_questions": "independent_family_dependent_embodiment_or_shared_infrastructure_unresolved",
@@ -39,9 +39,21 @@
     },
     {
       "repository": "master-records/core-lite",
-      "path": "samples/receipt_chain_001.json and tools/verify_chain.py",
-      "blob_sha": "ec8d2a5663dfe857bfc6c4caf0d467b8882281b7;ad85646b57eaac4432b155cf73a1e86defef335c",
-      "support": "bounded ordered receipt-chain sample, source hash and repository bindings, terminal receipt consistency, required flags, expected-order validation, fail-closed verification, and downstream independent-verification boundary"
+      "path": "tools/verify_chain.py",
+      "blob_sha": "ad85646b57eaac4432b155cf73a1e86defef335c",
+      "support": "required-field, receipt-order, terminal-consistency, flag, result, expected-fixture, and fail-closed validation"
+    },
+    {
+      "repository": "master-records/core-lite",
+      "path": "tools/map_to_spe_chain.py",
+      "blob_sha": "75f1bcce287b1b5f0d40e3af9cca468787fe019a",
+      "support": "bounded schema transformation preserving chain identity, repository bindings, source hash, result, ordered receipts, and flags"
+    },
+    {
+      "repository": "master-records/core-lite",
+      "path": "tests/test_spe_mapping.py",
+      "blob_sha": "adf728776b36ddbe7b00818a44f230f6e14cdebd",
+      "support": "checked-in expected-shape equality and mapped receipt-order testing"
     }
   ],
   "source_identity": {
@@ -53,14 +65,17 @@
     "resolution_path": "evidence/PUBLISHER_MASTER_RECORDS_SOURCE_IDENTITY_RESOLUTION.md"
   },
   "working_disclosure": "reviews/PUBLISHER-master-records-reconstruction-technical-disclosure.md",
-  "expected_decision": "FAIL_CLOSED_LIMITATION_CHRONOLOGY_CONTRIBUTOR_AND_LEGAL_BLOCKERS",
+  "limitation_map": "evidence/PUBLISHER-master-records-reconstruction-limitation-map.md",
+  "abstract_and_figure_plan": "reviews/PUBLISHER-master-records-reconstruction-abstract-and-figure-plan.md",
+  "chronology_intake": "evidence/PUBLISHER-master-records-reconstruction-chronology.md",
+  "expected_decision": "FAIL_CLOSED_PRODUCTION_RECONSTRUCTION_CHRONOLOGY_CONTRIBUTOR_AND_LEGAL_BLOCKERS",
   "next_machine_tasks": [
-    "inspect and hash the SPE mapper and tests",
-    "build a limitation-level evidence map distinguishing custody creation from downstream verification",
-    "create a working abstract and figure plan from verified evidence",
-    "create chronology and public-disclosure audit templates",
-    "create a non-legal overlap report against Receipt-Based State Transition Validation and PAT-002",
-    "reconcile the Publisher central ledger and mirror handoff"
+    "locate and verify SPE-side independent verification output for the mapped sample",
+    "locate source-record creation and hash-computation implementation",
+    "locate production custody retention supersession rollback conflict and reconstruction sources",
+    "create bounded non-legal overlap notes against Receipt-Based State Transition Validation PAT-002 and event-sourcing systems",
+    "expand the specification and formal drawings only where new verified evidence supports them",
+    "reconcile the Publisher central ledger and registry source snapshot"
   ],
   "next_human_or_counsel_tasks": [
     "identify factual contributors and contribution details",
