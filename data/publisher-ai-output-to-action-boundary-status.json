@@ -1,21 +1,21 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "family_key": "ai_output_to_action_boundary",
   "title": "AI Output-to-Action Boundary",
-  "status": "working_technical_disclosure_complete_generalized_combination_blocked",
+  "status": "working_disclosure_limitation_map_abstract_figure_plan_chronology_and_overlap_notes_complete_generalized_transition_blocked",
   "invention_capture": "working technical disclosure complete from bounded verified executable source",
-  "disclosure_chronology": "not populated; exact evidence intake defined in action packet",
-  "evidence_map": "partial verified executable source; limitation-level map pending additional anchors",
-  "prior_art_distinction_notes": "output filtering, tool permissioning, workflow approval, execution gating, and commit-time admissibility distinctions required",
-  "specification": "working technical disclosure present; full specification incomplete",
-  "abstract": "not yet separated from working disclosure",
-  "claim_themes": "candidate limitation clusters present; not final claims",
-  "drawings": "not created; generalized protocol structure unverified",
+  "disclosure_chronology": "factual intake template complete; attributable evidence not populated",
+  "evidence_map": "bounded limitation-level map complete from verified executable source; generalized action transition support absent",
+  "prior_art_distinction_notes": "bounded non-legal overlap notes complete; verified external search pending",
+  "specification": "bounded working technical disclosure present; full specification incomplete",
+  "abstract": "working abstract complete",
+  "claim_themes": "candidate information-admission authority-separation and execution-grant limitation clusters present; not final claims",
+  "drawings": "figure plan complete; formal drawings blocked by unverified generalized transition structures",
   "inventor_fields": "undetermined",
   "ownership_fields": "unconfirmed",
-  "counsel_questions": "independent family versus dependent embodiment unresolved",
+  "counsel_questions": "independent family versus dependent embodiment and relationship to commit-time disclosure and receipt families unresolved",
   "filing_packet": "not authorized",
-  "warning_resolution": "blocked by generalized source, chronology, contributor, family, and counsel fields",
+  "warning_resolution": "bounded written and executable-source drafting warnings resolved; generalized source chronology contributor family and counsel blockers open",
   "human_filing": "not started",
   "filing_receipt": null,
   "application_number": null,
@@ -30,29 +30,49 @@
       "path": "scripts/import_ecosystem_chat_activation.py",
       "blob_sha": "a2186f2634f5acf5253f9f26b28b673c2afc2b8a",
       "evidence_type": "EXECUTABLE",
-      "support_summary": "Validates hashes, custody, reconstruction, stage chain, supersession, destination, and authority boundaries while preserving publication, release, custody, and execution authorization as false."
+      "support_summary": "Validates hashes, custody, reconstruction, stage chain, supersession, destination, and authority boundaries while preserving publication, release, custody, activation, and execution authorization as false."
     }
   ],
   "artifacts": {
     "source_inventory": "evidence/PUBLISHER-ai-output-to-action-source-inventory.md",
     "working_disclosure": "reviews/PUBLISHER-ai-output-to-action-technical-disclosure.md",
-    "action_packet": "reviews/PUBLISHER-ai-output-to-action-action-packet.md"
+    "limitation_map": "evidence/PUBLISHER-ai-output-to-action-limitation-map.md",
+    "abstract_and_figure_plan": "reviews/PUBLISHER-ai-output-to-action-abstract-and-figure-plan.md",
+    "chronology_template": "evidence/PUBLISHER-ai-output-to-action-chronology.md",
+    "nonlegal_overlap_notes": "reviews/PUBLISHER-ai-output-to-action-nonlegal-overlap-notes.md",
+    "action_packet": "reviews/PUBLISHER-ai-output-to-action-action-packet.md",
+    "reconciliation_delta": "data/publisher-ai-output-to-action-status-delta-2026-07-29.json"
   },
   "combination_level_support": "unverified",
+  "blocking_gates": {
+    "general_output_schema_verified": false,
+    "canonical_action_request_object_verified": false,
+    "authority_grant_mechanism_verified": false,
+    "grant_scope_duration_expiration_revocation_and_consumption_verified": false,
+    "tool_specific_execution_grant_verified": false,
+    "complete_output_to_action_transition_verified": false,
+    "negative_path_and_execution_outputs_verified": false,
+    "chronology_evidence_populated": false,
+    "contributors_verified": false,
+    "family_disposition_determined_by_counsel": false,
+    "inventorship_determined": false,
+    "ownership_confirmed": false,
+    "owner_filing_authorization": false,
+    "filing_receipt_present": false
+  },
   "decision": "FAIL_CLOSED_GENERALIZED_SOURCE_CHRONOLOGY_FAMILY_AND_COUNSEL_BLOCKERS",
   "next_machine_work": [
-    "locate source files defining action requests and downstream authority grants",
-    "create a limitation-level evidence map",
-    "create bounded non-legal overlap notes",
-    "create a chronology and disclosure audit template",
-    "draft a separate abstract and figure plan only from verified evidence",
-    "refresh the Publisher family ledger and handoff"
+    "locate source files defining general output objects action requests and downstream authority grants",
+    "locate grant scope duration expiration revocation consumption and tool-specific execution behavior",
+    "locate retained negative-path and execution outputs",
+    "expand formal drawings and specification only after generalized structures are verified",
+    "refresh the Publisher central family ledger handoff and patent-registry source snapshot"
   ],
   "next_human_or_counsel_work": [
-    "identify canonical implementation sources",
     "provide dated conception and disclosure records",
-    "identify factual contributors and contributions",
-    "obtain counsel family, inventorship, ownership, disclosure, and filing recommendations"
+    "identify factual contributors and attributable contributions",
+    "obtain counsel family inventorship ownership disclosure and filing recommendations",
+    "record explicit owner disposition only after counsel packet completion"
   ],
   "legal_boundary": "This record does not determine inventorship, ownership, patentability, legal family scope, filing strategy, filing authority, filing status, application number, receipt, or deadline."
 }
