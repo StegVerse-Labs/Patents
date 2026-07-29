@@ -1,48 +1,29 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "family_key": "commit_time_admissibility_gate",
   "title": "Commit-Time Admissibility Gate",
   "source_handoff": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
   "source_repository": "GCAT-BCAT-Engine/Publisher",
-  "status": "verified_source_inventory_and_nonlegal_limitation_mapping_present",
+  "status": "working_disclosure_abstract_figure_plan_and_chronology_template_complete_executable_blocked",
   "source_inventory": "evidence/PUBLISHER-commit-time-admissibility-source-inventory.md",
   "limitation_mapping": "evidence/PUBLISHER-commit-time-admissibility-limitation-mapping.md",
+  "working_disclosure": "reviews/PUBLISHER-commit-time-admissibility-technical-disclosure.md",
+  "abstract_and_figure_plan": "reviews/PUBLISHER-commit-time-admissibility-abstract-and-figure-plan.md",
+  "chronology_intake": "evidence/PUBLISHER-commit-time-admissibility-chronology.md",
   "verified_source_count": 5,
-  "verified_sources": [
-    {
-      "path": "patents/prep/provisional_patent_framework.md",
-      "blob_sha": "4ab2c0c10a9bff47e6228b25d8dad09495440373"
-    },
-    {
-      "path": "docs/commit_time_triage_paper.md",
-      "blob_sha": "41bcc67c74844cfbc96c12138a6ebfd48df1a0c6"
-    },
-    {
-      "path": "papers/GCAT-BCAT/P0_CommitTime_Synthesis_v1.tex",
-      "blob_sha": "4be83f75d214b44495d7f3c95628f888a76c89c8"
-    },
-    {
-      "path": "papers/GCAT-BCAT/P5_CommitTime_Execution_v1.tex",
-      "blob_sha": "c51cdc8d6b6f3f5b15f0b24a9f9b7b94d7cbe486"
-    },
-    {
-      "path": "papers/GCAT-BCAT/P6_CommitGate_Executable_v1.tex",
-      "blob_sha": "57bc163166bf6cbb9a42b87196de35c0f395db4c"
-    }
-  ],
-  "invention_capture": "technical themes extracted from verified sources",
-  "disclosure_chronology": "blocked_pending_verified_public_access_dates_and_repository_history",
-  "evidence_map": "textual_source_inventory_and_nonlegal_mapping_present_executable_anchors_pending",
-  "prior_art_distinction_notes": "source_assertions_not_adopted_professional_review_pending",
-  "specification": "draft_framework_present_not_verified_filing_specification",
-  "abstract": "multiple draft abstracts_present_not_selected",
-  "claim_themes": "nonlegal_limitation_clusters_present_not_final_claims",
-  "drawings": "figure_list_present_formal_drawings_not_verified",
+  "invention_capture": "working technical disclosure complete from verified written sources",
+  "disclosure_chronology": "intake template complete; attributable evidence not populated",
+  "evidence_map": "verified written-source inventory and nonlegal limitation mapping present; executable anchors pending",
+  "prior_art_distinction_notes": "bounded source comparison questions present in limitation map; verified external search pending",
+  "specification": "bounded working disclosure present; full specification incomplete",
+  "abstract": "working abstract complete",
+  "claim_themes": "candidate technical limitation clusters present; not final claims",
+  "drawings": "figure plan complete; formal drawings blocked",
   "inventor_fields": "undetermined",
   "ownership_fields": "unconfirmed",
-  "counsel_questions": "family_scope_recoverability_triage_receipt_and_cross_family_relationships_open",
+  "counsel_questions": "family scope, recoverability, triage, receipt, numbered-family relationships, inventorship, ownership, disclosure consequences, and filing strategy open",
   "filing_packet": "not_authorized",
-  "warning_resolution": "partial_source_warnings_recorded_executable_and_legal_warnings_open",
+  "warning_resolution": "written-source warnings bounded; executable, chronology, contributor, and legal warnings open",
   "human_filing": "not_started",
   "filing_receipt": null,
   "application_number": null,
@@ -54,6 +35,7 @@
     "test_and_benchmark_receipts_preserved": false,
     "conception_chronology_verified": false,
     "public_disclosure_audit_complete": false,
+    "contributors_verified": false,
     "inventorship_determined_by_counsel": false,
     "ownership_confirmed": false,
     "prior_art_review_complete": false,
@@ -73,7 +55,8 @@
   "next_machine_actions": [
     "resolve and inspect the referenced GCAT-BCAT-Engine/Triage repository",
     "anchor exact executable paths commits tests benchmark traces and receipts",
-    "build verified public-disclosure chronology without inferring legal consequences",
+    "populate attributable chronology and contributor evidence without legal inference",
+    "prepare formal drawings only after executable component and schema identities are verified",
     "compare limitation clusters to numbered and Publisher candidates using nonlegal overlap labels",
     "prepare controlled disposition form without selecting a legal outcome"
   ]
