@@ -2,9 +2,20 @@
 
 ## Authoritative priority
 
-Patent filing preparation for the StegVerse foundational architecture remains Priority 1.
+Patent filing preparation for the StegVerse foundational architecture remains Priority 1. Dedicated family handoffs and immutable first-party evidence control over summaries.
 
-## Current family order
+## Governing boundary
+
+This repository may prepare, validate, organize, and emit first-party patent drafting and filing-support artifacts. It must not submit applications, pay fees, sign or certify declarations, determine inventorship, ownership, patentability, enablement, disclosure consequences, foreign-rights effects, legal deadlines, or authorize filing. Unsupported facts must remain unresolved.
+
+## Machine-readable portfolio source
+
+```text
+data/portfolio-completion-status.json
+schema: 0.6.1
+```
+
+## Controlled numbered families
 
 1. `PAT-001` — Transition-Table-Native Dynamic Micro-Node Computing
 2. `PAT-002` — Heartbeat-Governed Entity and Reflected-State Computing
@@ -12,139 +23,71 @@ Patent filing preparation for the StegVerse foundational architecture remains Pr
 4. `PAT-004` — Manifest-Governed Bidirectional Neural Communication
 5. `PAT-005` — Governed Device Continuity and Destination-Bound Hardware Abstraction
 
-`PAT-005` remains the urgent disclosure-review candidate because the tracked public technical paper date is 2026-07-13. Earliest enabling disclosure, inventorship, claim scope, and foreign-filing consequences remain unresolved.
-
-## Governing boundary
-
-This repository may prepare, validate, organize, and emit first-party patent drafting and filing-support artifacts. It must not automatically submit an application, pay fees, sign or certify declarations, determine inventorship or patentability as legal conclusions, authorize filing, invent missing facts, or claim `patent pending` before an actual filing receipt exists.
-
-## Machine-readable portfolio source
+Dedicated sources:
 
 ```text
-data/portfolio-completion-status.json
+PAT-001_MIRROR_HANDOFF.md
+PAT-002_MIRROR_HANDOFF.md
+PAT-003_MIRROR_HANDOFF.md
+PAT-004_MIRROR_HANDOFF.md
+PAT-005_MIRROR_HANDOFF.md
 ```
 
-Current schema version: `0.6`.
+## Current numbered-family state
 
-## Numbered-family source-of-truth map
+`PAT-001` remains practitioner-review-ready with blockers. `PAT-002`, `PAT-003`, and `PAT-004` remain structured review preparations with exact implementation, chronology, evidence, drafting, specialist, practitioner, and owner blockers preserved in their dedicated handoffs.
 
-```text
-PAT-001: PAT-001_MIRROR_HANDOFF.md
-PAT-002: PAT-002_MIRROR_HANDOFF.md
-PAT-003: PAT-003_MIRROR_HANDOFF.md
-PAT-004: PAT-004_MIRROR_HANDOFF.md
-PAT-005: PAT-005_MIRROR_HANDOFF.md
-```
-
-Each dedicated family handoff governs bounded continuation for that family. This root handoff governs portfolio ordering, filing-state invariants, cross-family disposition boundaries, registry synchronization inputs, and ecosystem propagation rules.
-
-## Numbered-family state
-
-### PAT-001
+### PAT-005 corrected factual posture
 
 ```text
-status: practitioner_review_ready_with_blockers
-family handoff: PAT-001_MIRROR_HANDOFF.md
-status record: data/PAT-001-completion-status.json
-readiness index: filing-readiness/PAT-001_FILING_READINESS_INDEX.md
-practitioner handoff: reviews/PAT-001-practitioner-handoff.md
-specification and abstract: working drafts present
-verified-core evidence map: present
-formal drawing sources and rendered review drawings: present; filing approval pending
-inventorship and ownership: unresolved
-filing packet: not authorized
-expected decision: FAIL_CLOSED_BLOCKERS
-```
-
-### PAT-002
-
-```text
-status: structured_review_preparation_with_blockers
-family handoff: PAT-002_MIRROR_HANDOFF.md
-status record: data/PAT-002-completion-status.json
-readiness index: filing-readiness/PAT-002_FILING_READINESS_INDEX.md
-action packet: reviews/PAT-002-human-action-packet.md
-```
-
-### PAT-003
-
-```text
-status: structured_review_preparation_with_blockers
-family handoff: PAT-003_MIRROR_HANDOFF.md
-status record: data/PAT-003-completion-status.json
-readiness index: filing-readiness/PAT-003_FILING_READINESS_INDEX.md
-action packet: reviews/PAT-003-human-action-packet.md
-```
-
-### PAT-004
-
-```text
-status: structured_review_preparation_with_blockers
-family handoff: PAT-004_MIRROR_HANDOFF.md
-status record: data/PAT-004-completion-status.json
-readiness index: filing-readiness/PAT-004_FILING_READINESS_INDEX.md
-action packet: reviews/PAT-004-human-action-packet.md
-```
-
-The PAT-004 structured family record defines an inventive center, technical problem, technical effects, shared clauses, parent-family relationships, and method/system claim identifiers. No implementation anchors, dates, inventorship, ownership, practitioner recommendation, or filing authorization have been inferred.
-
-### PAT-005
-
-```text
-status: practitioner_review_ready
-family handoff: PAT-005_MIRROR_HANDOFF.md
-status record: data/PAT-005-completion-status.json
-readiness manifest: data/PAT-005-readiness-manifest-2026-07-30.json
+status: practitioner_review_ready_with_public_disclosure_factual_intake_installed
+public disclosure audit intake: present
+factual disclosure evidence: incomplete
+earliest public disclosure: unresolved
+earliest enabling public disclosure: unresolved
+public accessibility: unresolved
+practitioner consequence analysis: absent
+paper title: unresolved
+publication or repository path: unresolved
+immutable paper hash: unresolved
+platform: unresolved
+exact timestamp: unresolved
+timezone: unresolved
+access evidence: unresolved
 filed: false
 patent pending authorized: false
-expected decision: FAIL_CLOSED_BLOCKERS
-human action packet: reviews/PAT-005-human-action-packet.md
+filing receipt: null
+application number: null
+actual filing date: null
+nonprovisional deadline: null
+PCT deadline: null
+expected decision: FAIL_CLOSED_FACTUAL_DISCLOSURE_EVIDENCE_AND_AUTHORITY_GATES
 ```
 
-The PAT-005 technical package includes its disclosure, working provisional, claim architecture, evidence maps, drawings, prior-art working charts, conception and contribution worksheets, practitioner handoff, validators, executable negative-case records, and a Steps 1–4 pre-owner preparation pipeline. Its dated readiness manifest verifies core repository artifacts and records the absence of the five authority-gated outputs. It remains blocked by verified prior-art references, attributable contributor facts, inventorship, completed disclosure audit, authorized drawing approval, practitioner recommendation, and explicit owner filing authorization.
+The repository-derived `2026-07-13` technical-paper lead is not itself evidence of a public, enabling, accessible, or legally consequential disclosure. Exact first-party search for `"2026-07-13"` and `"technical paper"` located only existing Patents status, triage, chronology, and audit references; it did not identify the underlying paper.
 
-Required PAT-005 gate outputs remain:
+Current PAT-005 sources:
 
 ```text
+PAT-005_MIRROR_HANDOFF.md
+data/PAT-005-completion-status.json
+data/PAT-005-readiness-manifest-2026-07-30.json
 evidence/PAT-005-public-disclosure-audit.md
-inventorship/PAT-005-inventorship-determination.md
-reviews/PAT-005-practitioner-recommendation.md
-diagrams/PAT-005-drawing-approval.md
-reviews/PAT-005-owner-decision.md
+evidence/PAT-005-handoff-disclosure-audit-reconciliation-2026-07-30.md
+reviews/PAT-005-human-action-packet.md
 ```
 
-## Portfolio-wide ChatGPT correspondence intake
-
-Installed:
+Verified event evidence may be stored only under:
 
 ```text
-intake/chatgpt/CORRESPONDENCE_INTAKE_CONTRACT.md
-intake/chatgpt/correspondence-record.schema.json
-intake/chatgpt/portfolio-correspondence-manifest.json
+evidence/PAT-005-disclosure-evidence/<EVENT-ID>/
 ```
 
-The intake contract applies to every numbered family and each controlled Publisher-origin candidate. It preserves conversation and message provenance, author role, content hashes, chronology relationships, corrections, contradictions, supersession, confidentiality, proposed family mappings, claim or figure relationships, and review status.
-
-ChatGPT correspondence may feed invention capture, chronology, contributor assertions, disclosure leads, implementation-evidence leads, drafting, prior-art distinction hypotheses, counsel questions, drawings, and owner-decision inputs. Assistant-authored material is not independent corroboration, inventor testimony, counsel advice, ownership evidence, filing authority, or a legal conclusion.
-
-PAT-005 remains the first family adapter:
-
-```text
-intake/chatgpt/PAT-005_CORRESPONDENCE_INTAKE_CONTRACT.md
-intake/chatgpt/PAT-005-correspondence-manifest.json
-```
-
-Current portfolio intake decision:
-
-```text
-FAIL_CLOSED_SOURCE_NOT_MATERIALIZED
-```
-
-No stable ChatGPT conversation export or bounded excerpt has yet been committed to the portfolio-wide intake path. Therefore no normalized message count, family index, contradiction report, or ingestion receipt is claimed.
+No title, path, hash, platform, timestamp, timezone, access proof, disclosed limitation, accessibility, enablement, legal consequence, foreign-rights effect, or deadline may be inferred.
 
 ## Publisher-family reconciliation
 
-The following Publisher families remain controlled candidates whose legal relationship to numbered PAT families is unresolved:
+The following Publisher-origin candidates remain controlled and legally unmapped:
 
 ```text
 Commit-Time Admissibility Gate
@@ -157,84 +100,62 @@ Master-Records Reconstruction and Verification
 Multi-Entity Observer-Participant Admissibility
 ```
 
-Do not silently merge, split, abandon, publish, or treat these as covered by PAT-001 through PAT-005. Each requires an explicit disposition supported by factual records and practitioner advice.
+Source:
+
+```text
+PUBLISHER_FAMILIES_MIRROR_HANDOFF.md
+data/publisher-family-completion-status.json
+```
+
+No candidate may be silently merged, omitted, published, abandoned, or treated as covered by another family.
 
 ## Filing and deadline invariant
 
-No numbered or Publisher family currently has a recorded official filing receipt, application number, or actual filing date. Therefore:
+No numbered or Publisher family has a verified official filing receipt, application number, or actual filing date. Therefore every family remains unfiled, patent-pending representation is unauthorized, and nonprovisional and PCT deadlines remain null. Drafts, commits, packet dates, conversation dates, disclosure leads, and workflow installation are not filing events.
 
-```text
-filed: false
-patent pending: not authorized
-nonprovisional deadline: null
-PCT deadline: null
-```
+## Registry synchronization
 
-No deadline may be calculated from a draft date, packet-generation date, repository commit, conversation timestamp, correspondence export, or assumed submission date.
+The patent-registry approved-source snapshot must include the current exact blobs for this root handoff, `data/portfolio-completion-status.json`, `PAT-005_MIRROR_HANDOFF.md`, and `data/PAT-005-readiness-manifest-2026-07-30.json`, in addition to the schema `0.8` Publisher ledger and supporting handoffs.
 
-## Portfolio filing-state validator
+An approved-source snapshot refresh is a bounded source reconciliation only. It is not an authoritative workflow run, importer receipt, synchronization receipt, filing event, or lifecycle mutation.
 
-Installed:
+## Next bounded machine work
 
-```text
-tools/validate_portfolio_filing_state.py
-tests/test_portfolio_filing_state.py
-```
+1. Refresh the patent-registry exact-hash approved-source snapshot with the corrected PAT-005 and portfolio records.
+2. Reconcile registry synchronization status and registry handoff without claiming an authoritative run.
+3. Inspect `.github/workflows/authoritative-status-sync.yml`, current runs, jobs, artifacts, issues, and pull requests. Admit a receipt only when a verified run and artifact exist.
+4. Continue exact first-party repository search for the July 13, 2026 paper and install only verified source material under the event-evidence path.
+5. If PAT-005 and registry evidence remain blocked, advance one independent Publisher family from canonical executable or runtime evidence and update its dedicated handoff and machine ledger.
+6. Inspect and update patent-related issues and pull requests after concrete changes.
+7. Run portfolio and registry validators through an authoritative dispatcher when available and preserve the output receipt.
 
-The validator fails closed when any family claims `filed`, `patent_pending`, or a calculated nonprovisional deadline without all required filing evidence. A filed state requires an existing repository receipt path, actual application number, and parseable actual filing date. A patent-pending state requires the same actual filing evidence. A calculated deadline requires a valid actual filing-date basis.
+## Exact human action packets
 
-The current portfolio ledger contains no filed or patent-pending claim and no calculated deadline, so its expected decision is:
+### PAT-005 factual and practitioner packet
 
-```text
-PORTFOLIO_FILING_STATE_VALID
-```
+1. Identify the paper using first-party title, path, immutable hash, platform, exact timestamp, timezone, and access evidence.
+2. Preserve each verified source under `evidence/PAT-005-disclosure-evidence/<EVENT-ID>/`.
+3. Obtain attributable contributor facts and qualified practitioner analysis for inventorship, disclosure consequences, prior art, enablement, drawings, and disposition.
+4. Commit required determinations only to their defined paths.
+5. Resume packet rendering only after factual and authority gates are complete.
+6. Patent Center submission, signing, certification, payment, and official receipt retrieval remain authorized-human actions only.
 
-Authoritative dispatcher execution and preserved validation output remain pending; installation does not claim that the repository test suite has run.
+### Registry technical packet
 
-## Current next machine work
+1. Open `StegVerse-Labs/patent-registry` → Actions → `Authoritative Patent Status Sync`.
+2. Run the workflow on the default branch after confirming the current approved-source snapshot hashes.
+3. Record run ID, tested commit, conclusion, job ID, logs, and artifact identity.
+4. Download `patent-registry-authoritative-status-sync`.
+5. Preserve report and receipt files plus hashes under `data/receipts/authoritative-status-sync/`.
+6. Resume automated receipt verification and registry status reconciliation.
 
-1. Run `tools/validate_portfolio_filing_state.py` and `tests/test_portfolio_filing_state.py` through the authoritative dispatcher and preserve the output receipt.
-2. Materialize pertinent ChatGPT conversation exports or bounded excerpts; preserve stable conversation/message identifiers, hashes, and confidentiality classes.
-3. Build the portfolio-wide correspondence normalizer, schema validator, family indexes, contradiction reports, and hash-chained ingestion receipts.
-4. Feed normalized correspondence into PAT-005 Steps 1–4 preparation and then extend the adapter to PAT-001 through PAT-004 and the eight Publisher candidates.
-5. Locate exact PAT-002 implementation anchors and build its standalone disclosure and limitation evidence map.
-6. Locate verified PAT-003 source anchors and build its standalone disclosure and limitation evidence map.
-7. Locate verified PAT-004 source anchors and build its standalone disclosure and limitation evidence map while keeping supported and proposed embodiments distinct.
-8. Continue PAT-001 canonical-source corroboration, contributor evidence, drawing approval, practitioner recommendation, and authoritative readiness validation.
-9. Preserve PAT-005 fail-closed status until the exact factual, practitioner, owner, and filing-human outputs are committed.
-10. Reconcile the portfolio machine ledger and patent-registry approved-source snapshot after every authoritative root-handoff change before the next status import.
-11. Reconcile Publisher families through explicit controlled disposition records.
-12. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
+## Issues and pull requests
 
-## Human-boundary protocol
+Priority tracking remains `StegVerse-Labs/Patents#1` and `StegVerse-Labs/patent-registry#1`. All current patent-related issues and pull requests must be inspected during each continuation. No open pull request or successful workflow may be assumed from prior summaries.
 
-Every blocked family must have an action packet identifying:
+## Ecosystem update boundary
 
-```text
-family and stage
-why automation stopped
-blocker class
-unresolved facts or decisions
-exact source files
-ordered human steps
-required input or document
-expected output or receipt
-repository destination
-automation resumption step
-disclosure or deadline risk
-```
-
-A generic statement that counsel or human review is required is insufficient.
-
-## Issue and pull-request state
-
-Priority issue: `#1`.
-
-No open patent pull request was found in the current check. Direct commits therefore require later authoritative-dispatch validation before release or filing-packet authorization.
-
-## Required ecosystem updates after an explicit disposition
-
-When any family reaches an approved filing, trade-secret, defensive-publication, abandonment, tag, or release state, verify bounded updates in:
+After an explicit filed, trade-secret, defensive-publication, abandonment, tag, or release disposition, verify bounded propagation to:
 
 ```text
 StegVerse-Labs/Site
@@ -243,19 +164,9 @@ admissibility-wiki
 stegguardian-wiki
 ```
 
-Do not expose unpublished claims, inventorship disputes, counsel advice, or unfiled patent-sensitive details.
+Do not expose unpublished claims, contributor disputes, practitioner advice, or unfiled strategy.
 
 ## Thread archive and orchestration custody
-
-Machine-readable source:
-
-```text
-data/thread-archive-custody-status.json
-```
-
-Repository continuation state is preserved, but that state is not equivalent to orchestration custody. The orchestration layer has not been verified as operational, no thread-ingestion receipt is present, remaining tasks have not been accepted or scheduled by an orchestrator, and no continuation checkpoint has been emitted.
-
-Current decision:
 
 ```text
 repository continuation state preserved: true
@@ -264,21 +175,4 @@ thread ready to archive: false
 active working thread still required: true
 ```
 
-The phrases `thread ready to archive`, `orchestration has custody`, `autonomous continuation is active`, and `the prior conversation is not required` are prohibited until the required orchestration evidence is committed and verified.
-
-Archive readiness requires, at minimum:
-
-```text
-stable thread or conversation identifier
-orchestration ingestion receipt
-hash or immutable reference to the ingested source
-task extraction manifest
-assignment or scheduling receipt for unfinished work
-orchestrator identity and runtime version
-accepted-custody timestamp
-continuation checkpoint or replay reference
-```
-
-## Continuation state
-
-This handoff preserves repository continuation state for the active working session. It does not authorize archiving the thread, does not establish autonomous continuation, and does not replace the missing orchestration custody receipt.
+Repository handoffs do not establish orchestration custody. Archive readiness requires a verified ingestion receipt, source hash, task-extraction manifest, assignment receipt, orchestrator identity and version, accepted-custody timestamp, and continuation checkpoint.
