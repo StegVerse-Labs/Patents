@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "family_id": "PAT-005",
+  "family_name": "Governed Device Continuity and Destination-Bound Hardware Abstraction",
+  "generated_date": "2026-07-30",
+  "source_of_truth": "PAT-005_MIRROR_HANDOFF.md",
+  "portfolio_source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
+  "status_source": "data/PAT-005-completion-status.json",
+  "current_stage": "practitioner_review_ready",
+  "decision": "FAIL_CLOSED_BLOCKERS",
+  "verified_repository_artifacts": [
+    {
+      "path": "PAT-005_MIRROR_HANDOFF.md",
+      "blob_sha": "6862a829972a223f7e5b78761b198c4fdbe44159",
+      "role": "dedicated family handoff"
+    },
+    {
+      "path": "data/PAT-005-completion-status.json",
+      "blob_sha": "6e0c24e1a9372659fef04d7b949bedec85b63477",
+      "role": "machine-readable lifecycle ledger"
+    },
+    {
+      "path": "disclosures/PAT-005-governed-device-continuity.md",
+      "blob_sha": "c894008ff9466909ad9b4af8ef2fcf955a2e14e9",
+      "role": "working invention disclosure"
+    },
+    {
+      "path": "provisionals/PAT-005-working-provisional-draft.md",
+      "blob_sha": "0e5e8d8d579256ef5db250c7eb9deb4e4ff6891e",
+      "role": "working provisional draft"
+    },
+    {
+      "path": "claims/PAT-005-claim-architecture.md",
+      "blob_sha": "b66cdc39845372e62c44fb98b0498d8d65c5598f",
+      "role": "working claim architecture"
+    },
+    {
+      "path": "reviews/PAT-005-practitioner-handoff.md",
+      "blob_sha": "a0daa46d8a11cd63f01561bd92e23fce1a152b78",
+      "role": "qualified-practitioner review packet"
+    }
+  ],
+  "completed_artifacts_declared_by_status_ledger": [
+    "evidence/PAT-005-cross-repository-source-map.md",
+    "evidence/PAT-005-destination-and-guardian-anchors.md",
+    "evidence/PAT-005-end-to-end-reconstruction.md",
+    "evidence/PAT-005-negative-and-failure-paths.md",
+    "diagrams/PAT-005-figure-descriptions.md",
+    "diagrams/PAT-005-formal-drawing-sheets.md",
+    "diagrams/PAT-005-drawing-production-spec.md",
+    "prior-art/PAT-005-initial-collision-chart.md",
+    "prior-art/PAT-005-limitation-claim-chart.md",
+    "evidence/PAT-005-conception-chronology.md",
+    "inventorship/PAT-005-claim-contribution-worksheet.md",
+    "inventorship/PAT-005-contributor-interview-packet.md",
+    "reviews/PAT-005-filing-readiness-index.md",
+    "reviews/PAT-005-human-action-packet.md",
+    "data/PAT-005-implementation-anchors.json",
+    "tools/validate_pat005_implementation_anchors.py",
+    "tests/test_pat005_implementation_anchors.py",
+    "fixtures/PAT-005-negative-cases.json",
+    "tools/replay_pat005_negative_cases.py",
+    "tests/test_pat005_negative_cases.py"
+  ],
+  "authority_gated_outputs_required": [
+    {
+      "path": "evidence/PAT-005-public-disclosure-audit.md",
+      "status": "not_found_in_current_exact-name_search",
+      "authority_class": "factual human evidence"
+    },
+    {
+      "path": "inventorship/PAT-005-inventorship-determination.md",
+      "status": "not_found_in_current_exact-name_search",
+      "authority_class": "qualified practitioner determination"
+    },
+    {
+      "path": "reviews/PAT-005-practitioner-recommendation.md",
+      "status": "not_found_in_current_exact-name_search",
+      "authority_class": "qualified practitioner recommendation"
+    },
+    {
+      "path": "diagrams/PAT-005-drawing-approval.md",
+      "status": "not_found_in_current_exact-name_search",
+      "authority_class": "formal human drawing approval"
+    },
+    {
+      "path": "reviews/PAT-005-owner-decision.md",
+      "status": "not_found_in_current_exact-name_search",
+      "authority_class": "explicit owner disposition"
+    }
+  ],
+  "filing_state": {
+    "packet_emission_authorized": false,
+    "human_filing_started": false,
+    "official_filing_receipt": null,
+    "application_number": null,
+    "actual_filing_date": null,
+    "nonprovisional_deadline": null,
+    "pct_deadline": null,
+    "patent_pending_authorized": false
+  },
+  "disclosure_risk": {
+    "tracked_public_technical_paper_date": "2026-07-13",
+    "earliest_enabling_disclosure_confirmed": false,
+    "legal_consequence_determined": false,
+    "deadline_calculated": false,
+    "posture": "URGENT_FACTUAL_AUDIT_AND_PRACTITIONER_REVIEW_REQUIRED"
+  },
+  "verification_boundary": {
+    "direct_blob_verification_completed_for_core_artifacts": true,
+    "remaining_completed_artifact_paths_reconciled_from_canonical_status_ledger": true,
+    "authoritative_test_execution_receipt_present": false,
+    "legal_or_filing_conclusion_made": false
+  },
+  "next_machine_action": "Reconcile the root portfolio handoff to this manifest and preserve fail-closed status until all five authority-gated outputs exist and pass consistency checks.",
+  "legal_notice": "Technical readiness manifest only. This file does not determine inventorship, ownership, patentability, disclosure consequences, filing authority, filing status, application numbers, filing dates, or deadlines."
+}
