@@ -1,15 +1,17 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "family_key": "commit_time_admissibility_gate",
   "title": "Commit-Time Admissibility Gate",
   "source_handoff": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
+  "dedicated_handoff": "COMMIT_TIME_ADMISSIBILITY_MIRROR_HANDOFF.md",
   "source_repository": "GCAT-BCAT-Engine/Publisher",
-  "status": "working_disclosure_abstract_figure_plan_and_chronology_template_complete_executable_blocked",
+  "status": "working_disclosure_abstract_figure_plan_chronology_and_dedicated_handoff_complete_executable_blocked",
   "source_inventory": "evidence/PUBLISHER-commit-time-admissibility-source-inventory.md",
   "limitation_mapping": "evidence/PUBLISHER-commit-time-admissibility-limitation-mapping.md",
   "working_disclosure": "reviews/PUBLISHER-commit-time-admissibility-technical-disclosure.md",
   "abstract_and_figure_plan": "reviews/PUBLISHER-commit-time-admissibility-abstract-and-figure-plan.md",
   "chronology_intake": "evidence/PUBLISHER-commit-time-admissibility-chronology.md",
+  "disposition_record": "reviews/PUBLISHER-commit-time-admissibility-disposition-record.md",
   "verified_source_count": 5,
   "invention_capture": "working technical disclosure complete from verified written sources",
   "disclosure_chronology": "intake template complete; attributable evidence not populated",
@@ -58,6 +60,7 @@
     "populate attributable chronology and contributor evidence without legal inference",
     "prepare formal drawings only after executable component and schema identities are verified",
     "compare limitation clusters to numbered and Publisher candidates using nonlegal overlap labels",
-    "prepare controlled disposition form without selecting a legal outcome"
+    "prepare controlled disposition form without selecting a legal outcome",
+    "reconcile this dedicated handoff into the Publisher root handoff central ledger and patent registry"
   ]
 }
