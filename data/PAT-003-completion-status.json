@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.1.1",
   "family_id": "PAT-003",
   "title": "Generalized Adaptive Scanner Using Dynamic Micro-Nodes",
-  "status": "structured_review_preparation_chronology_comparison_and_handoff_complete_direct_implementation_blocked",
+  "status": "structured_review_preparation_chronology_comparison_handoff_and_dated_source_search_complete_direct_implementation_blocked",
   "filed": false,
   "patent_pending_authorized": false,
   "invention_capture": "structured_family_record_present_standalone_bounded_disclosure_pending",
@@ -34,7 +34,8 @@
     "dedicated_mirror_handoff": true,
     "chronology_intake": true,
     "technical_comparison_research_ledger": true,
-    "bounded_source_search": true
+    "bounded_source_search": true,
+    "dated_source_search_receipt": true
   },
   "artifacts": {
     "dedicated_handoff": "PAT-003_MIRROR_HANDOFF.md",
@@ -42,7 +43,19 @@
     "comparison_ledger": "reviews/PAT-003_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md",
     "readiness_index": "filing-readiness/PAT-003_FILING_READINESS_INDEX.md",
     "human_action_packet": "reviews/PAT-003-human-action-packet.md",
-    "structured_claim_source": "data/master_claims.json"
+    "structured_claim_source": "data/master_claims.json",
+    "dated_source_search_receipt": "evidence/PAT-003-source-search-receipt-2026-07-30.md"
+  },
+  "source_search_result": {
+    "date": "2026-07-30",
+    "scopes": [
+      "StegVerse-Labs",
+      "Data-Continuation",
+      "Admissible-Existence"
+    ],
+    "direct_implementation_verified": false,
+    "result": "NO_DIRECT_FIRST_PARTY_IMPLEMENTATION_LOCATED_IN_BOUNDED_CONNECTED_SEARCH",
+    "negative_result_boundary": "does_not_prove_absence_from_history_unindexed_private_or_external_sources"
   },
   "blocking_gates": {
     "standalone_invention_disclosure": false,
@@ -61,9 +74,9 @@
     "filing_packet_emitted": false,
     "filing_receipt_recorded": false
   },
-  "expected_decision": "FAIL_CLOSED_DIRECT_IMPLEMENTATION_CHRONOLOGY_AND_LEGAL_BLOCKERS",
+  "expected_decision": "FAIL_CLOSED_DIRECT_PAT003_SOURCE_CHRONOLOGY_AND_LEGAL_BLOCKERS",
   "next_machine_tasks": [
-    "identify canonical scanner signal acquisition adaptive node construction comparative evaluation observation interval non_inference and receipt sources",
+    "verify any newly supplied canonical scanner signal acquisition adaptive node construction comparative evaluation observation interval non_inference and receipt sources",
     "validate exact repository paths and immutable commits or blobs",
     "create a limitation level evidence map separating implemented written_description_only proposed and unsupported behavior",
     "draft a standalone technical disclosure only after supported boundaries are established",
@@ -73,6 +86,7 @@
   "next_human_tasks": [
     "provide dated conception implementation private disclosure and public disclosure records",
     "identify contributors and attributable technical contributions",
+    "provide any exact repository path retained artifact or design record for the combined PAT-003 behavior",
     "obtain practitioner review of claim support diagnostic boundaries prior art family relationships inventorship ownership disclosure consequences and filing strategy",
     "record explicit owner disposition only after practitioner recommendation"
   ],
