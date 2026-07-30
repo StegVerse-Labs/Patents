@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.6",
-  "generated_utc": "2026-07-30T12:03:34Z",
+  "schema_version": "0.6.1",
+  "generated_utc": "2026-07-30T22:26:00Z",
   "repository": "StegVerse-Labs/Patents",
   "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
   "legal_notice": "Technical portfolio tracking only. Unknown facts, inventorship, ownership, legal conclusions, filing authority, filing dates, application numbers, fees, receipts, and deadlines are not inferred.",
@@ -121,13 +121,26 @@
     {
       "family_id": "PAT-005",
       "title": "Governed Device Continuity and Destination-Bound Hardware Abstraction",
-      "status": "practitioner_review_ready",
+      "status": "practitioner_review_ready_with_public_disclosure_factual_intake_installed",
       "family_handoff": "PAT-005_MIRROR_HANDOFF.md",
       "status_record": "data/PAT-005-completion-status.json",
       "readiness_manifest": "data/PAT-005-readiness-manifest-2026-07-30.json",
       "invention_capture": "complete",
-      "disclosure_chronology": "worksheet_present_public_disclosure_audit_pending",
-      "evidence_map": "complete",
+      "disclosure_chronology": "worksheet_present_public_disclosure_audit_intake_present_factual_evidence_incomplete",
+      "public_disclosure_audit_intake": "present",
+      "factual_disclosure_evidence": "incomplete",
+      "earliest_public_disclosure": "unresolved",
+      "earliest_enabling_public_disclosure": "unresolved",
+      "public_accessibility": "unresolved",
+      "practitioner_consequence_analysis": "absent",
+      "paper_title": null,
+      "publication_path": null,
+      "immutable_paper_hash": null,
+      "platform": null,
+      "exact_timestamp": null,
+      "timezone": null,
+      "access_evidence": null,
+      "evidence_map": "complete_for_current_repository_anchors_disclosure_event_evidence_incomplete",
       "prior_art_distinction_notes": "initial_charts_present_verified_identifiers_pending",
       "specification": "working_draft_present_approved_filing_version_absent",
       "abstract": "working_draft_or_unverified",
@@ -144,54 +157,34 @@
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "pct_deadline": null,
-      "disclosure_risk": "urgent_factual_audit_and_practitioner_review_due_to_tracked_public_technical_paper_2026-07-13",
-      "expected_decision": "FAIL_CLOSED_BLOCKERS"
+      "patent_pending_authorized": false,
+      "disclosure_risk": "urgent_factual_identification_and_practitioner_review_due_to_repository_derived_2026-07-13_lead_only",
+      "expected_decision": "FAIL_CLOSED_FACTUAL_DISCLOSURE_EVIDENCE_AND_AUTHORITY_GATES"
     }
   ],
   "publisher_invention_families": [
-    {"family_key": "commit_time_admissibility_gate", "title": "Commit-Time Admissibility Gate", "status": "counsel_packet_draft_exists_mapping_unresolved"},
-    {"family_key": "receipt_based_state_transition_validation", "title": "Receipt-Based State Transition Validation", "status": "controlled_candidate_disposition_unresolved"},
-    {"family_key": "publisher_governed_disclosure_pipeline", "title": "Publisher Governed Disclosure Pipeline", "status": "controlled_candidate_disposition_unresolved"},
-    {"family_key": "application_correction_gate", "title": "Application Correction Gate", "status": "controlled_candidate_disposition_unresolved"},
-    {"family_key": "ai_output_to_action_boundary", "title": "AI Output-to-Action Boundary", "status": "controlled_candidate_disposition_unresolved"},
-    {"family_key": "recoverability_aware_execution_boundary", "title": "Recoverability-Aware Execution Boundary", "status": "controlled_candidate_disposition_unresolved"},
-    {"family_key": "master_records_reconstruction_and_verification", "title": "Master-Records Reconstruction and Verification", "status": "controlled_candidate_disposition_unresolved"},
-    {"family_key": "multi_entity_observer_participant_admissibility", "title": "Multi-Entity Observer-Participant Admissibility", "status": "controlled_candidate_disposition_unresolved"}
+    {"family_key":"commit_time_admissibility_gate","title":"Commit-Time Admissibility Gate","status":"counsel_packet_draft_exists_mapping_unresolved"},
+    {"family_key":"receipt_based_state_transition_validation","title":"Receipt-Based State Transition Validation","status":"controlled_candidate_disposition_unresolved"},
+    {"family_key":"publisher_governed_disclosure_pipeline","title":"Publisher Governed Disclosure Pipeline","status":"controlled_candidate_disposition_unresolved"},
+    {"family_key":"application_correction_gate","title":"Application Correction Gate","status":"controlled_candidate_disposition_unresolved"},
+    {"family_key":"ai_output_to_action_boundary","title":"AI Output-to-Action Boundary","status":"controlled_candidate_disposition_unresolved"},
+    {"family_key":"recoverability_aware_execution_boundary","title":"Recoverability-Aware Execution Boundary","status":"controlled_candidate_disposition_unresolved"},
+    {"family_key":"master_records_reconstruction_and_verification","title":"Master-Records Reconstruction and Verification","status":"controlled_candidate_disposition_unresolved"},
+    {"family_key":"multi_entity_observer_participant_admissibility","title":"Multi-Entity Observer-Participant Admissibility","status":"controlled_candidate_disposition_unresolved"}
   ],
-  "portfolio_filing_state": {
-    "filed_application_count": 0,
-    "official_filing_receipt_count": 0,
-    "application_number_count": 0,
-    "actual_filing_date_count": 0,
-    "nonprovisional_deadline_count": 0,
-    "pct_deadline_count": 0,
-    "patent_pending_authorized_count": 0
-  },
+  "portfolio_filing_state": {"filed_application_count":0,"official_filing_receipt_count":0,"application_number_count":0,"actual_filing_date_count":0,"nonprovisional_deadline_count":0,"pct_deadline_count":0,"patent_pending_authorized_count":0},
   "portfolio_blockers": [
     "Publisher invention families remain legally unmapped to numbered PAT families",
-    "No filed application receipt or application number is recorded",
-    "No nonprovisional or PCT deadline may be calculated until an actual filing event exists",
-    "PAT-001 requires canonical source corroboration, contributor evidence, verified prior art, disclosure audit, drawing approval, practitioner recommendation, dispatcher receipt, and owner disposition",
-    "PAT-002 requires exact implementation anchors, factual chronology, evidence map, drafts, interviews, and practitioner review",
-    "PAT-003 requires source discovery, factual chronology, evidence classification, drafts, interviews, and practitioner review",
-    "PAT-004 requires source discovery, factual chronology, technical-boundary classification, specialist review, drafts, interviews, and practitioner review",
-    "PAT-005 requires factual disclosure audit, inventorship determination, practitioner recommendation, drawing approval, and explicit owner decision"
+    "No filed application receipt, application number, actual filing date, or deadline basis is recorded",
+    "PAT-001 through PAT-004 retain their dedicated factual, technical, practitioner, and owner blockers",
+    "PAT-005 factual audit intake exists but the disclosure event identity and evidence remain incomplete",
+    "PAT-005 inventorship, ownership, practitioner recommendation, drawing approval, owner decision, and filing authority remain unresolved"
   ],
   "next_machine_actions": [
-    "run the portfolio filing-state validator and tests through the authoritative dispatcher and preserve the receipt",
-    "refresh the patent-registry approved-source snapshot for the new root handoff and portfolio ledger blobs",
-    "locate PAT-002 implementation anchors in StegEntity and Data-Continuation/core-lite",
-    "search connected repositories for PAT-003 source anchors and create its standalone disclosure and evidence map",
-    "search connected repositories for PAT-004 source anchors and create its standalone disclosure and evidence map",
-    "continue PAT-001 canonical-source and implementation corroboration",
-    "preserve PAT-005 fail-closed status until all five authority-gated outputs exist",
-    "reconcile Publisher candidates only through explicit practitioner and owner disposition records"
+    "refresh the patent-registry approved-source snapshot with current PAT-005 handoff and readiness blobs plus this ledger blob",
+    "obtain and verify an authoritative registry workflow run and artifact or preserve fail-closed absence",
+    "continue exact first-party search for the July 13 2026 paper without inference",
+    "advance an independent Publisher family when PAT-005 and registry evidence remain blocked"
   ],
-  "portfolio_controls": {
-    "filing_state_validator": "tools/validate_portfolio_filing_state.py",
-    "filing_state_tests": "tests/test_portfolio_filing_state.py",
-    "validator_expected_current_decision": "PORTFOLIO_FILING_STATE_VALID",
-    "authoritative_dispatch_validation": "pending",
-    "canonical_lifecycle_mutation_authorized": false
-  }
+  "portfolio_controls": {"filing_state_validator":"tools/validate_portfolio_filing_state.py","filing_state_tests":"tests/test_portfolio_filing_state.py","validator_expected_current_decision":"PORTFOLIO_FILING_STATE_VALID","authoritative_dispatch_validation":"pending","canonical_lifecycle_mutation_authorized":false}
 }
