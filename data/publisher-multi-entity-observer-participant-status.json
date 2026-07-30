@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "family_key": "multi_entity_observer_participant_admissibility",
   "title": "Multi-Entity Observer-Participant Admissibility",
-  "status": "working_disclosure_abstract_figure_plan_and_distinction_notes_complete_implementation_blocked",
+  "status": "working_disclosure_abstract_figure_plan_distinction_notes_limitation_map_and_dedicated_handoff_complete_implementation_blocked",
   "invention_capture": "working_technical_disclosure_complete_from_verified_formal_support",
   "disclosure_chronology": "factual_template_complete_evidence_not_populated",
-  "evidence_map": "partial_verified_two_source_inventory",
+  "evidence_map": "verified_two_source_inventory_and_limitation_level_map_complete_executable_support_pending",
   "prior_art_distinction_notes": "bounded_nonlegal_distinction_questions_complete_external_search_and_practitioner_review_pending",
   "specification": "working_disclosure_present_full_specification_not_created",
   "abstract": "working_abstract_complete",
@@ -13,7 +13,7 @@
   "drawings": "figure_plan_complete_formal_drawings_not_created",
   "inventor_fields": "undetermined",
   "ownership_fields": "unconfirmed",
-  "counsel_questions": "independent_family_dependent_embodiment_or_research_track_unresolved",
+  "counsel_questions": "independent_family_dependent_embodiment_continuation_candidate_or_research_track_unresolved",
   "filing_packet": "not_authorized",
   "warning_resolution": "blocked_by_implementation_chronology_contributors_external_search_and_legal_disposition",
   "human_filing": "not_started",
@@ -24,6 +24,7 @@
   "pct_deadline": null,
   "patent_pending_authorized": false,
   "approval_required_now": false,
+  "dedicated_handoff": "MULTI_ENTITY_OBSERVER_PARTICIPANT_MIRROR_HANDOFF.md",
   "verified_sources": [
     {
       "repository": "Admissible-Existence/DC",
@@ -39,7 +40,9 @@
     }
   ],
   "artifacts": [
+    "MULTI_ENTITY_OBSERVER_PARTICIPANT_MIRROR_HANDOFF.md",
     "evidence/PUBLISHER-multi-entity-observer-participant-source-inventory.md",
+    "evidence/PUBLISHER-multi-entity-observer-participant-limitation-map.md",
     "reviews/PUBLISHER-multi-entity-observer-participant-technical-disclosure.md",
     "reviews/PUBLISHER-multi-entity-observer-participant-abstract-and-figure-plan.md",
     "reviews/PUBLISHER-multi-entity-observer-participant-chronology-audit.md",
@@ -52,6 +55,8 @@
     "figure_plan_complete": true,
     "chronology_template_complete": true,
     "bounded_nonlegal_distinction_notes_complete": true,
+    "limitation_level_evidence_map_complete": true,
+    "dedicated_mirror_handoff_complete": true,
     "formal_drawings_complete": false,
     "dedicated_executable_protocol_verified": false,
     "chronology_evidence_verified": false,
@@ -60,10 +65,10 @@
   },
   "expected_decision": "FAIL_CLOSED_IMPLEMENTATION_CHRONOLOGY_EXTERNAL_SEARCH_AND_LEGAL_BLOCKERS",
   "next_machine_tasks": [
-    "create a limitation-level evidence map distinguishing formal support from executable support",
-    "create a non-legal overlap report against PAT-002, Distributed Coherence, and Receipt-Based State Transition Validation",
     "locate or receive a dedicated observer-participant protocol or implementation source",
+    "create a non-legal overlap report against PAT-002, Distributed Coherence, and Receipt-Based State Transition Validation",
     "normalize dated chronology records when supplied",
+    "reconcile the dedicated status into the Publisher central ledger and patent registry",
     "convert the figure plan into formal drawings only after implementation fields and flows are verified",
     "expand the working disclosure into a full specification only to the extent supported by verified evidence"
   ],
