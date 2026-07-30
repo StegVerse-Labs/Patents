@@ -9,7 +9,7 @@ This is technical portfolio tracking only. It does not determine inventorship, o
 ## Current controlled stage
 
 ```text
-stage: bounded working disclosure and formal-source organization complete
+stage: bounded working disclosure, formal-source organization, and internal overlap analysis complete
 implementation: blocked
 filing readiness: false
 approval required now: false
@@ -38,7 +38,7 @@ These sources provide formal written-description support only. They do not estab
 invention capture: working technical disclosure complete from verified formal support
 disclosure chronology: factual template complete; evidence not populated
 evidence map: partial verified two-source inventory and limitation map present
-prior-art distinction notes: bounded non-legal distinction questions complete; external search and practitioner review pending
+prior-art distinction notes: bounded non-legal distinction questions and internal overlap report complete; external search and practitioner review pending
 specification: working disclosure present; full specification not created
 abstract: working abstract complete
 claim themes: candidate limitation clusters present; not final
@@ -65,9 +65,27 @@ reviews/PUBLISHER-multi-entity-observer-participant-technical-disclosure.md
 reviews/PUBLISHER-multi-entity-observer-participant-abstract-and-figure-plan.md
 reviews/PUBLISHER-multi-entity-observer-participant-chronology-audit.md
 reviews/PUBLISHER-multi-entity-observer-participant-nonlegal-distinction-notes.md
+reviews/PUBLISHER-multi-entity-observer-participant-nonlegal-overlap-report-2026-07-30.md
 reviews/PUBLISHER-multi-entity-observer-participant-action-packet.md
 data/publisher-multi-entity-observer-participant-status.json
 ```
+
+## Internal overlap result
+
+The bounded internal report compares this candidate with PAT-002, Distributed Coherence, Receipt-Based State Transition Validation, Commit-Time Admissibility, and Master-Records infrastructure.
+
+The candidate-specific technical center remains:
+
+```text
+observer-participant role separation
+observation lag and freshness
+local-state and global-coherence separation
+reconciliation of incompatible locally coherent states
+observer contribution without execution authority
+receipt-linked replay of the multi-entity decision path
+```
+
+The report does not determine legal family boundaries, novelty, obviousness, claim scope, or patentability.
 
 ## Exact technical blocker
 
@@ -91,7 +109,7 @@ Automation cannot verify the complete family until a first-party source establis
 
 ```text
 application: Multi-Entity Observer-Participant Admissibility
-stage: bounded disclosure and formal support complete; dedicated executable protocol unverified
+stage: bounded disclosure, formal support, and internal overlap analysis complete; dedicated executable protocol unverified
 ```
 
 ### Information or documents required
