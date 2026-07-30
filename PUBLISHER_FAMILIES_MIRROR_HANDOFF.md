@@ -2,13 +2,12 @@
 
 ## Purpose and authority
 
-This handoff is the source of truth for reconciling Publisher-origin invention candidates with numbered families in `StegVerse-Labs/Patents`. Dedicated family records control when this summary conflicts with a more specific immutable source or status record.
+This handoff is the source of truth for reconciling Publisher-origin invention candidates with numbered families in `StegVerse-Labs/Patents`. Dedicated family handoffs and immutable first-party evidence control when they are more specific.
 
 Companion sources:
 
 ```text
 PATENTS_MIRROR_HANDOFF.md
-GCAT-BCAT-Engine/Publisher/docs/PUBLISHER_MIRROR_HANDOFF.md
 data/publisher-family-completion-status.json
 reviews/PUBLISHER_FAMILY_READINESS_MATRIX_2026-07-28.md
 reviews/PUBLISHER_FAMILY_NONLEGAL_OVERLAP_MATRIX_2026-07-28.md
@@ -17,67 +16,45 @@ data/thread-archive-custody-status.json
 
 ## Governing objective
 
-Move every Publisher-origin family into one explicit controlled state: mapped to an existing numbered family, registered as a new family, dependent embodiment, continuation candidate, retained as trade secret, defensively published, deferred for evidence, abandoned, or filed after explicit authorization. No family may be silently merged, omitted, published, abandoned, or treated as covered.
+Every Publisher-origin candidate must remain in an explicit controlled state until practitioner and owner disposition. No candidate may be silently merged, omitted, published, abandoned, or treated as covered by another family.
 
-## Current family records
+## Controlled candidates
 
 ### Commit-Time Admissibility Gate
 
 ```text
-status: working disclosure, abstract, figure plan, and chronology intake complete; executable implementation blocked
-evidence inventory: evidence/PUBLISHER-commit-time-admissibility-source-inventory.md
-limitation map: evidence/PUBLISHER-commit-time-admissibility-limitation-mapping.md
+dedicated handoff: COMMIT_TIME_ADMISSIBILITY_MIRROR_HANDOFF.md
 status record: data/publisher-commit-time-admissibility-evidence-status.json
-working disclosure: reviews/PUBLISHER-commit-time-admissibility-technical-disclosure.md
-abstract and figure plan: reviews/PUBLISHER-commit-time-admissibility-abstract-and-figure-plan.md
-chronology intake: evidence/PUBLISHER-commit-time-admissibility-chronology.md
-primary blocker: canonical executable triage implementation, authoritative traces and tests, populated chronology, contributors, and legal disposition
-approval required now: false
+status: bounded disclosure, limitation map, abstract, figure plan, and chronology intake complete; executable implementation blocked
+primary blocker: canonical executable triage, retained traces, chronology, contributors, and legal disposition
 ```
 
 ### Receipt-Based State Transition Validation
 
 ```text
-status: working disclosure, abstract, figure plan, chronology intake, and non-legal distinction notes complete; executable implementation blocked
-evidence inventory: evidence/PUBLISHER-receipt-based-state-transition-source-inventory.md
+dedicated handoff: RECEIPT_BASED_STATE_TRANSITION_MIRROR_HANDOFF.md
 status record: data/publisher-receipt-based-state-transition-status.json
-working disclosure: reviews/PUBLISHER-receipt-based-state-transition-technical-disclosure.md
-abstract and figure plan: reviews/PUBLISHER-receipt-based-state-transition-abstract-and-figure-plan.md
-chronology intake: evidence/PUBLISHER-receipt-based-state-transition-chronology.md
-non-legal distinction notes: reviews/PUBLISHER-receipt-based-state-transition-nonlegal-distinction-notes.md
-action packet: reviews/PUBLISHER-receipt-based-state-transition-action-packet.md
-primary blocker: canonical receipt generator and validator paths, retained runtime outputs, populated chronology, contributors, and legal disposition
-approval required now: false
+status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, and distinction notes complete; executable implementation blocked
+primary blocker: canonical receipt generator and validator, runtime outputs, chronology, contributors, and legal disposition
 ```
 
 ### Publisher Governed Disclosure Pipeline
 
 ```text
-status: working disclosure, limitation map, abstract, figure plan, chronology intake, and non-legal distinction notes complete; generalized pipeline blocked
+dedicated handoff: PUBLISHER_GOVERNED_DISCLOSURE_PIPELINE_MIRROR_HANDOFF.md
 status record: data/publisher-governed-disclosure-pipeline-status.json
-limitation map: evidence/PUBLISHER-governed-disclosure-pipeline-limitation-map.md
-working disclosure: reviews/PUBLISHER-governed-disclosure-pipeline-technical-disclosure.md
-abstract and figure plan: reviews/PUBLISHER-governed-disclosure-pipeline-abstract-and-figure-plan.md
-chronology intake: evidence/PUBLISHER-governed-disclosure-pipeline-chronology.md
-non-legal distinction notes: reviews/PUBLISHER-governed-disclosure-pipeline-nonlegal-distinction-notes.md
-action packet: reviews/PUBLISHER-governed-disclosure-pipeline-action-packet.md
+status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, and distinction notes complete; generalized pipeline blocked
 verified executable source repository: GCAT-BCAT-Engine/Publisher
-primary blocker: generalized disclosure and publication schemas, redaction or secrecy controls, closure and authorization receipts, retained runtime traces, populated chronology, contributors, and legal disposition
-approval required now: false
+primary blocker: generalized disclosure and publication schemas, redaction controls, closure and authorization receipts, retained traces, chronology, contributors, and legal disposition
 ```
 
 ### Application Correction Gate
 
 ```text
-status: chronology intake and bounded non-legal distinction notes complete; direct family source pending
+dedicated handoff: APPLICATION_CORRECTION_GATE_MIRROR_HANDOFF.md
 status record: data/publisher-application-correction-gate-status.json
-evidence review: evidence/PUBLISHER-application-correction-gate-source-candidate-review-2026-07-28.md
-chronology intake: evidence/PUBLISHER-application-correction-gate-chronology.md
-non-legal distinction notes: reviews/PUBLISHER-application-correction-gate-nonlegal-distinction-notes.md
-action packet: reviews/PUBLISHER-application-correction-gate-action-packet.md
-verified adjacency source: StegVerse-Labs/hybrid-collab-bridge/docs/AI-Entity-Governance-Rules.md
-primary blocker: no direct first-party source defining the complete application-state correction gate, corrected-state representation, receipt relationship, and supersession or rollback behavior
-approval required now: false
+status: chronology intake, source-candidate review, and bounded distinction notes complete; direct family source pending
+primary blocker: complete corrected-state representation, correction authority, receipt relationship, revalidation, supersession, and rollback behavior
 ```
 
 A specification, abstract, and drawings remain intentionally unwritten because direct support for the complete corrected-state combination has not been verified.
@@ -85,77 +62,57 @@ A specification, abstract, and drawings remain intentionally unwritten because d
 ### AI Output-to-Action Boundary
 
 ```text
-status: working technical disclosure complete; generalized combination blocked
-evidence inventory: evidence/PUBLISHER-ai-output-to-action-source-inventory.md
+dedicated handoff: AI_OUTPUT_TO_ACTION_MIRROR_HANDOFF.md
 status record: data/publisher-ai-output-to-action-boundary-status.json
-working disclosure: reviews/PUBLISHER-ai-output-to-action-technical-disclosure.md
-action packet: reviews/PUBLISHER-ai-output-to-action-action-packet.md
-primary blocker: generalized action-request, authority-transition, execution-grant, chronology, contributors, and legal disposition evidence
-approval required now: false
+status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, and overlap notes complete; generalized transition blocked
+primary blocker: general output object, canonical action request, authority grant lifecycle, tool-specific execution grant, negative traces, chronology, contributors, and legal disposition
 ```
 
 ### Recoverability-Aware Execution Boundary
 
 ```text
-status: working disclosure, abstract, figure plan, chronology intake, limitation map, overlap notes, and adjacent-artifact inspection complete; direct executable implementation blocked
-evidence inventory: evidence/PUBLISHER-recoverability-aware-execution-source-inventory.md
-limitation map: evidence/PUBLISHER-recoverability-aware-execution-limitation-map.md
-status record: data/publisher-recoverability-aware-execution-status.json
-working disclosure: reviews/PUBLISHER-recoverability-aware-execution-technical-disclosure.md
-abstract and figure plan: reviews/PUBLISHER-recoverability-aware-execution-abstract-and-figure-plan.md
-chronology intake: evidence/PUBLISHER-recoverability-aware-execution-chronology.md
-non-legal overlap notes: reviews/PUBLISHER-recoverability-aware-execution-nonlegal-overlap-notes.md
-adjacent artifact inspection: evidence/PUBLISHER-recoverability-aware-execution-rtg001-artifact-watch-2026-07-29.md
 dedicated handoff: RECOVERABILITY_AWARE_EXECUTION_MIRROR_HANDOFF.md
-action packet: reviews/PUBLISHER-recoverability-aware-execution-action-packet.md
-primary blocker: canonical executable source, runtime decision traces, calibration provenance, populated chronology, contributors, and legal family boundary
-approval required now: false
+status record: data/publisher-recoverability-aware-execution-status.json
+status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, overlap notes, and adjacent-artifact inspection complete; direct executable implementation blocked
+primary blocker: canonical executable controller, runtime decision traces, calibration provenance, chronology, contributors, and legal family boundary
 ```
-
-The RTG-001 workflow artifact is inspected adjacent staged-analysis output. It does not establish a recoverability controller, runtime decision, RTG state update, theorem correctness, or direct family support.
 
 ### Master-Records Reconstruction and Verification
 
 ```text
-status: limitation map, abstract, figure plan, and chronology template complete; production reconstruction blocked
-source identity resolution: evidence/PUBLISHER_MASTER_RECORDS_SOURCE_IDENTITY_RESOLUTION.md
-evidence inventory: evidence/PUBLISHER-master-records-reconstruction-source-inventory.md
-limitation map: evidence/PUBLISHER-master-records-reconstruction-limitation-map.md
+dedicated handoff: MASTER_RECORDS_RECONSTRUCTION_VERIFICATION_MIRROR_HANDOFF.md
 status record: data/publisher-master-records-reconstruction-status.json
-working disclosure: reviews/PUBLISHER-master-records-reconstruction-technical-disclosure.md
-abstract and figure plan: reviews/PUBLISHER-master-records-reconstruction-abstract-and-figure-plan.md
-chronology intake: evidence/PUBLISHER-master-records-reconstruction-chronology.md
-action packet: reviews/PUBLISHER-master-records-reconstruction-action-packet.md
+status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, and overlap notes complete; production reconstruction blocked
 verified implementation source: master-records/core-lite
-primary blocker: authoritative execution outputs, SPE-side verification, production custody and reconstruction behavior, chronology, contributors, and legal family disposition
-approval required now: false
+primary blocker: SPE-side independent verification, source-record generation, production custody, rollback, conflict handling, reconstruction traces, chronology, contributors, and legal disposition
 ```
 
 ### Multi-Entity Observer-Participant Admissibility
 
 ```text
-status: working disclosure, abstract, figure plan, chronology template, and non-legal distinction notes complete; implementation blocked
-evidence inventory: evidence/PUBLISHER-multi-entity-observer-participant-source-inventory.md
+dedicated handoff: MULTI_ENTITY_OBSERVER_PARTICIPANT_MIRROR_HANDOFF.md
 status record: data/publisher-multi-entity-observer-participant-status.json
-action packet: reviews/PUBLISHER-multi-entity-observer-participant-action-packet.md
-primary blocker: dedicated observer-participant protocol, executable implementation, populated chronology, and contributors
-approval required now: false
+status: bounded disclosure, limitation map, abstract, figure plan, chronology template, and distinction notes complete; executable protocol blocked
+primary blocker: canonical observer-participant protocol, role and authority schema, coherence and reconciliation runtime, retained traces, chronology, contributors, and legal disposition
 ```
 
 ## Central synchronization state
 
 ```text
 data/publisher-family-completion-status.json
-schema_version: 0.6
-reconciled_utc: 2026-07-29T13:44:00Z
+schema_version: 0.7
+blob: 2e520cf08068b6e429d7b75a348e4a5a41fbb162
+reconciled_utc: 2026-07-30T00:03:00Z
+controlled candidates: 8
+dedicated handoffs present: 8
 ```
 
-The central ledger reflects the current dedicated lifecycle records for all eight Publisher families across invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline.
+The central ledger now reflects the latest bounded lifecycle records for all eight candidates across invention capture, disclosure chronology, evidence map, non-legal distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline.
 
 ## Filing and deadline invariant
 
 ```text
-all families: unfiled
+all Publisher candidates: unfiled
 all application numbers: null
 all filing receipts: null
 all actual filing dates: null
@@ -165,43 +122,28 @@ patent pending authorization: false
 ready for owner decision: 0
 ```
 
-No deadline may be calculated from a draft date, repository commit, conversation timestamp, correspondence export, assumed submission, or packet-generation date.
+No deadline may be calculated from a draft date, repository commit, conversation timestamp, packet-generation date, or assumed submission.
 
-`PAT-005` remains the urgent disclosure-review candidate because the root handoff records a public technical-paper date of 2026-07-13. That date does not itself establish an enabling disclosure, statutory deadline, or foreign-filing consequence.
+`PAT-005` remains the urgent disclosure-review candidate because `PATENTS_MIRROR_HANDOFF.md` records a public technical-paper date of 2026-07-13. That date does not itself establish an enabling disclosure, statutory deadline, or foreign-filing consequence.
 
-## Issue and pull-request state
+## Next bounded machine work
 
-Last verified state:
-
-```text
-StegVerse-Labs/Patents issue #1: open
-StegVerse-Labs/patent-registry issue #1: open
-open patent-related pull requests across Patents, patent-registry, and Publisher: none found
-```
-
-Direct commits require later authoritative validation before release or filing-packet authorization.
-
-## Next machine work
-
-1. Refresh the patent-registry exact-hash snapshot for ledger schema `0.6` and this handoff.
-2. Perform the bounded status-only registry import or produce a deterministic refusal receipt.
-3. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
-4. Locate canonical executable receipt generation, validation, reconstruction, tests, fixtures, and retained outputs for Receipt-Based State Transition Validation.
-5. Locate generalized disclosure and publication schemas, redaction controls, closure or authorization receipts, and retained traces for Publisher Governed Disclosure Pipeline.
-6. Locate canonical executable and trace sources for Recoverability-Aware Execution Boundary and Commit-Time Admissibility Gate.
-7. Locate direct first-party sources for Application Correction Gate and generalized AI Output-to-Action behavior.
-8. Run and preserve authoritative filing-state validation receipts when a permitted dispatcher is available.
-9. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
+1. Refresh the patent-registry exact-hash snapshot for Publisher ledger schema `0.7` and this handoff.
+2. Run the Patents filing-state and Publisher reconciliation tests through an authoritative dispatcher and preserve receipts.
+3. Run the patent-registry tests and bounded status-only importer or preserve deterministic refusal receipts.
+4. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
+5. Locate canonical executable and retained runtime evidence for each implementation-blocked Publisher family.
+6. Preserve active-thread status until orchestration custody is demonstrated by ingestion, task extraction, assignment, accepted-custody, and continuation receipts.
 
 ## Human and legal boundary
 
 Automation must stop before legal family mapping, inventorship determination, ownership conclusion, patentability opinion, legal disclosure-consequence determination, trade-secret or defensive-publication election, filing authorization, or Patent Center submission, certification, signing, or payment.
 
-Owner approval is requested only when a family reaches `READY_FOR_OWNER_DECISION` after technical drafting, chronology, contributor facts, counsel inventorship and ownership conclusions, counsel family and filing recommendation, and technical warning resolution are present.
+Owner approval is requested only after technical warnings, factual chronology, contributor records, practitioner recommendations, inventorship and ownership conclusions, and filing strategy are present.
 
 ## Required ecosystem updates
 
-After an explicit filing, trade-secret, defensive-publication, abandonment, tag, or release decision, verify bounded status propagation to:
+After an explicit filing, trade-secret, defensive-publication, abandonment, tag, or release decision, verify bounded propagation to:
 
 ```text
 StegVerse-Labs/Site
@@ -214,14 +156,6 @@ Do not expose unpublished claims, contributor disputes, counsel advice, or unfil
 
 ## Thread archive and orchestration custody
 
-Machine-readable source:
-
-```text
-data/thread-archive-custody-status.json
-```
-
-Repository continuation state is preserved, but orchestration custody is not demonstrated. No verified orchestration ingestion receipt, task extraction manifest, assignment receipt, accepted-custody timestamp, or continuation checkpoint exists.
-
 ```text
 repository continuation state preserved: true
 orchestration custody accepted: false
@@ -229,4 +163,4 @@ thread ready to archive: false
 active working thread still required: true
 ```
 
-No Publisher-family handoff may state that the prior conversation is unnecessary or that the thread is ready to archive until the required orchestration evidence is committed and verified.
+No handoff may claim archive readiness until a verified ingestion receipt, source hash, task-extraction manifest, assignment receipt, orchestrator identity and version, accepted-custody timestamp, and continuation checkpoint are committed and verified.
