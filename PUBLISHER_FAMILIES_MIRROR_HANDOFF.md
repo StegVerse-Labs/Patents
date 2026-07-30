@@ -9,6 +9,7 @@ Companion sources:
 ```text
 PATENTS_MIRROR_HANDOFF.md
 data/publisher-family-completion-status.json
+data/publisher-family-central-ledger-reconciliation-delta-2026-07-30T2000Z.json
 reviews/PUBLISHER_FAMILY_READINESS_MATRIX_2026-07-28.md
 reviews/PUBLISHER_FAMILY_NONLEGAL_OVERLAP_MATRIX_2026-07-28.md
 data/thread-archive-custody-status.json
@@ -62,6 +63,8 @@ A specification, abstract, and drawings remain intentionally unwritten because d
 ```text
 dedicated handoff: AI_OUTPUT_TO_ACTION_BOUNDARY_MIRROR_HANDOFF.md
 status record: data/publisher-ai-output-to-action-boundary-status.json
+status schema: 1.2.1
+status blob: ce8cb2386feaf2d5d4de750862ff9419b7eb61fa
 status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, overlap notes, and dedicated handoff complete; generalized transition blocked
 verified bounded executable source: GCAT-BCAT-Engine/Publisher/scripts/import_ecosystem_chat_activation.py
 primary blocker: general output object, canonical action request, authority-grant lifecycle, tool-specific execution grant, negative traces, chronology, contributors, and legal disposition
@@ -81,9 +84,12 @@ primary blocker: canonical executable controller, runtime decision traces, calib
 ```text
 dedicated handoff: MASTER_RECORDS_RECONSTRUCTION_VERIFICATION_MIRROR_HANDOFF.md
 status record: data/publisher-master-records-reconstruction-status.json
-status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, and overlap notes complete; production reconstruction blocked
+status schema: 1.3.1
+status blob: cfd05ef798993403936d849dba250368f790df74
+status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, overlap notes, and reciprocal-verifier search complete; independent verification and production reconstruction blocked
 verified implementation source: master-records/core-lite
-primary blocker: SPE-side independent verification, source-record generation, production custody, rollback, conflict handling, reconstruction traces, chronology, contributors, and legal disposition
+verified reciprocal package: StegVerse-Labs/admissibility-wiki/docs/external-frameworks/decisionassure-pilot/
+primary blocker: independent SPE-side or reciprocal verification output, source-record generation, production custody, rollback, conflict handling, reconstruction traces, chronology, contributors, and legal disposition
 ```
 
 ### Multi-Entity Observer-Participant Admissibility
@@ -91,8 +97,10 @@ primary blocker: SPE-side independent verification, source-record generation, pr
 ```text
 dedicated handoff: MULTI_ENTITY_OBSERVER_PARTICIPANT_MIRROR_HANDOFF.md
 status record: data/publisher-multi-entity-observer-participant-status.json
-status: bounded disclosure, limitation map, abstract, figure plan, chronology template, and distinction notes complete; executable protocol blocked
-primary blocker: canonical observer-participant protocol, role and authority schema, coherence and reconciliation runtime, retained traces, chronology, contributors, and legal disposition
+status schema: 1.3.1
+status blob: 7124f8ee58e33475cf1cf3dd64fe7d38cfdac411
+status: bounded disclosure, limitation map, abstract, figure plan, chronology template, distinction notes, and internal overlap report complete; executable protocol blocked
+primary blocker: canonical observer-participant protocol, role and authority schema, coherence and reconciliation runtime, retained traces, chronology, contributors, external prior-art review, and legal disposition
 ```
 
 ## Central synchronization state
@@ -100,14 +108,17 @@ primary blocker: canonical observer-participant protocol, role and authority sch
 ```text
 controlled candidates: 8
 dedicated handoffs present: 8
-AI Output-to-Action dedicated handoff installed: true
-AI Output-to-Action machine status schema: 1.2.1
 central completion ledger: data/publisher-family-completion-status.json
-central ledger reconciliation required after current handoff/status changes: true
+central ledger current schema: 0.7
+central ledger current blob: 2e520cf08068b6e429d7b75a348e4a5a41fbb162
+reconciliation delta: data/publisher-family-central-ledger-reconciliation-delta-2026-07-30T2000Z.json
+reconciliation delta commit: 1182bb68320f3be57bbbcee596f9096cbb135c94
+central ledger rewrite required: true
+authoritative reconciliation validation required: true
 patent-registry exact-hash snapshot refresh required: true
 ```
 
-The central completion ledger must be refreshed before it is treated as current because the AI Output-to-Action dedicated handoff and status record changed in this continuation.
+The reconciliation delta identifies exact source records, immutable blobs, and required field changes for AI Output-to-Action Boundary, Master-Records Reconstruction and Verification, and Multi-Entity Observer-Participant Admissibility. It preserves all filing and deadline invariants. The central ledger remains stale until it is rewritten from the current dedicated records and validated through an authoritative dispatcher.
 
 ## Filing and deadline invariant
 
@@ -128,12 +139,13 @@ No deadline may be calculated from a draft date, repository commit, conversation
 
 ## Next bounded machine work
 
-1. Reconcile `data/publisher-family-completion-status.json` with all current dedicated handoffs and family status records.
-2. Refresh the patent-registry exact-hash snapshot for the reconciled Publisher ledger and this handoff.
-3. Run Patents filing-state and Publisher reconciliation checks through an authoritative dispatcher and preserve receipts.
-4. Continue PAT-005 factual disclosure, contributor, drawing-review, practitioner, and owner-decision preparation.
-5. Locate canonical executable and retained runtime evidence for each implementation-blocked Publisher family.
-6. Preserve active-thread status until orchestration custody is demonstrated by ingestion, task extraction, assignment, accepted-custody, and continuation receipts.
+1. Rewrite `data/publisher-family-completion-status.json` from the current dedicated status records using the committed reconciliation delta.
+2. Run Publisher reconciliation and filing-state checks through an authoritative dispatcher and preserve receipts.
+3. Refresh the patent-registry exact-hash snapshot for the reconciled Publisher ledger and this handoff.
+4. Run the bounded registry status-only import or preserve a deterministic refusal receipt.
+5. Continue PAT-005 factual disclosure, contributor, drawing-review, practitioner, and owner-decision preparation.
+6. Locate canonical executable and retained runtime evidence for each implementation-blocked Publisher family.
+7. Preserve active-thread status until orchestration custody is demonstrated by ingestion, task extraction, assignment, accepted-custody, and continuation receipts.
 
 ## Human and legal boundary
 
