@@ -47,7 +47,7 @@ Admissible-Existence/core-lite README.md
 support: receipt-bound runtime integration
 ```
 
-A connected search of these repositories returned no heartbeat-specific match during the current review. This negative result does not prove absence from repository history or from unindexed files.
+A dated connected-repository source search was preserved at `evidence/PAT-002-source-search-receipt-2026-07-30.md`. It located no indexed first-party implementation, schema, workflow, test, retained output, receipt generator, or validator for the complete heartbeat/reflected-state combination. This negative result does not prove absence from repository history, unindexed files, disconnected repositories, or retained material outside GitHub.
 
 ## Completed preparation artifacts
 
@@ -59,6 +59,7 @@ evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md
 evidence/PAT-002_SOURCE_IDENTITY_BLOCKER.md
 evidence/PAT-002_SOURCE_IDENTITY_RESOLUTION.md
 data/PAT-002-source-anchor-manifest-2026-07-28.json
+evidence/PAT-002-source-search-receipt-2026-07-30.md
 evidence/PAT-002_DISCLOSURE_CHRONOLOGY.md
 reviews/PAT-002_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md
 ```
@@ -80,7 +81,7 @@ reviews/PAT-002_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md
 
 Application: PAT-002
 
-Current stage: structured review preparation with general formal anchors and factual intake surfaces complete.
+Current stage: structured review preparation with general formal anchors, factual intake surfaces, and a dated bounded source-search receipt complete.
 
 Automation stopped because the complete heartbeat/reflected-state combination cannot be drafted as implemented or supported without exact first-party sources.
 
@@ -136,4 +137,4 @@ nonprovisional deadline: null
 
 ## Current decision
 
-`FAIL_CLOSED_HEARTBEAT_REFLECTED_STATE_CHRONOLOGY_AND_FAMILY_REVIEW_BLOCKERS`
+`FAIL_CLOSED_HEARTBEAT_REFLECTED_STATE_DIRECT_SOURCE_REQUIRED`
