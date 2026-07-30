@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.1.1",
   "family_id": "PAT-005",
   "family_name": "Governed Device Continuity and Destination-Bound Hardware Abstraction",
   "source_of_truth": "PAT-005_MIRROR_HANDOFF.md",
   "portfolio_source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
   "dedicated_mirror_handoff": true,
-  "status": "practitioner_review_ready",
+  "status": "practitioner_review_ready_with_public_disclosure_factual_intake_installed",
   "filed": false,
   "patent_pending_authorized": false,
   "completed": {
@@ -25,6 +25,7 @@
     "initial_prior_art_collision_chart": true,
     "limitation_level_claim_chart": true,
     "conception_chronology_worksheet": true,
+    "public_disclosure_audit_intake": true,
     "inventorship_worksheet": true,
     "contributor_interview_packet": true,
     "practitioner_handoff": true,
@@ -55,6 +56,7 @@
     "initial_prior_art_collision_chart": "prior-art/PAT-005-initial-collision-chart.md",
     "limitation_level_claim_chart": "prior-art/PAT-005-limitation-claim-chart.md",
     "conception_chronology_worksheet": "evidence/PAT-005-conception-chronology.md",
+    "public_disclosure_audit_intake": "evidence/PAT-005-public-disclosure-audit.md",
     "inventorship_worksheet": "inventorship/PAT-005-claim-contribution-worksheet.md",
     "contributor_interview_packet": "inventorship/PAT-005-contributor-interview-packet.md",
     "practitioner_handoff": "reviews/PAT-005-practitioner-handoff.md",
@@ -73,6 +75,7 @@
     "contributor_interviews_complete": false,
     "inventorship_determined": false,
     "ownership_confirmed": false,
+    "public_disclosure_audit_intake_present": true,
     "earliest_public_disclosure_audited": false,
     "executable_negative_fixtures_preserved": true,
     "formal_drawings_approved": false,
@@ -93,32 +96,35 @@
   },
   "disclosure_risk": {
     "tracked_public_technical_paper_date": "2026-07-13",
+    "factual_audit_intake_path": "evidence/PAT-005-public-disclosure-audit.md",
+    "factual_audit_complete": false,
     "earliest_enabling_disclosure_confirmed": false,
     "legal_consequence_determined": false,
     "deadline_calculated": false,
     "current_posture": "URGENT_FACTUAL_AUDIT_AND_PRACTITIONER_REVIEW_REQUIRED"
   },
   "required_pre_filing_outputs": [
-    "evidence/PAT-005-public-disclosure-audit.md",
+    "evidence/PAT-005-public-disclosure-audit.md (present but factually incomplete)",
     "inventorship/PAT-005-inventorship-determination.md",
     "reviews/PAT-005-practitioner-recommendation.md",
     "diagrams/PAT-005-drawing-approval.md",
     "reviews/PAT-005-owner-decision.md"
   ],
-  "expected_decision": "FAIL_CLOSED_BLOCKERS",
+  "expected_decision": "FAIL_CLOSED_FACTUAL_DISCLOSURE_EVIDENCE_AND_AUTHORITY_GATES",
   "next_machine_tasks": [
-    "verify all completed technical artifacts against the dedicated handoff",
-    "emit a PAT-005 readiness manifest that preserves the five authority-gated outputs as absent",
-    "populate stable prior art publication identifiers only after verified search",
+    "verify supplied disclosure-event identifiers hashes dates versions and access evidence",
+    "populate limitation-level factual disclosure mappings only from supplied source records",
+    "prepare a non-privileged counsel evidence index after factual intake is populated",
+    "reconcile the readiness manifest after each authority-gated output changes",
     "run the canonical portfolio entry point through the authoritative execution path"
   ],
   "next_human_tasks": [
+    "populate evidence/PAT-005-public-disclosure-audit.md with exact publication identity timing access and source records",
     "conduct contributor interviews",
-    "audit public disclosures factually",
     "obtain claim-by-claim inventorship and ownership review",
-    "obtain qualified patent practitioner review",
+    "obtain qualified patent practitioner disclosure and filing review",
     "record drawing approval",
     "record explicit owner disposition"
   ],
-  "legal_notice": "Working technical portfolio status only. Exact source, destination, Guardian, and replayed negative-case evidence supports technical review but does not determine inventorship, ownership, patentability, disclosure consequences, filing authority, or patent-pending status. Negative replay evidence is derived from anchored validator semantics and is not a production execution receipt. No deadline is calculated without an actual verified filing event."
+  "legal_notice": "Working technical portfolio status only. Exact source, destination, Guardian, and replayed negative-case evidence supports technical review but does not determine inventorship, ownership, patentability, disclosure consequences, filing authority, or patent-pending status. The public-disclosure audit file is a factual intake surface and is not a legal conclusion. No deadline is calculated without an attributable practitioner basis or an actual verified filing event, as applicable."
 }
