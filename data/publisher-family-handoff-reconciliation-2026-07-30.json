@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "generated_date": "2026-07-30",
+  "repository": "StegVerse-Labs/Patents",
+  "purpose": "Non-destructive reconciliation of dedicated Publisher-family handoffs against the canonical Publisher-family summary and central lifecycle ledger.",
+  "source_of_truth": {
+    "path": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
+    "blob_sha": "54fbc7e815f6999b0882589e3624fbbd4b7338ba"
+  },
+  "central_ledger": {
+    "path": "data/publisher-family-completion-status.json",
+    "schema_version": "0.6",
+    "blob_sha": "de496c967abc03848c190a6af48dc62d8398f794",
+    "reconciliation_state": "STALE_RELATIVE_TO_DEDICATED_HANDOFFS",
+    "canonical_rewrite_performed": false
+  },
+  "families": [
+    {
+      "family_key": "commit_time_admissibility_gate",
+      "title": "Commit-Time Admissibility Gate",
+      "dedicated_handoff": "COMMIT_TIME_ADMISSIBILITY_MIRROR_HANDOFF.md",
+      "canonical_ledger_merge_required": true
+    },
+    {
+      "family_key": "receipt_based_state_transition_validation",
+      "title": "Receipt-Based State Transition Validation",
+      "dedicated_handoff": "RECEIPT_BASED_STATE_TRANSITION_MIRROR_HANDOFF.md",
+      "canonical_ledger_merge_required": true
+    },
+    {
+      "family_key": "publisher_governed_disclosure_pipeline",
+      "title": "Publisher Governed Disclosure Pipeline",
+      "dedicated_handoff": "PUBLISHER_GOVERNED_DISCLOSURE_PIPELINE_MIRROR_HANDOFF.md",
+      "canonical_ledger_merge_required": true,
+      "status_delta": "data/publisher-governed-disclosure-pipeline-status-delta-2026-07-30T0055Z.json"
+    },
+    {
+      "family_key": "application_correction_gate",
+      "title": "Application Correction Gate",
+      "dedicated_handoff": "APPLICATION_CORRECTION_GATE_MIRROR_HANDOFF.md",
+      "canonical_ledger_merge_required": true
+    },
+    {
+      "family_key": "ai_output_to_action_boundary",
+      "title": "AI Output-to-Action Boundary",
+      "dedicated_handoff": "AI_OUTPUT_TO_ACTION_MIRROR_HANDOFF.md",
+      "canonical_ledger_merge_required": true,
+      "status_delta": "data/publisher-family-reconciliation-delta-ai-output-to-action-2026-07-29T1504Z.json"
+    },
+    {
+      "family_key": "recoverability_aware_execution_boundary",
+      "title": "Recoverability-Aware Execution Boundary",
+      "dedicated_handoff": "RECOVERABILITY_AWARE_EXECUTION_MIRROR_HANDOFF.md",
+      "canonical_ledger_merge_required": false
+    },
+    {
+      "family_key": "master_records_reconstruction_and_verification",
+      "title": "Master-Records Reconstruction and Verification",
+      "dedicated_handoff": "MASTER_RECORDS_RECONSTRUCTION_VERIFICATION_MIRROR_HANDOFF.md",
+      "canonical_ledger_merge_required": true,
+      "status_delta": "data/publisher-master-records-reconstruction-status-delta-2026-07-29T2023-0500.json"
+    },
+    {
+      "family_key": "multi_entity_observer_participant_admissibility",
+      "title": "Multi-Entity Observer-Participant Admissibility",
+      "dedicated_handoff": "MULTI_ENTITY_OBSERVER_PARTICIPANT_MIRROR_HANDOFF.md",
+      "canonical_ledger_merge_required": true
+    }
+  ],
+  "coverage": {
+    "tracked_publisher_families": 8,
+    "dedicated_handoffs_present": 8,
+    "dedicated_handoff_coverage_complete": true,
+    "families_requiring_canonical_ledger_merge": 7
+  },
+  "portfolio_invariants": {
+    "filed_families": 0,
+    "patent_pending_authorized_families": 0,
+    "application_numbers_recorded": 0,
+    "filing_receipts_recorded": 0,
+    "actual_filing_dates_recorded": 0,
+    "calculated_nonprovisional_deadlines": 0,
+    "ready_for_owner_decision": 0
+  },
+  "next_machine_actions": [
+    "verify each dedicated handoff blob immediately before canonical merge",
+    "apply family-specific status deltas without weakening lifecycle fields",
+    "advance publisher-family-completion-status schema only after deterministic merge validation",
+    "refresh PUBLISHER_FAMILIES_MIRROR_HANDOFF.md references and reconciliation timestamp",
+    "refresh patent-registry approved-source snapshot after canonical Patents reconciliation",
+    "run registry tests and status-only importer through an authoritative dispatcher",
+    "preserve synchronization or deterministic refusal receipt"
+  ],
+  "legal_notice": "Technical reconciliation only. This manifest does not determine inventorship, ownership, patentability, priority, legal family relationship, disclosure consequence, filing strategy, filing authority, filing status, application number, receipt, or deadline."
+}
