@@ -26,6 +26,18 @@ data/portfolio-completion-status.json
 
 Current schema version: `0.5`.
 
+## Numbered-family source-of-truth map
+
+```text
+PAT-001: PATENTS_MIRROR_HANDOFF.md (portfolio-governed until a dedicated handoff is installed)
+PAT-002: PAT-002_MIRROR_HANDOFF.md
+PAT-003: PAT-003_MIRROR_HANDOFF.md
+PAT-004: PAT-004_MIRROR_HANDOFF.md
+PAT-005: PAT-005_MIRROR_HANDOFF.md
+```
+
+Each dedicated family handoff governs bounded continuation for that family. This root handoff governs portfolio ordering, filing-state invariants, cross-family disposition boundaries, registry synchronization inputs, and ecosystem propagation rules.
+
 ## Numbered-family state
 
 ### PAT-001
@@ -43,6 +55,7 @@ filing packet: not authorized
 
 ```text
 status: structured_review_preparation_with_blockers
+family handoff: PAT-002_MIRROR_HANDOFF.md
 status record: data/PAT-002-completion-status.json
 readiness index: filing-readiness/PAT-002_FILING_READINESS_INDEX.md
 action packet: reviews/PAT-002-human-action-packet.md
@@ -52,6 +65,7 @@ action packet: reviews/PAT-002-human-action-packet.md
 
 ```text
 status: structured_review_preparation_with_blockers
+family handoff: PAT-003_MIRROR_HANDOFF.md
 status record: data/PAT-003-completion-status.json
 readiness index: filing-readiness/PAT-003_FILING_READINESS_INDEX.md
 action packet: reviews/PAT-003-human-action-packet.md
@@ -61,6 +75,7 @@ action packet: reviews/PAT-003-human-action-packet.md
 
 ```text
 status: structured_review_preparation_with_blockers
+family handoff: PAT-004_MIRROR_HANDOFF.md
 status record: data/PAT-004-completion-status.json
 readiness index: filing-readiness/PAT-004_FILING_READINESS_INDEX.md
 action packet: reviews/PAT-004-human-action-packet.md
@@ -72,13 +87,26 @@ The PAT-004 structured family record defines an inventive center, technical prob
 
 ```text
 status: practitioner_review_ready
+family handoff: PAT-005_MIRROR_HANDOFF.md
+status record: data/PAT-005-completion-status.json
+readiness manifest: data/PAT-005-readiness-manifest-2026-07-30.json
 filed: false
 patent pending authorized: false
 expected decision: FAIL_CLOSED_BLOCKERS
 human action packet: reviews/PAT-005-human-action-packet.md
 ```
 
-The PAT-005 technical package includes its disclosure, working provisional, claim architecture, evidence maps, drawings, prior-art working charts, conception and contribution worksheets, practitioner handoff, validators, executable negative-case records, and a Steps 1–4 pre-owner preparation pipeline. It remains blocked by verified prior-art references, attributable contributor facts, inventorship, completed disclosure audit, authorized drawing approval, practitioner recommendation, and explicit owner filing authorization.
+The PAT-005 technical package includes its disclosure, working provisional, claim architecture, evidence maps, drawings, prior-art working charts, conception and contribution worksheets, practitioner handoff, validators, executable negative-case records, and a Steps 1–4 pre-owner preparation pipeline. Its dated readiness manifest verifies core repository artifacts and records the absence of the five authority-gated outputs. It remains blocked by verified prior-art references, attributable contributor facts, inventorship, completed disclosure audit, authorized drawing approval, practitioner recommendation, and explicit owner filing authorization.
+
+Required PAT-005 gate outputs remain:
+
+```text
+evidence/PAT-005-public-disclosure-audit.md
+inventorship/PAT-005-inventorship-determination.md
+reviews/PAT-005-practitioner-recommendation.md
+diagrams/PAT-005-drawing-approval.md
+reviews/PAT-005-owner-decision.md
+```
 
 ## Portfolio-wide ChatGPT correspondence intake
 
@@ -169,8 +197,9 @@ Authoritative dispatcher execution and preserved validation output remain pendin
 7. Locate verified PAT-004 source anchors and build its standalone disclosure and limitation evidence map while keeping supported and proposed embodiments distinct.
 8. Continue PAT-001 corroboration, drawing review outputs, and authoritative readiness validation.
 9. Preserve PAT-005 fail-closed status until the exact factual, practitioner, owner, and filing-human outputs are committed.
-10. Reconcile Publisher families through explicit controlled disposition records.
-11. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
+10. Reconcile the portfolio machine ledger and patent-registry approved-source snapshot to the current root handoff blob before the next authoritative status import.
+11. Reconcile Publisher families through explicit controlled disposition records.
+12. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
 
 ## Human-boundary protocol
 
