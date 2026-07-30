@@ -2,7 +2,7 @@
 
 ## Purpose and authority
 
-This file is the dedicated source of truth for the **Master-Records Reconstruction and Verification** invention candidate in `StegVerse-Labs/Patents`. It governs bounded technical preparation for this family. More specific immutable source artifacts and verified status records control if they conflict with this summary.
+This file is the dedicated source of truth for the **Master-Records Reconstruction and Verification** invention candidate in `StegVerse-Labs/Patents`. More specific immutable source artifacts and the current machine-readable status control if they conflict with this summary.
 
 Companion sources:
 
@@ -13,6 +13,7 @@ data/publisher-master-records-reconstruction-status.json
 evidence/PUBLISHER_MASTER_RECORDS_SOURCE_IDENTITY_RESOLUTION.md
 evidence/PUBLISHER-master-records-reconstruction-source-inventory.md
 evidence/PUBLISHER-master-records-reconstruction-limitation-map.md
+evidence/PUBLISHER-master-records-independent-verification-search-receipt-2026-07-30.md
 reviews/PUBLISHER-master-records-reconstruction-technical-disclosure.md
 reviews/PUBLISHER-master-records-reconstruction-abstract-and-figure-plan.md
 evidence/PUBLISHER-master-records-reconstruction-chronology.md
@@ -30,13 +31,13 @@ evidence map: bounded limitation-level map complete
 prior-art distinction notes: bounded non-legal overlap notes complete; verified external review pending
 specification: bounded working disclosure present; full specification incomplete
 abstract: working abstract complete
-claim themes: candidate limitation clusters present; not final
+claim themes: candidate limitation clusters present; not final claims
 drawings: figure plan complete; formal drawings blocked
 inventor fields: undetermined
 ownership fields: unconfirmed
 counsel questions: unresolved
 filing packet: not authorized
-warning resolution: open
+warning resolution: StegVerse reciprocal verifier located; independent and production blockers remain
 human filing: not started
 filing receipt: null
 application number: null
@@ -48,8 +49,6 @@ approval required now: false
 ```
 
 ## Verified bounded sources
-
-The current status record identifies the following first-party sources:
 
 ```text
 GCAT-BCAT-Engine/Publisher
@@ -71,9 +70,32 @@ master-records/core-lite
 master-records/core-lite
   tests/test_spe_mapping.py
   blob adf728776b36ddbe7b00818a44f230f6e14cdebd
+
+StegVerse-Labs/admissibility-wiki
+  docs/external-frameworks/decisionassure-pilot/README.md
+  blob 22c9d56addace5cc974a5e4dec1975e7c669e2a4
 ```
 
-These sources support bounded chain validation, schema mapping, receipt ordering, terminal consistency, provenance preservation, continuity references, and fail-closed verification. They do not establish the complete production reconstruction, custody, rollback, conflict-resolution, independent-verification, or legal-family combination.
+The first five sources support bounded chain validation, mapping, receipt ordering, terminal consistency, provenance preservation, continuity references, and fail-closed verification.
+
+The admissibility-wiki source identifies a complete StegVerse-authored reciprocal verifier package containing canonical policies, canonical delegations, a canonicalization specification, a revised trace, and a deterministic verifier that emits a verification receipt. That package expressly does not establish collaborator authorship, native external-verifier execution, general certification, or execution authority.
+
+## Verification classification
+
+```text
+StegVerse reciprocal verifier package located: true
+independently authored SPE-side verifier located: false
+independently retained SPE-side output located: false
+production reconstruction evidence located: false
+```
+
+Decision:
+
+```text
+FAIL_CLOSED_INDEPENDENT_VERIFICATION_PRODUCTION_RECONSTRUCTION_CHRONOLOGY_CONTRIBUTOR_AND_LEGAL_BLOCKERS
+```
+
+The bounded search result means no independent SPE-side verifier or output was located in the connected search. It does not prove absence from an external collaborator system, unconnected repository, unpublished archive, local device, expired artifact, or unindexed history.
 
 ## Source identity boundary
 
@@ -92,7 +114,8 @@ Do not infer a missing historical repository, succession relationship, ownership
 Automation remains blocked on verified first-party evidence for:
 
 ```text
-SPE-side independent verification output for the mapped sample
+independently authored SPE-side or reciprocal verifier
+retained independent verification output for the mapped sample
 source-record creation and canonical hash computation
 production custody retention
 supersession and rollback behavior
@@ -105,56 +128,73 @@ historical orchestration succession, if any
 
 Formal drawings and specification expansion may proceed only where newly verified evidence directly supports them.
 
-## Next bounded machine work
+## Exact action packet
 
-1. Locate and verify the canonical SPE-side verifier and retained output for the mapped sample.
-2. Locate source-record creation and canonical hash-computation implementation.
-3. Locate production custody, retention, supersession, rollback, conflict, and reconstruction sources.
-4. Preserve exact repository, commit, path, blob SHA, commands, stdout, stderr, exit code, timestamps, and output hashes.
-5. Preserve representative positive and negative traces under:
+**Application:** Publisher-origin Master-Records Reconstruction and Verification
+
+**Current stage:** bounded disclosure, limitation map, abstract, figure plan, chronology intake, overlap notes, core-lite verification sources, and a dated reciprocal-verifier search receipt complete.
+
+**Automation stopped because:** the located reciprocal package is StegVerse-authored and expressly does not prove independent external verification; production custody and reconstruction behavior also remain unverified.
+
+Provide an independently produced verifier or execution record containing:
+
+```text
+repository or storage identity
+exact path or object identifier
+commit SHA, blob SHA, or cryptographic hash
+author or producing-system identity
+execution timestamp
+command or invocation method
+input hashes
+stdout and stderr
+exit code
+output hash
+retained verification receipt
+```
+
+Provide production evidence, where it exists, for:
+
+```text
+source-record generation
+canonical hash computation
+custody and retention
+supersession
+rollback
+conflict detection and resolution
+reconstruction
+positive and negative runtime paths
+```
+
+Install implementation evidence under:
 
 ```text
 evidence/PUBLISHER-master-records-reconstruction-implementation/
-data/receipts/PUBLISHER-master-records-reconstruction/
 ```
 
-6. Expand the limitation map, disclosure, specification, and formal drawings only from verified support.
-7. Reconcile `data/publisher-master-records-reconstruction-status.json` and `data/publisher-family-completion-status.json`.
-8. Refresh the patent-registry approved-source snapshot and perform the bounded status-only import or preserve a deterministic refusal receipt.
-
-## Human factual action packet
-
-**Current stage:** bounded technical disclosure, limitation map, abstract, figure plan, chronology intake, and non-legal overlap notes complete; production reconstruction evidence blocked.
-
-**Automation stopped because:** contributor facts, dated conception and disclosure evidence, historical source succession, and production execution evidence are absent or unverified.
-
-Provide or identify:
+Install independent reciprocal outputs under:
 
 ```text
-factual contributor names and contribution descriptions
-dated conception records
-dated disclosure records
-public-disclosure records, if any
-historical master-records or orchestration repository identity, if any
-repository succession evidence, if any
-canonical SPE verification implementation and retained output
-production custody and reconstruction traces
+data/receipts/PUBLISHER-master-records-reconstruction/independent-verification/
 ```
 
-Place factual materials at:
+Install chronology evidence under:
+
+```text
+evidence/PUBLISHER-master-records-reconstruction-chronology-evidence/
+```
+
+Install contributor facts under:
 
 ```text
 inventorship/PUBLISHER-master-records-reconstruction-contributor-interviews.md
 inventorship/PUBLISHER-master-records-reconstruction-contribution-worksheet.md
-evidence/PUBLISHER-master-records-reconstruction-chronology-evidence/
-evidence/PUBLISHER_MASTER_RECORDS_SOURCE_IDENTITY_RESOLUTION.md
 ```
 
-Automation resumes with evidence hashing, limitation reconciliation, supported specification and drawing expansion, warning review, central-ledger synchronization, and registry synchronization.
+After those records are committed, automation resumes with immutable hashing, independent-verification classification, limitation reconciliation, negative-path review, supported specification and drawing expansion, warning review, central-ledger synchronization, and patent-registry synchronization.
 
-## Counsel decision packet
+## Counsel decision boundary
 
-Patent counsel must determine, and automation must not determine:
+Patent counsel must determine:
 
 ```text
 independent family versus dependent embodiment versus continuation candidate versus shared infrastructure
@@ -163,7 +203,7 @@ ownership and assignment status
 legal disclosure consequences
 claim support and enablement
 prior-art conclusions
-filing strategy
+filing or preservation strategy
 ```
 
 Save counsel advice at:
@@ -190,9 +230,7 @@ dispositions/PUBLISHER-master-records-reconstruction-owner-disposition.md
 
 ## Clerical filing boundary
 
-No Patent Center screen is currently actionable. Clerical human filing begins only after technical warnings are resolved, contributor facts are complete, counsel recommendations are recorded, owner filing authorization exists, and a filing packet is explicitly authorized.
-
-Clerical filing may then include submission, signatures or certifications, fee payment, and retrieval of the official filing receipt. Save any official receipt and application metadata only in the repository paths designated by the authorized filing packet. Do not calculate a deadline before an actual verified filing date exists.
+No Patent Center screen is actionable. Clerical filing begins only after technical warnings are resolved, contributor facts are complete, counsel advice is recorded, owner filing authorization exists, and a filing packet is explicitly authorized. Do not calculate a deadline before an actual verified filing date exists.
 
 ## Filing and deadline invariant
 
@@ -206,21 +244,10 @@ nonprovisional deadline: null
 PCT deadline: null
 ```
 
-A draft, commit, conversation timestamp, disclosure template, packet emission, or owner discussion is not a filing event.
+A draft, commit, conversation timestamp, disclosure template, packet emission, owner discussion, or reciprocal-verifier package is not a filing event.
 
-## Required ecosystem propagation after explicit disposition
+## Ecosystem propagation and custody
 
-After an explicitly approved filed, trade-secret, defensive-publication, abandonment, tag, or release state, verify bounded propagation to:
+Do not propagate unpublished claims, counsel advice, contributor disputes, or unfiled filing strategy. Propagation to Site, Publisher, admissibility-wiki, or stegguardian-wiki requires an explicit approved filing, trade-secret, defensive-publication, abandonment, tag, or release state.
 
-```text
-StegVerse-Labs/Site
-GCAT-BCAT-Engine/Publisher
-admissibility-wiki
-stegguardian-wiki
-```
-
-Do not propagate unpublished claims, counsel advice, contributor disputes, or unfiled filing strategy.
-
-## Continuation state
-
-Repository continuation state is preserved. Orchestration custody is not demonstrated until a verified ingestion receipt, task-extraction manifest, assignment receipt, accepted-custody timestamp, and continuation checkpoint are committed and verified. The active thread remains required until then.
+Repository continuation state is preserved. Orchestration custody is not demonstrated until a verified ingestion receipt, task-extraction manifest, assignment receipt, accepted-custody timestamp, and continuation checkpoint are committed and verified.
