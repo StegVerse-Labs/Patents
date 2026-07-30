@@ -14,8 +14,6 @@ reviews/PUBLISHER_FAMILY_NONLEGAL_OVERLAP_MATRIX_2026-07-28.md
 data/thread-archive-custody-status.json
 ```
 
-## Governing objective
-
 Every Publisher-origin candidate must remain in an explicit controlled state until practitioner and owner disposition. No candidate may be silently merged, omitted, published, abandoned, or treated as covered by another family.
 
 ## Controlled candidates
@@ -53,7 +51,7 @@ primary blocker: generalized disclosure and publication schemas, redaction contr
 ```text
 dedicated handoff: APPLICATION_CORRECTION_GATE_MIRROR_HANDOFF.md
 status record: data/publisher-application-correction-gate-status.json
-status: chronology intake, source-candidate review, and bounded distinction notes complete; direct family source pending
+status: chronology intake, source-candidate review, bounded distinction notes, and dated source-search receipt complete; direct family source pending
 primary blocker: complete corrected-state representation, correction authority, receipt relationship, revalidation, supersession, and rollback behavior
 ```
 
@@ -62,10 +60,11 @@ A specification, abstract, and drawings remain intentionally unwritten because d
 ### AI Output-to-Action Boundary
 
 ```text
-dedicated handoff: AI_OUTPUT_TO_ACTION_MIRROR_HANDOFF.md
+dedicated handoff: AI_OUTPUT_TO_ACTION_BOUNDARY_MIRROR_HANDOFF.md
 status record: data/publisher-ai-output-to-action-boundary-status.json
-status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, and overlap notes complete; generalized transition blocked
-primary blocker: general output object, canonical action request, authority grant lifecycle, tool-specific execution grant, negative traces, chronology, contributors, and legal disposition
+status: bounded disclosure, limitation map, abstract, figure plan, chronology intake, overlap notes, and dedicated handoff complete; generalized transition blocked
+verified bounded executable source: GCAT-BCAT-Engine/Publisher/scripts/import_ecosystem_chat_activation.py
+primary blocker: general output object, canonical action request, authority-grant lifecycle, tool-specific execution grant, negative traces, chronology, contributors, and legal disposition
 ```
 
 ### Recoverability-Aware Execution Boundary
@@ -99,15 +98,16 @@ primary blocker: canonical observer-participant protocol, role and authority sch
 ## Central synchronization state
 
 ```text
-data/publisher-family-completion-status.json
-schema_version: 0.7
-blob: 2e520cf08068b6e429d7b75a348e4a5a41fbb162
-reconciled_utc: 2026-07-30T00:03:00Z
 controlled candidates: 8
 dedicated handoffs present: 8
+AI Output-to-Action dedicated handoff installed: true
+AI Output-to-Action machine status schema: 1.2.1
+central completion ledger: data/publisher-family-completion-status.json
+central ledger reconciliation required after current handoff/status changes: true
+patent-registry exact-hash snapshot refresh required: true
 ```
 
-The central ledger now reflects the latest bounded lifecycle records for all eight candidates across invention capture, disclosure chronology, evidence map, non-legal distinction notes, specification, abstract, claim themes, drawings, inventor fields, ownership fields, counsel questions, filing packet, warning resolution, human filing, filing receipt, application number, actual filing date, and nonprovisional deadline.
+The central completion ledger must be refreshed before it is treated as current because the AI Output-to-Action dedicated handoff and status record changed in this continuation.
 
 ## Filing and deadline invariant
 
@@ -124,14 +124,14 @@ ready for owner decision: 0
 
 No deadline may be calculated from a draft date, repository commit, conversation timestamp, packet-generation date, or assumed submission.
 
-`PAT-005` remains the urgent disclosure-review candidate because `PATENTS_MIRROR_HANDOFF.md` records a public technical-paper date of 2026-07-13. That date does not itself establish an enabling disclosure, statutory deadline, or foreign-filing consequence.
+`PAT-005` remains the urgent factual disclosure-review candidate because `PATENTS_MIRROR_HANDOFF.md` records a public technical-paper date of 2026-07-13. That date does not itself establish an enabling disclosure, statutory deadline, or foreign-filing consequence.
 
 ## Next bounded machine work
 
-1. Refresh the patent-registry exact-hash snapshot for Publisher ledger schema `0.7` and this handoff.
-2. Run the Patents filing-state and Publisher reconciliation tests through an authoritative dispatcher and preserve receipts.
-3. Run the patent-registry tests and bounded status-only importer or preserve deterministic refusal receipts.
-4. Continue PAT-005 chronology, contributor, disclosure-audit, drawing-review, practitioner, and owner-decision preparation.
+1. Reconcile `data/publisher-family-completion-status.json` with all current dedicated handoffs and family status records.
+2. Refresh the patent-registry exact-hash snapshot for the reconciled Publisher ledger and this handoff.
+3. Run Patents filing-state and Publisher reconciliation checks through an authoritative dispatcher and preserve receipts.
+4. Continue PAT-005 factual disclosure, contributor, drawing-review, practitioner, and owner-decision preparation.
 5. Locate canonical executable and retained runtime evidence for each implementation-blocked Publisher family.
 6. Preserve active-thread status until orchestration custody is demonstrated by ingestion, task extraction, assignment, accepted-custody, and continuation receipts.
 
