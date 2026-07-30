@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.7",
-  "generated_utc": "2026-07-30T00:03:00Z",
+  "schema_version": "0.8",
+  "generated_utc": "2026-07-30T21:02:08Z",
   "repository": "StegVerse-Labs/Patents",
   "source_handoff": "PUBLISHER_FAMILIES_MIRROR_HANDOFF.md",
   "legal_notice": "Technical tracking only. No legal family boundary, inventorship, ownership, patentability, disclosure consequence, filing strategy, filing authority, application number, receipt, or deadline is inferred.",
@@ -112,7 +112,7 @@
     {
       "family_key": "ai_output_to_action_boundary",
       "title": "AI Output-to-Action Boundary",
-      "status": "working_disclosure_limitation_map_abstract_figure_plan_chronology_and_overlap_notes_complete_generalized_transition_blocked",
+      "status": "working_disclosure_limitation_map_abstract_figure_plan_chronology_overlap_notes_and_dedicated_handoff_complete_generalized_transition_blocked",
       "invention_capture": "working_technical_disclosure_complete_from_bounded_verified_executable_source",
       "disclosure_chronology": "factual_intake_template_complete_attributable_evidence_not_populated",
       "evidence_map": "bounded_limitation_level_map_complete_generalized_action_transition_support_absent",
@@ -132,7 +132,7 @@
       "actual_filing_date": null,
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-ai-output-to-action-boundary-status.json",
-      "dedicated_handoff": "AI_OUTPUT_TO_ACTION_MIRROR_HANDOFF.md",
+      "dedicated_handoff": "AI_OUTPUT_TO_ACTION_BOUNDARY_MIRROR_HANDOFF.md",
       "current_decision": "FAIL_CLOSED_GENERALIZED_SOURCE_CHRONOLOGY_FAMILY_AND_COUNSEL_BLOCKERS"
     },
     {
@@ -164,10 +164,10 @@
     {
       "family_key": "master_records_reconstruction_and_verification",
       "title": "Master-Records Reconstruction and Verification",
-      "status": "limitation_map_abstract_figure_plan_chronology_overlap_notes_and_dedicated_handoff_complete_production_reconstruction_blocked",
+      "status": "limitation_map_abstract_figure_plan_chronology_overlap_notes_reciprocal_verifier_search_and_dedicated_handoff_complete_independent_verification_and_production_reconstruction_blocked",
       "invention_capture": "working_technical_disclosure_complete",
       "disclosure_chronology": "intake_template_complete_factual_evidence_not_populated",
-      "evidence_map": "bounded_limitation_level_map_complete_for_core_lite_verifier_mapper_and_tests",
+      "evidence_map": "bounded_limitation_level_map_complete_for_core_lite_verifier_mapper_tests_and_stegverse_reciprocal_verifier_package",
       "prior_art_distinction_notes": "bounded_nonlegal_overlap_notes_complete_verified_external_review_pending",
       "specification": "bounded_working_disclosure_present_full_specification_incomplete",
       "abstract": "working_abstract_complete",
@@ -177,7 +177,7 @@
       "ownership_fields": "unconfirmed",
       "counsel_questions": "independent_family_dependent_embodiment_continuation_shared_infrastructure_or_nonpatent_disposition_unresolved",
       "filing_packet": "not_authorized",
-      "warning_resolution": "production_reconstruction_independent_verification_chronology_contributor_and_legal_blockers_open",
+      "warning_resolution": "independent_verification_production_reconstruction_chronology_contributor_and_legal_blockers_open",
       "human_filing": "not_started",
       "filing_receipt": null,
       "application_number": null,
@@ -185,23 +185,23 @@
       "nonprovisional_deadline": null,
       "status_record": "data/publisher-master-records-reconstruction-status.json",
       "dedicated_handoff": "MASTER_RECORDS_RECONSTRUCTION_VERIFICATION_MIRROR_HANDOFF.md",
-      "current_decision": "FAIL_CLOSED_PRODUCTION_RECONSTRUCTION_INDEPENDENT_VERIFICATION_CHRONOLOGY_CONTRIBUTOR_AND_LEGAL_BLOCKERS"
+      "current_decision": "FAIL_CLOSED_INDEPENDENT_VERIFICATION_PRODUCTION_RECONSTRUCTION_CHRONOLOGY_CONTRIBUTOR_AND_LEGAL_BLOCKERS"
     },
     {
       "family_key": "multi_entity_observer_participant_admissibility",
       "title": "Multi-Entity Observer-Participant Admissibility",
-      "status": "working_disclosure_abstract_figure_plan_chronology_distinction_notes_limitation_map_and_dedicated_handoff_complete_implementation_blocked",
+      "status": "working_disclosure_abstract_figure_plan_chronology_distinction_notes_limitation_map_internal_overlap_report_and_dedicated_handoff_complete_implementation_blocked",
       "invention_capture": "working_technical_disclosure_complete_from_verified_formal_support",
       "disclosure_chronology": "factual_template_complete_evidence_not_populated",
-      "evidence_map": "verified_formal_source_inventory_and_limitation_map_complete_executable_support_pending",
-      "prior_art_distinction_notes": "bounded_nonlegal_distinction_questions_complete_external_search_and_practitioner_review_pending",
+      "evidence_map": "verified_two_source_inventory_and_limitation_level_map_complete_executable_support_pending",
+      "prior_art_distinction_notes": "bounded_nonlegal_distinction_notes_and_internal_overlap_report_complete_external_search_and_practitioner_review_pending",
       "specification": "working_disclosure_present_full_specification_not_created",
       "abstract": "working_abstract_complete",
       "claim_themes": "candidate_limitation_clusters_present_not_final",
       "drawings": "figure_plan_complete_formal_drawings_not_created",
       "inventor_fields": "undetermined",
       "ownership_fields": "unconfirmed",
-      "counsel_questions": "independent_family_dependent_embodiment_or_research_track_unresolved",
+      "counsel_questions": "independent_family_dependent_embodiment_continuation_candidate_or_research_track_unresolved",
       "filing_packet": "not_authorized",
       "warning_resolution": "blocked_by_implementation_chronology_contributors_external_search_and_legal_disposition",
       "human_filing": "not_started",
@@ -226,11 +226,11 @@
     "deadline_basis": "actual_filing_receipt_application_number_and_actual_filing_date_only"
   },
   "next_machine_actions": [
-    "refresh_publisher_families_mirror_handoff_for_ledger_schema_0_7",
-    "refresh_patent_registry_exact_hash_snapshot_for_ledger_schema_0_7",
+    "run_authoritative_publisher_reconciliation_and_filing_state_validation_for_ledger_schema_0_8",
+    "refresh_publisher_families_mirror_handoff_for_ledger_schema_0_8_and_current_blob",
+    "refresh_patent_registry_exact_hash_snapshot_for_ledger_schema_0_8",
     "perform_status_only_registry_import_or_deterministic_refusal_pass_using_refreshed_exact_hash_snapshot",
     "continue_pat005_chronology_contributor_disclosure_audit_drawing_review_and_practitioner_preparation",
-    "locate_canonical_executable_and_runtime_evidence_for_implementation_blocked_families",
-    "run_authoritative_filing_state_and_registry_validation_when_dispatcher_execution_is_available"
+    "locate_canonical_executable_and_runtime_evidence_for_implementation_blocked_families"
   ]
 }
