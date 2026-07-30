@@ -7,7 +7,7 @@ This file is the dedicated continuation source for `PAT-003 — Generalized Adap
 ## Current stage
 
 ```text
-status: structured_review_preparation_with_blockers
+status: structured_review_preparation_chronology_comparison_and_handoff_complete_direct_implementation_blocked
 filed: false
 patent pending authorized: false
 application number: null
@@ -41,10 +41,14 @@ These are working technical records only. They do not establish implementation, 
 
 ```text
 data/PAT-003-completion-status.json
+evidence/PAT-003_DISCLOSURE_CHRONOLOGY.md
+reviews/PAT-003_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md
 filing-readiness/PAT-003_FILING_READINESS_INDEX.md
 reviews/PAT-003-human-action-packet.md
 data/master_claims.json
 ```
+
+The chronology artifact is a factual intake surface; dated evidence has not been populated. The comparison ledger is a bounded technical research scaffold; verified external references and practitioner conclusions remain absent.
 
 ## Source search result
 
@@ -55,13 +59,13 @@ A bounded connected search for scanner, sensing, observation, micro-node, return
 | Field | Current state |
 |---|---|
 | Invention capture | Structured family record present; standalone bounded disclosure pending |
-| Disclosure chronology | Missing; intake artifact required |
+| Disclosure chronology | Factual intake complete; dated evidence not populated |
 | Evidence map | Structured clauses present; direct implementation mapping absent |
-| Prior-art distinction notes | Not verified; reproducible comparison ledger required |
-| Specification | Missing |
-| Abstract | Missing |
-| Claim themes | Concept-level method and system identifiers present |
-| Drawings | Missing |
+| Prior-art distinction notes | Bounded technical comparison ledger complete; verified external references and legal conclusions pending |
+| Specification | Missing; direct implementation and supported-embodiment boundary pending |
+| Abstract | Missing; supported specification pending |
+| Claim themes | Concept-level method and system identifiers present; evidence links incomplete |
+| Drawings | Missing; supported system boundary pending |
 | Inventor fields | Undetermined |
 | Ownership fields | Unconfirmed |
 | Counsel questions | Scope, support, diagnostic-boundary, family relationship, inventorship, ownership, disclosure consequences, and disposition unresolved |
@@ -86,9 +90,10 @@ receipt schema and validator
 retained positive and negative traces
 supported sensor modalities
 supported biological or organism-specific embodiments
-factual conception chronology
-public-disclosure chronology
+factual conception chronology evidence
+public-disclosure chronology evidence
 contributors and attributable contributions
+verified external comparison references
 ```
 
 ## Required repository destinations
@@ -112,9 +117,63 @@ inventorship/PAT-003-contributor-interviews.md
 inventorship/PAT-003-contribution-worksheet.md
 ```
 
+## Exact action packet
+
+**Application:** PAT-003
+
+**Current stage:** Structured technical review preparation with chronology intake and bounded comparison ledger complete; direct implementation, populated chronology, contributor facts, and legal review blocked.
+
+**Why automation stopped:** No exact first-party implementation source has been verified for the combined adaptive scanner architecture, and the chronology intake contains no attributable dated source evidence. Drafting an enabling specification, supported figures, inventorship determination, ownership conclusion, prior-art conclusion, or filing packet would require unsupported factual or legal inference.
+
+**Unresolved facts and decisions:**
+
+```text
+exact repository and immutable source anchors
+implemented versus proposed behavior
+supported sensor modalities
+supported biological or organism-specific embodiments
+conception and disclosure dates
+contributors and attributable contributions
+claim support and family boundaries
+prior-art significance
+diagnostic or medical claim boundary
+inventorship and ownership
+filing, trade-secret, defensive-publication, defer, or abandonment disposition
+```
+
+**Exact files involved:**
+
+```text
+PAT-003_MIRROR_HANDOFF.md
+data/PAT-003-completion-status.json
+evidence/PAT-003_DISCLOSURE_CHRONOLOGY.md
+reviews/PAT-003_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md
+filing-readiness/PAT-003_FILING_READINESS_INDEX.md
+reviews/PAT-003-human-action-packet.md
+data/master_claims.json
+```
+
+**Ordered human evidence steps:**
+
+1. Locate any first-party scanner, sensing, signal-acquisition, adaptive-node, observation-interval, comparison, non-inference, or receipt source.
+2. Preserve the original source without rewriting it.
+3. Record repository, exact path, commit SHA or blob SHA, source date, and known author or contributor.
+4. Classify each source as conceptual description, executable implementation, test, runtime trace, receipt, diagram, private disclosure, or public disclosure.
+5. Populate `evidence/PAT-003_DISCLOSURE_CHRONOLOGY.md` only with attributable records.
+6. Place implementation anchors or bounded references under `evidence/PAT-003-implementation/`.
+7. Place supporting chronology records under `evidence/PAT-003-chronology-evidence/`.
+8. Record factual contributor statements in the two PAT-003 inventorship worksheets without making an inventorship conclusion.
+9. Provide verified external references to the technical-comparison ledger; preserve search method, search date, and source identity.
+10. Obtain patent-practitioner review of support, family boundaries, diagnostic scope, prior art, inventorship, ownership, disclosure consequences, and filing strategy.
+11. Record an explicit owner disposition only after the written practitioner recommendation.
+
+**Outcome to preserve:** Immutable source references, populated factual chronology, contributor records, verified comparison references, practitioner recommendation, and explicit owner disposition.
+
+**Patent Center screen:** None. No clerical filing action is appropriate until a reviewed and authorized filing packet exists.
+
 ## Automation resumption
 
-After exact sources are supplied, automation resumes with immutable source validation, limitation-level mapping, supported-versus-proposed embodiment separation, standalone disclosure drafting, abstract and figure plan, working specification, negative-path review, and readiness reconciliation.
+After exact sources are supplied, automation resumes with immutable source validation, limitation-level mapping, supported-versus-proposed embodiment separation, standalone disclosure drafting, abstract and figure plan, working specification, negative-path review, readiness reconciliation, and bounded filing-packet preparation if later authorized.
 
 ## Human and legal boundary
 
