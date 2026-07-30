@@ -1,23 +1,33 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "family_id": "PAT-005",
   "family_name": "Governed Device Continuity and Destination-Bound Hardware Abstraction",
   "generated_date": "2026-07-30",
   "source_of_truth": "PAT-005_MIRROR_HANDOFF.md",
   "portfolio_source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
   "status_source": "data/PAT-005-completion-status.json",
-  "current_stage": "practitioner_review_ready",
-  "decision": "FAIL_CLOSED_BLOCKERS",
+  "current_stage": "practitioner_review_ready_with_public_disclosure_factual_intake_installed",
+  "decision": "FAIL_CLOSED_FACTUAL_DISCLOSURE_EVIDENCE_AND_AUTHORITY_GATES",
   "verified_repository_artifacts": [
     {
       "path": "PAT-005_MIRROR_HANDOFF.md",
-      "blob_sha": "6862a829972a223f7e5b78761b198c4fdbe44159",
+      "blob_sha": "98ecb699b1ef286684f6c0b48280ba0e2f323861",
       "role": "dedicated family handoff"
     },
     {
       "path": "data/PAT-005-completion-status.json",
-      "blob_sha": "6e0c24e1a9372659fef04d7b949bedec85b63477",
+      "blob_sha": "dbaa49a7f6f319387dbc3a387eb1a1537dc1efc6",
       "role": "machine-readable lifecycle ledger"
+    },
+    {
+      "path": "evidence/PAT-005-public-disclosure-audit.md",
+      "blob_sha": "2adcbe230556eed7ea9d98fc8165e6d776c461cc",
+      "role": "present factual disclosure intake; incomplete"
+    },
+    {
+      "path": "evidence/PAT-005-handoff-disclosure-audit-reconciliation-2026-07-30.md",
+      "blob_sha": "05853c56f0df601a33b0f899040558be13a105d1",
+      "role": "handoff and audit consistency reconciliation"
     },
     {
       "path": "disclosures/PAT-005-governed-device-continuity.md",
@@ -40,52 +50,46 @@
       "role": "qualified-practitioner review packet"
     }
   ],
-  "completed_artifacts_declared_by_status_ledger": [
-    "evidence/PAT-005-cross-repository-source-map.md",
-    "evidence/PAT-005-destination-and-guardian-anchors.md",
-    "evidence/PAT-005-end-to-end-reconstruction.md",
-    "evidence/PAT-005-negative-and-failure-paths.md",
-    "diagrams/PAT-005-figure-descriptions.md",
-    "diagrams/PAT-005-formal-drawing-sheets.md",
-    "diagrams/PAT-005-drawing-production-spec.md",
-    "prior-art/PAT-005-initial-collision-chart.md",
-    "prior-art/PAT-005-limitation-claim-chart.md",
-    "evidence/PAT-005-conception-chronology.md",
-    "inventorship/PAT-005-claim-contribution-worksheet.md",
-    "inventorship/PAT-005-contributor-interview-packet.md",
-    "reviews/PAT-005-filing-readiness-index.md",
-    "reviews/PAT-005-human-action-packet.md",
-    "data/PAT-005-implementation-anchors.json",
-    "tools/validate_pat005_implementation_anchors.py",
-    "tests/test_pat005_implementation_anchors.py",
-    "fixtures/PAT-005-negative-cases.json",
-    "tools/replay_pat005_negative_cases.py",
-    "tests/test_pat005_negative_cases.py"
-  ],
-  "authority_gated_outputs_required": [
+  "disclosure_audit": {
+    "intake_present": true,
+    "factual_evidence_complete": false,
+    "earliest_public_disclosure_resolved": false,
+    "earliest_enabling_disclosure_resolved": false,
+    "public_accessibility_resolved": false,
+    "practitioner_analysis_present": false,
+    "tracked_repository_date": "2026-07-13",
+    "exact_title": null,
+    "publication_or_repository_path": null,
+    "immutable_hash": null,
+    "platform": null,
+    "exact_timestamp": null,
+    "timezone": null,
+    "access_evidence": null
+  },
+  "pre_filing_outputs": [
     {
       "path": "evidence/PAT-005-public-disclosure-audit.md",
-      "status": "not_found_in_current_exact-name_search",
+      "status": "present_but_factually_incomplete",
       "authority_class": "factual human evidence"
     },
     {
       "path": "inventorship/PAT-005-inventorship-determination.md",
-      "status": "not_found_in_current_exact-name_search",
+      "status": "absent",
       "authority_class": "qualified practitioner determination"
     },
     {
       "path": "reviews/PAT-005-practitioner-recommendation.md",
-      "status": "not_found_in_current_exact-name_search",
+      "status": "absent",
       "authority_class": "qualified practitioner recommendation"
     },
     {
       "path": "diagrams/PAT-005-drawing-approval.md",
-      "status": "not_found_in_current_exact-name_search",
+      "status": "absent",
       "authority_class": "formal human drawing approval"
     },
     {
       "path": "reviews/PAT-005-owner-decision.md",
-      "status": "not_found_in_current_exact-name_search",
+      "status": "absent",
       "authority_class": "explicit owner disposition"
     }
   ],
@@ -99,19 +103,14 @@
     "pct_deadline": null,
     "patent_pending_authorized": false
   },
-  "disclosure_risk": {
-    "tracked_public_technical_paper_date": "2026-07-13",
-    "earliest_enabling_disclosure_confirmed": false,
-    "legal_consequence_determined": false,
-    "deadline_calculated": false,
-    "posture": "URGENT_FACTUAL_AUDIT_AND_PRACTITIONER_REVIEW_REQUIRED"
-  },
   "verification_boundary": {
-    "direct_blob_verification_completed_for_core_artifacts": true,
-    "remaining_completed_artifact_paths_reconciled_from_canonical_status_ledger": true,
     "authoritative_test_execution_receipt_present": false,
-    "legal_or_filing_conclusion_made": false
+    "legal_or_filing_conclusion_made": false,
+    "public_accessibility_inferred": false,
+    "enablement_inferred": false,
+    "legal_consequence_inferred": false,
+    "deadline_inferred": false
   },
-  "next_machine_action": "Reconcile the root portfolio handoff to this manifest and preserve fail-closed status until all five authority-gated outputs exist and pass consistency checks.",
-  "legal_notice": "Technical readiness manifest only. This file does not determine inventorship, ownership, patentability, disclosure consequences, filing authority, filing status, application numbers, filing dates, or deadlines."
+  "next_machine_action": "Locate immutable first-party evidence identifying the July 13, 2026 technical paper, update only verified factual audit fields, and reconcile central and registry records without activating filing or deadline state.",
+  "legal_notice": "Technical readiness manifest only. No inventorship, ownership, patentability, enablement, disclosure consequence, foreign-rights effect, filing authority, filing status, application number, filing date, or deadline is determined."
 }
