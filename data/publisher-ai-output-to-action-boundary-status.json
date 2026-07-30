@@ -1,8 +1,9 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.2.1",
   "family_key": "ai_output_to_action_boundary",
   "title": "AI Output-to-Action Boundary",
-  "status": "working_disclosure_limitation_map_abstract_figure_plan_chronology_and_overlap_notes_complete_generalized_transition_blocked",
+  "status": "working_disclosure_limitation_map_abstract_figure_plan_chronology_overlap_notes_and_dedicated_handoff_complete_generalized_transition_blocked",
+  "source_of_truth": "AI_OUTPUT_TO_ACTION_BOUNDARY_MIRROR_HANDOFF.md",
   "invention_capture": "working technical disclosure complete from bounded verified executable source",
   "disclosure_chronology": "factual intake template complete; attributable evidence not populated",
   "evidence_map": "bounded limitation-level map complete from verified executable source; generalized action transition support absent",
@@ -34,6 +35,7 @@
     }
   ],
   "artifacts": {
+    "dedicated_handoff": "AI_OUTPUT_TO_ACTION_BOUNDARY_MIRROR_HANDOFF.md",
     "source_inventory": "evidence/PUBLISHER-ai-output-to-action-source-inventory.md",
     "working_disclosure": "reviews/PUBLISHER-ai-output-to-action-technical-disclosure.md",
     "limitation_map": "evidence/PUBLISHER-ai-output-to-action-limitation-map.md",
@@ -45,6 +47,7 @@
   },
   "combination_level_support": "unverified",
   "blocking_gates": {
+    "dedicated_mirror_handoff": true,
     "general_output_schema_verified": false,
     "canonical_action_request_object_verified": false,
     "authority_grant_mechanism_verified": false,
@@ -74,5 +77,15 @@
     "obtain counsel family inventorship ownership disclosure and filing recommendations",
     "record explicit owner disposition only after counsel packet completion"
   ],
+  "filing_state": {
+    "filed": false,
+    "filing_packet": "not_authorized",
+    "human_filing": "not_started",
+    "filing_receipt": null,
+    "application_number": null,
+    "actual_filing_date": null,
+    "nonprovisional_deadline": null,
+    "pct_deadline": null
+  },
   "legal_boundary": "This record does not determine inventorship, ownership, patentability, legal family scope, filing strategy, filing authority, filing status, application number, receipt, or deadline."
 }
