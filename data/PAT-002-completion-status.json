@@ -1,11 +1,12 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.1.1",
   "family_id": "PAT-002",
   "title": "Heartbeat-Governed Entity and Reflected-State Computing",
-  "status": "structured_review_preparation_with_partial_source_anchors_and_intake_surfaces_complete",
+  "status": "structured_review_preparation_with_partial_source_anchors_intake_surfaces_and_dedicated_handoff_complete",
   "filed": false,
   "patent_pending_authorized": false,
-  "source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
+  "source_of_truth": "PAT-002_MIRROR_HANDOFF.md",
+  "portfolio_source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
   "completed": {
     "family_record_in_master_claims": true,
     "inventive_center_defined": true,
@@ -25,7 +26,7 @@
     "bounded_source_anchor_manifest": true,
     "disclosure_chronology_intake": true,
     "technical_comparison_research_ledger": true,
-    "dedicated_mirror_handoff": false,
+    "dedicated_mirror_handoff": true,
     "new_repository_required": false
   },
   "partial": {
@@ -34,7 +35,7 @@
     "evidence_map": "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md defines limitation and combination evidence requirements; general formal and runtime-integration anchors are verified, but heartbeat and reflected-state combination support remains unpopulated",
     "claim_architecture": "shared clauses and claim identifiers exist; claim text and evidence references require verification",
     "prior_art_distinction": "reviews/PAT-002_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md defines bounded research clusters and candidate-reference fields; no verified external references or conclusions are populated",
-    "source_identity": "Admissible-Existence/AE and DC are verified formal-source authorities at their root README blobs; Admissible-Existence/core-lite is verified as implementation/integration evidence only. Exact heartbeat and reflected-state sources remain unresolved. A connected repository search returned no heartbeat-specific match in these three repositories during the current review."
+    "source_identity": "Admissible-Existence/AE and DC are verified formal-source authorities at their root README blobs; Admissible-Existence/core-lite is verified as implementation/integration evidence only. Exact heartbeat and reflected-state sources remain unresolved. Connected repository search has not located a heartbeat-specific first-party source; this negative result does not establish absence."
   },
   "blocking_gates": {
     "formal_authority_organization_confirmed": true,
@@ -61,14 +62,17 @@
     "filing_receipt_present": false
   },
   "known_source_records": [
-    "data/master_claims.json",
+    "PAT-002_MIRROR_HANDOFF.md",
     "PATENTS_MIRROR_HANDOFF.md",
+    "data/master_claims.json",
     "evidence/PAT-002_CLAIM_ELEMENT_EVIDENCE_MAP.md",
     "evidence/PAT-002_SOURCE_IDENTITY_BLOCKER.md",
     "evidence/PAT-002_SOURCE_IDENTITY_RESOLUTION.md",
     "data/PAT-002-source-anchor-manifest-2026-07-28.json",
     "evidence/PAT-002_DISCLOSURE_CHRONOLOGY.md",
-    "reviews/PAT-002_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md"
+    "reviews/PAT-002_TECHNICAL_COMPARISON_RESEARCH_LEDGER.md",
+    "filing-readiness/PAT-002_FILING_READINESS_INDEX.md",
+    "reviews/PAT-002-human-action-packet.md"
   ],
   "verified_source_anchors": [
     {
