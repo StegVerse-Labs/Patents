@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.3.1",
   "family_key": "master_records_reconstruction_and_verification",
   "title": "Master-Records Reconstruction and Verification",
-  "status": "limitation_map_abstract_figure_plan_chronology_and_bounded_overlap_notes_complete_production_reconstruction_blocked",
+  "status": "limitation_map_abstract_figure_plan_chronology_overlap_notes_and_reciprocal_verifier_search_complete_independent_and_production_reconstruction_blocked",
   "invention_capture": "working_technical_disclosure_complete",
   "disclosure_chronology": "intake_template_complete_factual_evidence_not_populated",
   "evidence_map": "limitation_level_map_complete_for_bounded_core_lite_verifier_mapper_and_tests",
@@ -15,7 +15,7 @@
   "ownership_fields": "unconfirmed",
   "counsel_questions": "independent_family_dependent_embodiment_continuation_shared_infrastructure_or_nonpatent_disposition_unresolved",
   "filing_packet": "not_authorized",
-  "warning_resolution": "production_reconstruction_independent_verification_chronology_contributor_and_legal_blockers_open",
+  "warning_resolution": "ste gverse_reciprocal_verifier_located_but_independent_verification_production_reconstruction_chronology_contributor_and_legal_blockers_open",
   "human_filing": "not_started",
   "filing_receipt": null,
   "application_number": null,
@@ -54,6 +54,12 @@
       "path": "tests/test_spe_mapping.py",
       "blob_sha": "adf728776b36ddbe7b00818a44f230f6e14cdebd",
       "support": "checked-in expected-shape equality and mapped receipt-order testing"
+    },
+    {
+      "repository": "StegVerse-Labs/admissibility-wiki",
+      "path": "docs/external-frameworks/decisionassure-pilot/README.md",
+      "blob_sha": "22c9d56addace5cc974a5e4dec1975e7c669e2a4",
+      "support": "StegVerse-authored deterministic reciprocal verifier package and receipt marker; explicitly not independent collaborator-authored or native-verifier execution evidence"
     }
   ],
   "source_identity": {
@@ -69,9 +75,16 @@
   "abstract_and_figure_plan": "reviews/PUBLISHER-master-records-reconstruction-abstract-and-figure-plan.md",
   "chronology_intake": "evidence/PUBLISHER-master-records-reconstruction-chronology.md",
   "nonlegal_overlap_notes": "reviews/PUBLISHER-master-records-reconstruction-nonlegal-overlap-notes.md",
-  "expected_decision": "FAIL_CLOSED_PRODUCTION_RECONSTRUCTION_INDEPENDENT_VERIFICATION_CHRONOLOGY_CONTRIBUTOR_AND_LEGAL_BLOCKERS",
+  "independent_verification_search_receipt": "evidence/PUBLISHER-master-records-independent-verification-search-receipt-2026-07-30.md",
+  "verification_classification": {
+    "stegverse_reciprocal_verifier_package_located": true,
+    "independent_spe_side_verifier_located": false,
+    "independent_spe_side_output_located": false,
+    "production_reconstruction_evidence_located": false
+  },
+  "expected_decision": "FAIL_CLOSED_INDEPENDENT_VERIFICATION_PRODUCTION_RECONSTRUCTION_CHRONOLOGY_CONTRIBUTOR_AND_LEGAL_BLOCKERS",
   "next_machine_tasks": [
-    "locate and verify SPE-side independent verification output for the mapped sample",
+    "locate and verify independently authored SPE-side or reciprocal verification output for the mapped sample",
     "locate source-record creation and hash-computation implementation",
     "locate production custody retention supersession rollback conflict and reconstruction sources",
     "locate retained positive and negative runtime traces",
@@ -79,6 +92,7 @@
     "reconcile the Publisher central ledger and registry source snapshot"
   ],
   "next_human_or_counsel_tasks": [
+    "provide an independently authored verifier or reciprocal execution receipt with producer identity input hashes output hash command timestamp stdout stderr and exit code",
     "identify factual contributors and contribution details",
     "provide dated conception and disclosure records",
     "identify any separate master-records/orchestration repository and succession evidence if it exists",
