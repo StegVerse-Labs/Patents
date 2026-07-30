@@ -109,16 +109,17 @@ primary blocker: canonical observer-participant protocol, role and authority sch
 controlled candidates: 8
 dedicated handoffs present: 8
 central completion ledger: data/publisher-family-completion-status.json
-central ledger current schema: 0.7
-central ledger current blob: 2e520cf08068b6e429d7b75a348e4a5a41fbb162
+central ledger schema: 0.8
+central ledger commit: 3729efb3412629040230356cc4b50a9d0aa8f475
+central ledger blob: 022e903c52ce7d115e6feecc32c36182da95a63c
 reconciliation delta: data/publisher-family-central-ledger-reconciliation-delta-2026-07-30T2000Z.json
 reconciliation delta commit: 1182bb68320f3be57bbbcee596f9096cbb135c94
-central ledger rewrite required: true
+central ledger rewrite required: false
 authoritative reconciliation validation required: true
 patent-registry exact-hash snapshot refresh required: true
 ```
 
-The reconciliation delta identifies exact source records, immutable blobs, and required field changes for AI Output-to-Action Boundary, Master-Records Reconstruction and Verification, and Multi-Entity Observer-Participant Admissibility. It preserves all filing and deadline invariants. The central ledger remains stale until it is rewritten from the current dedicated records and validated through an authoritative dispatcher.
+The central ledger now incorporates the current dedicated AI Output-to-Action, Master-Records Reconstruction, and Multi-Entity Observer-Participant states and corrects the AI handoff path. The rewrite is a repository state reconciliation, not an authoritative execution result. Validation receipts and patent-registry synchronization remain required.
 
 ## Filing and deadline invariant
 
@@ -139,13 +140,12 @@ No deadline may be calculated from a draft date, repository commit, conversation
 
 ## Next bounded machine work
 
-1. Rewrite `data/publisher-family-completion-status.json` from the current dedicated status records using the committed reconciliation delta.
-2. Run Publisher reconciliation and filing-state checks through an authoritative dispatcher and preserve receipts.
-3. Refresh the patent-registry exact-hash snapshot for the reconciled Publisher ledger and this handoff.
-4. Run the bounded registry status-only import or preserve a deterministic refusal receipt.
-5. Continue PAT-005 factual disclosure, contributor, drawing-review, practitioner, and owner-decision preparation.
-6. Locate canonical executable and retained runtime evidence for each implementation-blocked Publisher family.
-7. Preserve active-thread status until orchestration custody is demonstrated by ingestion, task extraction, assignment, accepted-custody, and continuation receipts.
+1. Run Publisher reconciliation and filing-state checks through an authoritative dispatcher and preserve receipts.
+2. Refresh the patent-registry exact-hash snapshot for central ledger schema `0.8` and this handoff.
+3. Run the bounded registry status-only import or preserve a deterministic refusal receipt.
+4. Continue PAT-005 factual disclosure, contributor, drawing-review, practitioner, and owner-decision preparation.
+5. Locate canonical executable and retained runtime evidence for each implementation-blocked Publisher family.
+6. Preserve active-thread status until orchestration custody is demonstrated by ingestion, task extraction, assignment, accepted-custody, and continuation receipts.
 
 ## Human and legal boundary
 
