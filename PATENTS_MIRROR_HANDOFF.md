@@ -24,12 +24,12 @@ This repository may prepare, validate, organize, and emit first-party patent dra
 data/portfolio-completion-status.json
 ```
 
-Current schema version: `0.5`.
+Current schema version: `0.6`.
 
 ## Numbered-family source-of-truth map
 
 ```text
-PAT-001: PATENTS_MIRROR_HANDOFF.md (portfolio-governed until a dedicated handoff is installed)
+PAT-001: PAT-001_MIRROR_HANDOFF.md
 PAT-002: PAT-002_MIRROR_HANDOFF.md
 PAT-003: PAT-003_MIRROR_HANDOFF.md
 PAT-004: PAT-004_MIRROR_HANDOFF.md
@@ -44,11 +44,16 @@ Each dedicated family handoff governs bounded continuation for that family. This
 
 ```text
 status: practitioner_review_ready_with_blockers
+family handoff: PAT-001_MIRROR_HANDOFF.md
+status record: data/PAT-001-completion-status.json
+readiness index: filing-readiness/PAT-001_FILING_READINESS_INDEX.md
+practitioner handoff: reviews/PAT-001-practitioner-handoff.md
 specification and abstract: working drafts present
 verified-core evidence map: present
-formal drawing sources: present; review rendering pending
+formal drawing sources and rendered review drawings: present; filing approval pending
 inventorship and ownership: unresolved
 filing packet: not authorized
+expected decision: FAIL_CLOSED_BLOCKERS
 ```
 
 ### PAT-002
@@ -195,9 +200,9 @@ Authoritative dispatcher execution and preserved validation output remain pendin
 5. Locate exact PAT-002 implementation anchors and build its standalone disclosure and limitation evidence map.
 6. Locate verified PAT-003 source anchors and build its standalone disclosure and limitation evidence map.
 7. Locate verified PAT-004 source anchors and build its standalone disclosure and limitation evidence map while keeping supported and proposed embodiments distinct.
-8. Continue PAT-001 corroboration, drawing review outputs, and authoritative readiness validation.
+8. Continue PAT-001 canonical-source corroboration, contributor evidence, drawing approval, practitioner recommendation, and authoritative readiness validation.
 9. Preserve PAT-005 fail-closed status until the exact factual, practitioner, owner, and filing-human outputs are committed.
-10. Reconcile the portfolio machine ledger and patent-registry approved-source snapshot to the current root handoff blob before the next authoritative status import.
+10. Reconcile the portfolio machine ledger and patent-registry approved-source snapshot after every authoritative root-handoff change before the next status import.
 11. Reconcile Publisher families through explicit controlled disposition records.
 12. Preserve active-thread status until orchestration custody is demonstrated by an ingestion and task-assignment receipt.
 
