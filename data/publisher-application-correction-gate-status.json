@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.3.1",
   "family_key": "application_correction_gate",
   "title": "Application Correction Gate",
   "status": "dedicated_handoff_chronology_and_nonlegal_distinction_surfaces_complete_direct_source_pending",
@@ -27,8 +27,12 @@
     "StegVerse-Labs organization Application Correction Gate search",
     "hybrid-collab-bridge malformed output retry correction review",
     "StegVerse-Labs application correction gate corrected state supersession rollback receipt retry validation failure search",
-    "StegVerse-Labs validation failure correction retry escalation corrected output search"
+    "StegVerse-Labs validation failure correction retry escalation corrected output search",
+    "StegVerse-Labs corrected_state correction_authority retry_exhaustion supersession rollback revalidation receipt search on 2026-07-30",
+    "StegVerse-Labs correction rollback supersession revalidation receipt search on 2026-07-30"
   ],
+  "latest_search_receipt": "evidence/PUBLISHER-application-correction-gate-source-search-receipt-2026-07-30.md",
+  "latest_search_result": "no direct first-party family source, executable implementation, retained runtime output, receipt generator, validator, or chronology evidence located",
   "located_sources": [
     {
       "repository": "StegVerse-Labs/hybrid-collab-bridge",
