@@ -1,12 +1,12 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.3.1",
   "family_key": "multi_entity_observer_participant_admissibility",
   "title": "Multi-Entity Observer-Participant Admissibility",
-  "status": "working_disclosure_abstract_figure_plan_distinction_notes_limitation_map_and_dedicated_handoff_complete_implementation_blocked",
+  "status": "working_disclosure_abstract_figure_plan_distinction_notes_limitation_map_dedicated_handoff_and_overlap_report_complete_implementation_blocked",
   "invention_capture": "working_technical_disclosure_complete_from_verified_formal_support",
   "disclosure_chronology": "factual_template_complete_evidence_not_populated",
   "evidence_map": "verified_two_source_inventory_and_limitation_level_map_complete_executable_support_pending",
-  "prior_art_distinction_notes": "bounded_nonlegal_distinction_questions_complete_external_search_and_practitioner_review_pending",
+  "prior_art_distinction_notes": "bounded_nonlegal_distinction_questions_and_internal_overlap_report_complete_external_search_and_practitioner_review_pending",
   "specification": "working_disclosure_present_full_specification_not_created",
   "abstract": "working_abstract_complete",
   "claim_themes": "candidate_limitation_clusters_present_not_final",
@@ -47,6 +47,7 @@
     "reviews/PUBLISHER-multi-entity-observer-participant-abstract-and-figure-plan.md",
     "reviews/PUBLISHER-multi-entity-observer-participant-chronology-audit.md",
     "reviews/PUBLISHER-multi-entity-observer-participant-nonlegal-distinction-notes.md",
+    "reviews/PUBLISHER-multi-entity-observer-participant-nonlegal-overlap-report-2026-07-30.md",
     "reviews/PUBLISHER-multi-entity-observer-participant-action-packet.md"
   ],
   "verified_progress": {
@@ -55,6 +56,7 @@
     "figure_plan_complete": true,
     "chronology_template_complete": true,
     "bounded_nonlegal_distinction_notes_complete": true,
+    "bounded_internal_overlap_report_complete": true,
     "limitation_level_evidence_map_complete": true,
     "dedicated_mirror_handoff_complete": true,
     "formal_drawings_complete": false,
@@ -66,7 +68,6 @@
   "expected_decision": "FAIL_CLOSED_IMPLEMENTATION_CHRONOLOGY_EXTERNAL_SEARCH_AND_LEGAL_BLOCKERS",
   "next_machine_tasks": [
     "locate or receive a dedicated observer-participant protocol or implementation source",
-    "create a non-legal overlap report against PAT-002, Distributed Coherence, and Receipt-Based State Transition Validation",
     "normalize dated chronology records when supplied",
     "reconcile the dedicated status into the Publisher central ledger and patent registry",
     "convert the figure plan into formal drawings only after implementation fields and flows are verified",
@@ -80,5 +81,5 @@
     "obtain inventorship and ownership determinations",
     "record owner disposition only after counsel recommendation"
   ],
-  "legal_notice": "Technical tracking only. This status does not determine inventorship, ownership, patentability, priority, filing strategy, filing authority, filing status, application number, receipt, or deadline."
+  "legal_notice": "Technical tracking only. The internal overlap report is not a prior-art conclusion and this status does not determine inventorship, ownership, patentability, priority, filing strategy, filing authority, filing status, application number, receipt, or deadline."
 }
