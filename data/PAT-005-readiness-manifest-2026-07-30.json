@@ -1,76 +1,63 @@
 {
-  "schema_version": "1.0.1",
+  "schema_version": "1.1.0",
   "family_id": "PAT-005",
   "family_name": "Governed Device Continuity and Destination-Bound Hardware Abstraction",
   "generated_date": "2026-07-30",
+  "reconciled_date": "2026-07-31",
   "source_of_truth": "PAT-005_MIRROR_HANDOFF.md",
   "portfolio_source_of_truth": "PATENTS_MIRROR_HANDOFF.md",
   "status_source": "data/PAT-005-completion-status.json",
-  "current_stage": "practitioner_review_ready_with_public_disclosure_factual_intake_installed",
-  "decision": "FAIL_CLOSED_FACTUAL_DISCLOSURE_EVIDENCE_AND_AUTHORITY_GATES",
+  "current_stage": "practitioner_review_ready_with_verified_paper_identity_and_limitation_map",
+  "decision": "FAIL_CLOSED_ACCESSIBILITY_ENABLEMENT_AND_AUTHORITY_GATES",
   "verified_repository_artifacts": [
     {
       "path": "PAT-005_MIRROR_HANDOFF.md",
-      "blob_sha": "98ecb699b1ef286684f6c0b48280ba0e2f323861",
-      "role": "dedicated family handoff"
+      "blob_sha": "13791fa3ac6782d354fae4dccb1dcd8b8ace827b",
+      "role": "dedicated family handoff reconciled to completed factual limitation map"
     },
     {
       "path": "data/PAT-005-completion-status.json",
-      "blob_sha": "dbaa49a7f6f319387dbc3a387eb1a1537dc1efc6",
-      "role": "machine-readable lifecycle ledger"
+      "blob_sha": "529fe5243afa7c5e6678c54cd18816008174a08b",
+      "role": "machine-readable lifecycle ledger schema 1.2.0"
     },
     {
       "path": "evidence/PAT-005-public-disclosure-audit.md",
-      "blob_sha": "2adcbe230556eed7ea9d98fc8165e6d776c461cc",
-      "role": "present factual disclosure intake; incomplete"
+      "blob_sha": "85bee38e40e0f8f86859be69dbf9b97fb4dab8e1",
+      "role": "verified source identity and completed nonlegal limitation-level factual map"
     },
     {
-      "path": "evidence/PAT-005-handoff-disclosure-audit-reconciliation-2026-07-30.md",
-      "blob_sha": "05853c56f0df601a33b0f899040558be13a105d1",
-      "role": "handoff and audit consistency reconciliation"
-    },
-    {
-      "path": "disclosures/PAT-005-governed-device-continuity.md",
-      "blob_sha": "c894008ff9466909ad9b4af8ef2fcf955a2e14e9",
-      "role": "working invention disclosure"
-    },
-    {
-      "path": "provisionals/PAT-005-working-provisional-draft.md",
-      "blob_sha": "0e5e8d8d579256ef5db250c7eb9deb4e4ff6891e",
-      "role": "working provisional draft"
-    },
-    {
-      "path": "claims/PAT-005-claim-architecture.md",
-      "blob_sha": "b66cdc39845372e62c44fb98b0498d8d65c5598f",
-      "role": "working claim architecture"
-    },
-    {
-      "path": "reviews/PAT-005-practitioner-handoff.md",
-      "blob_sha": "a0daa46d8a11cd63f01561bd92e23fce1a152b78",
-      "role": "qualified-practitioner review packet"
+      "path": "evidence/PAT-005-disclosure-evidence/PAT005-DISC-001/first-party-source-receipt.json",
+      "role": "preserved first-party source identity receipt"
     }
   ],
+  "identified_source": {
+    "event_id": "PAT005-DISC-001",
+    "title": "Device Continuity as a Governed Hardware Abstraction Layer",
+    "subtitle": "A reconstructable path from device observation to destination-specific integration",
+    "repository": "GCAT-BCAT-Engine/Publisher",
+    "path": "Papers/device-continuity-layer-governed-hardware-abstraction.md",
+    "blob_sha": "1b70321f62d92244efaddd3025dc6f90c8859f2e",
+    "introducing_commit": "661521388485f275a9231394dd2308bb52db68d3",
+    "introducing_timestamp": "2026-07-13T22:15:41-05:00",
+    "platform": "GitHub repository"
+  },
   "disclosure_audit": {
     "intake_present": true,
-    "factual_evidence_complete": false,
+    "source_identity_complete": true,
+    "identified_paper_limitation_factual_map_complete": true,
+    "historical_public_accessibility_resolved": false,
+    "earlier_disclosure_search_complete": false,
     "earliest_public_disclosure_resolved": false,
     "earliest_enabling_disclosure_resolved": false,
-    "public_accessibility_resolved": false,
+    "enablement_determined": false,
     "practitioner_analysis_present": false,
-    "tracked_repository_date": "2026-07-13",
-    "exact_title": null,
-    "publication_or_repository_path": null,
-    "immutable_hash": null,
-    "platform": null,
-    "exact_timestamp": null,
-    "timezone": null,
     "access_evidence": null
   },
   "pre_filing_outputs": [
     {
       "path": "evidence/PAT-005-public-disclosure-audit.md",
-      "status": "present_but_factually_incomplete",
-      "authority_class": "factual human evidence"
+      "status": "present_with_verified_source_identity_and_completed_nonlegal_factual_map",
+      "authority_class": "bounded factual repository evidence"
     },
     {
       "path": "inventorship/PAT-005-inventorship-determination.md",
@@ -104,13 +91,20 @@
     "patent_pending_authorized": false
   },
   "verification_boundary": {
-    "authoritative_test_execution_receipt_present": false,
+    "authoritative_registry_workflow_receipt_present": false,
     "legal_or_filing_conclusion_made": false,
     "public_accessibility_inferred": false,
     "enablement_inferred": false,
     "legal_consequence_inferred": false,
     "deadline_inferred": false
   },
-  "next_machine_action": "Locate immutable first-party evidence identifying the July 13, 2026 technical paper, update only verified factual audit fields, and reconcile central and registry records without activating filing or deadline state.",
-  "legal_notice": "Technical readiness manifest only. No inventorship, ownership, patentability, enablement, disclosure consequence, foreign-rights effect, filing authority, filing status, application number, filing date, or deadline is determined."
+  "next_machine_actions": [
+    "investigate immutable first-party historical visibility evidence for GCAT-BCAT-Engine/Publisher at the introducing timestamp",
+    "search connected first-party sources for earlier PAT-005 disclosure events without making an absence claim",
+    "reconcile portfolio root handoff and execution prompt to current exact blobs",
+    "refresh patent-registry approved-source snapshot with exact current blobs",
+    "inspect authoritative-status-sync runs jobs steps logs conclusions artifacts and independently verifiable receipts",
+    "advance an independent Publisher-origin patent family if access and workflow evidence remain blocked"
+  ],
+  "legal_notice": "Technical readiness manifest only. Verified source identity and a completed nonlegal factual map do not determine public accessibility, enablement, inventorship, ownership, patentability, disclosure consequences, foreign-rights effects, filing authority, filing status, application number, filing date, or deadline."
 }
