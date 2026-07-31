@@ -8,7 +8,8 @@ The machine-readable family status controls the current bounded lifecycle record
 
 ```text
 data/publisher-ai-output-to-action-boundary-status.json
-schema_version: 1.2.0
+schema_version: 1.2.1
+status blob: ce8cb2386feaf2d5d4de750862ff9419b7eb61fa
 ```
 
 This handoff does not determine legal family scope, inventorship, ownership, patentability, priority, filing authority, filing status, application number, receipt, or deadline.
@@ -49,6 +50,12 @@ evidence class: executable bounded-source support
 
 The verified source supports validation of hashes, custody, reconstruction, stage-chain, supersession, destination, and authority boundaries while preserving publication, release, custody, activation, and execution authorization as false. It does not establish the complete generalized output-to-action transition.
 
+## Latest bounded source search
+
+On 2026-07-31, the connected Publisher repository index was searched for combined action-request, authority-grant, execution-grant, revocation, expiration, consumption, activation-authorization, and execution-authorization terms. No indexed result was returned. The executable anchor was fetched directly and its blob was reverified.
+
+This observation is preserved in `evidence/PUBLISHER-ai-output-to-action-source-inventory.md`. It does not prove that no qualifying implementation exists in repository history, unindexed paths, workflow artifacts, other first-party repositories, or retained runtime evidence.
+
 ## Completed artifacts
 
 ```text
@@ -80,7 +87,7 @@ data/publisher-ai-output-to-action-boundary-status.json
 
 **Application:** Publisher-origin AI Output-to-Action Boundary
 
-**Current stage:** Bounded disclosure, limitation map, abstract, figure plan, chronology intake, overlap notes, and dedicated handoff complete; generalized transition evidence blocked.
+**Current stage:** Bounded disclosure, limitation map, abstract, figure plan, chronology intake, overlap notes, dedicated handoff, executable-anchor reverification, and bounded source-search record complete; generalized transition evidence blocked.
 
 ### Automation stop reason
 
