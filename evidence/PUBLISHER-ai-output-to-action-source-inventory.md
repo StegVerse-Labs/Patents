@@ -57,6 +57,12 @@ a complete output-to-action transition implementation
 combination-level operation across arbitrary AI agents
 ```
 
+## Bounded source-search observation — 2026-07-31
+
+The connected repository index was searched for combined action-request, authority-grant, execution-grant, revocation, expiration, and consumption terminology, and separately for activation/execution authorization terminology. No indexed result was returned. The executable anchor was then fetched directly and its blob reverified as `a2186f2634f5acf5253f9f26b28b673c2afc2b8a`.
+
+This is a bounded connector observation only. It does not prove that no qualifying source exists in repository history, unindexed paths, artifacts, workflow outputs, other first-party repositories, or retained runtime evidence.
+
 ## Family overlap questions
 
 Non-legal technical comparison remains required against:
