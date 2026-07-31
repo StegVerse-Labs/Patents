@@ -11,10 +11,10 @@ Portfolio-wide governance remains in `PATENTS_MIRROR_HANDOFF.md`.
 ## Current stage
 
 ```text
-status: practitioner_review_ready_with_public_disclosure_factual_intake_installed
+status: practitioner_review_ready_with_verified_paper_identity_and_remaining_disclosure_authority_gates
 filed: false
 patent pending authorized: false
-expected decision: FAIL_CLOSED_FACTUAL_DISCLOSURE_EVIDENCE_AND_AUTHORITY_GATES
+expected decision: FAIL_CLOSED_ACCESSIBILITY_ENABLEMENT_AND_AUTHORITY_GATES
 ```
 
 Machine-readable source:
@@ -29,28 +29,50 @@ Exact human action packet:
 reviews/PAT-005-human-action-packet.md
 ```
 
-## Public-disclosure factual posture
+## Verified July 13 paper identity
 
-A repository-derived public technical-paper date of `2026-07-13` is tracked. The factual intake file exists:
+The first-party paper underlying the July 13, 2026 lead is now identified:
 
 ```text
-evidence/PAT-005-public-disclosure-audit.md
+title: Device Continuity as a Governed Hardware Abstraction Layer
+subtitle: A reconstructable path from device observation to destination-specific integration
+repository: GCAT-BCAT-Engine/Publisher
+path: Papers/device-continuity-layer-governed-hardware-abstraction.md
+blob: 1b70321f62d92244efaddd3025dc6f90c8859f2e
+introducing commit: 661521388485f275a9231394dd2308bb52db68d3
+commit message: Add publishable Device Continuity Layer paper
+commit timestamp: 2026-07-13T22:15:41-05:00
+platform: GitHub repository
+paper internal date statement: July 2026
+paper internal publication-status statement: Publication-ready technical paper
 ```
 
-Current classification:
+Preserved factual receipt:
+
+```text
+evidence/PAT-005-disclosure-evidence/PAT005-DISC-001/first-party-source-receipt.json
+commit: 61b106cee28a561b181447aa059ad70baa72997e
+```
+
+The connected GitHub repository returned the paper content from the default branch. That observation verifies repository access during this session, but it does not establish when unrestricted public accessibility began, whether the repository was public on July 13, whether an earlier disclosure exists, whether the paper was enabling, or any legal consequence.
+
+## Public-disclosure factual posture
 
 ```text
 public disclosure audit intake: present
-factual disclosure evidence: incomplete
+paper identity: verified
+repository path: verified
+immutable blob: verified
+introducing commit and timestamp: verified
+repository access during current connected session: verified
+public accessibility on July 13: unresolved
 earliest public disclosure: unresolved
 earliest enabling public disclosure: unresolved
-public accessibility: unresolved
+limitation-level factual mapping: incomplete
 practitioner consequence analysis: absent
 nonprovisional deadline: null
 PCT deadline: null
 ```
-
-The repository does not yet verify the paper title, publication or repository path, immutable hash, platform, exact timestamp, timezone, access evidence, disclosed limitations, enablement, legal consequence, foreign-rights effect, or deadline.
 
 Supporting source material must be stored only under:
 
@@ -60,9 +82,7 @@ evidence/PAT-005-disclosure-evidence/<EVENT-ID>/
 
 Do not infer facts not established by immutable first-party evidence.
 
-## Lifecycle status
-
-### Completed bounded technical artifacts
+## Completed bounded technical artifacts
 
 ```text
 disclosures/PAT-005-governed-device-continuity.md
@@ -87,14 +107,16 @@ reviews/PAT-005-filing-readiness-index.md
 reviews/PAT-005-human-action-packet.md
 data/PAT-005-implementation-anchors.json
 fixtures/PAT-005-negative-cases.json
+evidence/PAT-005-disclosure-evidence/PAT005-DISC-001/first-party-source-receipt.json
 ```
 
-The public-disclosure audit is an installed intake surface, not a completed factual audit or legal analysis.
-
-### Remaining factual and authority gates
+## Remaining factual and authority gates
 
 ```text
-factual disclosure evidence complete: false
+public accessibility evidence complete: false
+earliest-disclosure search complete: false
+limitation-level factual mapping complete: false
+enablement determined: false
 verified prior-art references complete: false
 contributor interviews complete: false
 inventorship determined: false
@@ -108,7 +130,7 @@ packet emission authorized: false
 Required outputs and classifications:
 
 ```text
-evidence/PAT-005-public-disclosure-audit.md — present but factually incomplete
+evidence/PAT-005-public-disclosure-audit.md — present; source identity now supported but audit incomplete
 inventorship/PAT-005-inventorship-determination.md — absent
 reviews/PAT-005-practitioner-recommendation.md — absent
 diagrams/PAT-005-drawing-approval.md — absent
@@ -127,31 +149,32 @@ PCT deadline: null
 patent pending representation: not authorized
 ```
 
-No draft date, repository commit, conversation timestamp, packet date, disclosure-template date, or assumed submission may be used as a filing event or deadline basis.
+No draft date, repository commit, conversation timestamp, packet date, paper date, or assumed submission may be used as a filing event or deadline basis.
 
 ## Exact blocker and action packet
 
-Automation has completed the bounded drafting, technical evidence mapping, source-anchor, drawing-source, and negative-case work supported by current records. It remains stopped by incomplete factual disclosure evidence, factual contributor testimony, qualified practitioner determinations, formal drawing approval, explicit owner disposition, and any later human Patent Center transaction.
+Automation has identified and hash-bound the paper and introducing commit. It remains stopped by unresolved public-access conditions and chronology, incomplete factual limitation mapping, qualified practitioner determinations, contributor testimony, formal drawing approval, explicit owner disposition, and any later human Patent Center transaction.
 
 Ordered actions:
 
-1. Identify the July 13, 2026 paper from exact first-party evidence: title, path, immutable hash, platform, timestamp, timezone, and access evidence.
-2. Store each verified source under `evidence/PAT-005-disclosure-evidence/<EVENT-ID>/` and update the factual audit without legal inference.
-3. Complete contributor interviews and the claim-contribution worksheet using attributable facts only.
-4. Obtain a qualified practitioner’s inventorship, disclosure-consequence, prior-art, enablement, drawing, and disposition analysis.
-5. Commit the practitioner determination and recommendation to the exact required paths.
-6. Commit formal drawing approval and explicit owner disposition.
-7. Resume packet rendering only after all five pre-filing outputs are present and internally consistent.
-8. Perform Patent Center submission, signing, certification, and payment only by an authorized human after a filing-ready packet exists.
-9. Save an official receipt only at `filing_packets/PAT-005/uspto_filing_receipt.pdf`.
+1. Establish the repository visibility and access conditions applicable on `2026-07-13T22:15:41-05:00`, including first unrestricted-access evidence if available.
+2. Search for and preserve any earlier first-party disclosure event without treating absence of search results as proof of absence.
+3. Map the paper text to PAT-005 technical themes factually, without an enablement or legal conclusion.
+4. Complete contributor interviews and the claim-contribution worksheet using attributable facts only.
+5. Obtain a qualified practitioner’s inventorship, disclosure-consequence, prior-art, enablement, drawing, and disposition analysis.
+6. Commit the practitioner determination and recommendation to the exact required paths.
+7. Commit formal drawing approval and explicit owner disposition.
+8. Resume packet rendering only after all pre-filing outputs are present and internally consistent.
+9. Perform Patent Center submission, signing, certification, and payment only by an authorized human after a filing-ready packet exists.
+10. Save an official receipt only at `filing_packets/PAT-005/uspto_filing_receipt.pdf`.
 
 ## Next bounded machine work
 
-1. Search connected first-party repositories for exact evidence identifying the July 13, 2026 technical paper.
-2. Update only verified factual fields in `evidence/PAT-005-public-disclosure-audit.md`.
-3. Reconcile `data/PAT-005-readiness-manifest-2026-07-30.json`, the portfolio ledger, root handoff, registry snapshot, and issue records after concrete evidence changes.
-4. Preserve `FAIL_CLOSED_FACTUAL_DISCLOSURE_EVIDENCE_AND_AUTHORITY_GATES`.
-5. Inspect authoritative patent-registry workflow receipts; if none exist, preserve the technical action packet and advance another independent family.
+1. Update the factual disclosure audit and readiness records with the verified paper identity while preserving unresolved accessibility and enablement.
+2. Inspect first-party repository history and retained publication evidence for access conditions and any earlier event.
+3. Complete a nonlegal limitation-level factual map from the identified paper.
+4. Reconcile the portfolio ledger, root handoff, registry snapshot, and issue records after each concrete evidence change.
+5. Preserve fail-closed authority and filing invariants.
 
 ## Ecosystem update boundary
 
