@@ -2,193 +2,91 @@
 
 ## Purpose
 
-This file is the reusable new-chat execution prompt for continuing the StegVerse patent portfolio with maximum bounded progress and minimum loss of context.
-
-It does not replace any family handoff. Every run must begin by reading the current handoffs and machine ledgers identified below. Verified immutable source artifacts control over summaries.
+Continue bounded StegVerse patent preparation from live repository evidence. Verified immutable artifacts, current handoffs, machine ledgers, Git history, issues, pull requests, workflows, jobs, logs, and artifacts control over chat summaries.
 
 ## Required first reads
 
-Read these files from `StegVerse-Labs/Patents` before making any change:
+Read in order:
+
+1. `PATENTS_MIRROR_HANDOFF.md`
+2. `PAT-005_MIRROR_HANDOFF.md`
+3. `evidence/PAT-005-public-disclosure-audit.md`
+4. `evidence/PAT-005-disclosure-evidence/PAT005-DISC-001/first-party-source-receipt.json`
+5. `data/PAT-005-completion-status.json`
+6. `data/PAT-005-readiness-manifest-2026-07-30.json`
+7. `data/portfolio-completion-status.json`
+8. `PUBLISHER_FAMILIES_MIRROR_HANDOFF.md`
+9. Every family handoff relevant to the next independent work.
+
+When registry synchronization is in scope, also read:
+
+1. `StegVerse-Labs/patent-registry/PATENT_REGISTRY_MIRROR_HANDOFF.md`
+2. `StegVerse-Labs/patent-registry/data/registry-synchronization-status.json`
+3. the current approved-source snapshot
+4. `.github/workflows/authoritative-status-sync.yml`
+
+## Current PAT-005 source state
 
 ```text
-PATENTS_MIRROR_HANDOFF.md
-PUBLISHER_FAMILIES_MIRROR_HANDOFF.md
-PAT-001_MIRROR_HANDOFF.md
-PAT-002_MIRROR_HANDOFF.md
-PAT-003_MIRROR_HANDOFF.md
-PAT-004_MIRROR_HANDOFF.md
-PAT-005_MIRROR_HANDOFF.md
-COMMIT_TIME_ADMISSIBILITY_MIRROR_HANDOFF.md
-RECEIPT_BASED_STATE_TRANSITION_MIRROR_HANDOFF.md
-PUBLISHER_GOVERNED_DISCLOSURE_PIPELINE_MIRROR_HANDOFF.md
-APPLICATION_CORRECTION_GATE_MIRROR_HANDOFF.md
-AI_OUTPUT_TO_ACTION_BOUNDARY_MIRROR_HANDOFF.md
-RECOVERABILITY_AWARE_EXECUTION_MIRROR_HANDOFF.md
-MASTER_RECORDS_RECONSTRUCTION_VERIFICATION_MIRROR_HANDOFF.md
-MULTI_ENTITY_OBSERVER_PARTICIPANT_MIRROR_HANDOFF.md
+status: practitioner_review_ready_with_verified_paper_identity_and_limitation_map
+source repository: GCAT-BCAT-Engine/Publisher
+source path: Papers/device-continuity-layer-governed-hardware-abstraction.md
+source blob: 1b70321f62d92244efaddd3025dc6f90c8859f2e
+introducing commit: 661521388485f275a9231394dd2308bb52db68d3
+introducing timestamp: 2026-07-13T22:15:41-05:00
+factual limitation map: complete
+historical public accessibility: unresolved
+earlier disclosure search: incomplete
+enablement: undetermined
+practitioner consequence analysis: absent
+expected decision: FAIL_CLOSED_ACCESSIBILITY_ENABLEMENT_AND_AUTHORITY_GATES
 ```
 
-Also read the current machine ledgers and custody state:
+Current controlling blobs:
 
 ```text
-data/portfolio-completion-status.json
-data/publisher-family-completion-status.json
-data/thread-archive-custody-status.json
+PAT-005 handoff: 13791fa3ac6782d354fae4dccb1dcd8b8ace827b
+PAT-005 readiness manifest: 0eebabf106ded9f40023c30b1f9fb6150bd607c4
+PAT-005 audit: 85bee38e40e0f8f86859be69dbf9b97fb4dab8e1
+PAT-005 completion status: 529fe5243afa7c5e6678c54cd18816008174a08b
+portfolio status: 211b57e13e016dfae00c8d1bc0ff2ec1f03aed7d
+root handoff: c8812340a9d0480ac8e3bbe5256a49178691ba52
 ```
 
-Read any family-specific status, readiness, counsel packet, action packet, evidence map, receipt, issue, pull request, workflow output, or filing-packet artifact referenced by those handoffs.
+## Current bounded priority
 
-When work depends on external first-party implementation evidence, inspect the exact connected repositories and immutable paths named in the relevant handoff. Do not substitute memory or inferred repository relationships for direct evidence.
+1. Investigate immutable first-party historical visibility evidence for `GCAT-BCAT-Engine/Publisher` at `2026-07-13T22:15:41-05:00`, including repository and organization events, publication receipts, releases, Pages evidence, issues, pull requests, discussions, workflows, logs, and retained artifacts.
+2. Search connected first-party repositories, commits, releases, issues, workflows, publication records, websites, and retained evidence for an earlier PAT-005 disclosure event. Absence of results is not proof of absence.
+3. Refresh the patent-registry approved-source snapshot using exact current blobs, including the current portfolio and root-handoff blobs.
+4. Inspect authoritative-status-sync workflow runs, jobs, steps, logs, conclusions, and artifacts where available.
+5. Admit files under `patent-registry/data/receipts/authoritative-status-sync/` only after independently verifying run ID, tested commit, conclusion, job and steps, artifact identity, report, receipt stream, and all relevant hashes.
+6. Inspect and update `StegVerse-Labs/Patents#1`, `StegVerse-Labs/patent-registry#1`, and affected patent pull requests after concrete changes.
+7. If historical-access evidence and authoritative registry workflow evidence remain blocked, advance one independent Publisher-origin patent family from canonical executable or runtime evidence.
+8. Update this prompt and every controlling handoff after durable context changes.
 
-## Current goals
+## Portfolio execution rules
 
-1. Maintain concrete lifecycle status for every numbered and Publisher-origin invention family.
-2. Complete all bounded, non-destructive, first-party drafting, evidence mapping, validation, manifest, readiness, packet, receipt, and synchronization work currently supported by repository evidence.
-3. Advance another independent family whenever one family is blocked.
-4. Preserve exact blockers and next-action packets for every authority-gated or evidence-gated stasis.
-5. Reconcile changed family records into the central portfolio ledger, Publisher ledger, root handoffs, and patent-registry snapshot when repository authority permits.
-6. Keep filing and deadline claims fail-closed until verified official filing evidence exists.
-7. Continue until every family is filed, intentionally held as trade secret, defensively published under an explicit decision, abandoned under an explicit decision, or has a fully documented exact blocker and next-action packet.
+Maintain explicit lifecycle status for invention capture, disclosure chronology, evidence map, prior-art distinction notes, specification, abstract, claim themes or claims draft, drawings, inventor fields, ownership fields, counsel questions, filing-packet emission, warning resolution, human filing, filing receipt, application number, actual filing date, nonprovisional deadline, PCT deadline, and owner disposition.
 
-## Required lifecycle fields
+Complete supported drafts and evidence mappings, replace scaffolding only from verified evidence, preserve deterministic refusals, update machine ledgers, inspect issues and pull requests, and advance another independent family whenever the active family is blocked.
 
-For each family, maintain explicit status for:
+Do not silently merge, split, abandon, publish, or treat one invention family as covered by another.
 
-```text
-invention capture
-disclosure chronology
-evidence map
-prior-art distinction notes
-specification
-abstract
-claim themes or claims draft
-drawings
-inventor fields
-ownership fields
-counsel questions
-filing packet emission
-warning resolution
-human filing
-filing receipt
-application number
-actual filing date
-nonprovisional deadline
-PCT deadline where tracked
-owner disposition
-```
+## Authority boundary
 
-## Controlled invention families
+Do not infer public accessibility, enablement, legal consequences, foreign-rights effects, deadlines, inventorship, ownership, filing status, application numbers, signatures, fees, or filing authority.
 
-Numbered families:
-
-```text
-PAT-001 — Transition-Table-Native Dynamic Micro-Node Computing
-PAT-002 — Heartbeat-Governed Entity and Reflected-State Computing
-PAT-003 — Generalized Adaptive Scanner Using Dynamic Micro-Nodes
-PAT-004 — Manifest-Governed Bidirectional Neural Communication
-PAT-005 — Governed Device Continuity and Destination-Bound Hardware Abstraction
-```
-
-Publisher-origin candidates:
-
-```text
-Commit-Time Admissibility Gate
-Receipt-Based State Transition Validation
-Publisher Governed Disclosure Pipeline
-Application Correction Gate
-AI Output-to-Action Boundary
-Recoverability-Aware Execution Boundary
-Master-Records Reconstruction and Verification
-Multi-Entity Observer-Participant Admissibility
-```
-
-Do not silently merge, split, abandon, publish, or treat one family as covered by another.
-
-## Execution rules
-
-Perform all bounded work available in the current run, including:
-
-```text
-complete supported drafts
-replace scaffolding and placeholders only from verified evidence
-create missing handoffs when repository authority permits
-update machine-readable lifecycle ledgers
-run available repository checks through an authoritative dispatcher where available
-preserve deterministic refusal receipts when execution is unavailable or denied
-emit manifests, readiness reports, evidence maps, action packets, and synchronization deltas
-inspect issues and pull requests
-update the root and family handoffs after concrete changes
-advance the next independent family when blocked
-```
-
-Do not invent or infer unsupported facts, inventorship, ownership, conception dates, disclosure dates, legal conclusions, prior-art results, signatures, certifications, fees, entity status, application numbers, filing receipts, filing dates, or deadlines.
-
-Do not submit to the USPTO, pay fees, certify declarations, sign documents, authorize filing, or act as patent counsel.
+Do not submit to the USPTO, pay fees, sign or certify documents, authorize filing, or act as patent counsel.
 
 No deadline may be calculated from a draft date, repository commit, conversation timestamp, packet-generation date, disclosure template, or assumed submission.
 
 ## Human-action packet requirement
 
-When automation reaches a non-automatable or authority-gated stasis, report:
-
-```text
-application or family and current stage
-precise reason automation stopped
-every unresolved field or decision
-exact repository file or Patent Center screen involved
-ordered steps the human must perform
-information or document required
-expected outcome or receipt
-exact repository destination
-automation that resumes afterward
-disclosure or deadline risk
-```
-
-Separate legal-counsel decisions from clerical human filing actions.
-
-## Notification rule
-
-Notify the user only when:
-
-```text
-concrete repository progress occurred
-a disclosure or deadline risk was discovered
-a family became counsel-ready, filing-ready, filed, or deadline-sensitive
-an exact human action is required
-```
-
-When no meaningful change occurred and no unresolved human action needs surfacing, do not claim progress.
-
-## Mandatory end-of-response continuation prompt
-
-At the end of every user-visible response, include a fenced block titled `NEXT CHAT PROMPT` containing a ready-to-paste prompt for a new chat.
-
-The prompt must:
-
-1. Direct the next session to read this file first.
-2. Direct the next session to read `PATENTS_MIRROR_HANDOFF.md`, `PUBLISHER_FAMILIES_MIRROR_HANDOFF.md`, and every family handoff relevant to the next work.
-3. Name any exact status, evidence, counsel, action-packet, filing-packet, registry, issue, pull-request, workflow, or receipt files that changed or must be inspected next.
-4. Summarize the latest concrete progress, current blockers, current goals, end goals, and authority boundaries.
-5. Instruct the next session to use the connected GitHub repositories directly and continue without asking for confirmation when bounded repository authority permits.
-6. Instruct the next session to update this execution prompt and the controlling handoffs whenever new durable context is required for future sessions.
-7. Preserve the rule that unsupported facts and legal conclusions must not be invented and that no USPTO submission, signature, certification, or fee payment is authorized.
-
-The continuation prompt must be specific to the work just completed rather than a generic restatement.
-
-## Current priority ordering
-
-Unless the current handoffs show a newer priority:
-
-1. Address PAT-005 public-disclosure factual intake and preserve urgency without inventing legal consequences or deadlines.
-2. Complete authoritative portfolio and Publisher-ledger reconciliation after recent family-status and handoff changes.
-3. Refresh the patent-registry exact-hash approved-source snapshot and preserve synchronization or deterministic-refusal receipts.
-4. Continue bounded source and runtime evidence discovery for blocked numbered and Publisher families.
-5. Advance supported specification, abstract, figure, evidence, counsel-packet, and action-packet work for the next independent family.
-6. Preserve active-thread status until verified orchestration ingestion, task extraction, assignment, accepted custody, and continuation receipts exist.
+When machine work reaches a non-automatable or authority-gated stasis, preserve the family and stage, exact stop reason, unresolved fields, relevant repository file or Patent Center surface, ordered human steps, required information, expected receipt, repository destination, resuming automation, and disclosure or deadline risk. Separate legal-practitioner decisions from clerical filing actions.
 
 ## End state
 
-The portfolio is complete only when each family has an explicit, evidence-backed terminal state:
+A family is terminal only when evidence supports one of:
 
 ```text
 filed
@@ -199,3 +97,7 @@ or fully documented blocker with exact next-action packet
 ```
 
 Repository continuation records are not equivalent to legal disposition, filing, or orchestration custody.
+
+## Mandatory continuation output
+
+After concrete work, provide a ready-to-paste `NEXT CHAT PROMPT` naming exact changed files and blobs, latest commits, unresolved evidence and authority gates, next bounded work, and the same filing and legal boundaries.
