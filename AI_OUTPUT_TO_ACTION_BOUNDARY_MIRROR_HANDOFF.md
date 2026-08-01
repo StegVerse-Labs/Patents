@@ -8,8 +8,8 @@ The machine-readable family status controls the current bounded lifecycle record
 
 ```text
 data/publisher-ai-output-to-action-boundary-status.json
-schema_version: 1.2.1
-status blob: ce8cb2386feaf2d5d4de750862ff9419b7eb61fa
+schema_version: 1.3.0
+status blob: cfc591061deb8521e1700ff201bf7d1d3677805a
 ```
 
 This handoff does not determine legal family scope, inventorship, ownership, patentability, priority, filing authority, filing status, application number, receipt, or deadline.
@@ -17,19 +17,17 @@ This handoff does not determine legal family scope, inventorship, ownership, pat
 ## Current lifecycle state
 
 ```text
-invention capture: working technical disclosure complete from bounded verified executable source
+invention capture: bounded request-to-execution-candidate chain supported by three verified executables
 disclosure chronology: factual intake template complete; attributable evidence not populated
-evidence map: bounded limitation-level map complete; generalized action-transition support absent
+evidence map: request routing, authority-evidence binding, scoped admissibility, expiry refusal, and execution-candidate emission mapped
 prior-art distinction notes: bounded non-legal overlap notes complete; verified external search pending
-specification: bounded working technical disclosure present; full specification incomplete
-abstract: working abstract complete
-claim themes: candidate information-admission, authority-separation, and execution-grant limitation clusters present; not final claims
-drawings: figure plan complete; formal drawings blocked by unverified generalized transition structures
+specification: bounded working technical disclosure present; reconciliation to expanded TVC evidence pending
+abstract: working abstract complete; expanded-evidence reconciliation pending
+claim themes: information admission, request routing, authority separation, scoped admissibility, expiry, and execution-candidate limitation clusters present; not final claims
+drawings: figure plan complete; request-route and authority-binding sequence update pending; formal approval absent
 inventor fields: undetermined
 ownership fields: unconfirmed
-counsel questions: independent family versus dependent embodiment, relationship to commit-time, disclosure, and receipt families, claim support, inventorship, ownership, disclosure consequences, and disposition unresolved
 filing packet: not authorized
-warning resolution: bounded source-drafting warnings resolved; generalized-source, chronology, contributor, family, and counsel blockers open
 human filing: not started
 filing receipt: null
 application number: null
@@ -39,113 +37,65 @@ PCT deadline: null
 patent pending authorized: false
 ```
 
-## Verified bounded source
+## Verified bounded sources
 
 ```text
-repository: GCAT-BCAT-Engine/Publisher
-path: scripts/import_ecosystem_chat_activation.py
-blob SHA: a2186f2634f5acf5253f9f26b28b673c2afc2b8a
-evidence class: executable bounded-source support
+GCAT-BCAT-Engine/Publisher
+scripts/import_ecosystem_chat_activation.py
+blob: a2186f2634f5acf5253f9f26b28b673c2afc2b8a
+
+StegVerse-Labs/TVC
+scripts/route_ecosystem_service_request.py
+blob: 5139f935362967906fdbb318f4444fa453b70c9a
+
+StegVerse-Labs/TVC
+scripts/bind_service_admissibility.py
+blob: 570eaa2db77379fd5f093c2ba721357e25c7c914
 ```
 
-The verified source supports validation of hashes, custody, reconstruction, stage-chain, supersession, destination, and authority boundaries while preserving publication, release, custody, activation, and execution authorization as false. It does not establish the complete generalized output-to-action transition.
+The verified chain now supports deterministic service-request hashing and routing without authority, identification of required later authority and admissibility records, independent authority-evidence and CGE-decision binding, execution-scope validation, expiry refusal, and execution-candidate emission. Publisher and TVC both preserve execution authorization as false.
 
-## Latest bounded source search
+This materially strengthens the technical separation between output or request admission and actual action authority. It does not establish authority creation, tool-specific execution-grant issuance, grant revocation, one-time consumption, actual tool execution, or a complete generalized AI-output-to-action transition.
 
-On 2026-07-31, the connected Publisher repository index was searched for combined action-request, authority-grant, execution-grant, revocation, expiration, consumption, activation-authorization, and execution-authorization terms. No indexed result was returned. The executable anchor was fetched directly and its blob was reverified.
-
-This observation is preserved in `evidence/PUBLISHER-ai-output-to-action-source-inventory.md`. It does not prove that no qualifying implementation exists in repository history, unindexed paths, workflow artifacts, other first-party repositories, or retained runtime evidence.
-
-## Completed artifacts
+## Current controlling evidence blobs
 
 ```text
 evidence/PUBLISHER-ai-output-to-action-source-inventory.md
-reviews/PUBLISHER-ai-output-to-action-technical-disclosure.md
+blob: 89308fd5c6cc6030f290554a7129bd57b3a9c44c
+
 evidence/PUBLISHER-ai-output-to-action-limitation-map.md
-reviews/PUBLISHER-ai-output-to-action-abstract-and-figure-plan.md
-evidence/PUBLISHER-ai-output-to-action-chronology.md
-reviews/PUBLISHER-ai-output-to-action-nonlegal-overlap-notes.md
-reviews/PUBLISHER-ai-output-to-action-action-packet.md
-data/publisher-ai-output-to-action-status-delta-2026-07-29.json
+blob: 4a370afe6fcf260020cc1caf3c91b54e7e506212
+
 data/publisher-ai-output-to-action-boundary-status.json
+blob: cfc591061deb8521e1700ff201bf7d1d3677805a
 ```
 
 ## Exact technical blockers
 
-1. General output-object schema is not verified.
-2. Canonical action-request object is not verified.
-3. Authority-grant creation mechanism is not verified.
-4. Grant scope, duration, expiration, revocation, and consumption are not verified.
-5. Tool-specific execution grant is not verified.
-6. Complete output-to-action transition is not verified.
-7. Negative-path and successful execution outputs are not retained and verified.
-8. Dated conception, implementation, and disclosure chronology is not populated.
-9. Contributors and attributable contributions are not verified.
+1. A general AI output-object schema is not verified.
+2. A canonical generalized action-request object is not verified; the TVC service request is bounded.
+3. The mechanism that creates authority evidence is not verified.
+4. A tool-specific execution grant is not verified.
+5. Grant revocation behavior is not verified.
+6. One-time grant consumption behavior is not verified.
+7. Actual execution and service-actual receipts are not verified.
+8. Retained positive execution and revoked, consumed, and tool-out-of-scope outputs are not verified.
+9. Dated chronology and contributors remain unverified.
 10. Legal family disposition remains unresolved.
 
-## Exact action packet
+## Next bounded machine work
 
-**Application:** Publisher-origin AI Output-to-Action Boundary
-
-**Current stage:** Bounded disclosure, limitation map, abstract, figure plan, chronology intake, overlap notes, dedicated handoff, executable-anchor reverification, and bounded source-search record complete; generalized transition evidence blocked.
-
-### Automation stop reason
-
-Automation cannot expand the specification, generate formal drawings, classify counsel readiness, or emit a filing packet without immutable first-party support for the complete output-to-action transition and retained positive and negative execution evidence.
-
-### Required technical input
-
-Provide one or more original first-party records with:
-
-```text
-repository and exact path
-commit SHA or blob SHA
-general output-object schema
-canonical action-request schema
-authority-grant creation and validation mechanism
-grant scope, duration, expiration, revocation, and consumption behavior
-tool-specific execution authorization
-workflow or tests
-positive execution output
-negative, expired, revoked, out-of-scope, and consumed-grant outputs
-receipt, replay, or reconstruction output
-known source date and contributor
-```
-
-Place implementation and runtime evidence under:
-
-```text
-evidence/PUBLISHER-ai-output-to-action-implementation/
-data/receipts/PUBLISHER-ai-output-to-action/
-```
-
-Place chronology evidence under:
-
-```text
-evidence/PUBLISHER-ai-output-to-action-chronology-evidence/
-```
-
-Place contributor facts under:
-
-```text
-inventorship/PUBLISHER-ai-output-to-action-contributor-interviews.md
-inventorship/PUBLISHER-ai-output-to-action-contribution-worksheet.md
-```
-
-### Automation resumption
-
-After verified records are committed, automation resumes with immutable source hashing and classification, limitation-level evidence-map completion, proposed-versus-authorized action separation analysis, grant-lifecycle and negative-path verification, specification expansion, formal drawing generation, practitioner packet preparation, and central Publisher-ledger and patent-registry snapshot reconciliation.
-
-## Counsel versus clerical filing boundary
-
-Qualified patent counsel must later determine legal family relationships, claim support, prior-art conclusions, inventorship, ownership, disclosure consequences, and filing or preservation strategy.
-
-No Patent Center clerical action is appropriate. No counsel-approved filing packet, owner authorization, official filing receipt, application number, filing date, or calculated deadline exists.
+1. Locate the producer and canonical schema for the authority evidence consumed by `bind_service_admissibility.py`.
+2. Locate the producer and canonical schema for the CGE decision, including scope and expiry.
+3. Locate the transition from `execution_candidate: true` to tool-specific execution authorization.
+4. Locate grant revocation and consumption logic and retained negative outputs.
+5. Locate service actual, execution receipt, ledger append receipt, and requester return receipt production.
+6. Reconcile the working technical disclosure, abstract, figure plan, central Publisher-family ledger, root Publisher handoff, execution prompt, and patent-registry approved-source snapshot.
 
 ## Current decision
 
 ```text
-FAIL_CLOSED_GENERALIZED_SOURCE_CHRONOLOGY_FAMILY_AND_COUNSEL_BLOCKERS
+FAIL_CLOSED_EXECUTION_GRANT_REVOCATION_CONSUMPTION_RUNTIME_CHRONOLOGY_FAMILY_AND_COUNSEL_BLOCKERS
 ```
 
 ## Filing invariant
@@ -161,3 +111,12 @@ PCT deadline: null
 ```
 
 No deadline may be calculated from a repository commit, draft, workflow run, conversation timestamp, or assumed submission.
+
+## Archive state
+
+```text
+repository continuation state preserved: true
+orchestration custody accepted: false
+thread ready to archive: false
+active working thread still required: true
+```
