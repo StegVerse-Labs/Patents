@@ -7,10 +7,12 @@
 ## Current decision
 
 ```text
-PARTIAL_VERIFIED_EXECUTABLE_SUPPORT
+PARTIAL_VERIFIED_REQUEST_TO_EXECUTION_CANDIDATE_SUPPORT
 ```
 
-## Verified executable anchor
+## Verified executable sources
+
+### Publisher bounded import anchor
 
 ```text
 repository: GCAT-BCAT-Engine/Publisher
@@ -19,49 +21,82 @@ blob: a2186f2634f5acf5253f9f26b28b673c2afc2b8a
 evidence type: executable
 ```
 
+This source validates upstream state, propagation, custody, reconstruction, stage-chain, supersession, destination, and authority-boundary records while keeping publication, release, custody, and execution authorization false.
+
+### TVC service-request router
+
+```text
+repository: StegVerse-Labs/TVC
+path: scripts/route_ecosystem_service_request.py
+blob: 5139f935362967906fdbb318f4444fa453b70c9a
+evidence type: executable
+```
+
+This source validates a provider-neutral service request, binds it to a deterministic hash, resolves an enabled provider, emits a hash-bound route, and requires later service estimate, authority evidence, CGE admissibility, service receipt or refusal, service actual, ledger receipt, and requester return receipt records. The route explicitly records `authority_granted: false`, `admissibility_granted: false`, and `execution_authorized: false`.
+
+### TVC authority and admissibility binder
+
+```text
+repository: StegVerse-Labs/TVC
+path: scripts/bind_service_admissibility.py
+blob: 570eaa2db77379fd5f093c2ba721357e25c7c914
+evidence type: executable
+```
+
+This source binds the route to authority evidence and an externally produced CGE decision. It verifies request, route, provider, service, authority-evidence hash, decision hash, expiry, admissibility state, and execution scope. It rejects invalid authority, mismatched records, expired decisions, and out-of-scope service requests. A passing record emits an `execution_candidate` while preserving `execution_authorized_by_tvc: false`.
+
 ## Supported technical behavior
 
-The importer:
+The combined bounded chain now supports:
 
-1. acquires an upstream state, propagation packet, and custody record;
-2. verifies canonical hashes and cross-record bindings;
-3. requires recorded custody and passing reconstruction conditions;
-4. rejects incomplete stage chains and unresolved supersession;
-5. verifies that the source packet does not itself grant activation, release, publication, or custody authority;
-6. verifies Publisher is an intended destination;
-7. emits `PENDING`, `REJECTED`, or verified-import status;
-8. keeps publication, release, custody, and execution authorization false in the emitted status.
+1. receipt of an upstream informational state or packet;
+2. canonical hashing and cross-record binding;
+3. explicit separation of informational admission from action authority;
+4. a provider-neutral service-request object;
+5. deterministic routing without authority or admissibility;
+6. a required later authority-evidence record;
+7. external CGE admissibility binding;
+8. scoped service admission;
+9. expiry-based refusal;
+10. emission of an execution candidate without execution authorization.
 
 ## Candidate limitation leads
 
 ```text
-output packet received
+output or state packet received
 provenance and integrity validated
-authority boundary inspected
-informational acceptance separated from action permission
-bounded status emitted
+service request represented and hashed
+request routed without authority
+authority evidence independently supplied and hash-bound
+admissibility decision independently supplied and hash-bound
+scope and expiration validated
+execution candidate emitted
 execution authority remains false
-separate later authority transition required
+separate tool-specific authorization and execution transition required
 ```
 
-## Unsupported elements
+## Remaining unsupported elements
 
 No verified source yet establishes:
 
 ```text
 a general AI model output schema
-a separate action-request object
-a human or machine approval token
+a canonical generalized action-request object
+a mechanism that creates the authority evidence
 a tool-specific execution grant
-a complete output-to-action transition implementation
-combination-level operation across arbitrary AI agents
+grant revocation behavior
+grant one-time consumption behavior
+a complete execution transition and service actual
+a retained positive execution output
+retained revoked, consumed, and tool-out-of-scope outputs
+combination-level operation across arbitrary AI agents and tools
 ```
 
-## Bounded source-search observation — 2026-07-31
+## Bounded source-search observations
 
-The connected repository index was searched for combined action-request, authority-grant, execution-grant, revocation, expiration, and consumption terminology, and separately for activation/execution authorization terminology. No indexed result was returned. The executable anchor was then fetched directly and its blob reverified as `a2186f2634f5acf5253f9f26b28b673c2afc2b8a`.
+The connected repository index was first searched for combined action-request, authority-grant, execution-grant, revocation, expiration, and consumption terminology. No combined indexed result was returned. A later targeted search for `execution_authorized` returned the TVC routing and admissibility-binding executables above, among other bounded authority-preserving sources.
 
-This is a bounded connector observation only. It does not prove that no qualifying source exists in repository history, unindexed paths, artifacts, workflow outputs, other first-party repositories, or retained runtime evidence.
+These are bounded connector observations only. They do not prove that no additional qualifying source exists in repository history, unindexed paths, artifacts, workflow outputs, other first-party repositories, or retained runtime evidence.
 
 ## Family overlap questions
 
@@ -72,6 +107,7 @@ Commit-Time Admissibility Gate
 Publisher Governed Disclosure Pipeline
 Receipt-Based State Transition Validation
 PAT-002 heartbeat and reflected-state family
+TVC service admissibility and execution-candidate mechanisms
 ```
 
 This inventory does not merge those families or determine claim scope.
