@@ -66,7 +66,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
     assert receipt["workstream_decision"] == "CONTINUE_ACTIVE_PATENT_WORK"
     assert receipt["machine_queue_size"] == 1
     assert receipt["evidence_queue_size"] == 1
-    assert receipt["schema_version"] == "2.1"
+    assert receipt["schema_version"] == "2.2"
     assert receipt["authority_boundary"]["filing_performed"] is False
 
 
