@@ -23,6 +23,10 @@ def _load(path: Path) -> dict[str, Any]:
     return data
 
 
+def _is_fail_closed_decision(value: Any) -> bool:
+    return isinstance(value, str) and value.startswith("FAIL_CLOSED")
+
+
 def validate_record(repo_root: Path, record_path: Path) -> dict[str, Any]:
     errors: list[str] = []
     warnings: list[str] = []
@@ -76,9 +80,9 @@ def validate_record(repo_root: Path, record_path: Path) -> dict[str, Any]:
         unresolved = sorted(key for key, value in blockers.items() if value is not True)
 
     expected = record.get("expected_decision")
-    if unresolved and expected not in (None, "FAIL_CLOSED_BLOCKERS"):
+    if unresolved and expected is not None and not _is_fail_closed_decision(expected):
         errors.append("expected_decision must fail closed while blocking gates remain")
-    if not unresolved and expected == "FAIL_CLOSED_BLOCKERS":
+    if not unresolved and _is_fail_closed_decision(expected):
         warnings.append("all blockers are true but expected_decision remains fail closed")
 
     decision = "VALID_FAIL_CLOSED" if unresolved and not errors else "VALID_NO_BLOCKERS"
