@@ -33,10 +33,17 @@ Patentability searching and freedom-to-operate analysis must remain distinct. A 
 | Agent orchestration and tool routers | Select agents/tools according to task capability. | P1-L01, L10, L11, L12 | Minimum-addressability node construction, no authority expansion, default expiry. |
 | Capability-based security | Grants narrow authorities and object capabilities. | P1-L01, L03, L11, L12 | Demand construction plus transition-bound lifecycle and receipt evidence. |
 | Policy-as-code and authorization engines | Evaluate policy, identity, delegation, and deny decisions. | P1-L03, L04 | Integration into node construction, role coverage, return path, and reconstruction witness. |
-| Event sourcing and tamper-evident logs | Preserve state transitions and replay evidence. | P1-L06, L08, L13 | Receipt binds node build/addressability/disposition and governs execution before consequence. |
+| Event sourcing and tamper-evident logs | Preserve state transitions and replay evidence. | P1-L06, L08, L13, L18, L20, L21 | Receipt binds node build/addressability/disposition; current topology and reformation acceptance are conditioned on admitted causal state rather than logging alone. |
 | Lease-based distributed systems | Retain resources while leases or heartbeats remain valid. | P1-L14, L15, L16 | Externally evidenced usage rather than heartbeat-only self-retention; authority remains bounded. |
 | Object pools and warm serverless instances | Reuse active instances to reduce startup cost. | P1-L10, L14, L15 | Reuse conditioned on admissibility and active usage, without scope or authority expansion. |
-| Autonomic and self-healing systems | Monitor health and preserve or recreate components. | P1-L13, L14, L16 | Node cannot establish its own right to persist; external standing controls retention. |
+| Autonomic and self-healing systems | Monitor health and preserve or recreate components. | P1-L13, L14, L16, L20, L21 | Node cannot establish its own right to persist; external standing controls retention; reformation does not itself prove governed continuity. |
+| Moving-target defense | Rotates or mutates hosts, addresses, routes, or attack surfaces to reduce attacker stability. | P1-L17, L18, L20, L21 | Test whether membership/topology are themselves receipt-derived governed resultant state and whether reformation requires reconstruction equality rather than reachability. |
+| Ephemeral workload identity | Issues short-lived workload identities, credentials, or attestations tied to transient compute. | P1-L17, L19, L20 | Distinguish identity/attestation from governed membership and preserve authority-plane separation. |
+| Zero-trust admission and continuous attestation | Continuously evaluates identity, posture, and access before or during communication. | P1-L17, L19 | Determine whether admission creates network membership/topology or merely grants access; compare non-self-promoting authority planes. |
+| Event-sourced topology reconstruction | Reconstructs distributed state/topology from ordered events or logs. | P1-L18, L21 | Test latest-accepted-relationship topology plus admission semantics and equality-gated reformation, not reconstruction alone. |
+| Dynamic overlay and ad-hoc networks | Forms, fragments, heals, and reforms logical network topologies over changing participants. | P1-L17, L18, L21 | Distinguish observed/negotiated adjacency from receipt-bound admitted relationships and reconstruction-gated continuity. |
+| Distributed ledgers and replicated state machines | Preserve ordered, tamper-evident state and replicated transition histories. | P1-L06, L08, L18, L20, L21 | Determine whether ledger consensus/state replication teaches disposable substrate plus separately governed network membership/topology. |
+| State-machine-controlled network admission | Applies finite-state or policy transitions to join/leave/access decisions. | P1-L17, L18, L19, L21 | Test the complete combination of exact causal receipt binding, authority-plane separation, resultant topology, and equality-gated reformation. |
 
 ## Search term matrix
 
@@ -72,6 +79,19 @@ Patentability searching and freedom-to-operate analysis must remain distinct. A 
 - `cryptographic proof policy authorization execution`
 - `event sourced authorization decision reconstruction`
 
+### StegOS/InTr Network Manifold refinements
+
+- `moving target defense receipt governed network membership`
+- `ephemeral node admitted relationship topology receipt`
+- `zero trust network membership event sourced topology`
+- `dynamic overlay network state machine admission receipt`
+- `ephemeral workload identity topology reconstruction`
+- `fragmentation reformation replay equality network`
+- `distributed ledger network membership topology reconstruction`
+- `state machine controlled network admission causal receipt`
+- `latest accepted relationship network topology event sourcing`
+- `disposable execution substrate durable causal state network`
+
 ## Classification candidates
 
 The following classifications are starting points only and must be confirmed in current USPTO, CPC, WIPO, and Espacenet classification tools:
@@ -83,7 +103,10 @@ The following classifications are starting points only and must be confirmed in 
 - cryptographic verification and tamper-evident records;
 - event sourcing, replay, and state reconstruction;
 - autonomous or agent-based computing;
-- lifecycle, lease, and resource-retention control.
+- lifecycle, lease, and resource-retention control;
+- moving-target defense and adaptive network security;
+- dynamic overlay, ad-hoc, and topology-control networking;
+- workload identity, attestation, and zero-trust admission.
 
 Record exact CPC/IPC symbols only after database verification.
 
@@ -98,6 +121,7 @@ Record exact CPC/IPC symbols only after database verification.
 | PA-005 | TBD | TBD | IEEE Xplore / ACM Digital Library | TBD | Before earliest claimed priority | No | TBD | NOT STARTED |
 | PA-006 | TBD | TBD | arXiv and technical literature | TBD | Before earliest claimed priority | No | TBD | NOT STARTED |
 | PA-007 | TBD | TBD | Open-source repositories and release history | TBD | Before earliest claimed priority | No | TBD | NOT STARTED |
+| PA-008 | TBD | TBD | Patent + non-patent network-security corpus | StegOS/InTr manifold search matrix above | Before any asserted priority for P1-L17–L21 | No | P1-L17–L21 | NOT STARTED |
 
 ## Reference analysis template
 
@@ -125,6 +149,7 @@ Record exact CPC/IPC symbols only after database verification.
 | Combination ID | References considered together | Motivation to combine | PAT-001 limitations potentially covered | Missing differentiators | Status |
 |---|---|---|---|---|---|
 | COMB-001 | TBD | TBD | TBD | TBD | NOT STARTED |
+| COMB-002 | Moving-target defense + zero-trust/workload identity + event-sourced reconstruction + state-machine admission | To be assessed from actual references, not assumed | P1-L17–L21 | Receipt-derived membership/topology, authority-plane non-promotion, disposable substrate with durable causal state, equality-gated reformation | NOT STARTED |
 
 ## Highest-value differentiators to test
 
@@ -136,7 +161,12 @@ Search and claim review should determine whether prior art teaches the complete 
 4. a deterministic receipt binding request, role evidence, decision, return path, reconstruction data, and node disposition;
 5. default expiry with retention only through externally evidenced ongoing usage;
 6. retained context without authority or addressability expansion;
-7. prohibition on heartbeat-only self-justified persistence.
+7. prohibition on heartbeat-only self-justified persistence;
+8. receipt-derived network membership rather than connectivity/identity/attestation alone;
+9. current topology derived from latest accepted governed relationships while history remains reconstructable;
+10. separation of observation, credential, transition, execution, and reconstruction authority without self-promotion;
+11. disposable execution substrate with durable causal state; and
+12. acceptance of a reformed manifold conditioned on replay/reconstruction equality rather than renewed reachability.
 
 ## Completion gate
 
