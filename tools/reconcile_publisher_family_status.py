@@ -81,6 +81,12 @@ def load_json(path: Path) -> dict[str, Any]:
     return value
 
 
+def _normalized_state(value: Any) -> Any:
+    if isinstance(value, str):
+        return value.strip().lower().replace("_", " ")
+    return value
+
+
 def assert_fail_closed_status(family_key: str, status: dict[str, Any]) -> None:
     prohibited_truthy = {
         "patent_pending_authorized": status.get("patent_pending_authorized"),
@@ -95,9 +101,9 @@ def assert_fail_closed_status(family_key: str, status: dict[str, Any]) -> None:
         if status.get(field) is not None:
             raise ValueError(f"{family_key}: unsupported non-null {field}")
 
-    if status.get("human_filing") not in (None, "not_started"):
+    if _normalized_state(status.get("human_filing")) not in (None, "not started"):
         raise ValueError(f"{family_key}: unsupported human_filing state")
-    if status.get("filing_packet") not in (None, "not_authorized"):
+    if _normalized_state(status.get("filing_packet")) not in (None, "not authorized"):
         raise ValueError(f"{family_key}: unsupported filing_packet state")
 
 
