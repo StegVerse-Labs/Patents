@@ -24,6 +24,17 @@ The PAT-001 working data now preserves a bounded claim-refinement lane for the S
 
 The controlling packet is `evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md`. These are candidate refinements only. They do not establish patentability, inventorship, priority, filing readiness, or completed physical reduction to practice. The related canonical StegOS task `STEGOS-NODE-MANIFOLD-001` still requires authentic second-node, `NETWORK_PRESENT`, fragmentation/reformation, and exact multi-node replay/reconstruction evidence before corresponding physical/runtime evidence postures may be upgraded.
 
+A pre-registered proof-ingestion layer now prevents those future physical results from being translated into post-hoc claim rewriting:
+
+- `evidence/PAT-001_STEGOS_PROOF_TO_PATENT_EVIDENCE_MATRIX.md` — human-readable predicate-to-limitation and immutable-evidence contract;
+- `data/PAT-001-stegos-proof-to-patent-evidence-matrix.json` — machine-readable status for all four physical predicates;
+- `tools/validate_pat001_stegos_proof_matrix.py` — fail-closed validator requiring fixed mappings and complete retained evidence before a predicate may be marked ingested;
+- `tests/test_pat001_stegos_proof_matrix.py` — regression tests for physical-proof, evidence-completeness, and post-hoc-mapping boundaries.
+
+Current physical predicate state remains unchanged: all four are `PENDING_AUTHENTIC_RETAINED_EVIDENCE`. Source code, CI, deterministic fixtures, HeartBeat observations, or single-node evidence cannot satisfy them.
+
+Current bounded PAT-001 blocker investigation also records that demand-only construction and default-expiry/usage-only retention remain unverified in directly matching first-party micro-node lifecycle code. StegOS source does directly corroborate HeartBeat non-authority as a software-architecture fact, but that is not equivalent to proving the separate micro-node `heartbeat_non_self_retention` lifecycle limitation. Prior-art work has advanced to stable patent-publication identifiers for selected moving-target-defense and zero-trust/workload-identity collision zones, while the overall prior-art gate remains open pending broader searches, limitation mapping, combination analysis, and practitioner review.
+
 `PAT-005` is an urgent practitioner-review candidate because a public technical paper was committed on 2026-07-13. Its earliest enabling public disclosure, inventorship, claim scope, and foreign-filing consequences remain under review.
 
 ## PAT-005 working package
