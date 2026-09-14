@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "family_id": "PAT-001",
   "status": "practitioner_review_ready_with_blockers_and_dedicated_handoff",
   "filed": false,
@@ -13,6 +13,7 @@
     "inventorship_worksheet": true,
     "contributor_interview_packet": true,
     "prior_art_search_ledger": true,
+    "bounded_prior_art_identifier_record": true,
     "figure_descriptions": true,
     "verified_core_drawing_sources": true,
     "formal_drawing_sheet_source": true,
@@ -27,6 +28,9 @@
     "lifecycle_evidence_record": true,
     "lifecycle_evidence_validator": true,
     "lifecycle_evidence_tests": true,
+    "stegos_proof_to_patent_matrix": true,
+    "stegos_proof_to_patent_matrix_validator": true,
+    "stegos_proof_to_patent_matrix_tests": true,
     "filing_readiness_index": true,
     "readiness_validator": true,
     "readiness_validator_tests": true,
@@ -41,6 +45,7 @@
     "inventorship_worksheet": "evidence/PAT-001_INVENTORSHIP_WORKSHEET.md",
     "contributor_interview_packet": "inventorship/PAT-001-contributor-interview-packet.md",
     "prior_art_search_ledger": "evidence/PAT-001_PRIOR_ART_SEARCH_LEDGER.md",
+    "bounded_prior_art_identifier_record": "data/active-family-prior-art-identifiers.json",
     "figure_descriptions": "figures/PAT-001_FIGURE_DESCRIPTIONS.md",
     "verified_core_drawing_sources": "figures/PAT-001-FIG-01-system-overview.mmd",
     "formal_drawing_sheet_source": "diagrams/PAT-001-formal-drawing-sheets.md",
@@ -55,6 +60,9 @@
     "lifecycle_evidence_record": "data/PAT-001-lifecycle-evidence.json",
     "lifecycle_evidence_validator": "tools/validate_pat001_lifecycle_evidence.py",
     "lifecycle_evidence_tests": "tests/test_pat001_lifecycle_evidence.py",
+    "stegos_proof_to_patent_matrix": "data/PAT-001-stegos-proof-to-patent-evidence-matrix.json",
+    "stegos_proof_to_patent_matrix_validator": "tools/validate_pat001_stegos_proof_matrix.py",
+    "stegos_proof_to_patent_matrix_tests": "tests/test_pat001_stegos_proof_matrix.py",
     "filing_readiness_index": "filing-readiness/PAT-001_FILING_READINESS_INDEX.md",
     "readiness_validator": "tools/validate_patent_readiness.py",
     "readiness_validator_tests": "tests/test_patent_readiness.py",
@@ -66,6 +74,10 @@
     "canonical_june_16_source_verified": false,
     "demand_construction_evidence_verified": false,
     "expiry_and_usage_retention_evidence_verified": false,
+    "stegos_distinct_second_active_node_observed": false,
+    "stegos_network_present_proven": false,
+    "stegos_real_fragmentation_and_reformation_observed": false,
+    "stegos_exact_multi_node_replay_reconstruction_equality": false,
     "contributor_interviews_complete": false,
     "inventorship_determined": false,
     "verified_prior_art_references": false,
@@ -76,11 +88,19 @@
     "owner_packet_authorization": false,
     "owner_filing_authorization": false
   },
+  "evidence_progress": {
+    "heartbeat_non_authority_software_architecture": "VERIFIED_CORROBORATION_ONLY",
+    "demand_construction_investigation": "NO_DIRECT_FIRST_PARTY_IMPLEMENTATION_LOCATED",
+    "expiry_usage_retention_investigation": "ADJACENT_SURFACES_ONLY_DIRECT_PAT001_NODE_LIFECYCLE_NOT_VERIFIED",
+    "prior_art_publication_identifiers": "PARTIALLY_VERIFIED_COLLISION_ANALYSIS_INCOMPLETE",
+    "stegos_physical_proof_ingestion": "PRE_REGISTERED_PENDING_AUTHENTIC_RETAINED_EVIDENCE"
+  },
   "expected_decision": "FAIL_CLOSED_BLOCKERS",
   "expected_readiness_decision": "FAIL_CLOSED_BLOCKERS",
   "next_machine_tasks": [
-    "retry canonical-source and lifecycle implementation searches only when a recorded retry trigger occurs",
-    "populate stable patent and non-patent prior art identifiers after verified searches",
+    "ingest authentic retained StegOS physical evidence only when a pre-registered predicate evidence package is complete",
+    "retry demand-construction and lifecycle implementation searches only when a recorded retry trigger occurs",
+    "continue stable patent and non-patent prior art identifier and limitation mapping searches",
     "run the canonical portfolio entry point through the authoritative execution path",
     "reconcile PAT-001_MIRROR_HANDOFF.md into the root portfolio handoff and registry source snapshot"
   ],
@@ -99,5 +119,5 @@
     "automated_fee_payment_permitted": false,
     "patent_pending_use_permitted": false
   },
-  "legal_notice": "Working technical portfolio status only. The lifecycle evidence record preserves implemented runtime behavior and explicit non-implementation findings; it does not establish conception date, inventorship, patentability, filing authority, or patent-pending status. Rendered SVGs are review artifacts, not approved filing drawings. Not legal advice and not a filed patent application."
+  "legal_notice": "Working technical portfolio status only. The proof-to-patent matrix pre-registers evidence ingestion fields and limitation mappings but does not establish physical proof, conception date, reduction to practice, inventorship, patentability, filing authority, or patent-pending status. Bounded prior-art identifier verification is not a novelty, obviousness, or freedom-to-operate conclusion."
 }
