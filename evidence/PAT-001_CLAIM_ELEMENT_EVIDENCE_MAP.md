@@ -10,6 +10,8 @@
 - **REDUCTION TO PRACTICE** — executable implementation, schema, test, or verified runtime behavior.
 - **CORROBORATION REQUIRED** — recollection or session evidence exists, but canonical source/commit has not yet been verified.
 - **CLAIM REFINEMENT** — limitation was articulated after the earliest implementation and may require separate priority analysis.
+- **VERIFIED SOFTWARE ARCHITECTURE** — immutable source/commit evidence verifies the stated software-side architecture but does not establish any still-pending physical/runtime predicate.
+- **PARTIAL REDUCTION** — executable source/tests establish part of a candidate limitation while the complete physical/runtime proposition remains unproved.
 
 ## Candidate independent-claim limitations
 
@@ -31,6 +33,11 @@
 | P1-L14 | Delay expiry only when externally evidenced ongoing usage requires continued operation. | July 13–14 discussion. | 2026-07-13–14 | CLAIM REFINEMENT | Candidate dependent or continuation claim. Requires usage-lease implementation evidence. |
 | P1-L15 | Preserve bounded prior context during delayed expiry without expanding authority or addressability. | July 13–14 discussion. | 2026-07-13–14 | CLAIM REFINEMENT | Candidate conversational/stream embodiment; no canonical implementation mapped yet. |
 | P1-L16 | Prevent a node's own heartbeat from independently justifying persistence. | July 13–14 discussion. | 2026-07-13–14 | CLAIM REFINEMENT | Important anti-self-preservation limitation; likely dependent claim. |
+| P1-L17 | Treat ephemeral network membership as resulting from an admitted, receipt-bound Node/Interlock/local-head relationship rather than from connectivity, addressability, heartbeat observation, or execution capability alone. | StegOS PR #32 merge `0758a31ac61d9ec19f65d5a40de683cac5a6a380`; PR #35 merge `47da2996d9442f6c7b359f6ee61ea7e949f793bd`; `docs/STEGOS_NODE_MANIFOLD_MIRROR_HANDOFF.md`. | No conception/RTP date assigned by this refinement | CLAIM REFINEMENT + PARTIAL REDUCTION + CORROBORATION REQUIRED | Software-side admission/binding exists; authentic retained physical network membership and second-node evidence remain pending. |
+| P1-L18 | Derive current Network Manifold topology from each Node's latest accepted governed relationship while retaining historical observations only for reconstruction. | StegOS PR #29 merge `5bf75a2744aa7d4c688dc621a855bc7a6c5675a5`; PR #33 merge `9a7c521dd468ed404148fdec1ef6e58948cf470d`; StegOS manifold handoff. | No conception/RTP date assigned by this refinement | CLAIM REFINEMENT + PARTIAL REDUCTION + CORROBORATION REQUIRED | `NETWORK_PRESENT` and authentic multi-node resultant-manifold evidence remain pending. |
+| P1-L19 | Keep observation/synchronization, credentials/routes, transition admissibility, execution capability, and reconstruction/reality authority distinct so evidence from one plane cannot self-promote into another. | StegOS PR #25 merge `14f3acddd61260c54ba8b3cbc6826d5fc4c6467d`; PR #35 merge `47da2996d9442f6c7b359f6ee61ea7e949f793bd`; canonical `STEGOS-NODE-MANIFOLD-001` task authority model. | No conception date assigned by this refinement | VERIFIED SOFTWARE ARCHITECTURE + CLAIM REFINEMENT | Verified as software/source authority separation only; does not imply completion of physical manifold predicates. |
+| P1-L20 | Permit ephemeral execution substrates to disappear, expire, or be replaced while durable receipt lineage and reconstruction evidence preserve governed causal state independently of continued node existence. | Existing P1-L13 evidence; StegOS PR #28 merge `942adfe9dd3f7768c09f4e979938d5aa9db99b09`; PR #30 merge `3d48eb6ab4b11ce7b0013141e40cb8e3209f2474`; PR #34 merge `40c3b165c0eadd79dcda75315924be24d3bff784`. | No conception/RTP date assigned by this refinement | CLAIM REFINEMENT + PARTIAL REDUCTION + CORROBORATION REQUIRED | Durable evidence is implemented; actual PAT-001 expiry/destruction and real fragmentation/reformation remain unresolved. |
+| P1-L21 | Accept a reformed Network Manifold as governed continuation only when replay/reconstruction of the retained causal transition sequence satisfies equality requirements, rather than on renewed reachability alone. | StegOS PR #30 merge `3d48eb6ab4b11ce7b0013141e40cb8e3209f2474`; StegOS manifold handoff; existing P1-L08 reconstruction witness evidence. | No conception/RTP date assigned by this refinement | CLAIM REFINEMENT + PARTIAL REDUCTION + CORROBORATION REQUIRED | Authentic fragmentation/reformation and exact multi-node replay equality remain pending. |
 
 ## Verified implementation evidence
 
@@ -127,6 +134,17 @@ Locate evidence for:
 - authority non-expansion during reuse;
 - prohibition on heartbeat-only retention.
 
+### StegOS/InTr physical manifold proof
+
+Do not upgrade P1-L17 through P1-L21 beyond their current posture until authentic retained evidence resolves the applicable canonical predicates:
+
+- `DISTINCT_SECOND_ACTIVE_NODE_OBSERVED`;
+- `NETWORK_PRESENT_PROVEN`;
+- `REAL_FRAGMENTATION_AND_REFORMATION_OBSERVED`;
+- `EXACT_MULTI_NODE_REPLAY_RECONSTRUCTION_EQUALITY`.
+
+Preserve exact repository/path/SHA, physical receipt identity, artifact digest, Node/Interlock identity, transition lineage, observation date, and reconstruction result for each future upgrade.
+
 ### Cross-repository implementation lineage
 
 Map commits and files from:
@@ -161,9 +179,18 @@ The strongest differentiating additions remain:
 - default ephemeral expiry;
 - usage-only delayed expiry;
 - retained context without authority expansion;
-- heartbeat cannot establish its own right to persist.
+- heartbeat cannot establish its own right to persist;
+- receipt-derived network membership;
+- receipt-derived current Network Manifold topology;
+- non-self-promoting separation of observation, credential, transition, execution, and reconstruction authorities;
+- disposable execution substrate with durable causal state; and
+- reformation acceptance conditioned on replay/reconstruction equality.
 
-These should not be represented as having the same evidence date as the July 2 runtime until earlier supporting material is located.
+These should not be represented as sharing the July 2 evidence date or any earlier conception date unless immutable supporting material establishes that date.
+
+## Dedicated StegOS/InTr refinement packet
+
+See `evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md` for limitation-by-limitation software evidence, physical proof gates, and collision-zone scope.
 
 ## Inventorship worksheet placeholder
 
@@ -173,3 +200,4 @@ For each limitation, counsel review must identify the human contributor or contr
 |---|---|---|---|---|
 | P1-L01–L09 | TBD | June architecture records and July runtime | TBD | OPEN |
 | P1-L10–L16 | TBD | July 13–14 discussions and any earlier records | TBD | OPEN |
+| P1-L17–L21 | TBD | Current StegOS/InTr sources plus any earlier conception records to be located | TBD | OPEN — NO DATE ASSIGNED BY REFINEMENT |
