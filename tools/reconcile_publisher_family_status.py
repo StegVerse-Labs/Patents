@@ -87,6 +87,12 @@ def _normalized_state(value: Any) -> Any:
     return value
 
 
+def _canonical_lifecycle_value(field: str, value: Any) -> Any:
+    if field in {"human_filing", "filing_packet"} and isinstance(value, str):
+        return value.strip().lower().replace(" ", "_")
+    return value
+
+
 def assert_fail_closed_status(family_key: str, status: dict[str, Any]) -> None:
     prohibited_truthy = {
         "patent_pending_authorized": status.get("patent_pending_authorized"),
@@ -131,9 +137,11 @@ def reconcile(ledger: dict[str, Any]) -> tuple[dict[str, Any], list[str]]:
 
         target = by_key[family_key]
         for field in LIFECYCLE_FIELDS:
-            if field in status and target.get(field) != status[field]:
-                target[field] = status[field]
-                changes.append(f"{family_key}.{field}")
+            if field in status:
+                value = _canonical_lifecycle_value(field, status[field])
+                if target.get(field) != value:
+                    target[field] = value
+                    changes.append(f"{family_key}.{field}")
         if target.get("status_record") != str(status_path.relative_to(ROOT)):
             target["status_record"] = str(status_path.relative_to(ROOT))
             changes.append(f"{family_key}.status_record")
