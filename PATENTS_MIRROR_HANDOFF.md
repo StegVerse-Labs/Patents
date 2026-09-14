@@ -31,6 +31,40 @@ Dedicated sources are `PAT-001_MIRROR_HANDOFF.md` through `PAT-005_MIRROR_HANDOF
 
 `PAT-001` remains practitioner-review-ready with blockers. `PAT-002`, `PAT-003`, and `PAT-004` remain structured review preparations with their dedicated factual, implementation, chronology, drafting, specialist, practitioner, and owner blockers preserved.
 
+### PAT-001 StegOS proof-to-patent update
+
+PAT-001 now contains a pre-registered evidence-ingestion matrix for the four unresolved physical predicates owned by `STEGOS-NODE-MANIFOLD-001`:
+
+```text
+DISTINCT_SECOND_ACTIVE_NODE_OBSERVED -> P1-L17, P1-L18
+NETWORK_PRESENT_PROVEN -> P1-L17, P1-L18
+REAL_FRAGMENTATION_AND_REFORMATION_OBSERVED -> P1-L18, P1-L20, P1-L21
+EXACT_MULTI_NODE_REPLAY_RECONSTRUCTION_EQUALITY -> P1-L18, P1-L20, P1-L21
+```
+
+Controlling artifacts:
+
+```text
+PAT-001_MIRROR_HANDOFF.md
+evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md
+evidence/PAT-001_STEGOS_PROOF_TO_PATENT_EVIDENCE_MATRIX.md
+data/PAT-001-stegos-proof-to-patent-evidence-matrix.json
+tools/validate_pat001_stegos_proof_matrix.py
+```
+
+The matrix fixes the evidence fields and candidate-limitation mappings before future physical observations are ingested. All four physical predicates remain pending authentic retained evidence. Source completion, deterministic fixtures, CI, connectivity, HeartBeat observation, and single-node evidence cannot satisfy them.
+
+Bounded 2026-09-14 blocker investigation also preserves the following current truth:
+
+```text
+demand construction: direct PAT-001 first-party implementation not located; blocker remains open
+micro-node default expiry + externally evidenced usage-only retention: not directly verified; blocker remains open
+HeartBeat non-authority: software-architecture corroboration verified in StegOS; not equivalent to heartbeat-only self-retention prevention
+prior art: selected patent publication identifiers/dates verified for collision-zone analysis; overall prior-art gate remains open
+```
+
+No physical proof, conception date, reduction-to-practice date, inventorship conclusion, patentability conclusion, filing recommendation, or filing authorization follows from this update.
+
 ### PAT-005 corrected factual posture
 
 ```text
@@ -97,25 +131,26 @@ No candidate may be silently merged, omitted, published, abandoned, or treated a
 
 ## Filing and deadline invariant
 
-No numbered or Publisher family has a verified official filing receipt, application number, or actual filing date. Every family remains unfiled, patent-pending representation is unauthorized, and nonprovisional and PCT deadlines remain null. Drafts, commits, packet dates, conversation dates, disclosure leads, and workflow installation are not filing events.
+No numbered or Publisher family has a verified official filing receipt, application number, or actual filing date. Every family remains unfiled, patent-pending representation is unauthorized, and nonprovisional and PCT deadlines remain null. Drafts, commits, packet dates, conversation dates, disclosure leads, workflow installation, and physical observation dates are not filing events.
 
 ## Registry synchronization
 
-The patent-registry approved-source snapshot must be refreshed with the exact current blobs for this handoff, the portfolio ledger, PAT-005 handoff, readiness manifest, audit, and completion status. A snapshot refresh is bounded source reconciliation only; it is not an authoritative workflow run, importer receipt, synchronization receipt, filing event, or lifecycle mutation.
+The patent-registry approved-source snapshot must be refreshed with the exact current blobs for this handoff, the portfolio ledger, PAT-001 handoff and proof-ingestion records, PAT-005 handoff, readiness manifest, audit, and completion status. A snapshot refresh is bounded source reconciliation only; it is not an authoritative workflow run, importer receipt, synchronization receipt, filing event, or lifecycle mutation.
 
 ## Next bounded machine work
 
-1. Investigate immutable first-party historical visibility evidence for `GCAT-BCAT-Engine/Publisher` at `2026-07-13T22:15:41-05:00`, including visibility-change history, organization audit records, repository events, publication receipts, releases, Pages evidence, issues, pull requests, discussions, workflows, and retained artifacts.
-2. Search connected first-party repositories and publication records for an earlier PAT-005 disclosure event. Absence of results is not proof of absence.
-3. Refresh the patent-registry exact-hash approved-source snapshot using current Patents blobs.
-4. Inspect authoritative-status-sync runs, jobs, steps, logs, conclusions, and artifacts. Admit receipts only after independently verifying run ID, tested commit, conclusion, job and steps, artifact identity, report, receipt stream, and relevant hashes.
-5. Inspect and update `StegVerse-Labs/Patents#1`, `StegVerse-Labs/patent-registry#1`, and affected pull requests after concrete changes.
-6. If PAT-005 access evidence and registry workflow evidence remain blocked, advance one independent Publisher family from canonical executable or runtime evidence.
-7. Update this handoff, the execution prompt, and dedicated handoffs after durable context changes.
+1. Preserve PAT-001 physical predicates fail-closed until authentic retained evidence satisfies the pre-registered matrix.
+2. Continue PAT-001 demand-construction and expiry/usage-retention searches only when a recorded retry trigger or exact implementation path exists.
+3. Continue PAT-001 patent and non-patent prior-art verification, exact limitation mapping, and combination analysis without inferring patentability.
+4. Investigate immutable first-party historical visibility evidence for `GCAT-BCAT-Engine/Publisher` at `2026-07-13T22:15:41-05:00`, including visibility-change history, organization audit records, repository events, publication receipts, releases, Pages evidence, issues, pull requests, discussions, workflows, and retained artifacts.
+5. Search connected first-party repositories and publication records for an earlier PAT-005 disclosure event. Absence of results is not proof of absence.
+6. Refresh the patent-registry exact-hash approved-source snapshot using current Patents blobs.
+7. Inspect authoritative-status-sync runs, jobs, steps, logs, conclusions, and artifacts. Admit receipts only after independently verifying run ID, tested commit, conclusion, job and steps, artifact identity, report, receipt stream, and relevant hashes.
+8. Update this handoff and dedicated family handoffs after durable context changes.
 
 ## Human action boundaries
 
-Qualified human and practitioner actions remain required for contributor testimony, inventorship, ownership, enablement, disclosure consequences, prior art, drawings, disposition, filing authorization, Patent Center submission, signatures, certifications, fees, and official receipt retrieval.
+Qualified human and practitioner actions remain required for contributor testimony, inventorship, ownership, enablement, disclosure consequences, complete prior-art analysis, drawings, disposition, filing authorization, Patent Center submission, signatures, certifications, fees, and official receipt retrieval.
 
 ## Ecosystem update boundary
 
