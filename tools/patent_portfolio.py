@@ -79,7 +79,7 @@ def run(repo_root: Path) -> tuple[dict[str, Any], int]:
     fd = acquire_lock(lock_path)
     try:
         completed = subprocess.run(
-            [sys.executable, "tools/run_patent_portfolio_dispatcher.py", "--repo-root", "."],
+            [sys.executable, "-m", "tools.run_patent_portfolio_dispatcher", "--repo-root", "."],
             cwd=repo_root,
             text=True,
             capture_output=True,
