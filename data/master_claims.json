@@ -3,70 +3,27 @@
   "record_status": "working_invention_disclosure_data",
   "legal_notice": "Working technical and claim-architecture data only. Not legal advice and not a filed patent application.",
   "shared_clauses": [
-    {
-      "clause_id": "SCL-MANIFEST-ADDRESSABILITY",
-      "text": "receiving a machine-readable manifest that defines an addressable scope external to the manifest"
-    },
-    {
-      "clause_id": "SCL-CAPABILITY-ABSENCE",
-      "text": "determining that no active bounded processing node possesses a capability required to address the manifest-defined scope"
-    },
-    {
-      "clause_id": "SCL-MINIMUM-NODE",
-      "text": "constructing a bounded processing node having no greater addressability than required by the manifest"
-    },
-    {
-      "clause_id": "SCL-TRANSITION-TABLE-BINDING",
-      "text": "binding the processing node to a transition-table cell defining state, role, permitted input, permitted output, authority, refusal, succession, and expiry conditions"
-    },
-    {
-      "clause_id": "SCL-USAGE-RETENTION",
-      "text": "retaining the processing node after completion only while externally evidenced continued usage satisfies a delayed-expiry condition"
-    },
-    {
-      "clause_id": "SCL-CONTEXT-BOUNDARY",
-      "text": "preserving context associated with continued usage without expanding beyond the manifest-defined addressability"
-    },
-    {
-      "clause_id": "SCL-RECEIPT",
-      "text": "generating a receipt identifying the manifest, node build, exercised addressability, state transition, output, and expiry or retention disposition"
-    },
-    {
-      "clause_id": "SCL-HEARTBEAT-COMPOSITE",
-      "text": "forming a state-bearing heartbeat from current system state, prior subsystem information, context, and routing intent"
-    },
-    {
-      "clause_id": "SCL-HEARTBEAT-PREFLIGHT",
-      "text": "evaluating health and admissibility of the heartbeat before subsystem interaction"
-    },
-    {
-      "clause_id": "SCL-RETURN-DELTA",
-      "text": "determining a multidimensional delta between a source heartbeat and one or more returned subsystem signals"
-    },
-    {
-      "clause_id": "SCL-STATE-UPDATE",
-      "text": "updating system state and subsequent routing according to evaluated fresh subsystem data rather than merely returning a reflected signal to its originating subsystem"
-    },
-    {
-      "clause_id": "SCL-MASTER-RECORDS-WITNESS",
-      "text": "providing a reconstructable representation of source, return, delta, and resulting state transitions to a witness record system"
-    },
-    {
-      "clause_id": "SCL-DYNAMIC-OBSERVATION",
-      "text": "continuing observation until a manifest-relative complete signal is acquired or a minimum adverse-condition observation interval is satisfied"
-    },
-    {
-      "clause_id": "SCL-NON-INFERENCE",
-      "text": "producing a non-inference result when the required observation interval expires without sufficient evidence"
-    },
-    {
-      "clause_id": "SCL-MUTUAL-CALIBRATION",
-      "text": "calibrating distinguishable sender-isolated, receiver-isolated, requested-coupling, confirmed-coupling, joint-operation, and disengagement states"
-    },
-    {
-      "clause_id": "SCL-NEURAL-STATE-INVOCATION",
-      "text": "invoking a manifest-specified node build only after observing a calibrated neural state satisfying an invocation condition"
-    }
+    {"clause_id": "SCL-MANIFEST-ADDRESSABILITY", "text": "receiving a machine-readable manifest that defines an addressable scope external to the manifest"},
+    {"clause_id": "SCL-CAPABILITY-ABSENCE", "text": "determining that no active bounded processing node possesses a capability required to address the manifest-defined scope"},
+    {"clause_id": "SCL-MINIMUM-NODE", "text": "constructing a bounded processing node having no greater addressability than required by the manifest"},
+    {"clause_id": "SCL-TRANSITION-TABLE-BINDING", "text": "binding the processing node to a transition-table cell defining state, role, permitted input, permitted output, authority, refusal, succession, and expiry conditions"},
+    {"clause_id": "SCL-USAGE-RETENTION", "text": "retaining the processing node after completion only while externally evidenced continued usage satisfies a delayed-expiry condition"},
+    {"clause_id": "SCL-CONTEXT-BOUNDARY", "text": "preserving context associated with continued usage without expanding beyond the manifest-defined addressability"},
+    {"clause_id": "SCL-RECEIPT", "text": "generating a receipt identifying the manifest, node build, exercised addressability, state transition, output, and expiry or retention disposition"},
+    {"clause_id": "SCL-RECEIPT-DERIVED-NETWORK-MEMBERSHIP", "text": "treating an ephemeral node as a governed network member only after an admitted relationship is bound to exact node identity, transition authority, and causal receipt state rather than connectivity, addressability, observation, or execution capability alone"},
+    {"clause_id": "SCL-RECEIPT-DERIVED-TOPOLOGY", "text": "deriving current network topology from latest accepted governed node relationships while preserving prior relationship observations for reconstruction without treating them as logically current"},
+    {"clause_id": "SCL-AUTHORITY-PLANE-SEPARATION", "text": "maintaining observation or synchronization, credential or routing, transition admissibility, execution, and reconstruction authorities as distinct planes that do not self-promote evidence or authority into one another"},
+    {"clause_id": "SCL-DISPOSABLE-SUBSTRATE-DURABLE-STATE", "text": "permitting an execution node to expire, disappear, become unavailable, or be replaced while durable receipt lineage and reconstruction evidence preserve governed causal state independently of continued node existence"},
+    {"clause_id": "SCL-REFORMATION-RECONSTRUCTION-EQUALITY", "text": "accepting a reformed network manifold as governed continuation only after replay or reconstruction of retained causal transitions satisfies an equality requirement rather than on renewed reachability or node presence alone"},
+    {"clause_id": "SCL-HEARTBEAT-COMPOSITE", "text": "forming a state-bearing heartbeat from current system state, prior subsystem information, context, and routing intent"},
+    {"clause_id": "SCL-HEARTBEAT-PREFLIGHT", "text": "evaluating health and admissibility of the heartbeat before subsystem interaction"},
+    {"clause_id": "SCL-RETURN-DELTA", "text": "determining a multidimensional delta between a source heartbeat and one or more returned subsystem signals"},
+    {"clause_id": "SCL-STATE-UPDATE", "text": "updating system state and subsequent routing according to evaluated fresh subsystem data rather than merely returning a reflected signal to its originating subsystem"},
+    {"clause_id": "SCL-MASTER-RECORDS-WITNESS", "text": "providing a reconstructable representation of source, return, delta, and resulting state transitions to a witness record system"},
+    {"clause_id": "SCL-DYNAMIC-OBSERVATION", "text": "continuing observation until a manifest-relative complete signal is acquired or a minimum adverse-condition observation interval is satisfied"},
+    {"clause_id": "SCL-NON-INFERENCE", "text": "producing a non-inference result when the required observation interval expires without sufficient evidence"},
+    {"clause_id": "SCL-MUTUAL-CALIBRATION", "text": "calibrating distinguishable sender-isolated, receiver-isolated, requested-coupling, confirmed-coupling, joint-operation, and disengagement states"},
+    {"clause_id": "SCL-NEURAL-STATE-INVOCATION", "text": "invoking a manifest-specified node build only after observing a calibrated neural state satisfying an invocation condition"}
   ],
   "families": [
     {
@@ -75,13 +32,16 @@
       "priority_order": 1,
       "status": "disclosure_in_progress",
       "parent_family_ids": [],
-      "inventive_center": "Demand-constructed, manifest-bounded processing nodes whose existence, addressability, transitions, context retention, and expiry are governed by a machine-readable transition table and evidenced by receipts.",
-      "technical_problem": "Conventional static pipelines, agents, and distributed workers retain unnecessary capability, lack transition-bound authority, and cannot prove the exact addressability exercised during computation.",
+      "inventive_center": "Demand-constructed, manifest-bounded processing nodes whose existence, addressability, transitions, context retention, expiry, and candidate governed network relationships are controlled by machine-readable transition rules and evidenced by receipts; StegOS/InTr Network Manifold refinements remain subject to separate support and priority analysis.",
+      "technical_problem": "Conventional static pipelines, agents, distributed workers, and transient network substrates can retain unnecessary capability or treat connectivity, identity, reachability, or observed topology as sufficient authority without reconstructable transition-bound proof of admitted membership and causal continuity.",
       "technical_effects": [
         "reduces persistent computational footprint",
         "prevents unnecessary capability from remaining active",
         "preserves context only for active use",
-        "provides reconstructable transition evidence"
+        "provides reconstructable transition evidence",
+        "candidate separation of governed network membership from mere connectivity or identity",
+        "candidate reconstruction of current topology from admitted causal relationships",
+        "candidate continuity across disposable execution substrates subject to replay or reconstruction equality"
       ],
       "shared_clause_ids": [
         "SCL-MANIFEST-ADDRESSABILITY",
@@ -90,37 +50,23 @@
         "SCL-TRANSITION-TABLE-BINDING",
         "SCL-USAGE-RETENTION",
         "SCL-CONTEXT-BOUNDARY",
-        "SCL-RECEIPT"
+        "SCL-RECEIPT",
+        "SCL-RECEIPT-DERIVED-NETWORK-MEMBERSHIP",
+        "SCL-RECEIPT-DERIVED-TOPOLOGY",
+        "SCL-AUTHORITY-PLANE-SEPARATION",
+        "SCL-DISPOSABLE-SUBSTRATE-DURABLE-STATE",
+        "SCL-REFORMATION-RECONSTRUCTION-EQUALITY"
       ],
-      "claim_ids": ["CLM-PAT-001-METHOD-001", "CLM-PAT-001-SYSTEM-001"],
+      "claim_ids": ["CLM-PAT-001-METHOD-001", "CLM-PAT-001-SYSTEM-001", "CLM-PAT-001-NETWORK-MANIFOLD-001"],
       "implementation_evidence": [
-        {
-          "repository": "StegVerse-002/micro-node-runtime",
-          "path": null,
-          "commit": null,
-          "description": "Transition-table-native request, decision, receipt, deterministic verification, role-obligation, and portable installation implementation."
-        },
-        {
-          "repository": "StegVerse-org/core-node-runtime-demo",
-          "path": null,
-          "commit": null,
-          "description": "Demonstration of larger runtime adaptation around manifest-bound micro-node behavior."
-        },
-        {
-          "repository": "StegVerse-Labs/stegseed",
-          "path": null,
-          "commit": null,
-          "description": "Portable declarations, warrants, policy references, and witness structures relevant to node construction."
-        }
+        {"repository": "StegVerse-002/micro-node-runtime", "path": null, "commit": null, "description": "Transition-table-native request, decision, receipt, deterministic verification, role-obligation, and portable installation implementation."},
+        {"repository": "StegVerse-org/core-node-runtime-demo", "path": null, "commit": null, "description": "Demonstration of larger runtime adaptation around manifest-bound micro-node behavior."},
+        {"repository": "StegVerse-Labs/stegseed", "path": null, "commit": null, "description": "Portable declarations, warrants, policy references, and witness structures relevant to node construction."},
+        {"repository": "StegVerse-Labs/StegOS", "path": "docs/STEGOS_NODE_MANIFOLD_MIRROR_HANDOFF.md", "commit": "47da2996d9442f6c7b359f6ee61ea7e949f793bd", "description": "Candidate Network Manifold refinement evidence: current-topology runtime, physical-to-network validators, authority separation, transition-packet binding, and replay/reconstruction architecture. Authentic second-node, NETWORK_PRESENT, fragmentation/reformation, and exact multi-node reconstruction predicates remain unresolved."}
       ],
-      "disclosure_dates": {
-        "first_conception": null,
-        "first_written_description": null,
-        "first_executable_implementation": null,
-        "first_public_disclosure": null
-      },
+      "disclosure_dates": {"first_conception": null, "first_written_description": null, "first_executable_implementation": null, "first_public_disclosure": null},
       "inventor_candidates": ["TO_BE_DETERMINED_BY_CLAIM_CONTRIBUTION"],
-      "notes": "Highest filing priority. Populate dates and claim-by-claim inventorship before external publication."
+      "notes": "Highest filing priority. Populate dates and claim-by-claim inventorship before external publication. P1-L17 through P1-L21 are claim refinements and receive no conception or reduction-to-practice date from their addition to this data model."
     },
     {
       "family_id": "PAT-002",
@@ -130,41 +76,14 @@
       "parent_family_ids": ["PAT-001"],
       "inventive_center": "A composite state-bearing heartbeat that is evaluated before transmission, transformed by subsystem interaction, compared with returned signals, and used to update whole-system state, node construction, routing, recovery, and witness records.",
       "technical_problem": "Ordinary liveness heartbeats and telemetry do not expose relational subsystem health, transformation deltas, context-bearing state evolution, or the distance between non-inference and irreversibility.",
-      "technical_effects": [
-        "observes source, path, receiver, and coupling health separately",
-        "uses return deltas to localize subsystem behavior",
-        "adapts observation and routing according to fresh subsystem data",
-        "supports recovery before irreversible transition"
-      ],
-      "shared_clause_ids": [
-        "SCL-HEARTBEAT-COMPOSITE",
-        "SCL-HEARTBEAT-PREFLIGHT",
-        "SCL-RETURN-DELTA",
-        "SCL-STATE-UPDATE",
-        "SCL-MASTER-RECORDS-WITNESS",
-        "SCL-RECEIPT"
-      ],
+      "technical_effects": ["observes source, path, receiver, and coupling health separately", "uses return deltas to localize subsystem behavior", "adapts observation and routing according to fresh subsystem data", "supports recovery before irreversible transition"],
+      "shared_clause_ids": ["SCL-HEARTBEAT-COMPOSITE", "SCL-HEARTBEAT-PREFLIGHT", "SCL-RETURN-DELTA", "SCL-STATE-UPDATE", "SCL-MASTER-RECORDS-WITNESS", "SCL-RECEIPT"],
       "claim_ids": ["CLM-PAT-002-METHOD-001", "CLM-PAT-002-SYSTEM-001"],
       "implementation_evidence": [
-        {
-          "repository": "StegVerse-Labs/StegEntity",
-          "path": null,
-          "commit": null,
-          "description": "Entity lifecycle and orchestration-cycle material relevant to heartbeat-governed state."
-        },
-        {
-          "repository": "Data-Continuation/core-lite",
-          "path": null,
-          "commit": null,
-          "description": "Continuity event, reconstruction, intake, export, and reporting mechanisms."
-        }
+        {"repository": "StegVerse-Labs/StegEntity", "path": null, "commit": null, "description": "Entity lifecycle and orchestration-cycle material relevant to heartbeat-governed state."},
+        {"repository": "Data-Continuation/core-lite", "path": null, "commit": null, "description": "Continuity event, reconstruction, intake, export, and reporting mechanisms."}
       ],
-      "disclosure_dates": {
-        "first_conception": null,
-        "first_written_description": null,
-        "first_executable_implementation": null,
-        "first_public_disclosure": null
-      },
+      "disclosure_dates": {"first_conception": null, "first_written_description": null, "first_executable_implementation": null, "first_public_disclosure": null},
       "inventor_candidates": ["TO_BE_DETERMINED_BY_CLAIM_CONTRIBUTION"],
       "notes": "Heartbeat health is determined prior to reflection; returned signals are primary evidence of relational and subsystem health."
     },
@@ -176,29 +95,11 @@
       "parent_family_ids": ["PAT-001", "PAT-002"],
       "inventive_center": "A generalized scanner that constructs acquisition, decoding, and comparative micro-nodes from observed signal conditions and evaluates an entity by how subsystems transform state-bearing inputs over a dynamically sufficient observation interval.",
       "technical_problem": "Fixed scanners and isolated-signal classifiers cannot efficiently reconstruct whole-system condition from simultaneous transformations, cross-signal coupling, adaptive response, and recovery.",
-      "technical_effects": [
-        "allocates computation proportionally to detected signal strength and ambiguity",
-        "distinguishes adaptive fluctuation from dysfunction through comparative relationships",
-        "reduces unnecessary observation and computation",
-        "preserves non-inference where completeness is not reached"
-      ],
-      "shared_clause_ids": [
-        "SCL-MANIFEST-ADDRESSABILITY",
-        "SCL-CAPABILITY-ABSENCE",
-        "SCL-MINIMUM-NODE",
-        "SCL-RETURN-DELTA",
-        "SCL-DYNAMIC-OBSERVATION",
-        "SCL-NON-INFERENCE",
-        "SCL-RECEIPT"
-      ],
+      "technical_effects": ["allocates computation proportionally to detected signal strength and ambiguity", "distinguishes adaptive fluctuation from dysfunction through comparative relationships", "reduces unnecessary observation and computation", "preserves non-inference where completeness is not reached"],
+      "shared_clause_ids": ["SCL-MANIFEST-ADDRESSABILITY", "SCL-CAPABILITY-ABSENCE", "SCL-MINIMUM-NODE", "SCL-RETURN-DELTA", "SCL-DYNAMIC-OBSERVATION", "SCL-NON-INFERENCE", "SCL-RECEIPT"],
       "claim_ids": ["CLM-PAT-003-METHOD-001", "CLM-PAT-003-SYSTEM-001"],
       "implementation_evidence": [],
-      "disclosure_dates": {
-        "first_conception": null,
-        "first_written_description": null,
-        "first_executable_implementation": null,
-        "first_public_disclosure": null
-      },
+      "disclosure_dates": {"first_conception": null, "first_written_description": null, "first_executable_implementation": null, "first_public_disclosure": null},
       "inventor_candidates": ["TO_BE_DETERMINED_BY_CLAIM_CONTRIBUTION"],
       "notes": "Sensor modalities and organism-specific embodiments must be supported in the specification without making unsupported diagnostic claims."
     },
@@ -210,28 +111,11 @@
       "parent_family_ids": ["PAT-001", "PAT-002", "PAT-003"],
       "inventive_center": "A calibrated mutual-state contract in which observed neural states invoke manifest-specified bounded node builds and stimulation or interpretation occurs only through transition-governed, mutually distinguishable isolated and coupled operating states.",
       "technical_problem": "Existing neural interfaces may decode or stimulate without a reconstructable mutual contract distinguishing spontaneous activity, intentional communication, authorized coupling, disengagement, and recovery to autonomous operation.",
-      "technical_effects": [
-        "prevents uncalibrated neural activity from being treated as communication",
-        "requires reciprocal evidence before joint operation",
-        "preserves autonomous sender and receiver states",
-        "records when coupling began, changed, and ended"
-      ],
-      "shared_clause_ids": [
-        "SCL-MANIFEST-ADDRESSABILITY",
-        "SCL-MUTUAL-CALIBRATION",
-        "SCL-NEURAL-STATE-INVOCATION",
-        "SCL-TRANSITION-TABLE-BINDING",
-        "SCL-HEARTBEAT-COMPOSITE",
-        "SCL-RECEIPT"
-      ],
+      "technical_effects": ["prevents uncalibrated neural activity from being treated as communication", "requires reciprocal evidence before joint operation", "preserves autonomous sender and receiver states", "records when coupling began, changed, and ended"],
+      "shared_clause_ids": ["SCL-MANIFEST-ADDRESSABILITY", "SCL-MUTUAL-CALIBRATION", "SCL-NEURAL-STATE-INVOCATION", "SCL-TRANSITION-TABLE-BINDING", "SCL-HEARTBEAT-COMPOSITE", "SCL-RECEIPT"],
       "claim_ids": ["CLM-PAT-004-METHOD-001", "CLM-PAT-004-SYSTEM-001"],
       "implementation_evidence": [],
-      "disclosure_dates": {
-        "first_conception": null,
-        "first_written_description": null,
-        "first_executable_implementation": null,
-        "first_public_disclosure": null
-      },
+      "disclosure_dates": {"first_conception": null, "first_written_description": null, "first_executable_implementation": null, "first_public_disclosure": null},
       "inventor_candidates": ["TO_BE_DETERMINED_BY_CLAIM_CONTRIBUTION"],
       "notes": "Separate passive observation, interpretation, communication, and stimulation authority in all claim and embodiment data."
     }
@@ -278,6 +162,27 @@
       "prior_art_collision_zones": ["container schedulers", "function-as-a-service", "agent registries"],
       "inventorship_notes": "Pending.",
       "review_notes": "Working concept only."
+    },
+    {
+      "claim_id": "CLM-PAT-001-NETWORK-MANIFOLD-001",
+      "family_id": "PAT-001",
+      "claim_number": null,
+      "claim_type": "independent",
+      "category": "method",
+      "depends_on": [],
+      "status": "claim_refinement_corroboration_required",
+      "preamble": "A computer-implemented method for governing an ephemeral network manifold, comprising:",
+      "limitations": [
+        {"limitation_id": "L1", "source_clause_id": "SCL-RECEIPT-DERIVED-NETWORK-MEMBERSHIP", "text": "admitting an ephemeral node as a governed network member only through an exact receipt-bound governed relationship rather than connectivity, addressability, observation, identity, or execution capability alone", "required": true, "evidence_refs": ["evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md#p1-l17--receipt-derived-network-membership"]},
+        {"limitation_id": "L2", "source_clause_id": "SCL-RECEIPT-DERIVED-TOPOLOGY", "text": "deriving current manifold topology from latest accepted governed node relationships while retaining historical observations for reconstruction", "required": true, "evidence_refs": ["evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md#p1-l18--receipt-derived-topology--manifold-state"]},
+        {"limitation_id": "L3", "source_clause_id": "SCL-AUTHORITY-PLANE-SEPARATION", "text": "maintaining observation, credential, transition, execution, and reconstruction authority as distinct non-self-promoting planes", "required": true, "evidence_refs": ["evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md#p1-l19--separation-of-observation-credential-transition-execution-and-reconstruction-authorities"]},
+        {"limitation_id": "L4", "source_clause_id": "SCL-DISPOSABLE-SUBSTRATE-DURABLE-STATE", "text": "preserving governed causal state through durable receipt lineage and reconstruction evidence independently of continued existence of an execution node", "required": true, "evidence_refs": ["evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md#p1-l20--disposable-execution-substrate-with-durable-causal-state"]},
+        {"limitation_id": "L5", "source_clause_id": "SCL-REFORMATION-RECONSTRUCTION-EQUALITY", "text": "accepting a reformed manifold as governed continuation only after replay or reconstruction equality is established", "required": true, "evidence_refs": ["evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md#p1-l21--reformation-acceptance-conditioned-on-replay--reconstruction-equality"]}
+      ],
+      "technical_effects": ["governed membership independent of mere reachability", "receipt-derived current topology", "authority-plane separation", "continuity across disposable substrates", "reconstruction-gated manifold reformation"],
+      "prior_art_collision_zones": ["moving-target defense", "ephemeral workload identity", "zero-trust admission", "event-sourced topology reconstruction", "dynamic overlay networks", "distributed ledgers", "replicated state machines", "state-machine-controlled network admission"],
+      "inventorship_notes": "Undetermined. Addition to this structured data does not establish conception, inventorship, priority, or reduction to practice.",
+      "review_notes": "Candidate PAT-001 refinement only. Authentic second-node, NETWORK_PRESENT, fragmentation/reformation, and exact multi-node replay/reconstruction equality remain required before any physical/runtime evidence posture is upgraded."
     },
     {
       "claim_id": "CLM-PAT-002-METHOD-001",

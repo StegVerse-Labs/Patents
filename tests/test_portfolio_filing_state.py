@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import sys
 from pathlib import Path
 
 
@@ -11,6 +12,7 @@ def load_validator():
     spec = importlib.util.spec_from_file_location("validate_portfolio_filing_state", SCRIPT)
     module = importlib.util.module_from_spec(spec)
     assert spec.loader is not None
+    sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module
 

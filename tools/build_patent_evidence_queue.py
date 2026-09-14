@@ -25,8 +25,8 @@ PROHIBITED = {
 CLASSIFIERS: list[tuple[str, tuple[str, ...]]] = [
     ("canonical_source_recovery", ("canonical", "source repositories", "commit anchors")),
     ("implementation_anchor_collection", ("implementation commit anchors", "validator and test paths", "source implementation")),
-    ("executable_fixture_collection", ("executable evidence", "negative fixture", "failure fixture", "validator fixture")),
     ("lifecycle_evidence_collection", ("expiry", "usage lease", "context retention", "heartbeat")),
+    ("executable_fixture_collection", ("executable evidence", "negative fixture", "failure fixture", "validator fixture")),
     ("prior_art_identifier_verification", ("prior art", "patent and non-patent")),
     ("authoritative_execution", ("authoritative execution", "canonical portfolio entry point", "dispatcher")),
 ]

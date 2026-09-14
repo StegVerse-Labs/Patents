@@ -12,6 +12,18 @@ This repository manages StegVerse invention disclosures, reusable claim data, pr
 
 `PAT-001` is the foundational computing architecture. The later families express technical extensions and implementations; dependency in this repository does not by itself establish legal priority entitlement.
 
+### PAT-001 StegOS / Interlock-InTr Network Manifold refinement
+
+The PAT-001 working data now preserves a bounded claim-refinement lane for the StegOS/InTr ephemeral Network Manifold. The refinement adds candidate technical limitations for:
+
+- receipt-derived network membership;
+- receipt-derived current topology / manifold state;
+- separation of observation, credential, transition, execution, and reconstruction authorities;
+- disposable execution substrate with durable causal state; and
+- reformation acceptance conditioned on replay/reconstruction equality.
+
+The controlling packet is `evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md`. These are candidate refinements only. They do not establish patentability, inventorship, priority, filing readiness, or completed physical reduction to practice. The related canonical StegOS task `STEGOS-NODE-MANIFOLD-001` still requires authentic second-node, `NETWORK_PRESENT`, fragmentation/reformation, and exact multi-node replay/reconstruction evidence before corresponding physical/runtime evidence postures may be upgraded.
+
 `PAT-005` is an urgent practitioner-review candidate because a public technical paper was committed on 2026-07-13. Its earliest enabling public disclosure, inventorship, claim scope, and foreign-filing consequences remain under review.
 
 ## PAT-005 working package

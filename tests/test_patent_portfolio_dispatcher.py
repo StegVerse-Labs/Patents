@@ -19,6 +19,7 @@ def test_build_commands_covers_active_machine_surface() -> None:
         "pat001_lifecycle_evidence",
         "pat005_implementation_anchors",
         "pat005_negative_cases",
+        "active_family_prior_art",
         "pat001_drawing_sources",
         "pat001_rendered_drawings",
         "evidence_queue_build",
@@ -41,6 +42,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
         "pat001_lifecycle_evidence": (0, {"decision": "PAT001_LIFECYCLE_EVIDENCE_VALID"}),
         "pat005_implementation_anchors": (0, {"decision": "PAT005_IMPLEMENTATION_ANCHORS_VALID"}),
         "pat005_negative_cases": (0, {"decision": "PAT005_NEGATIVE_CASES_REPLAYED", "passed_count": 8}),
+        "active_family_prior_art": (0, {"decision": "ACTIVE_FAMILY_PRIOR_ART_VALID"}),
         "pat001_drawing_sources": (0, {"decision": "DRAWING_SOURCES_VALID"}),
         "pat001_rendered_drawings": (0, {"decision": "DRAWING_MANIFEST_VALID"}),
         "evidence_queue_build": (0, {"decision": "EVIDENCE_QUEUE_READY", "queue": [{"task_id": "EVID-PAT-001-0123456789ab"}]}),
@@ -64,7 +66,7 @@ def test_dispatch_passes_expected_fail_closed_readiness(monkeypatch, tmp_path: P
     assert receipt["workstream_decision"] == "CONTINUE_ACTIVE_PATENT_WORK"
     assert receipt["machine_queue_size"] == 1
     assert receipt["evidence_queue_size"] == 1
-    assert receipt["schema_version"] == "2.1"
+    assert receipt["schema_version"] == "2.2"
     assert receipt["authority_boundary"]["filing_performed"] is False
 
 
