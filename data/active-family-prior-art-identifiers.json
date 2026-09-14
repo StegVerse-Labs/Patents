@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "decision": "PRIOR_ART_IDENTIFIERS_PARTIALLY_VERIFIED",
-  "verified_at": "2026-07-14",
+  "verified_at": "2026-09-14",
   "families": {
     "PAT-001": {
       "verified_non_patent_references": [
@@ -14,9 +14,40 @@
           "source": "https://arxiv.org/abs/2204.07210"
         }
       ],
-      "verified_patent_publications": [],
-      "patent_search_status": "NO_PUBLICATION_NUMBER_VERIFIED",
-      "remaining_requirement": "Verify patent publication numbers, priority dates, family members, and relevant claims through USPTO, WIPO, or Espacenet records."
+      "verified_patent_publications": [
+        {
+          "publication_number": "US11063961B1",
+          "title": "Moving target defense systems and methods",
+          "priority_date": "2016-05-19",
+          "publication_date": "2021-07-13",
+          "mapped_collision_zones": ["moving_target_defense", "dynamic_network_defense"],
+          "mapped_limitations": ["P1-L17", "P1-L18", "P1-L20", "P1-L21"],
+          "source": "https://patents.google.com/patent/US11063961B1/en",
+          "verification_posture": "PUBLICATION_IDENTIFIER_AND_DATES_VERIFIED_COLLISION_MAPPING_NONLEGAL"
+        },
+        {
+          "publication_number": "US20230328047A1",
+          "title": "Platform and Method for Automated Moving Target Defense",
+          "priority_date": "2021-09-13",
+          "publication_date": "2023-10-12",
+          "mapped_collision_zones": ["moving_target_defense", "ephemeral_workload_identity", "zero_trust_admission", "session_lifecycle"],
+          "mapped_limitations": ["P1-L17", "P1-L19", "P1-L20"],
+          "source": "https://patents.google.com/patent/US20230328047A1/en",
+          "verification_posture": "PUBLICATION_IDENTIFIER_AND_DATES_VERIFIED_COLLISION_MAPPING_NONLEGAL"
+        },
+        {
+          "publication_number": "US20250310329A1",
+          "title": "Zero trust authentication and authorization system",
+          "priority_date": "2024-04-01",
+          "publication_date": "2025-10-02",
+          "mapped_collision_zones": ["zero_trust_admission", "ephemeral_workload_identity", "just_in_time_access"],
+          "mapped_limitations": ["P1-L17", "P1-L19", "P1-L20"],
+          "source": "https://patents.google.com/patent/US20250310329A1/en",
+          "verification_posture": "PUBLICATION_IDENTIFIER_AND_DATES_VERIFIED_COLLISION_MAPPING_NONLEGAL"
+        }
+      ],
+      "patent_search_status": "BOUNDED_PUBLICATION_IDENTIFIERS_VERIFIED_MORE_SEARCH_AND_LIMITATION_ANALYSIS_REQUIRED",
+      "remaining_requirement": "Continue USPTO/WIPO/Espacenet and non-patent searching across all PAT-001 collision zones; verify family members, relevant claims/paragraphs, combination risks, and counsel analysis before any patentability or freedom-to-operate conclusion."
     },
     "PAT-005": {
       "verified_non_patent_references": [
