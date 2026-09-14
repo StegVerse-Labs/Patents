@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "family_id": "PAT-001",
+  "goal_task_id": "STEGOS-NODE-MANIFOLD-001",
+  "status": "PRE_REGISTERED_PHYSICAL_PROOF_INGESTION_READY",
+  "physical_proof_claimed": false,
+  "claim_rewriting_on_ingestion_permitted": false,
+  "source_truth": {
+    "task_registry": "StegVerse-Labs/.github/data/canonical-task-records/STEGOS-NODE-MANIFOLD-001.json",
+    "runtime_handoff": "StegVerse-Labs/StegOS/docs/STEGOS_NODE_MANIFOLD_MIRROR_HANDOFF.md",
+    "patent_handoff": "StegVerse-Labs/Patents/PAT-001_MIRROR_HANDOFF.md",
+    "claim_refinement": "evidence/PAT-001_STEGOS_INTR_NETWORK_MANIFOLD_CLAIM_REFINEMENT.md"
+  },
+  "software_anchor_commit": "07fe74c4eb4b2657dc1838d87836a6872a9da751",
+  "software_anchors": [
+    {
+      "repository": "StegVerse-Labs/StegOS",
+      "path": "stegos/real_peer_manifold_pipeline.py",
+      "blob_sha": "4a9ed2e9b3c1433eb8886f63c3c9713cb039de0a",
+      "supports": ["DISTINCT_SECOND_ACTIVE_NODE_OBSERVED", "NETWORK_PRESENT_PROVEN"]
+    },
+    {
+      "repository": "StegVerse-Labs/StegOS",
+      "path": "stegos/real_relationship_cycle.py",
+      "blob_sha": "a4613223e4643b8542af5fa7cbbd08f654512ca1",
+      "supports": ["NETWORK_PRESENT_PROVEN", "REAL_FRAGMENTATION_AND_REFORMATION_OBSERVED", "EXACT_MULTI_NODE_REPLAY_RECONSTRUCTION_EQUALITY"]
+    },
+    {
+      "repository": "StegVerse-Labs/StegOS",
+      "path": "stegos/heartbeat_protocol_sample.py",
+      "blob_sha": "1007b124fa67ec611839273bbe036e7e8b68c8c5",
+      "supports": ["HEARTBEAT_NON_AUTHORITY_CORROBORATION"]
+    }
+  ],
+  "required_evidence_package_fields": [
+    "source_repository",
+    "source_path",
+    "source_commit_sha",
+    "source_blob_sha",
+    "runtime_or_physical_receipt_ids",
+    "artifact_sha256",
+    "node_identities",
+    "interlock_identities",
+    "transition_lineage",
+    "negative_or_fail_closed_evidence",
+    "reconstruction_output",
+    "observation_date",
+    "disclosure_chronology_implications"
+  ],
+  "predicates": [
+    {
+      "predicate": "DISTINCT_SECOND_ACTIVE_NODE_OBSERVED",
+      "status": "PENDING_AUTHENTIC_RETAINED_EVIDENCE",
+      "supports_candidate_limitations": ["P1-L17", "P1-L18"],
+      "minimum_evidence": {
+        "source_repository": null,
+        "source_path": null,
+        "source_commit_sha": null,
+        "source_blob_sha": null,
+        "runtime_or_physical_receipt_ids": [],
+        "artifact_sha256": [],
+        "node_identities": ["FIRST_NODE_ID_REQUIRED", "DISTINCT_SECOND_NODE_ID_REQUIRED"],
+        "interlock_identities": ["FIRST_SOURCE_INTERLOCK_REQUIRED", "DISTINCT_SECOND_SOURCE_INTERLOCK_REQUIRED"],
+        "transition_lineage": ["LOCAL_RECEIPT_HEAD_PER_NODE", "BOUND_TRANSITION_PACKET_PER_NODE"],
+        "negative_or_fail_closed_evidence": ["reject identical node_id", "reject identical device binding", "reject identical interlock_id", "reject identical local receipt head"],
+        "reconstruction_output": "not sufficient alone; peer distinctness and admitted two-node inputs must be retained",
+        "observation_date": null,
+        "disclosure_chronology_implications": "Record only the authentic observation date and repository/custody date. Do not infer an earlier conception or reduction-to-practice date."
+      }
+    },
+    {
+      "predicate": "NETWORK_PRESENT_PROVEN",
+      "status": "PENDING_AUTHENTIC_RETAINED_EVIDENCE",
+      "supports_candidate_limitations": ["P1-L17", "P1-L18"],
+      "minimum_evidence": {
+        "source_repository": null,
+        "source_path": null,
+        "source_commit_sha": null,
+        "source_blob_sha": null,
+        "runtime_or_physical_receipt_ids": [],
+        "artifact_sha256": [],
+        "node_identities": ["TWO_DISTINCT_ACTIVE_NODE_IDS_REQUIRED"],
+        "interlock_identities": ["TWO_DISTINCT_RECIPROCAL_INTERLOCK_IDS_REQUIRED"],
+        "transition_lineage": ["LOCAL_ONLY_ORIGINATION", "FIRST_NETWORK_OBSERVATION", "PEER_NETWORK_OBSERVATION", "NETWORK_PRESENT_RESULTANT"],
+        "negative_or_fail_closed_evidence": ["connectivity alone is insufficient", "heartbeat observation alone is insufficient", "single-node evidence is insufficient", "self-interlock transition is rejected"],
+        "reconstruction_output": "resultant actual state must include LOCAL_ONLY -> NETWORK_PRESENT and bind retained two-node observations",
+        "observation_date": null,
+        "disclosure_chronology_implications": "Record the first authentic retained NETWORK_PRESENT observation date separately from source-code dates and disclosure dates."
+      }
+    },
+    {
+      "predicate": "REAL_FRAGMENTATION_AND_REFORMATION_OBSERVED",
+      "status": "PENDING_AUTHENTIC_RETAINED_EVIDENCE",
+      "supports_candidate_limitations": ["P1-L18", "P1-L20", "P1-L21"],
+      "minimum_evidence": {
+        "source_repository": null,
+        "source_path": null,
+        "source_commit_sha": null,
+        "source_blob_sha": null,
+        "runtime_or_physical_receipt_ids": [],
+        "artifact_sha256": [],
+        "node_identities": ["SAME_TWO_NODE_IDS_ACROSS_INITIAL_LOSS_RECOVERY_REQUIRED"],
+        "interlock_identities": ["SAME_TWO_SOURCE_INTERLOCKS_ACROSS_CYCLE_REQUIRED", "DISTINCT_EXTERNAL_LOSS_DESTINATIONS_REQUIRED", "RECIPROCAL_RECOVERY_DESTINATIONS_REQUIRED"],
+        "transition_lineage": ["INITIAL_RECIPROCAL_RELATIONSHIPS", "DIVERGENT_ACTIVE_NON_STALE_RELATIONSHIPS", "RECOVERED_RECIPROCAL_RELATIONSHIPS"],
+        "negative_or_fail_closed_evidence": ["reject stale-as-fragmentation substitution", "reject inactive participant substitution", "reject reused physical-network observation digest", "reject non-increasing observed_at", "reject shared loss destination"],
+        "reconstruction_output": "retained resultant must show LOCAL_ONLY -> NETWORK_PRESENT -> NETWORK_PRESENT -> NETWORK_FRAGMENTED -> NETWORK_PRESENT -> NETWORK_PRESENT",
+        "observation_date": null,
+        "disclosure_chronology_implications": "Record initial, fragmentation, and reformation observation timestamps; do not back-date P1-L18/P1-L20/P1-L21 conception or reduction from software readiness."
+      }
+    },
+    {
+      "predicate": "EXACT_MULTI_NODE_REPLAY_RECONSTRUCTION_EQUALITY",
+      "status": "PENDING_AUTHENTIC_RETAINED_EVIDENCE",
+      "supports_candidate_limitations": ["P1-L18", "P1-L20", "P1-L21"],
+      "minimum_evidence": {
+        "source_repository": null,
+        "source_path": null,
+        "source_commit_sha": null,
+        "source_blob_sha": null,
+        "runtime_or_physical_receipt_ids": [],
+        "artifact_sha256": [],
+        "node_identities": ["EXACT_NODE_ID_SET_FROM_LIVE_CYCLE_REQUIRED"],
+        "interlock_identities": ["EXACT_INTERLOCK_ID_SET_FROM_LIVE_CYCLE_REQUIRED"],
+        "transition_lineage": ["EXACT_LIVE_TRANSITION_SEQUENCE_REQUIRED", "EXACT_ORIGINATION_MANIFEST_REQUIRED", "EXACT_RESULTANT_MANIFEST_REQUIRED"],
+        "negative_or_fail_closed_evidence": ["reject changed node set", "reject changed observation digest", "reject changed transition ordering", "reject replay mismatch", "reject expected-state mismatch"],
+        "reconstruction_output": "replay_matches_live_cycle=true and expected_states_match=true with exact retained source observation digests",
+        "observation_date": null,
+        "disclosure_chronology_implications": "Record the date equality was actually reproduced from retained physical evidence; do not treat deterministic fixture equality as physical reduction."
+      }
+    }
+  ],
+  "ingestion_rules": {
+    "all_required_fields_must_be_populated_before_predicate_completion": true,
+    "source_only_or_ci_only_proof_is_sufficient": false,
+    "deterministic_fixture_substitutes_for_physical_evidence": false,
+    "single_node_result_substitutes_for_multi_node_proof": false,
+    "claim_text_may_be_rewritten_to_fit_observed_result": false,
+    "predicate_status_upgrade_requires_authentic_retained_artifacts": true,
+    "patentability_determined": false,
+    "inventorship_determined": false,
+    "filing_authorized": false
+  }
+}
