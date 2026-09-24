@@ -2,12 +2,12 @@
 
 ## Identity and authoritative status
 - Intake: StegVerse-Labs/.github#2626 and StegVerse-Labs/Patents#5
-- Goal Task ID: **NOT YET CANONICALLY ADMITTED**
+- Source-registered Task ID: `OPTICAL-PHYSICAL-STATE-REPLAY-RESEARCH-001`, **PROPOSED / UNCLAIMED**; authenticated AI_SESSION_GATE admission remains pending
 - COSV: **NOT YET DERIVED**
-- Coordination: **PROPOSED INTAKE; NO CLAIM OR CHECKOUT**
-- Last verified canonical Registry generation: **212** (2026-09-24; blob `d37de4ea6d0d7d7fe416baacae6ef05aa4d851f7`).
+- Coordination: **PROPOSED / UNCLAIMED; NO CLAIM OR CHECKOUT**
+- Latest verified canonical Registry generation: **217** (2026-09-24; blob `dba373396982c5314f1120d2b4b384c52ad61b78`). Optical coordination source registered at generation 214 through merged central PR #2631.
 - Authoritative collision disposition: **NOT RETURNED**. Issue #2626 had no retained comments when checked. There is no evidence of an authentic `AI_SESSION_GATE` check-in/event for this intake.
-- This handoff is a **pre-admission drafting/intake artifact**, not a canonical Task Registry handoff. On authenticated admission, reconcile ownership, create or designate the canonical `*_MIRROR_HANDOFF.md`, transfer only approved facts, and update this file to point to it.
+- This is the Patents **pre-admission intake handoff**. The already-registered central source handoff is `StegVerse-Labs/.github/docs/OPTICAL_PHYSICAL_STATE_REPLAY_RESEARCH_MIRROR_HANDOFF.md`; its source registration is not evidence of authentic check-in. After authentic admission, reconcile ownership and update both handoffs with exact facts.
 
 ## Verified portfolio overlap
 `PAT-003_MIRROR_HANDOFF.md` is the dedicated source for Generalized Adaptive Scanner Using Dynamic Micro-Nodes; it already preserves candidate dynamic acquisition/decoding nodes, ambiguity-dependent computation, variable sufficient observation intervals, explicit non-inference and bounded observation receipts. Optical and multispectral observation should first be charted as candidate PAT-003 embodiments; no new numbered patent family is hereby authorized.
@@ -37,3 +37,10 @@ Repository source inspection and PR tests are development evidence only. No auth
 - README and intake handoff are source-drafting artifacts; no canonical admission or patent filing.
 - On the initial PR head `b7d599e87825f7de35ed0dcdcf5db2904de94358`, `repo-smoke` and `build` completed successfully. A separate `Auto Assign` workflow failed because `pozil/auto-assign-issue@v1` was triggered on a `pull_request` despite requiring issue context; it also rejected the unsupported `numOfAssignee` input.
 - Bounded source repair committed on the PR branch at `003a1b259941bbbd866ae63a7dde853a14198534`: restrict Auto Assign to `issues.opened`, remove its unsupported input and unnecessary pull-request permission. New-head validation must be checked before claiming the PR fully green. This is source workflow repair, not a resident check-in or runtime receipt.
+
+## Reproducible source-only experiment checkpoint — 2026-09-24
+- An independent local synthetic patterned-motion recording was generated as a feasibility specimen: 120 frames, 30 fps, deliberate motion-regime change at source frame 45. No infant or adult footage, external live feed, runtime worker, sensor or governance authority was involved.
+- Local optical centroid and predecessor-hash replay produced 120 sequential observations with a successful original-source verification; the baseline interpretation first reported a displacement change at frame 45. A separately versioned lower threshold produced additional interpretations without rewriting the baseline.
+- Six deterministic local negative/positive tests passed: source reconstruction, onset detection, missing-frame rejection, timestamp alteration rejection, predecessor corruption rejection, and separate-version preservation. This is researcher-side local evidence only, not source CI or authentic governed runtime. The user-facing zip retains the exact specimen and tests; it has not been committed to this public repository pending IP/disclosure and owner admission review.
+- Candidate independently licensed external recording: NASA SVS `https://svs.gsfc.nasa.gov/5228`, with downloadable 360p MP4 and NASA SVS public-domain guidance (subject to exceptions). No external source footage was downloaded here; rights-cleared public-video ingestion is **NOT EXECUTED**.
+- Component-010's authorized authentic session-origin path cannot be substituted by a declared actor kind or GitHub source execution. Central issue #2626 still has no authentic hash-linked event accessible through connected GitHub custody. Remain `PROPOSED / UNCLAIMED`, with COSV unknown and PR #6 draft until actual owner/authority disposition.
