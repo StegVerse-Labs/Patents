@@ -31,3 +31,9 @@ Existing component-010 / AI_SESSION_GATE owner must consume #2626 through the ex
 
 ## Evidence and promotion limitations
 Repository source inspection and PR tests are development evidence only. No authentic resident invocation, WorkerCoordinator claim/fence, organization transition, Master Records custody, clinical validation, patent filing, inventorship decision or patentability finding has been shown for this intake.
+
+## Intake draft PR and exact-head evidence (2026-09-24)
+- Draft PR: https://github.com/StegVerse-Labs/Patents/pull/6
+- README and intake handoff are source-drafting artifacts; no canonical admission or patent filing.
+- On the initial PR head `b7d599e87825f7de35ed0dcdcf5db2904de94358`, `repo-smoke` and `build` completed successfully. A separate `Auto Assign` workflow failed because `pozil/auto-assign-issue@v1` was triggered on a `pull_request` despite requiring issue context; it also rejected the unsupported `numOfAssignee` input.
+- Bounded source repair committed on the PR branch at `003a1b259941bbbd866ae63a7dde853a14198534`: restrict Auto Assign to `issues.opened`, remove its unsupported input and unnecessary pull-request permission. New-head validation must be checked before claiming the PR fully green. This is source workflow repair, not a resident check-in or runtime receipt.
