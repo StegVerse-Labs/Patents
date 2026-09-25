@@ -123,3 +123,7 @@ Inventorship is determined from human contribution to conception of the subject 
 ## Versioning
 
 Repository epoch and portfolio settings live in `patent_manifest.json`. Structured claim-data versioning lives in `data/master_claims.json`.
+
+## Optical physical-state research intake (not admitted)
+
+Research proposal: [Patents #5](https://github.com/StegVerse-Labs/Patents/issues/5), central admission and owner-collision request [StegVerse-Labs/.github #2626](https://github.com/StegVerse-Labs/.github/issues/2626). Read [`OPTICAL_PHYSICAL_STATE_RESEARCH_INTAKE_MIRROR_HANDOFF.md`](OPTICAL_PHYSICAL_STATE_RESEARCH_INTAKE_MIRROR_HANDOFF.md) before continuing. This is a public, high-level **pre-admission** handoff, not a new numbered family, canonical Goal Task ID or authorization to mutate PAT-003 lifecycle status. Compare adaptive optical acquisition with existing PAT-003 before deciding any family relationship. Keep unpublished enabling patent details and restricted footage out of public GitHub. Ingestion, replay, licensing and experimental claims require separate validation.
