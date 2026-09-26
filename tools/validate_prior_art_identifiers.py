@@ -7,6 +7,8 @@ import re
 from pathlib import Path
 
 ARXIV = re.compile(r"^arXiv:\d{4}\.\d{4,5}$")
+PATENT_PUBLICATION = re.compile(r"^[A-Z]{2}\d+[A-Z]\d$")
+DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 FAMILIES = {"PAT-001", "PAT-005"}
 
 
@@ -47,11 +49,32 @@ def validate(path: Path) -> dict:
             verified_count += 1
             if not ref.get("title") or not ref.get("publication_date") or not ref.get("source"):
                 errors.append(f"{family_id}.reference[{index}] missing metadata")
+
         patents = family.get("verified_patent_publications", []) if isinstance(family, dict) else []
         if not isinstance(patents, list):
             errors.append(f"{family_id}.verified_patent_publications must be an array")
             patents = []
-        patent_count += len(patents)
+        for index, patent in enumerate(patents):
+            number = patent.get("publication_number") if isinstance(patent, dict) else None
+            if not isinstance(number, str) or not PATENT_PUBLICATION.fullmatch(number):
+                errors.append(f"{family_id}.patent[{index}].publication_number invalid")
+                continue
+            if number in seen:
+                errors.append(f"duplicate identifier: {number}")
+            seen.add(number)
+            patent_count += 1
+            for field in ("title", "priority_date", "publication_date", "source"):
+                if not patent.get(field):
+                    errors.append(f"{family_id}.patent[{index}] missing {field}")
+            for field in ("priority_date", "publication_date"):
+                value = patent.get(field)
+                if value and not DATE.fullmatch(str(value)):
+                    errors.append(f"{family_id}.patent[{index}].{field} invalid")
+            if not isinstance(patent.get("mapped_collision_zones"), list) or not patent.get("mapped_collision_zones"):
+                errors.append(f"{family_id}.patent[{index}].mapped_collision_zones missing")
+            if not isinstance(patent.get("mapped_limitations"), list) or not patent.get("mapped_limitations"):
+                errors.append(f"{family_id}.patent[{index}].mapped_limitations missing")
+
         if not patents and family.get("patent_search_status") != "NO_PUBLICATION_NUMBER_VERIFIED":
             errors.append(f"{family_id}.patent_search_status inconsistent")
 

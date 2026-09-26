@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "family_id": "PAT-001",
   "decision": "LIFECYCLE_EVIDENCE_PARTIAL_WITH_EXPLICIT_NEGATIVES",
   "inspected_repository": "StegVerse-002/micro-node-runtime",
@@ -28,6 +28,35 @@
       ]
     }
   ],
+  "supplemental_investigation": {
+    "observed_at": "2026-09-14",
+    "demand_construction": {
+      "status": "NO_DIRECT_FIRST_PARTY_IMPLEMENTATION_LOCATED",
+      "scope": ["StegVerse-Labs/StegOS", "StegVerse-Labs/StegCore", "StegVerse-Labs/Site", "StegVerse-Labs/continuity-vault-kit", "StegVerse-Labs organization code search"],
+      "finding": "Adjacent admissibility, node-activation, and minimal-micro-node rules exist, but no located implementation directly performs active admissible capable-node resolution followed by node construction only when no such node exists.",
+      "blocking_gate_advanced": false
+    },
+    "expiry_and_usage_retention": {
+      "status": "ADJACENT_EXPIRY_AND_LEASE_SURFACES_LOCATED_BUT_PAT001_NODE_LIFECYCLE_NOT_VERIFIED",
+      "finding": "Credential, session, delegation, and continuity lease expiry surfaces exist elsewhere, but no located source directly establishes PAT-001 default micro-node expiry plus externally evidenced usage-only retention.",
+      "blocking_gate_advanced": false
+    },
+    "heartbeat_non_authority": {
+      "status": "VERIFIED_SOFTWARE_ARCHITECTURE_CORROBORATION",
+      "repository": "StegVerse-Labs/StegOS",
+      "commit_sha": "07fe74c4eb4b2657dc1838d87836a6872a9da751",
+      "path": "stegos/heartbeat_protocol_sample.py",
+      "blob_sha": "1007b124fa67ec611839273bbe036e7e8b68c8c5",
+      "corroborates": [
+        "heartbeat_observation_is_non_causal",
+        "heartbeat_authority_effect_is_none",
+        "heartbeat_does_not_grant_execution_authority",
+        "heartbeat_does_not_supply_credential_authority",
+        "heartbeat_payload_is_excluded_from_transition_packet"
+      ],
+      "boundary": "This does not verify heartbeat_non_self_retention; the inspected micro-node lifecycle still lacks a retention decision that rejects heartbeat-only persistence."
+    }
+  },
   "explicit_negative_findings": [
     {
       "limitation": "default_expiry",
@@ -47,12 +76,12 @@
     {
       "limitation": "heartbeat_non_self_retention",
       "status": "NOT_IMPLEMENTED_IN_INSPECTED_SURFACE",
-      "basis": "No heartbeat field, liveness loop, persistence decision, or rule preventing heartbeat-only retention exists in the inspected surface."
+      "basis": "No heartbeat field, liveness loop, persistence decision, or rule preventing heartbeat-only retention exists in the inspected surface. Separate StegOS evidence now corroborates HeartBeat non-authority, but not this lifecycle-retention proposition."
     },
     {
       "limitation": "demand_only_node_construction_when_no_admissible_node_exists",
       "status": "NOT_ESTABLISHED_BY_INSPECTED_SURFACE",
-      "basis": "The runtime evaluates a supplied MicroNodeRequest but does not resolve or construct nodes from demand."
+      "basis": "The runtime evaluates a supplied MicroNodeRequest but does not resolve or construct nodes from demand; bounded 2026-09-14 repository investigation did not locate a direct replacement implementation."
     },
     {
       "limitation": "active_capability_resolution",
