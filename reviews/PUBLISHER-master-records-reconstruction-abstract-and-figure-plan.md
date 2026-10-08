@@ -34,8 +34,8 @@ Show the mapped candidate crossing into a separate downstream verifier. The mapp
 
 ### Figure 7 — Unsupported production lifecycle boundary
 
-Visually separate the verified bounded package from unresolved production capabilities: source creation, arbitrary-state reconstruction, retention, supersession, rollback, conflict resolution, and authoritative custody transfer.
+Visually separate the verified bounded package from unresolved production capabilities: source creation, arbitrary-state reconstruction, retention, supersession, rollback, conflict resolution, and organization record transfer.
 
 ## Drawing blockers
 
-Formal drawings remain blocked until component names, production schemas, reconstruction outputs, custody lifecycle behavior, and downstream verification receipts are verified. No implementation-specific structure should be inferred beyond the bounded sources.
+Formal drawings remain blocked until component names, production schemas, reconstruction outputs, organization record lifecycle behavior, and downstream verification receipts are verified. No implementation-specific structure should be inferred beyond the bounded sources.

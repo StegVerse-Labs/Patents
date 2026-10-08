@@ -6,7 +6,7 @@ This is a bounded first-party technical disclosure derived from verified sources
 
 ## Technical problem
 
-A distributed governed ecosystem may preserve individual events and receipts while still lacking a trustworthy method to bind them into an ordered, hash-referenced chain that can be independently checked and mapped into a downstream verification system. Without that binding, later reconstruction can confuse event order, source identity, custody, or final-state references.
+A distributed governed ecosystem may preserve individual events and receipts while still lacking a trustworthy method to bind them into an ordered, hash-referenced chain that can be independently checked and mapped into a downstream verification system. Without that binding, later reconstruction can confuse event order, source identity, organization records, or final-state references.
 
 ## Working technical concept
 
@@ -39,7 +39,7 @@ The connected `master-records/core-lite` package supplies a receipt-chain sample
 
 ## Unsupported elements
 
-The present evidence does not establish a full production custody service, arbitrary-record reconstruction, complete supersession and rollback semantics, distributed retention guarantees, or a complete combination across all StegVerse repositories.
+The present evidence does not establish a full production organization record service, arbitrary-record reconstruction, complete supersession and rollback semantics, distributed retention guarantees, or a complete combination across all StegVerse repositories.
 
 ## Required continuation
 

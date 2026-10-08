@@ -31,7 +31,7 @@ Potential overlap:
 
 Working distinction:
 
-Receipt-Based State Transition Validation centers on whether a transition and its receipt evidence are valid and reconstructable. Master-Records Reconstruction and Verification centers on custody-bound retention, transformation, replay, and independent reconstruction of an ordered state record across schemas or verification surfaces.
+Receipt-Based State Transition Validation centers on whether a transition and its receipt evidence are valid and reconstructable. Master-Records Reconstruction and Verification centers on organization-record retention, transformation, replay, and independent reconstruction of an ordered state record across schemas or verification surfaces.
 
 Unresolved boundary questions:
 
@@ -51,7 +51,7 @@ Potential overlap:
 
 Working distinction:
 
-PAT-002 appears oriented toward heartbeat-governed entity state and reflected-state computation. The present family is oriented toward immutable source bindings, custody, ordered receipt verification, bounded schema transformation, and later independent reconstruction. No legal relationship is inferred.
+PAT-002 appears oriented toward heartbeat-governed entity state and reflected-state computation. The present family is oriented toward immutable source bindings, organization records, ordered receipt verification, bounded schema transformation, and later independent reconstruction. No legal relationship is inferred.
 
 Unresolved boundary questions:
 
@@ -77,7 +77,7 @@ The verified sources support more than merely storing events: they require expli
 Still unresolved:
 
 - production-grade event creation and hash computation;
-- custody transfer and retention;
+- organization record transfer and retention;
 - conflict resolution;
 - rollback and supersession;
 - independent verifier output from the destination verification surface;
@@ -90,7 +90,7 @@ Potential overlap:
 - hash chains;
 - immutable ordering;
 - terminal-state validation;
-- provenance and custody.
+- provenance and organization records.
 
 Working distinction question:
 
@@ -123,7 +123,7 @@ PRODUCTION_RECONSTRUCTION_EVIDENCE_BLOCKED
 ## Next technical evidence required
 
 - source-record creation and hash-computation implementation;
-- production custody and retention behavior;
+- production organization record and retention behavior;
 - conflict, supersession, rollback, and reconstruction behavior;
 - independently retained destination-side verification output;
 - positive and negative runtime traces;

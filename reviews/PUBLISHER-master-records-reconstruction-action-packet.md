@@ -16,7 +16,7 @@ limitation map, chronology, contributors, and legal disposition blocked
 
 A connected first-party implementation source is now verified at `master-records/core-lite`. It establishes a bounded ordered receipt-chain sample, hash and repository bindings, required-order and required-field validation, terminal-receipt consistency, fail-closed verification, and downstream independent-verification separation.
 
-Automation cannot complete the family because the current package does not establish a full production custody and reconstruction lifecycle, complete supersession and rollback semantics, arbitrary-record reconstruction, attributable chronology, factual contributors, or the legal relationship between this candidate and adjacent families. The historical relationship to any separately named `master-records/orchestration` repository also remains unresolved.
+Automation cannot complete the family because the current package does not establish a full production organization record and reconstruction lifecycle, complete supersession and rollback semantics, arbitrary-record reconstruction, attributable chronology, factual contributors, or the legal relationship between this candidate and adjacent families. The historical relationship to any separately named `master-records/orchestration` repository also remains unresolved.
 
 ## Blocker classification
 
@@ -30,7 +30,7 @@ This is not an owner-approval blocker and not a Patent Center filing blocker.
 
 - whether a separate `master-records/orchestration` repository exists or existed;
 - rename, transfer, archive, replacement, or succession evidence;
-- production custody-record schema and writer paths, if distinct from core-lite;
+- production organization-record schema and writer paths, if distinct from core-lite;
 - complete reconstruction implementation;
 - supersession and rollback behavior;
 - retained valid, invalid, pending, rejected, and reconstructed receipts;
@@ -71,7 +71,7 @@ inventorship/PUBLISHER-master-records-reconstruction-contribution-worksheet.md
 
 ## Ordered factual steps
 
-1. Identify any source beyond `master-records/core-lite` that implements production custody creation, arbitrary reconstruction, supersession, rollback, retention, or cross-repository verification.
+1. Identify any source beyond `master-records/core-lite` that implements production organization record creation, arbitrary reconstruction, supersession, rollback, retention, or cross-repository verification.
 2. Record exact owner/repository, path, branch, and immutable commit or blob identifiers.
 3. State whether any `master-records/orchestration` repository was renamed, transferred, archived, replaced, or superseded.
 4. Provide representative valid and invalid receipts, reconstruction reports, and authoritative test outputs where available.
@@ -97,7 +97,7 @@ dated contributor or disclosure record
 
 ## Expected outcome to save
 
-A verified implementation-and-chronology evidence set sufficient to populate a limitation-level map and distinguish receipt creation, custody, reconstruction, downstream verification, and status projection.
+A verified implementation-and-chronology evidence set sufficient to populate a limitation-level map and distinguish receipt creation, organization records, reconstruction, downstream verification, and status projection.
 
 ## Automation that resumes afterward
 

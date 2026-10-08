@@ -117,7 +117,7 @@ Automation remains blocked on verified first-party evidence for:
 independently authored SPE-side or reciprocal verifier
 retained independent verification output for the mapped sample
 source-record creation and canonical hash computation
-production custody retention
+production organization record retention
 supersession and rollback behavior
 conflict detection and resolution behavior
 production reconstruction behavior
@@ -134,7 +134,7 @@ Formal drawings and specification expansion may proceed only where newly verifie
 
 **Current stage:** bounded disclosure, limitation map, abstract, figure plan, chronology intake, overlap notes, core-lite verification sources, and a dated reciprocal-verifier search receipt complete.
 
-**Automation stopped because:** the located reciprocal package is StegVerse-authored and expressly does not prove independent external verification; production custody and reconstruction behavior also remain unverified.
+**Automation stopped because:** the located reciprocal package is StegVerse-authored and expressly does not prove independent external verification; production organization record and reconstruction behavior also remain unverified.
 
 Provide an independently produced verifier or execution record containing:
 
@@ -157,7 +157,7 @@ Provide production evidence, where it exists, for:
 ```text
 source-record generation
 canonical hash computation
-custody and retention
+organization records and retention
 supersession
 rollback
 conflict detection and resolution
