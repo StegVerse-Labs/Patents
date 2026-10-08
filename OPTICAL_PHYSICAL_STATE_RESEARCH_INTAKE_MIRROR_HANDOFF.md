@@ -30,7 +30,7 @@ This public file contains only high-level research intake already described in t
 Existing component-010 / AI_SESSION_GATE owner must consume #2626 through the existing authorized intake, obtain the exact current Registry generation, collision owner disposition and hash-linked event, and distinguish `STOP_NOT_REGISTERED` from authentic admission. If intake lacks an eligible canonical identity, use the central registration workflow rather than manufacturing a Goal Task ID or COSV. On authentic admission, update repository README, this handoff and the authorized canonical handoff. Continue independent, non-governed and non-sensitive dataset scoping in parallel.
 
 ## Evidence and promotion limitations
-Repository source inspection and PR tests are development evidence only. No authentic resident invocation, WorkerCoordinator claim/fence, organization transition, Master Records custody, clinical validation, patent filing, inventorship decision or patentability finding has been shown for this intake.
+Repository source inspection and PR tests are development evidence only. No authentic resident invocation, WorkerCoordinator claim/fence, organization transition, Master Records organization record, clinical validation, patent filing, inventorship decision or patentability finding has been shown for this intake.
 
 ## Intake draft PR and exact-head evidence (2026-09-24)
 - Draft PR: https://github.com/StegVerse-Labs/Patents/pull/6
