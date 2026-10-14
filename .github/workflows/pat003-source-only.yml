@@ -1,0 +1,35 @@
+name: PAT-003 Source-Only Adapter Validation
+
+on:
+  pull_request:
+    paths:
+      - 'research/pat003/**'
+      - 'tests/test_pat003_double_pendulum_adapter_v1.py'
+      - '.github/workflows/pat003-source-only.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate versioned synthetic controls
+        run: |
+          mkdir -p receipts/pat003
+          python -m unittest discover -s tests -p 'test_pat003_double_pendulum_adapter_v1.py' -v 2>&1 | tee receipts/pat003/synthetic-controls.log
+          test "${PIPESTATUS[0]}" -eq 0
+      - name: Upload source-only test log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pat003-synthetic-${{ github.sha }}
+          retention-days: 90
+          if-no-files-found: warn
+          path: receipts/pat003/synthetic-controls.log
