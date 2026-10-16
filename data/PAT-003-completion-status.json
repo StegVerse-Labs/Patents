@@ -81,7 +81,7 @@
     "create a limitation level evidence map separating implemented written_description_only proposed and unsupported behavior",
     "draft a standalone technical disclosure only after supported boundaries are established",
     "draft abstract figure plan and specification only from verified support",
-    "preserve authoritative portfolio validation and registry synchronization receipts when dispatcher execution is available"
+    "preserve portfolio validation and registry synchronization receipts as outputs of the owning manifest-bound state transition; an unavailable receiver yields DURABLE_QUEUE_OR_EVENT_EPHEMERAL_MATERIALIZATION, not a wait on an external dispatcher or machine"
   ],
   "next_human_tasks": [
     "provide dated conception implementation private disclosure and public disclosure records",
