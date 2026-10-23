@@ -98,6 +98,51 @@ legal_review_status
 none
 ```
 
+2026-10-23 Lane A append. The `none` block above is superseded by the records below; the original line is kept. These are research records only: not truth, not legal determination, not execution authority. They make no novelty, obviousness, freedom-to-operate or filing conclusion. Overlap and distinction are left to a practitioner. PAT-003 stays FAIL_CLOSED_NOT_READY_TO_FILE.
+
+```text
+reference_id: PAT003-REF-001
+title: Event-based down sampling
+publication_or_patent_number: US9883122B2 (application US14/853,991; publication US20160080670A1)
+publication_date: 2016-03-17 (US publication); 2018-01-30 (grant), as displayed by the source
+priority_date_if_verified: UNKNOWN (source displays 2014-09-16 from US62/051,131; not verified against official record)
+source_url_or_database: https://patents.google.com/patent/US9883122B2/en (Google Patents; derivative, not certified USPTO record)
+retrieval_date: 2026-10-23
+search_query: event-based sensor temporal downsampling patent US9883122
+technical_cluster: Adaptive sensing and active perception
+relevant_passages_or_figures: not stated here (private screen video-engine@62e9f3ef57ce3c5030444aee40e6c88f782b586a blob 2d55f2000968d8121b89cfb2dbf576b5308fea72)
+candidate_overlap: NOT_EVALUATED (practitioner)
+candidate_distinction: NOT_EVALUATED (practitioner)
+verification_status: BIBLIOGRAPHIC_FIELDS_OBSERVED_AT_SOURCE; retained page sha256 ba6e32c9a15bfd01cd3cf18c8c346077f98c61624c2f67bdc1b0c9fa9ad7337a (private)
+reviewer: Lane A research agent (not a practitioner)
+legal_review_status: NOT_REVIEWED
+```
+
+```text
+reference_id: PAT003-REF-002
+title: Event-based 64-channel binaural silicon cochlea with Q enhancement mechanisms
+publication_or_patent_number: DOI 10.1109/ISCAS.2010.5537164 (IEEE Xplore document 5537164)
+publication_date: 2010-05 (Crossref published-print; conference May 30 to June 2, 2010, as source-reported)
+priority_date_if_verified: not applicable (non-patent literature)
+source_url_or_database: https://api.crossref.org/works/10.1109/ISCAS.2010.5537164; https://ieeexplore.ieee.org/abstract/document/5537164
+retrieval_date: 2026-10-23
+search_query: silicon cochlea event-driven auditory sensor 2010 IEEE
+technical_cluster: Adaptive sensing and active perception
+relevant_passages_or_figures: not stated here (private screen video-engine@62e9f3ef57ce3c5030444aee40e6c88f782b586a blob 16012cc198d3ab25be275c003420ac2829a2dfeb; publisher abstract only)
+candidate_overlap: NOT_EVALUATED (practitioner)
+candidate_distinction: NOT_EVALUATED (practitioner)
+verification_status: BIBLIOGRAPHIC_FIELDS_OBSERVED_AT_SOURCE; retained Crossref record sha256 ec32eeda5f33247827e586073ae0b706a866c63746697deac6d1495be3662fca (private); full text not reviewed
+reviewer: Lane A research agent (not a practitioner)
+legal_review_status: NOT_REVIEWED
+```
+
+Overlap map (FP-2). Limitation IDs only. Rows stay CANDIDATE_NOT_ADMITTED.
+
+| reference_id | family_id | mapped_limitations | candidate_overlap |
+|---|---|---|---|
+| PAT003-REF-001 | PAT-003 | NOT_MAPPED (the private screen inspects grant claims; limitation mapping is pending) | NOT_EVALUATED (practitioner) |
+| PAT003-REF-002 | PAT-003 | L1, L2, L3, L4, L5, L6 screened against the publisher abstract only (private screen) | NOT_EVALUATED (practitioner) |
+
 ## Unsupported conclusions
 
 The present record does not establish that the proposed combination is novel or non-obvious, that any reference qualifies as prior art, that any search is complete, or that any claim should be filed.
