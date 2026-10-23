@@ -67,7 +67,8 @@ This section is appended. The rows above are not changed. Every row stays `CANDI
 | KV-4 | experiment record, v0.13 | `1JvItnCWl4HgCtDM7iHyyr0HKtkXd43kq` | `6a0f2cc20dc61d22cbc2e1aa32b5bccf98ba4aaa925e50058dba68893994bb79` | private, owner-authorized surface |
 | KV-5 | experiment progression record (generation 266) | `1x3EImytgYnc9EPi0G8ZWEenlI-FPAEoe` | `e192d7bbb9ce7c14fca2ae089824efe2ddda644f2d29cd76b88d4b205e6d3055` | private, owner-authorized surface |
 | KV-6 | v0.2 fixture record + evidence classification | `1OsabhfzFCt9OykYXFyKVZL51Mz2bX2hm`, `1k-H1tLOMKIV1U5YwMeyxE3-uTb3dFS6g` | `ccc0f02b128ee93a1ae62edf8a062f93b9434967770c6d521f96445dd5d3a142`, `4dcb040532a4a9a06446b1865b5111a31b4f6318c7a7b2d50b3a8f437a2724ba` | private, owner-authorized surface |
-| KV-7 | third-party double-pendulum video file | `1h-UEEqCboivOJYa2qeEHNMhlEzn95Hlt` | NOT COMPUTED (7,271,648,696 bytes; `research/pat003/input_manifest_v1.json` declares 481,804,387) | private; rights HOLD; EXPECTED_ORIGINAL_NOT_LOCATED |
+| KV-7 | third-party double-pendulum video, upstream source reference (publisher original, 7,271,648,696 bytes) | `1h-UEEqCboivOJYa2qeEHNMhlEzn95Hlt` | `8197492b6e244b28f7948cf7e5e74d3e198e1b1d39a78981ee607484d30c38d1` | private; internal non-redistributed use only (Lane D LD-OSR-RIGHTS-01) |
+| KV-8 | primary demonstration clip (481,804,387 bytes per `research/pat003/input_manifest_v1.json`) | NOT LOCATED (no copy in an accessible store) | NOT COMPUTED | private; rights UNKNOWN, referred to Lane D; relationship to KV-7 not measured |
 
 ### Public locators used
 
@@ -83,7 +84,7 @@ This section is appended. The rows above are not changed. Every row stays `CANDI
 |---|---|---|---|---|---|
 | L1 | proofs | PRIV-1 | see pointer | written-description only for the plurality; no supporting derivation | UNVERIFIED |
 | L1 | software tests | PEP; VE comms R1; KV-2 sync gate | PEP blob above; VE commit above | synthetic paired streams only (LH L162) | TESTED_SYNTHETIC |
-| L1 | physical measurements | E1 source; KV-7 | E1 hash above | single camera; decoder presentation timestamps, not authenticated capture time (LH L139–L142); second-instrument candidate KV-7 not ingested, rights HOLD (LH L160) | UNVERIFIED |
+| L1 | physical measurements | E1 source; KV-8; KV-7 | E1 hash above | single camera; decoder presentation timestamps, not authenticated capture time (LH L139–L142); video candidates KV-8 (primary clip, not located) and KV-7 (upstream original) not ingested in this chart (rights context LH L160) | UNVERIFIED |
 | L1 | **proposed class** | — | — | — | `proposed` (CANDIDATE_NOT_ADMITTED) |
 | L2 | proofs | PRIV-1 | see pointer | interpretive mapping only; no derivation links it to node construction | INTERP |
 | L2 | software tests | RP; VE scanner R2 | RP/VE commits above | synthetic only | TESTED_SYNTHETIC |
@@ -112,7 +113,7 @@ This section is appended. The rows above are not changed. Every row stays `CANDI
 |---|---|---|---|---|---|
 | L1 | proofs | PRIV-1 | see pointer | written-description only | UNVERIFIED |
 | L1 | software tests | VE comms R1 | VE commit above | synthetic; no physical channel | TESTED_SYNTHETIC |
-| L1 | physical measurements | KV-7 | not computed | second modality absent; only candidate not ingested, rights HOLD | ABSENT |
+| L1 | physical measurements | KV-8; KV-7 | not computed | second modality absent; video candidates not ingested in this chart | ABSENT |
 | L1 | **proposed class** | — | — | — | `written_description_only` (CANDIDATE_NOT_ADMITTED) |
 | L2 | proofs | PRIV-1 | see pointer | as method L1 | UNVERIFIED |
 | L2 | software tests | KV-2 sync gate; PEP | as above | synthetic paired streams only | TESTED_SYNTHETIC |
@@ -129,7 +130,7 @@ This section is appended. The rows above are not changed. Every row stays `CANDI
 
 ### Open items recorded with this map (not resolved here)
 
-1. Independent physical reference / second modality (method L1, L4; system L1, L4). The only located candidate (KV-7) is on rights HOLD and has a size mismatch.
+1. Independent physical reference / second modality (method L1, L4; system L1, L4). Video candidates: KV-8, the primary demonstration clip (not located in an accessible store, rights UNKNOWN), and KV-7, its upstream original (internal use only); neither is ingested in this chart.
 2. Adaptive benefit under the required context (method L2; system L3). The recorded measurement conflicts with this.
 3. Reviewer check of the PRIV-1 / PRIV-2 candidates.
 4. Owner definitions of undefined terms, and the scope decision on method L4/L5.
