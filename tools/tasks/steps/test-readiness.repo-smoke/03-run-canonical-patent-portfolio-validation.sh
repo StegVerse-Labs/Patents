@@ -1,0 +1,1 @@
+python tools/patent_portfolio.py --repo-root .
