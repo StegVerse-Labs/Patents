@@ -1,0 +1,108 @@
+{
+ "schema": "stegverse.workflow-surface-registry/v1",
+ "goal_id": "G17-WORKFLOW-SURFACE-MINIMIZATION",
+ "repository": "StegVerse-Labs/Patents",
+ "policy_issue": "StegVerse-Labs/.github#167, #168; StegVerse-org/.github#166",
+ "preferred_repository_workflow_count_max": 2,
+ "exception_repository_workflow_count_max": 3,
+ "credential_authority": "the SKAP Vault inside KV is the only PII and credential store for every user, including the StegVerse ecosystem's own; no secret or token is referenced, introduced or moved by this fold",
+ "invariants": [
+  "Every workflow file is registered in surfaces[]; an unregistered or changed one fails closed (tests/test_workflow_surface_registry.py).",
+  "A new check is a group in tools/tasks/task_catalog.json, never a new workflow file.",
+  "The stable dispatcher carries no workflow_dispatch, schedule, repository_dispatch, issues or workflow_run trigger; a kept surface is pinned by sha256 and unchanged by the fold."
+ ],
+ "unregistered_workflow_outcome": {
+  "disposition": "FAIL_CLOSED",
+  "failure_code": "UNREGISTERED_WORKFLOW_SURFACE",
+  "failed_predicate": "EVERY_WORKFLOW_FILE_IS_REGISTERED",
+  "required_evidence_or_repair": "register the file in control/workflow-surface-registry.json surfaces[] or fold it into tools/tasks/task_catalog.json",
+  "retry_entrypoint": "tests/test_workflow_surface_registry.py",
+  "owning_existing_goal": "G17-WORKFLOW-SURFACE-MINIMIZATION (StegVerse-Labs/.github#167/#168); StegVerse-org/.github#166",
+  "next_attempt": "the next pull request touching .github/workflows/"
+ },
+ "surfaces": [
+  {
+   "path": ".github/workflows/validation-dispatcher.yml",
+   "classification": "KEEP_STABLE_DISPATCHER",
+   "triggers": [
+    "pull_request",
+    "push"
+   ],
+   "permissions": {
+    "contents": "read"
+   }
+  },
+  {
+   "path": ".github/workflows/auto-assign.yml",
+   "classification": "KEEP_EXISTING_SURFACE_UNCHANGED",
+   "triggers": [
+    "issues"
+   ],
+   "permissions": null,
+   "reason": "KEEP_EXISTING_SURFACE_UNCHANGED (issue-event writer): on issues opened it assigns the issue with issues: write through pozil/auto-assign-issue and the built-in GITHUB_TOKEN. The issues event cannot be carried by the read-only pull_request/push dispatcher, so it is kept unchanged and not folded or eliminated.",
+   "verbatim_sha256": "905d69af32396aae5b3926571bec2687ef16c3d7337a793c7d451244bf004ddc"
+  }
+ ],
+ "folded": [
+  {
+   "workflow": ".github/workflows/sync-overlay-from-stegdb.yml",
+   "name": "Sync overlay from StegDB",
+   "triggers_before": [
+    "workflow_dispatch",
+    "schedule"
+   ],
+   "classification": "ELIMINATE",
+   "status": "DONE",
+   "reason": "Its triggers are workflow_dispatch and a daily schedule that GitHub has disabled for inactivity (state disabled_inactivity; last run 2026-04-09). It is a writer (contents: write; rsync --delete of the StegDB PatentsOverlay into canon/ and git push). This lane carries no dispatch and enables no schedule. Kept verbatim as a record; canon/ is unchanged.",
+   "verbatim_record": "tools/tasks/folded/sync-overlay-from-stegdb.yml",
+   "verbatim_sha256": "8ec8e0c4eabbe13a295b36f38a51953023c9c9b0e3c1301fc2e32546569d5101"
+  },
+  {
+   "workflow": ".github/workflows/pat003-source-only.yml",
+   "name": "PAT-003 Source-Only Adapter Validation",
+   "triggers_before": [
+    "pull_request",
+    "workflow_dispatch"
+   ],
+   "classification": "CONSOLIDATE_INTO_STABLE_DISPATCHER",
+   "status": "DONE",
+   "catalog_groups": [
+    "pat003-source-only.synthetic-controls"
+   ],
+   "verbatim_record": "tools/tasks/folded/pat003-source-only.yml",
+   "verbatim_sha256": "12e15e494d0d4501d2c86b7d75b6f1a5c20784ec5b8b6cd6bfd35beb7582622f"
+  },
+  {
+   "workflow": ".github/workflows/test-readiness.yml",
+   "name": "Test Readiness",
+   "triggers_before": [
+    "push",
+    "pull_request",
+    "workflow_dispatch"
+   ],
+   "classification": "CONSOLIDATE_INTO_STABLE_DISPATCHER",
+   "status": "DONE",
+   "catalog_groups": [
+    "test-readiness.repo-smoke"
+   ],
+   "verbatim_record": "tools/tasks/folded/test-readiness.yml",
+   "verbatim_sha256": "86a1863fbc933cf1f8187d9fd57a3bc0f532615f5390aed1404128eefb1c023e"
+  },
+  {
+   "workflow": ".github/workflows/proof-html.yml",
+   "name": "Proof HTML",
+   "triggers_before": [
+    "push",
+    "workflow_dispatch"
+   ],
+   "classification": "CARRIED_AS_DISPATCHER_JOB",
+   "status": "DONE",
+   "dispatcher_jobs": [
+    "proof-html-build"
+   ],
+   "reason": "Its one job is a single action step (anishathalye/proof-html@v1.1.0, an HTML link and markup check of the repository); a run block cannot call an action, so the job is carried verbatim as a dispatcher job (same action, same pin, same with:). Its push-on-every-branch and workflow_dispatch triggers are replaced by the dispatcher's: it now runs on every pull request and push to main. The job id is renamed to `proof-html-build` because the dispatcher already carries a `verify` job; its body is unchanged.",
+   "verbatim_record": "tools/tasks/folded/proof-html.yml",
+   "verbatim_sha256": "1b17a9dfec3e3591b7ff84016a9f7d80d8b82e03638ae101234a661070e4ae57"
+  }
+ ]
+}
