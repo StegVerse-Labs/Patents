@@ -1,0 +1,90 @@
+{
+  "schema": "stegverse.pat003.double-pendulum-input-manifest/v2",
+  "classification": "SOURCE_ONLY_PRIVATE_INPUTS_NOT_DISTRIBUTED",
+  "goal_task_id": "OPTICAL-PHYSICAL-STATE-REPLAY-RESEARCH-001",
+  "cosv": "10111110114000",
+  "provenance": "ChatGPT Library recovered files, 2026-10-14; ZIP hashes measured in prior local processing checkpoint, MP4 not yet hashed; v2 2026-10-23: the 481,804,387 B DP_free_drop_video.mp4 stays the PRIMARY demonstration input (social-media-scale clip, owner direction); the publisher original is listed separately in upstream_sources as the upstream source/reference; ZIP entries unchanged",
+  "expected_sources": [
+    {
+      "name": "Encoder_Data.zip",
+      "size_bytes": 1629108,
+      "sha256": "06a0a8dcecaec0cda065d518f23f2b578dd4e43bb17f82d072ef36f8818da904",
+      "library_file_id": "file_00000000726c821091ebe876afcd343d"
+    },
+    {
+      "name": "Video_Tracking_Data.zip",
+      "size_bytes": 7362421,
+      "sha256": "1e998d549726528d36a0de81f7e93b8756b10b53d18b2bbeaf08194fb22b8564",
+      "library_file_id": "file_00000000cdc081f599bcb20796607677"
+    },
+    {
+      "name": "Double_Pendulum_CAD.zip",
+      "size_bytes": 23404393,
+      "sha256": "115befebfbc289c2462d3eacac7c44db341529d79509f4f4b4541a82169ad814",
+      "library_file_id": "file_000000001c9c8210956c11e3a52be437"
+    },
+    {
+      "name": "DP_free_drop_video.mp4",
+      "size_bytes": 481804387,
+      "sha256": null,
+      "library_file_id": "file_000000001734820e8f0246055e4ac1f8",
+      "role": "PRIMARY_DEMONSTRATION_INPUT",
+      "sha256_status": "NOT_COMPUTED",
+      "sha256_not_computed_reason": "481,804,387 B file not present in any store accessible to Lane A (Drive KV/Optical State Replay folders and full-Drive title/type search, box); held in the ChatGPT Library by library_file_id only",
+      "relationship_to_upstream": "UNKNOWN_NOT_MEASURED (re-encode/derivative status not determined; rights status UNKNOWN, referred to Lane D)"
+    }
+  ],
+  "runner_input_contract": {
+    "input_directory": "PAT003_PRIVATE_INPUT_DIR",
+    "source_transport": "NOT_YET_ESTABLISHED",
+    "requires_explicit_private_authorized_transfer": true,
+    "reject_missing_files": true,
+    "reject_size_mismatch": true,
+    "reject_digest_mismatch": true,
+    "reject_unhashed_video_for_full_validation": true,
+    "rights_status": "UNRESOLVED_PUBLISHER_CC_BY_4_VS_PAPER_GPLV3_SCOPE",
+    "public_raw_data_distribution": false,
+    "authenticated_capture_clock": false,
+    "independent_physical_truth": false
+  },
+  "disposition": "FAIL_CLOSED_PENDING_RUNNER_INPUT_TRANSPORT_AND_RIGHTS_CLEARANCE",
+  "publication_control": {
+    "status": "HOLD_NO_PUBLIC_DISCLOSURE",
+    "scope": "all experimental video, derived data, dual-artifact findings, mechanisms, analyses, paper, demonstrations, screenshots, public artifacts and research site",
+    "release_condition": "Owner explicitly authorizes publication only after a documented invention-discovery and patent-coverage review concludes that all materially patentable components identified as far as the team's discovery can reasonably take it have been addressed by filings or a documented disposition, with rights and disclosure clearance",
+    "initial_patent_filing_alone_sufficient": false,
+    "private_experimentation_permitted_subject_to_governance": true,
+    "public_site_publisher_release_permitted": false
+  },
+  "supersedes": {
+    "path": "research/pat003/input_manifest_v1.json",
+    "git_blob": "ce7ab0ca9269707b65b704bb438edba2a5e45d62",
+    "sha256": "86ca5545803b75039eeec9d83fa0bdac50d368beebdc11ca7614d4791cd501da",
+    "scope": "Adds role/sha256_status fields to the DP_free_drop_video.mp4 entry and an upstream_sources list; v1 file is retained unchanged"
+  },
+  "rights_disposition_ref": {
+    "disposition": "ALLOW_INTERNAL_EVIDENCE_LOCAL_NON_REDISTRIBUTED_ONLY",
+    "redistribution": "FAIL_CLOSED (LD-OSR-RIGHTS-01)",
+    "receipt_sha256": "4df2881072e1d936e4a2f3c4ae8e5d8e9feb58564fa9b65db3792015de5e8ddc",
+    "scope_note": "LD-OSR-RIGHTS-01 covers the matched publisher files; rights status of the 481,804,387 B primary input is UNKNOWN pending Lane D"
+  },
+  "authority_note": "Not truth, not a legal determination, not execution authority.",
+  "upstream_sources": [
+    {
+      "name": "DP_free_drop_video.mp4",
+      "size_bytes": 7271648696,
+      "sha256": "8197492b6e244b28f7948cf7e5e74d3e198e1b1d39a78981ee607484d30c38d1",
+      "source_url": "https://data.mendeley.com/datasets/z4hvxjgtbz/2",
+      "source_doi": "10.17632/z4hvxjgtbz.2",
+      "publisher_file_id": "24f50db1-2551-4cf1-84dd-dc56f6a73fa5",
+      "role": "UPSTREAM_SOURCE_REFERENCE",
+      "authority": "PUBLISHER_ORIGINAL",
+      "authority_receipts": {
+        "KV_ARTIFACT_AUTHORITY_RECONCILE": "16cead97caf9f9c5adc0adaacd5d2783b2ec04591b7c6507393855ea7e0d4d3a",
+        "KV_RIGHTS_DISPOSITION_RECORD": "4df2881072e1d936e4a2f3c4ae8e5d8e9feb58564fa9b65db3792015de5e8ddc",
+        "issued_by": "Lane D, StegVerse-org/.github#167 c6367926497; #165 c6367927040"
+      },
+      "note": "Listed as the upstream source; does not assert the primary demonstration input is invalid."
+    }
+  ]
+}
