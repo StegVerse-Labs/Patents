@@ -40,9 +40,36 @@ class Fixture:
         for p in TEMPLATES:
             os.makedirs(os.path.dirname(os.path.join(self.d, p)), exist_ok=True)
             shutil.copy(os.path.join(ROOT, p), os.path.join(self.d, p))
+        self._make_hermetic()
         git(self.d, "init", "-q")
         self.commit("templates")
         self.base = git(self.d, "rev-parse", "HEAD")
+
+    def _make_hermetic(self):
+        """Do not depend on records the live repository has since appended to the copied templates.
+
+        The tests assume the pristine template state: no evidence-map section in the limitation
+        chart and no verified references in the research ledger. Both files are normalised after
+        copying, so merging evidence or ledger appends into the live files cannot change results.
+        """
+        chart = os.path.join(self.d, V.CHART)
+        with open(chart, encoding="utf-8") as fh:
+            lines = fh.read().split("\n")
+        kept, skipping = [], False
+        for line in lines:
+            if line.startswith("## "):
+                skipping = line.startswith("## Evidence map")
+            if not skipping:
+                kept.append(line)
+        with open(chart, "w", encoding="utf-8") as fh:
+            fh.write("\n".join(kept).rstrip("\n") + "\n")
+        ledger = os.path.join(self.d, V.LEDGER)
+        with open(ledger, encoding="utf-8") as fh:
+            s = fh.read()
+        start = s.index("## Current verified references")
+        end = s.index("## Unsupported conclusions")
+        with open(ledger, "w", encoding="utf-8") as fh:
+            fh.write(s[:start] + "## Current verified references\n" + "\n```text\nnone\n```\n" + "\n" + s[end:])
 
     def commit(self, msg):
         git(self.d, "add", "-A")
